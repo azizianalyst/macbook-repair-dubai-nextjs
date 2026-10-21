@@ -19,7 +19,7 @@ export default function GuideEraseMacBeforeSelling() {
     <BlogPostTemplate
       seoTitle="How to Erase All Data on a Mac Before Selling"
       seoDescription="The right 2026 order to erase a Mac before selling: back up, sign out of iCloud and Find My, then Erase All Content and Settings so the buyer isn't locked."
-      path="/how-to-erase-all-data-on-my-mac-before-giving-it-away"
+      path="/blog/how-to-erase-all-data-on-my-mac-before-giving-it-away"
       category="How-to · macOS"
       h1="How to Erase All Data on Your Mac Before Giving It Away"
       hook="Before you sell or hand over your MacBook, wiping it the right way protects your data and stops the new owner from getting locked out by Activation Lock - here's the exact 2026 order."
@@ -64,7 +64,7 @@ export default function GuideEraseMacBeforeSelling() {
             Time Machine → Back Up Now, or sync what matters to iCloud. If the Mac is already
             misbehaving and you can't reach your files, stop here - don't erase a drive you can't
             read. Our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery in Dubai
             </Link>{" "}
             can pull data off a failing drive before it's wiped for good.
@@ -128,7 +128,7 @@ export default function GuideEraseMacBeforeSelling() {
           </ul>
           <p>
             Need help getting a clean install on an older machine? Our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service in Dubai
             </Link>{" "}
             handles it for you, including stubborn drives that won't reinstall.
@@ -173,14 +173,14 @@ export default function GuideEraseMacBeforeSelling() {
             If you're handing over a Mac with sensitive work or client data and want certainty, we
             can wipe it to a verified clean state for you. Book a free diagnosis and we'll confirm
             the erase, the Find My status, and the install - see our{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             or just{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
             </Link>
-            . We offer free pickup across Dubai.
+            . Walk in to our Dubai Media City workshop, or WhatsApp a photo first for a quote.
           </p>
         </>
       }
@@ -215,12 +215,13 @@ export default function GuideEraseMacBeforeSelling() {
         },
         {
           q: "Can MacBook Repair Dubai erase and verify my Mac for me?",
-          a: "Yes. If you want certainty that your data is gone and the Mac is clear of Find My before handing it over, we'll wipe it to a verified clean state and confirm the install. Book a free diagnosis with free pickup across Dubai - call 055 741 3706 or message us on WhatsApp.",
+          a: "Yes. If you want certainty that your data is gone and the Mac is clear of Find My before handing it over, we'll wipe it to a verified clean state and confirm the install. Bring it to our Dubai Media City workshop for a free diagnosis - call 055 741 3706 or message us on WhatsApp.",
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Rescue files off a failing drive before you erase it for good." },
-        { label: "macOS reinstall service Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS install for older Macs that won't reinstall." },
+        { label: "macOS reinstall service Dubai", href: "/macos-reinstall-dubai", description: "Clean macOS install for older Macs that won't reinstall." },
         { label: "Should I buy a refurbished MacBook?", href: "/blog/should-i-buy-refurbished-macbook-dubai", description: "Buying a used Mac next? What to check before you pay." },
       ]}
     />

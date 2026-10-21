@@ -15,17 +15,17 @@ export default function IPadFullDiagnostic() {
       whatsappPrefill="Hi, I'd like a free iPad diagnostic - model and main concern:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPad Repair",     path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",     path: "/ipad-repair-dubai" },
         { name: "Free Diagnostic", path: "/ipad-full-diagnostic-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad diagnostics across all models" }}
-      serviceName="iPad Free Full Diagnostic"
+      serviceName="iPad Free Full Diagnostic Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Bring the iPad in, walk out with a written report and a fixed price.</strong> Free, no obligation, no upsell. We run a 25-point check on every iPad: screen quality and Pencil response, battery cycle count, Smart Connector pads, all cameras, both or four speakers, every port, Touch ID or Face ID, water-damage indicators, and a software-side check for Activation Lock and rogue profiles.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             About 1 in 5 iPads we see don't actually need a repair - they need a software reset, a free port clean, or an iPadOS update they could install at home. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything.
           </p>
         </>
@@ -46,10 +46,10 @@ export default function IPadFullDiagnostic() {
         { title: "Pencil + screen forensics", body: "Apple Pencil compatibility test (1, 2, Pro depending on model), screen brightness uniformity, True Tone calibration, original vs aftermarket detection." },
         { title: "Written report", body: "We hand you a one-page summary: what's working, what's borderline, what needs work, the cost in writing. No obligation to repair." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free - no warranty needed.",
-        "Any repair you book afterwards carries our standard 90-day warranty.",
+        "Any repair you book afterwards carries our standard warranty of 15 days to 2 years.",
         "We don't disable, modify or 'unlock' anything during the diagnostic.",
       ]}
       faqs={[

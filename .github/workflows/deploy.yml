@@ -1,0 +1,56 @@
+name: Deploy to Hostinger
+
+# Triggered by the in-admin "Publish & deploy" button (repository_dispatch: deploy)
+# or manually from the GitHub Actions tab (workflow_dispatch).
+on:
+  repository_dispatch:
+    types: [deploy]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Package archive (mirrors DEPLOY.md excludes)
+        run: |
+          rm -f /tmp/mbr-deploy.zip
+          zip -rq /tmp/mbr-deploy.zip . \
+            -x "node_modules/*" ".next/*" ".git/*" ".env.local" "*.zip" \
+               ".github/*" ".claude/*" ".audit/*" ".mobile-audit/*" \
+               "scripts/topic-images/raw/*" "scripts/home-images/raw/*"
+          ls -lh /tmp/mbr-deploy.zip
+
+      - name: Deploy to Hostinger
+        env:
+          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+        run: |
+          npm i --no-save axios tus-js-client
+          node scripts/deploy-ci.mjs /tmp/mbr-deploy.zip
+
+      - name: Verify homepage is live
+        run: |
+          for i in $(seq 1 40); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://macbook-repair-dubai.ae/ || true)
+            echo "attempt $i: $code"
+            [ "$code" = "200" ] && exit 0
+            sleep 6
+          done
+          echo "Homepage did not return 200 in time (deploy may still be finishing)."

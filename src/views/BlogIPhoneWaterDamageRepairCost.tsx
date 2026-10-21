@@ -7,20 +7,31 @@ export default function BlogIPhoneWaterDamageRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="iPhone Water Damage Repair Cost Dubai 2026 - Pricing"
-      seoDescription="iPhone water damage repair Dubai: AED 400-1,200 by board-damage tier. 80% recovery rate. First-24-hour rules, salt vs fresh water, when it's not recoverable."
-      path="/blog/iphone-water-damage-action-plan"
+      seoDescription="iPhone water damage repair Dubai: recovery priced by board-damage tier. 80% recovery rate. First-24-hour rules, salt vs fresh water, WhatsApp for your quote."
+      path="/blog/iphone-water-damage-repair-cost-dubai"
+      wide
+      toc={[
+        { id: "first-24-hours", label: "First 24 hours" },
+        { id: "salt-vs-fresh-water", label: "Salt vs fresh water" },
+        { id: "pricing-tiers", label: "Pricing tiers" },
+        { id: "ultrasonic-clean-process", label: "Ultrasonic clean process" },
+        { id: "not-recoverable", label: "When it's not recoverable" },
+        { id: "insurance-claims", label: "Insurance claims" },
+        { id: "apple-store-policy", label: "Apple Store policy" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · iPhone"
       h1="iPhone Water Damage Repair Dubai - Cost & Success Rates"
-      hook="iPhone water damage repair in Dubai costs AED 400-1,200 depending on board damage. We achieve 80% recovery at our workshop - but only if you bring it in within 24 hours and follow the 'do not charge' rule."
-      quickAnswer="iPhone water damage repair in Dubai costs AED 400 (clean only) to AED 1,200 (board-level recovery). 80% of phones brought in within 24 hours and not charged again are recoverable. Salt water is harder than fresh. Free diagnostic - we don't proceed unless we believe the phone can be saved."
+      hook="iPhone water damage repair in Dubai is priced by tier, from a quick clean to full board-level recovery, depending on board damage. We achieve 80% recovery at our workshop - but only if you bring it in within 24 hours and follow the 'do not charge' rule. Message us on WhatsApp for today's exact price on your model."
+      quickAnswer="iPhone water damage repair in Dubai is priced by tier, from a clean-only service to board-level recovery - message us on WhatsApp for the exact price on your phone. 80% of phones brought in within 24 hours and not charged again are recoverable. Salt water is harder than fresh. Free diagnostic - we don't proceed unless we believe the phone can be saved."
       author={{ name: "Usman", role: "iPhone board-level recovery technician" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-06-16"
       readingMinutes={10}
-      featuredImageAlt="iPhone water damage repair Dubai - ultrasonic cleaning bath in workshop"
+      featuredImageAlt="iPhone Water Damage Repair Cost Dubai, iPhone water damage repair Dubai - ultrasonic cleaning bath in workshop"
       body={
         <>
-          <h2>First 24 hours - what to do (and not do)</h2>
+          <h2 id="first-24-hours">iPhone Water Damage Repair Cost Dubai. First 24 hours - what to do (and not do)</h2>
           <p>
             The single biggest factor that decides whether your phone lives is what you do in the
             first hour. Follow this list:
@@ -33,7 +44,7 @@ export default function BlogIPhoneWaterDamageRepairCost() {
             <li><strong>Get it to a board-level workshop within 24 hours.</strong> Dubai air is humid; oxidation accelerates fast.</li>
           </ul>
 
-          <h2>Salt water vs fresh water - Dubai beach vs pool</h2>
+          <h2 id="salt-vs-fresh-water">Salt water vs fresh water - Dubai beach vs pool</h2>
           <p>
             Sea water (Jumeirah, Kite Beach, Palm) is salt-rich and conducts electricity. It causes
             galvanic corrosion on the iPhone logic board within hours of contact. Fresh water (a
@@ -48,19 +59,19 @@ export default function BlogIPhoneWaterDamageRepairCost() {
             <li><strong>Any water + customer charged it:</strong> ~30% full recovery</li>
           </ul>
 
-          <h2>Pricing tiers</h2>
+          <h2 id="pricing-tiers">Pricing tiers</h2>
           <BlogPriceTable
             caption="iPhone water damage recovery - Dubai, April 2026"
-            headers={["Service tier", "Our price (AED)", "What you get"]}
+            headers={["Service tier", "Our price", "What you get"]}
             rows={[
-              { model: "Tier 1 - Diagnostic + ultrasonic clean", ours: "AED 400", apple: "Open phone, full board ultrasonic clean (15 min in 99% IPA), reseat connectors, 30-day warranty if phone powers up cleanly. Most fresh-water cases." },
-              { model: "Tier 2 - Tier 1 + selective component replacement", ours: "AED 700", apple: "Add: replace any oxidised passives (capacitors, resistors), reflow visibly damaged solder joints, replace damaged connectors. 60-day warranty." },
-              { model: "Tier 3 - Board-level recovery + chip work", ours: "AED 1,000", apple: "Add: micro-soldering on damaged ICs, replace specific failed chips (PMIC, audio IC, charging IC), 90-day warranty. For salt-water and severely oxidised boards." },
-              { model: "Tier 4 - Data-only recovery (chip-off)", ours: "AED 1,200", apple: "Phone is unrecoverable. We remove NAND chip, recover photos/messages/contacts to a USB drive. Phone returned in pieces or recycled." },
+              { model: "Tier 1 - Diagnostic + ultrasonic clean", ours: "Price on request", apple: "Open phone, full board ultrasonic clean (15 min in 99% IPA), reseat connectors, 15-day warranty if phone powers up cleanly. Most fresh-water cases." },
+              { model: "Tier 2 - Tier 1 + selective component replacement", ours: "Price on request", apple: "Add: replace any oxidised passives (capacitors, resistors), reflow visibly damaged solder joints, replace damaged connectors. 60-day warranty." },
+              { model: "Tier 3 - Board-level recovery + chip work", ours: "Price on request", apple: "Add: micro-soldering on damaged ICs, replace specific failed chips (PMIC, audio IC, charging IC), warranty of 15 days to 2 years. For salt-water and severely oxidised boards." },
+              { model: "Tier 4 - Data-only recovery (chip-off)", ours: "Price on request", apple: "Phone is unrecoverable. We remove NAND chip, recover photos/messages/contacts to a USB drive. Phone returned in pieces or recycled." },
             ]}
           />
 
-          <h2>What we actually do - the ultrasonic clean process</h2>
+          <h2 id="ultrasonic-clean-process">What we actually do - the ultrasonic clean process</h2>
           <p>
             Step by step, what happens after you hand us the phone:
           </p>
@@ -75,7 +86,7 @@ export default function BlogIPhoneWaterDamageRepairCost() {
             <li><strong>You collect, with a written warranty matched to the tier of work done.</strong></li>
           </ol>
 
-          <h2>When water damage isn't recoverable - be honest</h2>
+          <h2 id="not-recoverable">When water damage isn't recoverable - be honest</h2>
           <p>
             Some phones cannot be saved. We tell you at the free diagnostic stage. Common
             unrecoverable cases:
@@ -87,36 +98,36 @@ export default function BlogIPhoneWaterDamageRepairCost() {
             <li>Burnt smell out of the speaker or charging port (means power-rail short already happened)</li>
           </ul>
           <p>
-            In those cases we offer Tier 4 data-only recovery (AED 1,200) to get your photos,
-            messages, contacts, and notes off the NAND. The phone itself is then either returned
-            in a parts bag or sent to our certified e-waste partner.
+            In those cases we offer Tier 4 data-only recovery to get your photos,
+            messages, contacts, and notes off the NAND - message us for the exact price. The phone
+            itself is then either returned in a parts bag or sent to our certified e-waste partner.
           </p>
 
-          <h2>Insurance claims for water-damaged iPhones in UAE</h2>
+          <h2 id="insurance-claims">Insurance claims for water-damaged iPhones in UAE</h2>
           <p>
             Most home-contents insurance policies in UAE (AXA Gulf, Emirates, Tokio Marine) cover
             mobile phones for accidental water damage if the phone is listed as a scheduled item.
             We provide a written diagnostic and itemised invoice formatted for direct claim
             submission. Tell us at intake that you'll be claiming and we'll structure the
-            paperwork accordingly. AppleCare+ also covers liquid damage at a service fee - usually
-            AED 379 - which is competitive on older models but not on iPhone 15 onward where our
-            Tier 1/2 pricing beats it.
+            paperwork accordingly. AppleCare+ also covers liquid damage at a flat service fee -
+            competitive on older models, but on iPhone 15 onward our Tier 1/2 recovery typically
+            works out better. Message us and we'll compare against your AppleCare+ fee.
           </p>
 
-          <h2>Apple Store water damage policy (often refuse repair)</h2>
+          <h2 id="apple-store-policy">Apple Store water damage policy (often refuse repair)</h2>
           <p>
             Apple's official policy: liquid damage voids the standard warranty, and Apple Stores in
             UAE often decline component-level repair. They'll quote a whole-device replacement at
-            full out-of-warranty service price (AED 2,800-4,500 depending on model). AppleCare+ is
+            the full out-of-warranty service price, which runs high depending on model. AppleCare+ is
             the only path to a flat-fee water-damage fix at Apple - and it has to be active. If
             you don't have AppleCare+, you're either looking at a full replacement or an
             independent board-level workshop like ours.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             Phone in water? <strong>Power off, do not charge, message us now.</strong>{" "}
-            <Link to="/iphone-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone water damage repair page
             </Link>{" "}
             for the full process and pricing. WhatsApp 055 741 3706 with a photo - quote in 4
@@ -126,9 +137,9 @@ export default function BlogIPhoneWaterDamageRepairCost() {
       }
       faqs={[
         { q: "How quickly do I need to bring my wet iPhone in?", a: "Within 24 hours for the best recovery odds. Within 6 hours for salt-water cases (sea water from Jumeirah, Kite, Palm). Phone OFF the entire time, no charging attempts." },
-        { q: "How much does iPhone water damage repair cost?", a: "AED 400 for clean-only (most fresh-water cases), AED 700 for selective component work, AED 1,000 for board-level chip recovery (salt water, severe oxidation), AED 1,200 for data-only chip-off. Free diagnostic - we don't quote until we've opened it." },
+        { q: "How much does iPhone water damage repair cost?", a: "It's priced by tier: clean-only (most fresh-water cases), selective component work, board-level chip recovery (salt water, severe oxidation), and data-only chip-off. Free diagnostic - we don't quote until we've opened it, so message us on WhatsApp for the exact price on your phone." },
         { q: "What's your success rate on water-damaged iPhones?", a: "About 80% overall. Higher for fresh water in the first 24 hours (over 90%), lower for salt water that's been sitting (around 50%). The biggest variable is whether the customer charged it after - that drops the rate to about 30%." },
-        { q: "Will my photos and messages survive water damage?", a: "If the SoC and NAND are intact: yes, fully. If the phone won't power on after our work, we offer Tier 4 chip-off data recovery (AED 1,200) - we extract the NAND chip and read the data directly. About 95% of NANDs survive even severe water damage." },
+        { q: "Will my photos and messages survive water damage?", a: "If the SoC and NAND are intact: yes, fully. If the phone won't power on after our work, we offer Tier 4 chip-off data recovery - we extract the NAND chip and read the data directly. About 95% of NANDs survive even severe water damage. Message us for the exact price." },
         { q: "Will my iPhone still be water-resistant after repair?", a: "Yes - we replace the perimeter gasket and re-seal during reassembly. Original IP rating restored (IP67 or IP68 depending on model). Avoid deep submersion for 48 hours so the new adhesive cures fully." },
         { q: "Is rice actually useful for a wet iPhone?", a: "No. Rice doesn't draw water out of sealed electronics - and rice dust ends up jammed in the Lightning or USB-C port, often causing additional charging failure. Power off, leave it alone, get it to a workshop." },
       ]}

@@ -9,6 +9,17 @@ export default function BlogM5ChipExplained() {
       seoTitle="Apple M5 Chip Explained - How It Compares to M4 (2026)"
       seoDescription="Apple M5 vs M4 - real benchmarks, GPU and Neural Engine gains, memory bandwidth, three M5 tiers, full Mac compatibility list, and whether you should upgrade."
       path="/blog/m5-chip-explained-vs-m4"
+      wide
+      toc={[
+        { id: "architecture-overview", label: "Architecture overview" },
+        { id: "cpu-performance", label: "CPU performance" },
+        { id: "gpu-neural-accelerators", label: "GPU and Neural Accelerators" },
+        { id: "memory-bandwidth", label: "Memory bandwidth" },
+        { id: "battery-efficiency", label: "Battery efficiency" },
+        { id: "m5-tiers", label: "M5 vs Pro vs Max" },
+        { id: "macs-with-m5", label: "Which Macs have M5" },
+        { id: "should-you-upgrade", label: "Should you upgrade" },
+      ]}
       category="Industry · Apple Silicon"
       h1="Apple M5 Chip vs M4 - What's Actually Different"
       hook="Apple released M5 in October 2025. Here's the real performance gain over M4."
@@ -17,10 +28,10 @@ export default function BlogM5ChipExplained() {
       datePublished="2026-04-26"
       dateModified="2026-04-26"
       readingMinutes={10}
-      featuredImageAlt="Apple M5 chip vs M4 explained 2026"
+      featuredImageAlt="M5 Chip Explained Vs M4. Apple M5 chip vs M4 explained 2026"
       body={
         <>
-          <h2>M5 architecture overview</h2>
+          <h2 id="architecture-overview">M5 Chip Explained Vs M4. M5 architecture overview</h2>
           <p>
             Apple announced M5 on 30 October 2025 and shipped first units (MacBook Pro 14/16, iPad Pro)
             on 14 November 2025. M5 is built on TSMC's third-generation 3nm process (N3P), the same node
@@ -36,7 +47,7 @@ export default function BlogM5ChipExplained() {
             <li><strong>Memory:</strong> LPDDR5X-8533 (M4: LPDDR5X-7500), 153 GB/s bandwidth on M5 base</li>
           </ul>
 
-          <h2>CPU performance - 14% single-core, 22% multi-core gains</h2>
+          <h2 id="cpu-performance">CPU performance - 14% single-core, 22% multi-core gains</h2>
           <p>
             Geekbench 6 averages from our workshop (3-run mean, MacBook Pro 14 base configurations):
           </p>
@@ -56,7 +67,7 @@ export default function BlogM5ChipExplained() {
             slightly higher (15-24%) depending on workload - IPC improvements compound across longer tasks.
           </p>
 
-          <h2>GPU + Neural Accelerators - 4× AI workload boost</h2>
+          <h2 id="gpu-neural-accelerators">GPU + Neural Accelerators - 4× AI workload boost</h2>
           <p>
             The GPU is the big story. Same 10-core count as M4 base, but each shader core now contains a
             dedicated "Neural Accelerator" - a matrix-multiplication unit that handles AI inference inside the
@@ -80,7 +91,7 @@ export default function BlogM5ChipExplained() {
             2077 native (in Crossover or Rosetta 2) runs ~30% faster on M5 vs M4.
           </p>
 
-          <h2>Memory bandwidth (~30% increase)</h2>
+          <h2 id="memory-bandwidth">Memory bandwidth (~30% increase)</h2>
           <p>
             M5 base: 153 GB/s (M4 was 120 GB/s - that's actually +27.5%). M5 Pro: 273 GB/s (M4 Pro: 273 GB/s - same).
             M5 Max: 546 GB/s (M4 Max: 546 GB/s - same). The bandwidth jump is concentrated on the M5 base.
@@ -88,7 +99,7 @@ export default function BlogM5ChipExplained() {
             count and Neural Accelerators.
           </p>
 
-          <h2>Battery efficiency (similar)</h2>
+          <h2 id="battery-efficiency">Battery efficiency (similar)</h2>
           <p>
             Apple's claim of "up to 24 hours" for M5 MacBook Pro 14 vs "up to 22 hours" for M4 is essentially
             within the margin of error. Our real-world web-browsing test (50% brightness, Wi-Fi, 12 tabs):
@@ -96,7 +107,7 @@ export default function BlogM5ChipExplained() {
             offset most of the gain.
           </p>
 
-          <h2>M5 vs M5 Pro vs M5 Max - three tiers explained</h2>
+          <h2 id="m5-tiers">M5 vs M5 Pro vs M5 Max - three tiers explained</h2>
           <BlogPriceTable
             caption="M5 family - April 2026"
             headers={["Spec", "M5", "M5 Pro", "M5 Max"]}
@@ -110,7 +121,7 @@ export default function BlogM5ChipExplained() {
             ]}
           />
 
-          <h2>Which Macs have M5 (April 2026 list)</h2>
+          <h2 id="macs-with-m5">Which Macs have M5 (April 2026 list)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>MacBook Pro 14″ M5 / M5 Pro / M5 Max</strong> - released November 2025</li>
             <li><strong>MacBook Pro 16″ M5 Pro / M5 Max</strong> - released November 2025</li>
@@ -125,11 +136,10 @@ export default function BlogM5ChipExplained() {
             available discounted at resellers).
           </p>
 
-          <h2>Should you upgrade from M4? (probably not yet)</h2>
+          <h2 id="should-you-upgrade">Should you upgrade from M4? (probably not yet)</h2>
           <p>
             <strong>If you own M4:</strong> The 18% CPU bump is real but you will not feel it in everyday use.
-            Wait for M6 (expected late 2026/early 2027). Selling your M4 now to fund an M5 will cost AED
-            2,500-3,500 net after depreciation.
+            Wait for M6 (it reached the Mac mini in September 2026; MacBooks have not moved to it yet). Selling your M4 now to fund an M5 means eating a meaningful chunk of depreciation.
           </p>
           <p>
             <strong>If you do AI/ML work:</strong> The 38-390% AI workload gain is genuinely meaningful. Upgrade
@@ -140,11 +150,11 @@ export default function BlogM5ChipExplained() {
           </p>
           <p>
             Need help deciding?{" "}
-            <Link to="/blog/macbook-pro-m4-vs-m5-worth-upgrade" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-pro-m4-vs-m5-worth-upgrade" className="text-accent font-semibold hover:underline">
               Read our full M4 vs M5 buyer's analysis
             </Link>{" "}
             with Dubai pricing. Apple's M5 announcement is on{" "}
-            <a href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">
+            <a href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
               apple.com/newsroom
             </a>.
           </p>
@@ -154,12 +164,12 @@ export default function BlogM5ChipExplained() {
         { q: "Is M5 made on a new process node?", a: "Yes - TSMC N3P (3nm 'enhanced'), same family as M4's N3E but with denser cells and ~5% better power-performance characteristics. Not as big a jump as the M2-to-M3 node change (N5P → N3E)." },
         { q: "Why didn't Apple bump TOPS on the Neural Engine?", a: "Apple shifted AI compute strategy. The Neural Engine stays at 38 TOPS but new 'Neural Accelerators' inside each GPU shader core handle most modern AI workloads, delivering up to 4× throughput on real applications without raising the headline TOPS number." },
         { q: "Does M5 support Wi-Fi 7 and Thunderbolt 5?", a: "Yes - both. M5 MacBook Pros ship with Wi-Fi 7 and Thunderbolt 5 (80 Gbps, 120 Gbps boost mode for displays). M4 was Wi-Fi 6E and Thunderbolt 4 only." },
-        { q: "When will M6 arrive?", a: "Apple's typical cadence is 12-18 months between M-series generations. M6 is expected late 2026 (MacBook Pro) or early 2027. Likely on TSMC N2 process - could be a bigger jump than M4-to-M5." },
+        { q: "When will M6 arrive?", a: "M6 has already arrived in one Mac: Apple launched the Mac mini with M6, its first 2nm Mac chip, in September 2026. As of late September 2026 no MacBook uses M6 yet; Apple has not announced when the MacBook Air or MacBook Pro will move to it." },
         { q: "Can I upgrade my M4 MacBook to M5?", a: "No. Apple Silicon is soldered to the logic board, including unified memory and SSD. Upgrading the chip means replacing the logic board, which costs more than buying a new Mac." },
       ]}
       relatedLinks={[
         { label: "MacBook Pro M4 vs M5 - should you upgrade?", href: "/blog/macbook-pro-m4-vs-m5-worth-upgrade", description: "Full Dubai-pricing decision guide." },
-        { label: "MacBook Pro M5 14″ repair page", href: "/macbook-pro-14-m5-2025-repair-dubai", description: "Service pricing for the new M5." },
+        { label: "MacBook Pro M5 repair page", href: "/macbook-pro-m5-repair-dubai", description: "Service pricing for the new M5." },
         { label: "MacBook repair (all models)", href: "/", description: "Every MacBook from 2018 to M5 Max." },
       ]}
     />

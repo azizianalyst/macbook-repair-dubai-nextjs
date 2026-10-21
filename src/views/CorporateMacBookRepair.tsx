@@ -1,0 +1,296 @@
+"use client";
+import { withSlash } from "@/lib/utils";
+import { Building2, Clock, Shield, Users, Phone, MessageCircle, CheckCircle2, FileText, MapPin } from "lucide-react";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
+import { PageShell } from "@/components/layout/PageShell";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
+import { USPStrip } from "@/components/blocks/USPStrip";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
+import { useSeo } from "@/hooks/use-seo";
+import { REVIEWS } from "@/content/reviews";
+import { NAP } from "@/content/site";
+
+const SERVICES = [
+  { icon: MapPin,    label: "Onsite visits or send-in",      body: "A technician can come to your office for a paid onsite visit, subject to availability and quoted on WhatsApp. Or your office books a same-day courier and the machines reach our bench within the day." },
+  { icon: Clock,     label: "Priority same-day turnaround",  body: "Corporate accounts get priority scheduling, screen, battery, keyboard, and trackpad repairs completed the day the machine reaches the bench." },
+  { icon: Users,     label: "Multi-device batch repair",     body: "Bring in or send 3–20 MacBooks at once. 15% labour discount on 3+ devices in one booking." },
+  { icon: FileText,  label: "Consolidated VAT invoices",     body: "Single invoice per batch repair with asset serial numbers, repair descriptions, and part costs, ready for your accounts team." },
+  { icon: Shield,    label: "Warranty of 15 days to 2 years",   body: "Every device repaired under corporate account carries the same written warranty of 15 days to 2 years as retail customers." },
+  { icon: Building2, label: "Dedicated WhatsApp line",       body: "A direct WhatsApp number for your IT manager or office admin, no queuing, no call centre, direct to the technician." },
+];
+
+const CLIENTS = [
+  "Media agencies (Dubai Media City, JLT)",
+  "Law firms (DIFC, Downtown Dubai)",
+  "Architecture and design studios (Business Bay)",
+  "Tech startups (Dubai Internet City)",
+  "Trading companies (Deira, Bur Dubai)",
+  "Schools and training centres (various)",
+];
+
+const REPAIRS = [
+  { label: "MacBook screen replacement",   price: "Price on request",  note: "All Air and Pro models, same-day for most" },
+  { label: "MacBook battery replacement",  price: "Price on request",  note: "3-month warranty, 80% capacity guarantee" },
+  { label: "MacBook keyboard replacement", price: "Price on request",  note: "Butterfly and scissor, US and UK layouts" },
+  { label: "MacBook logic board repair",   price: "Price on request",  note: "Component-level, 2–5 business days" },
+  { label: "macOS reinstall / migration",  price: "Price on request",  note: "Clean install + data migration to replacement device" },
+  { label: "Annual maintenance check",     price: "Price on request",  note: "Fan clean, thermal paste, battery health report" },
+];
+
+// The questions a procurement or IT lead asks before approving a vendor, which the
+// page previously did not answer anywhere: chain of custody, data handling on
+// staff exit, and how we fit alongside an existing IT provider.
+const GOVERNANCE = [
+  { title: "Chain of custody", body: "Every device that arrives is logged by serial number and confirmed on WhatsApp with a photo at handover. You always know which machine is with us, what stage it is at, and who signed for it." },
+  { title: "Data handling", body: "Machines are worked on at one bench and not passed between hands. We do not browse or copy company data beyond what a repair or recovery requires, and we will not unlock a device without evidence the company owns it." },
+  { title: "Secure wipe, confirmed in writing", body: "For staff exits or device disposal we wipe the Mac and confirm it in writing, which is normally what an IT or compliance file needs on record." },
+  { title: "Alongside your IT provider", body: "Most of our corporate clients already have a general IT partner for network and Windows. We handle the Apple hardware they cannot service, and work with them rather than around them." },
+];
+
+const FLEET_PROCESS = [
+  { step: "Send the device list", body: "Models, serials and a one-line fault each, on WhatsApp. If you do not have serials, we capture them when the machines arrive and send the list back to you." },
+  { step: "Free diagnosis, one written quote", body: "Every machine is diagnosed at no cost and quoted on a single document by serial number, so you can approve some, defer others, and retire the rest." },
+  { step: "Staged send-in", body: "Fleets come in waves rather than all at once, so the team is never without machines. We agree the waves with you before the first batch arrives." },
+  { step: "Return, invoice, asset record", body: "Devices are ready to collect with a consolidated VAT invoice listing each serial, the work done and the parts used - and an updated record of what is now in service." },
+];
+
+const FAQS = [
+  { q: "Do you offer corporate MacBook repair in Dubai?",
+    a: "Yes, corporate accounts with priority same-day turnaround, paid onsite visits subject to technician availability, consolidated VAT invoices, and a 15% multi-device labour discount. We serve companies in Dubai Media City, JLT, DIFC, Downtown Dubai, Business Bay, and Dubai Internet City. WhatsApp 055 741 3706 to set up a corporate account." },
+  { q: "Can you repair multiple MacBooks at once for our office?",
+    a: "Yes, we handle batches of 3 to 20 MacBooks in one booking. One drop-off, one VAT invoice listing all device serial numbers, repair types, and costs. 15% labour discount applied automatically to batches of 3 or more devices." },
+  { q: "Do you come to our office?",
+    a: "Yes, as a paid onsite visit, subject to technician availability. WhatsApp 055 741 3706 with your office address, device count and the faults, and we quote the visit before booking. Anything that needs the bench, like a screen or board repair, comes back to our Media City workshop." },
+  { q: "How fast can you repair a fleet of office MacBooks?",
+    a: "Screen, battery, keyboard, and trackpad repairs are usually same-day when the machine reaches us in the morning. Logic board repairs take 2–5 business days. Corporate jobs get priority on the bench to cut staff downtime." },
+  { q: "Can you provide VAT invoices for corporate MacBook repair?",
+    a: "Yes, all corporate repairs include a consolidated VAT-compliant invoice with each device's serial number, repair type, parts used, and cost. Invoices are issued in AED and can be sent by email to your accounts team." },
+  { q: "Do you offer an annual MacBook maintenance contract for companies?",
+    a: "Yes, the Annual Maintenance Contract (AMC) covers scheduled servicing, battery health checks, fan cleaning and thermal paste replacement, priority repair scheduling, and discounted parts. Pricing depends on fleet size. See /annual-maintenance-contract-dubai or WhatsApp for a quote." },
+  { q: "How do we get several MacBooks to your workshop?",
+    a: "Send a staff member with the batch, or book a same-day courier app and WhatsApp us the tracking link. We're at Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. When the work is done, collect the batch, or we book a courier to bring it back." },
+  { q: "How do you handle confidential company data during a repair?",
+    a: "Machines are worked on at one bench by one technician rather than passed between hands, and we do not browse or copy company data beyond what the repair or recovery requires. If you need the drive wiped before the device is returned or disposed of, we do it and confirm in writing." },
+  { q: "An employee left and nobody can log into their MacBook. Can you unlock it?",
+    a: "Only with evidence that the company owns the device - a purchase invoice or an asset record. We will ask for it, and we decline when ownership cannot be shown. That policy protects you as much as it constrains you." },
+  { q: "Can you work with our existing IT provider rather than replace them?",
+    a: "Yes, and that is the usual arrangement. Most corporate clients keep a general IT partner for network, Windows and helpdesk, and use us for the Apple hardware and board-level work that partner cannot do in-house." },
+  { q: "Do you need a PO, and can you onboard as a vendor?",
+    a: "Yes to both. We can work against a purchase order and complete standard vendor-onboarding paperwork, including trade licence and VAT registration details. Send what your accounts team needs and we will return it." },
+  { q: "Will our whole team be without laptops while you repair them?",
+    a: "No. Fleets come in waves that we agree with you first, so part of the team is always working. For larger accounts, loaner units can be arranged as part of a maintenance contract." },
+  { q: "What if a device is not worth repairing?",
+    a: "We will say so, with the reason, rather than quote work that does not make economic sense. We do not sell hardware, so we have no incentive to push you toward a replacement - or away from one." },
+];
+
+const FEATURED_REVIEW_INDEXES = [4, 9, 14, 20, 25];
+
+export default function CorporateMacBookRepair() {
+  const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
+
+  useSeo({
+    title: "Corporate MacBook Repair Dubai. Fleet Service, VAT Invoice | AMC Available",
+    description:
+      "Corporate MacBook repair Dubai. Paid onsite visits, same-day turnaround, VAT invoices, 15% multi-device discount. AMC available. Call 055 741 3706.",
+    path: "/corporate-macbook-repair-dubai",
+  });
+
+  // Scaffolded with image={undefined} and an alt already written for an image
+  // that was never wired up (audit 2026-09-23). Uses the route's own topic
+  // image, so src and alt can never drift apart.
+  const heroImg = imageForRoute("/corporate-macbook-repair-dubai");
+
+  return (
+    <PageShell>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+        <Hero
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
+          variant="device"
+          tone="dark"
+          eyebrow="Corporate MacBook repair · Dubai · Fleet service"
+          title="Corporate MacBook Repair Dubai"
+          subtitle="Paid onsite visits on request. Same-day turnaround. VAT invoices. 15% multi-device discount. AMC available. Concord Tower, Media City."
+        >
+          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+            <span className="flex items-center gap-1"><Building2 size={14} aria-hidden /> Corporate accounts available</span>
+            <span>·</span>
+            <span>3+ devices = 15% off labour</span>
+            <span>·</span>
+            <span>VAT invoices issued</span>
+          </p>
+        </Hero>
+
+        <USPStrip tone="dark" />
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "MacBook Repair Dubai", path: "/" }, { name: "Corporate MacBook Repair", path: "/corporate-macbook-repair-dubai" }]} />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <QuickAnswer
+            tone="dark"
+            question="Do you offer corporate MacBook repair in Dubai?"
+            answer="Yes, corporate MacBook repair in Dubai with paid onsite visits (subject to technician availability), same-day turnaround for common repairs, consolidated VAT invoices per batch, and 15% labour discount for 3+ devices. Our workshop is in Dubai Media City. WhatsApp 055 741 3706."
+          />
+        </section>
+
+        {/* Services */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">Corporate MacBook repair services</h2>
+          <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3 mt-lg">
+            {SERVICES.map(({ icon: Icon, label, body }) => (
+              <article key={label} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <Icon size={24} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[16px] font-bold mb-sm">{label}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">Corporate repair pricing</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[14px] border-collapse">
+                <thead>
+                  <tr className="border-b border-border text-left text-text-muted">
+                    <th className="py-sm pr-lg font-semibold">Repair</th>
+                    <th className="py-sm pr-lg font-semibold">Single device</th>
+                    <th className="py-sm font-semibold">3+ devices (15% off labour)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {REPAIRS.map((row) => (
+                    <tr key={row.label} className="border-b border-border">
+                      <td className="py-sm pr-lg font-medium">{row.label}</td>
+                      <td className="py-sm pr-lg"><PriceCTA compact message={`Hi, corporate price for ${row.label} in Dubai?`} /></td>
+                      <td className="py-sm text-text-muted">{row.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-[13px] text-text-muted mt-sm">Message us on WhatsApp for a written quote on your fleet. VAT invoice issued per batch. Every price is confirmed in writing before any work starts.</p>
+          </div>
+        </section>
+
+        {/* Who we work with */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Companies we work with in Dubai</h2>
+          <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3">
+            {CLIENTS.map((c) => (
+              <div key={c} className="flex items-center gap-sm border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md">
+                <CheckCircle2 size={16} className="text-accent shrink-0" aria-hidden />
+                <p className="text-[14px]">{c}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+            <div className="flex-1">
+              <h2 className="text-[22px] font-bold mb-sm">Set up a corporate MacBook repair account</h2>
+              <p className="text-[15px] text-text-muted">Onsite visits · Priority turnaround · VAT invoices · 15% multi-device discount · AMC available.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-sm shrink-0">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+                <MessageCircle size={18} aria-hidden /> WhatsApp
+              </a>
+              <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
+                <Phone size={18} aria-hidden /> {NAP.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">What our corporate clients say</h2>
+            <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        {/* Fleet process */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">How a fleet repair actually runs</h2>
+          <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+            The thing that worries an office manager is not the repair - it is ten people without laptops
+            on the same day. Fleets come in waves so that never happens.
+          </p>
+          <ol className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
+            {FLEET_PROCESS.map((f, i) => (
+              <li key={f.step} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <span className="mono text-accent text-[13px] font-bold">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="text-[17px] font-bold mb-sm mt-1">{f.step}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed m-0">{f.body}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Governance */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">Custody, data and vendor questions</h2>
+            <p className="text-[16px] text-text-muted max-w-[72ch] mb-lg">
+              What a procurement or IT lead needs answered before approving a repair vendor.
+            </p>
+            <div className="grid gap-md md:grid-cols-2">
+              {GOVERNANCE.map((g) => (
+                <article key={g.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                  <h3 className="text-[17px] font-bold mb-sm">{g.title}</h3>
+                  <p className="text-[14px] text-text-muted leading-relaxed m-0">{g.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Corporate MacBook repair Dubai. FAQ</h2>
+          <FAQAccordion items={FAQS} injectSchema />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[22px] font-bold mb-md">Related corporate services</h2>
+          <div className="flex flex-wrap gap-sm">
+            {[
+              { label: "Annual Maintenance Contract Dubai", href: "/annual-maintenance-contract-dubai" },
+              { label: "MacBook Repair Dubai", href: "/" },
+              { label: "Same-Day MacBook Repair", href: "/same-day-macbook-repair-dubai" },
+              { label: "Mac Repair Dubai", href: "/mac-repair-dubai" },
+              { label: "MacBook Screen Repair Dubai", href: "/macbook-screen-repair-dubai" },
+            ].map(({ label, href }) => (
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Find us. Concord Tower, Dubai Media City</h2>
+          <LocationBlock tone="dark" />
+        </section>
+      </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a fleet or AMC quote</h2>
+        <LeadForm preset={PRESETS.business} sourcePath="/corporate-macbook-repair-dubai" defaultDeviceType="MacBook" />
+      </section>
+
+      <RelatedArticles path="/corporate-macbook-repair-dubai" />
+    </PageShell>
+  );
+}

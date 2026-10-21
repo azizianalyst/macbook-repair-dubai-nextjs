@@ -18,9 +18,9 @@ import LandingTemplate from "@/components/blocks/LandingTemplate";
 import { GradientText } from "@/components/blocks/GradientText";
 
 // inline contextual link style for the dark band (descriptive-anchor internal links)
-const ilink = "text-accent-bright underline underline-offset-2 hover:text-white rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright";
+const ilink = "text-accent underline underline-offset-2 hover:text-white rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 import { localBusiness, organization, service as serviceSchema, faqPage, person, aggregateRating, reviewSchema } from "@/lib/schema";
-import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { NAP, REVIEW_COUNT, REVIEW_AVERAGE, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const WHATSAPP_QUOTE = `${NAP.whatsappUrl}?text=${encodeURIComponent(
   "Hi Shafiq, MacBook screen repair quote please. Model: ",
@@ -32,7 +32,7 @@ const DEMO_PATH = "/landing-template-demo";
 const FAQS = [
   {
     q: "How much does MacBook screen repair cost in Dubai?",
-    a: "From AED 600 for a MacBook Air 13\" or MacBook Pro 13\" panel, AED 800 for the 14\" Pro, and AED 1,200 for the 16\" Pro. Glass-only repair is AED 600 on 2012-2015 Retina models; newer models need a full panel swap because Apple bonded the glass to the LCD.",
+    a: "It depends on your exact model - MacBook Air 13\", Pro 13\", 14\" Pro, and 16\" Pro all price differently. Glass-only repair is possible on 2012-2015 Retina models; newer models need a full panel swap because Apple bonded the glass to the LCD. WhatsApp your serial for today's exact price.",
   },
   {
     q: "How long does MacBook screen replacement take?",
@@ -40,27 +40,27 @@ const FAQS = [
   },
   {
     q: "Do you fix Flexgate on the 2016 and 2017 MacBook Pro?",
-    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable for AED 600, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. It carries a 90-day warranty.",
+    a: "Yes. Flexgate on the A1706, A1707, and A1708 is repaired with a longer flex cable, same day. The new cable is 2 mm longer than Apple's original to stop the wear pattern returning. It carries a 3-month warranty - WhatsApp us for the exact price.",
   },
   {
     q: "Will True Tone still work after the screen is replaced?",
-    a: "True Tone works on genuine Apple panels - MacBook Repair Dubai calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS, but P3 colour, brightness, and contrast are identical. Both options carry the 90-day warranty.",
+    a: "True Tone works on genuine Apple panels - MacBook Repair Dubai calibrates it against the original logic board serial during reassembly. With aftermarket A-grade panels True Tone is disabled by macOS, but P3 colour, brightness, and contrast are identical. Both options carry the 3-month warranty.",
   },
   {
     q: "Can you replace just the cracked glass without changing the LCD?",
-    a: "On 2012-2015 Retina MacBooks, yes - an AED 600 glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. We will not charge for glass-only on bonded models because the result is unreliable.",
+    a: "On 2012-2015 Retina MacBooks, yes - a glass-only swap. On every MacBook from 2016 onward Apple bonded the glass to the LCD as a single assembly, so the full panel must be replaced. We will not do glass-only on bonded models because the result is unreliable. WhatsApp us for a price on your model.",
   },
   {
     q: "Do you use genuine Apple screens?",
-    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models we fit A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote and carry a 90-day warranty.",
+    a: "Genuine Apple panels are stocked for MacBook Pro M3, M4, and M5 - the only way to keep True Tone active. For 2012-2022 models we fit A-grade panels from the original Samsung or LG factories that built the Apple part. Both are labelled clearly on the WhatsApp quote and carry a 3-month warranty.",
   },
   {
     q: "Is there a warranty on the new screen?",
-    a: "A 90-day written warranty on parts and labour. It covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure. It does not cover new physical damage. The warranty is transferable once, free of charge, if the MacBook is sold.",
+    a: "A 3-month written warranty on parts and labour. It covers manufacturing defects, dead pixels appearing post-repair, backlight bleed, and cable failure. It does not cover new physical damage. The warranty is transferable once, free of charge, if the MacBook is sold.",
   },
   {
     q: "Do you offer pickup for screen repair?",
-    a: "Free pickup and delivery across Dubai mainland - Marina, Downtown, JBR, JLT, Palm, Business Bay, and Al Barsha. Same-hour pickup from Internet City and Knowledge Village. Sharjah and Abu Dhabi pickup is AED 100 each way.",
+    a: "No, we don't collect devices. Walk in to Office #45, Concord Tower, Media City, or send the MacBook yourself: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link. That works from Sharjah and Abu Dhabi too. When it's fixed, collect it, or we book a courier to bring it back.",
   },
 ];
 
@@ -68,9 +68,9 @@ export default function LandingTemplateDemo() {
   return (
     <LandingTemplate
       seo={{
-        title: "MacBook Screen Repair Dubai - From AED 600",
+        title: "MacBook Screen Repair Dubai - Same-Day, Quote on WhatsApp",
         description:
-          "MacBook screen repair Dubai from AED 600. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 90-day warranty. Call 055 741 3706.",
+          "MacBook screen repair Dubai. Same-day Air & Pro 14\". Flexgate, cracked glass, dead pixels. 3-month warranty. WhatsApp for a quote or call 055 741 3706.",
         path: DEMO_PATH,
         canonical: DEMO_PATH,
         noindex: true,
@@ -81,10 +81,8 @@ export default function LandingTemplateDemo() {
           organization(),
           serviceSchema({
             name: "MacBook Screen Repair Dubai",
-            price: 600,
-            priceMax: 1200,
             timeline: "Same day to 2 days",
-            warranty: "P90D",
+            warranty: "P3M",
             url: DEMO_PATH,
             description:
               "MacBook screen and LCD replacement in Dubai. Flexgate, cracked glass, dead pixels, backlight failure. Air, Pro 13/14/16, Intel and Apple Silicon.",
@@ -113,7 +111,7 @@ export default function LandingTemplateDemo() {
 
       /* Related internal links - GEO entity-linking */
       relatedServices={[
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen or short-lived battery, from AED 450, same day." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", description: "Swollen or short-lived battery, same day - message us for a price." },
         { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", description: "Board-level micro-soldering for no-power and short faults." },
         { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", description: "Liquid spill cleaning and corrosion repair, free diagnosis." },
       ]}
@@ -152,7 +150,7 @@ export default function LandingTemplateDemo() {
               { label: "Business Bay", href: "/macbook-repair-business-bay" },
               { label: "JBR", href: "/macbook-repair-jbr" },
               { label: "DIFC", href: "/macbook-repair-difc" },
-              { label: "MacBook repair near me", href: "/macbook-repair-near-me" },
+              { label: "MacBook repair near me", href: "/macbook-repair-near-me-dubai" },
             ],
           },
           {
@@ -175,20 +173,20 @@ export default function LandingTemplateDemo() {
         ctaHref: "/reviews",
         ctaLabel: `Read all ${REVIEW_COUNT}+ reviews`,
         items: [
-          { name: "Pauline Georgiadis", date: "2 weeks ago", rating: 5, text: "My MacBook Pro had an issue with the screen sensor and a motherboard short. I was so stressed out! They fixed it in record time and the price was very fair. Highly recommend!" },
-          { name: "Lloyd Stevens", date: "2 weeks ago", rating: 5, text: "Very professional and quick service, my 2017 MacBook Pro had an issue with the screen and needed a new battery, Aziz sorted this out the same day. Highly recommend!" },
-          { name: "Neil Morecraft", date: "3 weeks ago", rating: 5, text: "Friendly staff, quick turnaround, and great value for money. My MacBook came back looking spotless after a thorough clean and service - really pleased with the overall experience." },
+          { name: "Pauline Georgiadis", date: "", rating: 5, text: "My MacBook Pro had an issue with the screen sensor and a motherboard short. I was so stressed out! They fixed it in record time and the price was very fair. Highly recommend!" },
+          { name: "Lloyd Stevens", date: "", rating: 5, text: "Very professional and quick service, my 2017 MacBook Pro had an issue with the screen and needed a new battery, Aziz sorted this out the same day. Highly recommend!" },
+          { name: "Neil Morecraft", date: "", rating: 5, text: "Friendly staff, quick turnaround, and great value for money. My MacBook came back looking spotless after a thorough clean and service - really pleased with the overall experience." },
         ],
       }}
 
-      /* Key info - the things people ask AI: hours, pickup, location, quote */
+      /* Key info - the things people ask AI: hours, courier, location, quote */
       keyInfo={{
-        heading: "Hours, pickup & location",
+        heading: "Hours, courier & location",
         columns: [
-          { icon: Clock, title: "Opening hours", lines: ["Mon to Sat: 9 am - 10 pm", "Sunday: Closed", "WhatsApp replies 24/7"] },
-          { icon: Truck, title: "Free pickup & delivery", lines: ["Across Dubai mainland", "Courier within about 2 hours", "Free - you pay only on approval"] },
+          { icon: Clock, title: "Opening hours", lines: ["Mon to Sat: 9 am - 7 pm", "Friday: break 12-2 pm", "Sunday: Closed", "WhatsApp replies 24/7"] },
+          { icon: Truck, title: "Send it by courier", lines: ["Book any same-day courier app", "WhatsApp us the tracking link", "You pay only on approval"] },
           { icon: MapPin, title: "Visit the workshop", lines: ["Office #45, 10th Floor", "Concord Tower, Dubai Media City", "Al Sufouh, Dubai"] },
-          { icon: BadgeCheck, title: "Quote & warranty", lines: ["Free diagnosis, fixed written quote", "No fix, no charge", "90-day written warranty"] },
+          { icon: BadgeCheck, title: "Quote & warranty", lines: ["Free diagnosis, fixed written quote", "No fix, no charge", "3-month written warranty"] },
         ],
       }}
 
@@ -216,7 +214,7 @@ export default function LandingTemplateDemo() {
               { label: "M2 2022", href: "/macbook-air-13-m2-2022-repair-dubai", note: "MacBook Air 13-inch M2 2022 screen replacement" },
               { label: "M3 2024", href: "/macbook-air-13-m3-2024-repair-dubai", note: "MacBook Air 13-inch M3 2024 screen replacement" },
               { label: "M4 2025", href: "/macbook-air-13-m4-2025-repair-dubai", note: "MacBook Air 13-inch M4 2025 screen replacement" },
-              { label: "M5 2026", href: "/macbook-air-13-m5-2026-repair-dubai", note: "MacBook Air 13-inch M5 2026 screen replacement" },
+              { label: "M5 2026", href: "/macbook-air-m5-repair-dubai", note: "MacBook Air 13-inch M5 2026 screen replacement" },
             ],
           },
           {
@@ -225,13 +223,13 @@ export default function LandingTemplateDemo() {
               { label: "M2 2023", href: "/macbook-air-15-m2-2023-repair-dubai", note: "MacBook Air 15-inch M2 2023 screen replacement" },
               { label: "M3 2024", href: "/macbook-air-15-m3-2024-repair-dubai", note: "MacBook Air 15-inch M3 2024 screen replacement" },
               { label: "M4 2025", href: "/macbook-air-15-m4-2025-repair-dubai", note: "MacBook Air 15-inch M4 2025 screen replacement" },
-              { label: "M5 2026", href: "/macbook-air-15-m5-2026-repair-dubai", note: "MacBook Air 15-inch M5 2026 screen replacement" },
+              { label: "M5 2026", href: "/macbook-air-m5-repair-dubai", note: "MacBook Air 15-inch M5 2026 screen replacement" },
             ],
           },
           {
             heading: "MacBook Pro 13\"",
             models: [
-              { label: "Intel 2020", href: "/macbook-pro-13-intel-2020-repair-dubai", note: "MacBook Pro 13-inch Intel 2020 screen replacement (Flexgate-prone)" },
+              { label: "Intel 2020", href: "/macbook-pro-13-intel-2020-repair-dubai", note: "MacBook Pro 13-inch Intel 2020 screen replacement" },
               { label: "M1 2020", href: "/macbook-pro-13-m1-2020-repair-dubai", note: "MacBook Pro 13-inch M1 2020 screen replacement" },
               { label: "M2 2022", href: "/macbook-pro-13-m2-2022-repair-dubai", note: "MacBook Pro 13-inch M2 2022 screen replacement (last 13-inch Pro)" },
             ],
@@ -243,8 +241,8 @@ export default function LandingTemplateDemo() {
               { label: "M2 Pro 2023", href: "/macbook-pro-14-m2-pro-2023-repair-dubai", note: "MacBook Pro 14-inch M2 Pro 2023 screen replacement" },
               { label: "M3 2023", href: "/macbook-pro-14-m3-2023-repair-dubai", note: "MacBook Pro 14-inch M3 2023 screen replacement" },
               { label: "M4 2024", href: "/macbook-pro-14-m4-2024-repair-dubai", note: "MacBook Pro 14-inch M4 2024 screen replacement" },
-              { label: "M5 2025", href: "/macbook-pro-14-m5-2025-repair-dubai", note: "MacBook Pro 14-inch M5 2025 screen replacement" },
-              { label: "M5 Pro 2026", href: "/macbook-pro-14-m5-pro-2026-repair-dubai", note: "MacBook Pro 14-inch M5 Pro 2026 screen replacement" },
+              { label: "M5 2025", href: "/macbook-pro-m5-repair-dubai", note: "MacBook Pro 14-inch M5 2025 screen replacement" },
+              { label: "M5 Pro 2026", href: "/macbook-pro-m5-repair-dubai", note: "MacBook Pro 14-inch M5 Pro 2026 screen replacement" },
             ],
           },
           {
@@ -254,7 +252,7 @@ export default function LandingTemplateDemo() {
               { label: "M2 Pro 2023", href: "/macbook-pro-16-m2-pro-2023-repair-dubai", note: "MacBook Pro 16-inch M2 Pro 2023 screen replacement" },
               { label: "M3 2023", href: "/macbook-pro-16-m3-2023-repair-dubai", note: "MacBook Pro 16-inch M3 2023 screen replacement" },
               { label: "M4 2024", href: "/macbook-pro-16-m4-2024-repair-dubai", note: "MacBook Pro 16-inch M4 2024 screen replacement" },
-              { label: "M5 Pro 2026", href: "/macbook-pro-16-m5-pro-2026-repair-dubai", note: "MacBook Pro 16-inch M5 Pro 2026 screen replacement" },
+              { label: "M5 Pro 2026", href: "/macbook-pro-m5-repair-dubai", note: "MacBook Pro 16-inch M5 Pro 2026 screen replacement" },
             ],
           },
         ],
@@ -265,18 +263,18 @@ export default function LandingTemplateDemo() {
         badge: "MacBook screen repair - Dubai Media City",
         title: (
           <>
-            MacBook screen repair, <GradientText>from AED 600</GradientText>
+            MacBook screen repair, <GradientText>quote in minutes</GradientText>
           </>
         ),
         description:
-          "MacBook Repair Dubai replaces cracked glass, Flexgate cables, dead pixels, and dead backlights on every MacBook Air and Pro from Intel through M5. Same-day on most models, bench-tested for colour and dead pixels, and backed by a 90-day written warranty.",
+          "MacBook Repair Dubai replaces cracked glass, Flexgate cables, dead pixels, and dead backlights on every MacBook Air and Pro from Intel through M5. Same-day on most models, bench-tested for colour and dead pixels, and backed by a 3-month written warranty.",
         primary: { label: "Get a quote on WhatsApp", href: WHATSAPP_QUOTE },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: CALL },
         trustPills: [
           { icon: Star, label: `${REVIEW_AVERAGE.toFixed(1)} Google rating` },
           { icon: MessageSquare, label: `${REVIEW_COUNT}+ reviews` },
           { icon: CalendarClock, label: "Repairing Apple since 2004" },
-          { icon: ShieldCheck, label: "90-day warranty" },
+          { icon: ShieldCheck, label: "3-month warranty" },
         ],
         results: {
           icon: Monitor,
@@ -285,15 +283,15 @@ export default function LandingTemplateDemo() {
           status: { label: "Live", tone: "live" },
           stats: [
             { value: "3,400+", label: "Screens fitted" },
-            { value: "5.0", label: "Google rating" },
-            { value: "215+", label: "Reviews" },
+            { value: RATING_LABEL, label: "Google rating" },
+            { value: REVIEW_COUNT_LABEL, label: "Reviews" },
             { value: "Same-day", label: "Most models" },
           ],
           breakdown: [
-            { name: "Price from", value: "AED 600" },
+            { name: "Price", value: "On request" },
             { name: "Diagnosis", value: "Free" },
             { name: "Turnaround", value: "Same day" },
-            { name: "Warranty", value: "90 days" },
+            { name: "Warranty", value: "3 months" },
           ],
         },
       }}
@@ -315,18 +313,18 @@ export default function LandingTemplateDemo() {
           },
           {
             icon: Truck,
-            title: "Free pickup in Dubai",
-            body: "Free pickup and delivery across Dubai mainland, same day. Sharjah and Abu Dhabi pickup is AED 100 each way.",
+            title: "Walk in or send it by courier",
+            body: "Walk in with no appointment. Can't come in? Book any same-day courier app and it reaches us within the day, from Sharjah and Abu Dhabi too.",
           },
           {
             icon: ShieldCheck,
-            title: "90-day written warranty",
-            body: "Parts and labour covered for 90 days against defects, dead pixels, backlight bleed, and cable failure. Transferable once, free of charge.",
+            title: "3-month written warranty",
+            body: "Parts and labour covered for 3 months against defects, dead pixels, backlight bleed, and cable failure. Transferable once, free of charge.",
           },
           {
             icon: CalendarClock,
             title: "Same-day turnaround",
-            body: "Air 13\" and 15\", Pro 13\" Touch Bar, and Pro 14\" delivered same day when the panel is in stock - 90 of the last 100 same-day tickets shipped before 8 pm.",
+            body: "Air 13\" and 15\", Pro 13\" Touch Bar, and Pro 14\" finished same day when the panel is in stock - 90 of the last 100 same-day tickets shipped before 8 pm.",
           },
         ],
       }}
@@ -342,14 +340,14 @@ export default function LandingTemplateDemo() {
             name: "Flexgate cable fix",
             description:
               "Stage-light backlight and horizontal lines on the 2016-2017 Pro (A1706/A1707/A1708). Fixed with a 2 mm-longer flex cable so the wear pattern does not return.",
-            metric: { value: "AED 600", label: "Same-day cable swap" },
+            metric: { value: "Same day", label: "Cable swap turnaround" },
           },
           {
             icon: Layers,
             name: "Panel-only vs full assembly",
             description:
-              "LCD-only keeps the original camera, hinges, and antenna; full assembly swaps the whole lid. We quote both prices on every WhatsApp ticket.",
-            metric: { value: "AED 200-400", label: "Saved with LCD-only" },
+              "LCD-only keeps the original camera, hinges, and antenna; full assembly swaps the whole lid. We quote both options on every WhatsApp ticket.",
+            metric: { value: "LCD-only", label: "The cheaper option" },
           },
           {
             icon: Sun,
@@ -373,9 +371,9 @@ export default function LandingTemplateDemo() {
           },
           {
             icon: Truck,
-            name: "Free pickup & delivery",
+            name: "Walk in or courier",
             description:
-              "Free pickup from anywhere in Dubai mainland, same day. Or walk in to Office #45, Concord Tower, Media City - across from Media City Metro.",
+              "Walk in to Office #45, Concord Tower, Media City, a 3-minute walk from the Palm Jumeirah tram stop. Or book a same-day courier app yourself and WhatsApp us the tracking link.",
           },
         ],
       }}
@@ -415,15 +413,15 @@ export default function LandingTemplateDemo() {
       methodology={{
         heading: "Our screen repair process",
         subheading:
-          "From WhatsApp to delivery, every step has a fixed time estimate - no vague 'we'll call you back'.",
+          "From WhatsApp to handover, every step has a fixed time estimate - no vague 'we'll call you back'.",
         steps: [
           {
             title: "WhatsApp the model + photo",
             body: "Send the serial from About This Mac and a photo of the damage. Quote back in 4 to 8 minutes during business hours.",
           },
           {
-            title: "Free pickup or drop-off",
-            body: "Free pickup from anywhere in Dubai mainland, or walk in to Office #45, Concord Tower, Media City. Diagnosis on the spot, about 15 minutes.",
+            title: "Walk in or send it by courier",
+            body: "Walk in to Office #45, Concord Tower, Media City, or send it with a same-day courier you book. Diagnosis on the spot, about 15 minutes.",
           },
           {
             title: "Panel swap in the workshop",
@@ -434,7 +432,7 @@ export default function LandingTemplateDemo() {
             body: "On genuine panels, True Tone re-calibrates against the original board serial. The lid press cures for 90 minutes at 45 C before the MacBook leaves the bench.",
           },
           {
-            title: "47-point QC + 90-day warranty",
+            title: "47-point QC + 3-month warranty",
             body: "Backlight uniformity, dead-pixel scan, hinge torque, lid sensor, P3 gamut, and cable strain test - signed at handover with the warranty card.",
           },
         ],
@@ -444,45 +442,45 @@ export default function LandingTemplateDemo() {
       pricing={{
         heading: "MacBook screen repair pricing",
         subheading:
-          "All-in: panel, labour, and 90-day warranty. No diagnostic fee, no adhesive surcharge, VAT inclusive.",
+          "All-in: panel, labour, and 3-month warranty. No diagnostic fee, no adhesive surcharge, VAT inclusive.",
         tiers: [
           {
             name: "MacBook Air 13\" / Pro 13\"",
-            price: "AED 600",
-            period: "from",
+            price: "Price on request",
+            period: "",
             description: "Air 13\" M1/M2/M3 and Pro 13\" Touch Bar.",
             features: [
               "Same-day when in stock",
               "A-grade Samsung/LG panel",
-              "Free diagnosis & pickup",
-              "90-day written warranty",
+              "Free diagnosis, walk in",
+              "3-month written warranty",
             ],
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
           },
           {
             name: "MacBook Pro 14-16\"",
-            price: "AED 800",
-            period: "from",
-            description: "Pro 14\" from AED 800, Pro 16\" from AED 1,200.",
+            price: "Price on request",
+            period: "",
+            description: "Pro 14\" and Pro 16\" - message us for your model's price.",
             features: [
               "Genuine Apple panel option",
               "True Tone retained on genuine",
               "Same-day on 14\", 1-2 days on 16\"",
-              "90-day written warranty",
+              "3-month written warranty",
             ],
             highlighted: true,
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
           },
           {
             name: "Retina / assembly",
-            price: "AED 600",
-            period: "from",
+            price: "Price on request",
+            period: "",
             description: "2012-2015 Retina glass-only and 12\" Retina assembly.",
             features: [
               "Glass-only on 2012-2015 Retina",
               "Original Samsung panel sourcing",
-              "LCD-only saves AED 200-400",
-              "90-day written warranty",
+              "LCD-only is the cheaper option",
+              "3-month written warranty",
             ],
             cta: { label: "Get a quote", href: WHATSAPP_QUOTE },
           },
@@ -497,7 +495,7 @@ export default function LandingTemplateDemo() {
         eyebrow: "Free diagnosis",
         headline: "Cracked screen? WhatsApp the model - quote in 4 minutes",
         description:
-          "Send the year, screen size, processor, and a photo of the damage. Free pickup across Dubai mainland and a 90-day written warranty on every panel fitted.",
+          "Send the year, screen size, processor, and a photo of the damage. Walk in to Media City or send it by courier, with a 3-month written warranty on every panel fitted.",
         primary: { label: "Message on WhatsApp", href: WHATSAPP_QUOTE },
         secondary: { label: `Call ${NAP.phoneDisplay}`, href: CALL },
       }}

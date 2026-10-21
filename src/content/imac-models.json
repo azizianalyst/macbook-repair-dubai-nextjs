@@ -19,7 +19,7 @@
     "colours": "Blue, Green, Pink, Silver, Yellow, Orange, Purple",
     "commonIssues": [
       "Internal backup battery swelling (rare but documented)",
-      "Soldered SSD failure - chip-off recovery required",
+      "Soldered SSD failure - data recovery needs the original board running (no chip-off on Apple silicon)",
       "Power supply / power-brick failure",
       "Magic Keyboard / Touch ID pairing issues after macOS updates",
       "Webcam ribbon cable wear from screen open/close during repair attempts",
@@ -34,6 +34,13 @@
       "diagnostic": 0
     },
     "timelineNotes": "Logic-board work 3-5 days. Power supply same-day to 2 days. Screen 3 days (panel sourced).",
+    "turnaround": {
+      "screen": "3 days",
+      "logicBoard": "3-5 days",
+      "psu": "Same-day to 2 days",
+      "ssdRecovery": "Quoted after assessment",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "First M-series iMac and still a great machine in 2026. RAM and SSD are soldered - what you bought is what you keep. Logic-board failures we handle component-level where possible; full-board swap is the fallback.",
     "heroTagline": "First Apple Silicon iMac. Seven colours, 4.5K Retina, M1 - and we still keep these in great shape."
   },
@@ -71,7 +78,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "Most repairs 2-4 days. Apple SKIPPED M2 for iMac entirely - the M3 was the direct successor to M1.",
-    "honestyNote": "Apple skipped the M2 iMac generation entirely. If you have an 8GB M3, treat the SSD with care - heavy macOS swap usage on the soldered drive shortens its life. We've seen a few of these come in for chip-off SSD recovery already.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "logicBoard": "3-5 days",
+      "psu": "2-4 days",
+      "ssdRecovery": "Quoted after assessment",
+      "fanCleaning": "Same-day"
+    },
+    "honestyNote": "Apple skipped the M2 iMac generation entirely. If you have an 8GB M3, treat the SSD with care - heavy macOS swap usage on the soldered drive shortens its life. We've already seen a few come in for data recovery, which on Apple silicon means getting the original board running again.",
     "heroTagline": "Apple skipped M2 - this was the M1's direct successor. Same 7 colours, more punch."
   },
   {
@@ -106,7 +120,14 @@
       "fanCleaning": 320,
       "diagnostic": 0
     },
-    "timelineNotes": "Apple's current 24\" iMac. Most parts via authorised channels - battery-style same-day for power brick, 3 days for logic board.",
+    "timelineNotes": "Apple's current 24\" iMac. Power brick same-day, logic board 3 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "logicBoard": "3 days",
+      "psu": "Same-day",
+      "ssdRecovery": "Quoted after assessment",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "Current Apple lineup - always check warranty / AppleCare+ first. We handle accidental damage Apple won't cover (cracked panel, liquid spill, dropped power brick).",
     "heroTagline": "Apple's current 24\" iMac. 12MP camera, M4 punch, nano-texture option."
   },
@@ -147,6 +168,14 @@
       "diagnostic": 0
     },
     "timelineNotes": "RAM upgrade same-day. Fusion → SSD swap 1-2 days (one of our most-requested jobs). Logic-board work 3-5 days.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "logicBoard": "3-5 days",
+      "psu": "1-2 days",
+      "ram": "Same-day",
+      "ssd": "1-2 days",
+      "fanCleaning": "Same-day"
+    },
     "honestyNote": "Pre-T2 chip - much more user-serviceable than later models. RAM is socketed and upgradeable to 64GB. The single biggest speed boost we can give you is replacing the Fusion Drive with a proper SSD. Customers tell us their 2017 iMac feels brand new after this.",
     "heroTagline": "5K Retina, upgradeable RAM, no T2 chip. Still a fantastic machine in 2026 - and we keep it that way."
   },
@@ -167,7 +196,7 @@
     "wirelessChip": "Wi-Fi 5, Bluetooth 5.0",
     "currentInLineup": false,
     "discontinued": "August 2020",
-    "lastMacOS": "macOS Sonoma 14",
+    "lastMacOS": "macOS Sequoia 15",
     "commonIssues": [
       "Power supply failure (very common)",
       "Radeon Pro Vega GPU thermal failures",
@@ -186,8 +215,16 @@
       "thermalPaste": 320,
       "diagnostic": 0
     },
-    "timelineNotes": "RAM upgrade to 64GB same-day. Fusion → SSD 1-2 days. Power supply 1-2 days. Last macOS support: Sonoma 14.",
-    "honestyNote": "The best Intel 27\" iMac for upgrade value. i9 + 64GB RAM + 2TB SSD is a beast for ~AED 3,250 in upgrades - beats a base M4 Mac mini for display and total RAM. If you own one, upgrade it before buying new.",
+    "timelineNotes": "RAM upgrade to 64GB same-day. Fusion → SSD 1-2 days. Power supply 1-2 days. Last macOS support: Sequoia 15.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "logicBoard": "3-5 days",
+      "psu": "1-2 days",
+      "ram": "Same-day",
+      "ssd": "1-2 days",
+      "fanCleaning": "Same-day"
+    },
+    "honestyNote": "The best Intel 27\" iMac for upgrade value. i9 + 64GB RAM + 2TB SSD is a beast for the cost of the upgrades alone - beats a base M4 Mac mini for display and total RAM. If you own one, upgrade it before buying new.",
     "heroTagline": "i9, 64GB capable, 5K Retina. The best Intel 27\" iMac to upgrade in 2026."
   },
   {
@@ -207,14 +244,14 @@
     "wirelessChip": "Wi-Fi 5, Bluetooth 5.0",
     "currentInLineup": false,
     "discontinued": "March 2022 (last Intel iMac ever)",
-    "lastMacOS": "macOS Sequoia 15",
+    "lastMacOS": "macOS Tahoe 26",
     "commonIssues": [
       "Power supply failure (carries over from 2017-2019)",
       "T2 chip activation lock issues after logic-board changes",
       "Nano-texture display surface scratches from incorrect cleaning",
       "Thermal paste degradation on i9 / 10-core variants",
       "10GbE port failures (option)",
-      "SSD failure (now soldered behind T2 - chip-off recovery required)"
+      "SSD failure (soldered and encrypted by the T2 - data recovery needs the original board running)"
     ],
     "pricing": {
       "screen": 1300,
@@ -229,8 +266,16 @@
       "diagnostic": 0
     },
     "timelineNotes": "RAM upgrade same-day to 128GB. T2 chip means SSD is soldered - no SSD upgrade possible. Power supply 1-2 days. Last Intel iMac Apple ever made.",
-    "honestyNote": "Last Intel iMac ever, and the best one. RAM goes to 128GB user-upgradeable - incredible. But the T2 chip soldered the SSD to the board, so SSD upgrades are impossible (and SSD failure means chip-off recovery). Still receives the latest macOS Sequoia 15. Excellent buy used.",
-    "heroTagline": "Last Intel iMac. 128GB RAM-capable, T2-secured, still on macOS Sequoia in 2026."
+    "turnaround": {
+      "screen": "2-3 days",
+      "logicBoard": "3-5 days",
+      "psu": "1-2 days",
+      "ram": "Same-day",
+      "ssdRecovery": "Quoted after assessment",
+      "fanCleaning": "Same-day"
+    },
+    "honestyNote": "Last Intel iMac ever, and the best one. RAM goes to 128GB user-upgradeable - incredible. But the T2 chip soldered the SSD to the board, so SSD upgrades are impossible (and because the T2 encrypts it, data recovery means getting the original board running). Its last major macOS is Tahoe 26: macOS 27 runs only on Apple silicon, so this iMac stays on Tahoe. Excellent buy used.",
+    "heroTagline": "Last Intel iMac. 128GB RAM-capable, T2-secured, supported up to macOS Tahoe 26."
   },
   {
     "slug": "imac-27-pro-2017-repair-dubai",
@@ -256,7 +301,7 @@
       "Thermal paste degradation under Xeon load",
       "Power supply failure",
       "Parts scarcity - Xeon CPUs and Vega GPU modules are rare in 2026",
-      "T2 SSD failure - chip-off recovery only"
+      "T2 SSD failure - the modules are encrypted and paired to the T2, so recovery needs the original board running"
     ],
     "pricing": {
       "screen": 1560,
@@ -270,7 +315,17 @@
       "diagnostic": 0
     },
     "timelineNotes": "Parts sourcing 3-7 days for Xeon CPUs and Vega GPU modules - these are rare. Standard repairs (PSU, thermal paste, RAM) 2-3 days.",
-    "honestyNote": "Discontinued in 2021 and parts are getting genuinely rare. Xeon CPUs and Vega GPU modules can take a week to source. We're honest at intake - if it's a GPU failure on a 2017 iMac Pro, the parts may exceed the resale value. PSU and thermal jobs are still very worthwhile.",
+    "turnaround": {
+      "screen": "2-3 days",
+      "logicBoard": "3-5 days",
+      "psu": "2-3 days",
+      "ram": "2-3 days",
+      "gpu": "3-7 days (parts sourcing)",
+      "cpu": "3-7 days (parts sourcing)",
+      "ssdRecovery": "Quoted after assessment",
+      "fanCleaning": "2-3 days"
+    },
+    "honestyNote": "Discontinued in 2021 and parts are getting genuinely rare. Xeon CPUs and Vega GPU modules can take up to a week to source. We're honest at intake - if it's a GPU failure on a 2017 iMac Pro, the parts may exceed the resale value. PSU and thermal jobs are still very worthwhile.",
     "heroTagline": "Xeon W, ECC RAM, Vega Pro graphics, Space Gray. The workstation iMac. We still service them - when parts are available."
   }
 ]

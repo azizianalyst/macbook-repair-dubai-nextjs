@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacBookTrackpadRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="MacBook Trackpad Repair Dubai - AED 350 | 1 Day | Force Touch Specialists"
-      seoDescription="MacBook trackpad repair Dubai. Dead clicks, ghost touches, swollen-battery push-up. Force Touch haptic engine specialists. AED 350. Call 055 741 3706."
+      seoTitle="MacBook Trackpad Repair Dubai - | 1 Day | Force Touch Specialists"
+      seoDescription="MacBook trackpad repair Dubai. Dead clicks, ghost touches, swollen-battery push-up. Force Touch haptic engine specialists. Call 055 741 3706."
       path="/macbook-trackpad-repair-dubai"
       eyebrow="MacBook trackpad repair"
       h1="MacBook Trackpad Repair Dubai"
-      subtitle="Click stopped working, cursor jumping, trackpad lifting from the body. Often a swollen battery underneath - we always check both. AED 350, 1 day."
+      subtitle="Click stopped working, cursor jumping, trackpad lifting from the body. Often a swollen battery underneath - we always check both. One-day turnaround, written quote first."
       startingPrice={350}
       timeline="1 day"
       whatsappPrefill="Hi, my MacBook trackpad isn't working - model:"
@@ -19,13 +19,13 @@ export default function MacBookTrackpadRepair() {
         { name: "Trackpad Repair", path: "/macbook-trackpad-repair-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "MacBook input & Force Touch repair" }}
-      serviceName="MacBook Trackpad Repair"
+      serviceName="MacBook Trackpad Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>MacBook trackpad repair in Dubai</strong> usually splits into two camps: the trackpad itself has failed (worn click mechanism, dead Force Touch haptic engine, cracked glass), or the trackpad is fine but a <strong>swollen battery</strong> underneath is pushing it up from below. We always check the battery first - replacing a trackpad on top of a swollen cell is a fire risk and a waste of money.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             On Force Touch trackpads (2015 onwards) we replace the haptic engine and force sensors as a unit. Calibration done on the bench so click force matches Apple spec.
           </p>
         </>
@@ -46,11 +46,11 @@ export default function MacBookTrackpadRepair() {
         { title: "Swap the trackpad", body: "Disconnect, replace with the correct part for your model, transfer brackets, recalibrate force." },
         { title: "Bench QC", body: "Verify click consistency across all four corners, all gestures, Force Touch, and palm rejection." },
       ]}
-      warrantyDays={90}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers trackpad, click mechanism and Force Touch electronics.",
         "Excludes new physical damage (drops, fresh impact).",
-        "Free re-fit if click feel changes inside 90 days.",
+        "Free re-fit if click feel changes inside 2 years.",
       ]}
       faqs={[
         { q: "How can I tell if it's the trackpad or the battery underneath?", a: "Look for the trackpad sitting flush with the palm rest (vs. raised even slightly). Run coconutBattery - if your battery is showing swelling indicators or 100%+ original capacity, that's a swollen cell. We check both at intake - no charge." },
@@ -63,7 +63,7 @@ export default function MacBookTrackpadRepair() {
       reviewNames={["Saeed Alam", "Polycarp", "Mariia Chymyrysova"]}
       related={[
         { label: "MacBook Repair Hub",          href: "/",              description: "Parent hub - all MacBook services." },
-        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Swollen battery? Fix the cause first. From AED 350." },
+        { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai",  description: "Swollen battery? Fix the cause first." },
         { label: "MacBook Keyboard Repair",     href: "/macbook-keyboard-repair-dubai",       description: "Sister input fault. Same-day on most models." },
       ]}
       blogLink={{ label: "How a swollen MacBook battery breaks your trackpad", href: "/blog/macbook-battery-replacement-cost-2026" }}

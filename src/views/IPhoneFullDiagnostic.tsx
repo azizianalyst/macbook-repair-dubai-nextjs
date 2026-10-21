@@ -15,17 +15,17 @@ export default function IPhoneFullDiagnostic() {
       whatsappPrefill="Hi, I'd like a free iPhone diagnostic - model and main concern:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPhone Repair",   path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "Free Diagnostic", path: "/iphone-full-diagnostic-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone diagnostics across all models" }}
-      serviceName="iPhone Free Full Diagnostic"
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone diagnostics across all models" }}
+      serviceName="iPhone Free Full Diagnostic Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Walk in with a problem, walk out with a written report and a fixed price.</strong> Free, no obligation, no upsell. We run a 20-point check on every iPhone - battery health, screen quality, all four mics, both speakers, all ports, all antennas, Face ID or Touch ID, water-damage indicators, and a software-side check for jailbreaks or rogue profiles.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             About 20% of iPhones we see don't actually need a repair - they need a software reset, a free port clean, or a battery replacement they could schedule for next month. We tell you the truth either way. If you do need work, you'll see the price in writing before we touch anything.
           </p>
         </>
@@ -46,10 +46,10 @@ export default function IPhoneFullDiagnostic() {
         { title: "Battery + screen forensics", body: "True battery health (not just iOS Settings), screen brightness uniformity, True Tone calibration, original vs aftermarket detection." },
         { title: "Written report", body: "We hand you a one-page summary: what's working, what's borderline, what needs work, and the cost in writing. No obligation to repair." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Diagnostic itself is free of charge - no warranty needed.",
-        "Any repair you book afterwards carries our standard 90-day warranty.",
+        "Any repair you book afterwards carries our standard warranty of 15 days to 2 years.",
         "We don't disable, modify or 'unlock' anything during the diagnostic.",
       ]}
       faqs={[

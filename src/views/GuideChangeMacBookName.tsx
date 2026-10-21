@@ -16,7 +16,7 @@ export default function GuideChangeMacBookName() {
     <BlogPostTemplate
       seoTitle="How to Change Your MacBook's Name (2026 Guide)"
       seoDescription="Rename your MacBook in 30 seconds via System Settings, General, About. Plus computer name vs hostname vs Bonjour name, and changing it in Terminal."
-      path="/how-to-change-macbook-name"
+      path="/blog/how-to-change-macbook-name"
       category="How-to · macOS"
       h1="How to Change Your MacBook's Name"
       hook="Renaming your MacBook takes about 30 seconds and instantly updates AirDrop, Finder sharing, and your iCloud device list - here's the simple way, plus the Terminal trick for the technical hostname."
@@ -109,14 +109,14 @@ export default function GuideChangeMacBookName() {
             network glitch. Toggle Wi-Fi off and on, or restart the Mac, and the new name
             appears everywhere. If your MacBook is also feeling sluggish while you're in there,
             our{" "}
-            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">
               10 fixes for a slow MacBook
             </Link>{" "}
             are a quick read. And if the screen, keyboard, or anything else is misbehaving, our{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair team in Dubai
             </Link>{" "}
-            offers free pickup, free diagnosis, and a 90-day warranty.
+            offers walk-in service in Dubai Media City, free diagnosis, and a warranty of 15 days to 2 years.
           </p>
         </>
       }
@@ -155,8 +155,8 @@ export default function GuideChangeMacBookName() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook repair Dubai", href: "/", description: "Free pickup, free diagnosis, 90-day warranty across Dubai." },
-        { label: "macOS reinstall Dubai", href: "/mac-os-reinstall-dubai", description: "Clean install if your Mac's software is acting up." },
+        { label: "MacBook repair Dubai", href: "/", description: "Walk-in workshop in Dubai Media City, free diagnosis, warranty of 15 days to 2 years." },
+        { label: "macOS reinstall Dubai", href: "/macos-reinstall-dubai", description: "Clean install if your Mac's software is acting up." },
         { label: "MacBook running slow? 10 fixes", href: "/blog/macbook-running-slow-10-fixes", description: "Quick wins to speed up a sluggish MacBook." },
       ]}
     />

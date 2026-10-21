@@ -29,7 +29,7 @@ const TONE_DOT: Record<ResultsCardStatusTone, string> = {
 function StatusPill({ label, tone = "live" }: { label: string; tone?: ResultsCardStatusTone }) {
   const dot = TONE_DOT[tone];
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-2.5 py-1 text-xs font-medium text-white/80">
+    <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-2.5 py-1 text-xs font-medium text-white/80">
       <span className="relative inline-flex h-2 w-2">
         <span
           className={cn(
@@ -63,17 +63,11 @@ export function ResultsCard({
 
   return (
     <Reveal className={cn("relative", className)}>
-      {/* soft radial accent glow behind the card */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(60%_60%_at_50%_30%,hsl(150_84%_40%/0.28),transparent_70%)] blur-2xl"
-      />
-
-      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-md shadow-lg backdrop-blur-xl sm:p-lg">
+      <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md shadow-lg backdrop-blur-xl sm:p-lg">
         {/* Header row */}
         <div className="flex items-start gap-3">
           {Icon ? (
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-[hsl(150_84%_40%/0.18)] text-emerald-300">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-[hsl(150_84%_40%/0.18)] text-emerald-300">
               <Icon className="h-5 w-5" aria-hidden="true" />
             </span>
           ) : null}
@@ -82,11 +76,11 @@ export function ResultsCard({
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 {subtitle ? (
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-widest text-white/50">
+                  <p className="mono text-[12px] uppercase tracking-wider text-white/50">
                     {subtitle}
                   </p>
                 ) : null}
-                <h3 className="truncate text-base font-semibold text-on-primary sm:text-lg">
+                <h3 className="truncate text-base font-semibold text-text sm:text-lg">
                   {title}
                 </h3>
               </div>
@@ -101,9 +95,9 @@ export function ResultsCard({
             {tiles.map((s, i) => (
               <div
                 key={`${s.label}-${i}`}
-                className="rounded-xl border border-white/10 bg-white/[0.04] p-4"
+                className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-4"
               >
-                <div className="text-3xl font-extrabold leading-none text-on-primary sm:text-4xl">
+                <div className="text-3xl font-extrabold leading-none text-text sm:text-4xl">
                   <CountUp value={s.value} />
                 </div>
                 <div className="mt-1.5 text-xs text-white/60">{s.label}</div>
@@ -114,14 +108,14 @@ export function ResultsCard({
 
         {/* Optional breakdown list */}
         {breakdown && breakdown.length > 0 ? (
-          <div className="mt-md divide-y divide-white/10 rounded-xl border border-white/10 bg-white/[0.04]">
+          <div className="mt-md divide-y divide-white/10 rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03]">
             {breakdown.map((row, i) => (
               <div
                 key={`${row.name}-${i}`}
                 className="flex items-center justify-between gap-4 px-4 py-2.5 text-sm"
               >
                 <span className="min-w-0 truncate text-white/70">{row.name}</span>
-                <span className="shrink-0 font-semibold text-on-primary">{row.value}</span>
+                <span className="shrink-0 font-semibold text-text">{row.value}</span>
               </div>
             ))}
           </div>

@@ -1,46 +1,120 @@
-// canonical site data - change here, propagates everywhere
+// canonical site data. The business facts (NAP / reviews / hours / freshness) are now edited in the
+// admin Business tab and baked in by scripts/gen-business.cjs → business.generated.ts. We import and
+// re-export them here so every existing `@/content/site` import keeps working unchanged.
+import {
+  NAP as GEN_NAP, REVIEW_COUNT as GEN_REVIEW_COUNT, REVIEW_AVERAGE as GEN_REVIEW_AVERAGE,
+  CONTENT_REVIEWED as GEN_CONTENT_REVIEWED, HOURS as GEN_HOURS,
+} from "./business.generated";
+import { SITE_SETTINGS } from "./settings.generated";
+
+// `yearsInBusiness` in business.generated.ts is a HARDCODED number that silently
+// becomes false on each anniversary - it was due to expire on 10 October 2026
+// (audit 2026-09-23). Derive it from `founded` instead so it can never drift, and
+// override the generated field. Anything rendering tenure must read NAP.yearsInBusiness,
+// never a literal: the site already shipped "20 years" on 12 pages and "21 years" on 6.
+function yearsSince(founded: string): number {
+  const start = new Date(founded);
+  if (Number.isNaN(start.getTime())) return GEN_NAP.yearsInBusiness;
+  const now = new Date();
+  let years = now.getFullYear() - start.getFullYear();
+  const beforeAnniversary =
+    now.getMonth() < start.getMonth() ||
+    (now.getMonth() === start.getMonth() && now.getDate() < start.getDate());
+  if (beforeAnniversary) years -= 1;
+  return years;
+}
 
 export const NAP = {
-  name: "MacBook Repair Dubai",
-  street: "Office #45, 10th Floor, Concord Tower",
-  area: "Al Sufouh, Dubai Media City",
-  city: "Dubai",
-  country: "United Arab Emirates",
-  phoneDisplay: "055 741 3706",
-  phoneE164: "+971557413706",
-  whatsappUrl: "https://wa.me/971557413706",
-  facebook: "https://www.facebook.com/macbookrepairdubai.ae/",
-  founded: "10 October 2004",
-  yearsInBusiness: 21,
+  ...GEN_NAP,
+  yearsInBusiness: yearsSince(GEN_NAP.founded),
+};
+export const REVIEW_COUNT = GEN_REVIEW_COUNT;
+export const REVIEW_AVERAGE = GEN_REVIEW_AVERAGE;
+// Display labels for the Google rating (e.g. 232+ and 5.0). Copy uses these, never typed numbers,
+// so the site follows data/seo.json (t-review-count-from-data).
+export const REVIEW_COUNT_LABEL = `${REVIEW_COUNT}+`;
+export const RATING_LABEL = REVIEW_AVERAGE.toFixed(1);
+
+// Visible "content reviewed" freshness signal (AEO lever), now edited in the admin Business tab.
+export const CONTENT_REVIEWED = GEN_CONTENT_REVIEWED;
+
+// ISO date used as lastmod in all sitemaps for non-blog routes, now edited in /admin/settings
+// (settings.generated.ts). Only changes when content changes, so it stays a real freshness signal.
+export const SITEMAP_LAST_UPDATED = SITE_SETTINGS.sitemapLastmod;
+
+// Opening hours, now edited in the admin Business tab (see business.generated.ts).
+export const HOURS = GEN_HOURS;
+
+// Canonical repair pricing (AED, VAT-inclusive). Single source of truth, the home
+// FAQ answers, the visible price table, and the JSON-LD OfferCatalog must all agree
+// with these figures. Update here first, then sweep copy that quotes them.
+export const PRICING = {
+  floor: 150,        // cheapest itemized repair: single key cap (FAQ #1)
+  ceiling: 3500,     // top of the range across all services
+  screen: { from: 600, to: 1200 },      // Air 13"/Pro 13" 600 · Pro 14" 800 · Pro 16" 1,200
+  battery: { from: 450, to: 600 },      // Air 450 · Pro 13" 500 · Pro 14"/16" 600
+  keyboard: { from: 150, to: 700 },     // key cap 150 · Magic Keyboard 350 · butterfly top case 700
+  logicBoard: { from: 299, to: 2999 },  // component-level board repair (floor = simplest single-IC fix)
+  ssdUpgrade: { from: 599, to: 1499 },  // HDD→SSD incl. drive + installation
+  waterDamage: { from: 299, to: 2499 },
+  software: { from: 199, to: 499 },     // OS install, virus removal
 } as const;
 
-// Review totals - bump when site crosses 200+, 225+, 250+, etc.
-export const REVIEW_COUNT = 215;
-export const REVIEW_AVERAGE = 5.0;
+// Canonical warranty tiers. The warranty is NOT flat, it depends on the repair.
+// Single source of truth: visible copy, the /warranty page table, and every
+// JSON-LD WarrantyPromise (warranty: WARRANTY.*.iso) must agree with these.
+//   • hardware  → 2 years  (trackpad, ports, Touch Bar, hinge, fan, speaker, SSD/RAM, new Apple parts)
+//   • screens   → by grade (src/content/part-grades.ts): Apple original 2 years, pull-out 3 months,
+//                 new OEM / aftermarket 15 days; derived copy uses the standard pull-out (3 months)
+//   • battery   → 3 months + 80% capacity guarantee (MacBook & iPhone)
+//   • short     → 15 days  (keyboard replacement, software / macOS reinstall / virus removal,
+//                           diagnostics & no-fix, data recovery, and logic-board + liquid-damage repairs)
+// Headline phrasing gives the whole range ("15 days to 2 years"), never "flat"/"every repair".
+// Owner, 2026-10-21: hardware and new Apple parts 2 years; logic board stays 15 days.
+export const WARRANTY = {
+  hardware: { iso: "P2Y", label: "2 years" },
+  battery: { iso: "P3M", label: "3 months" },
+  short: { iso: "P15D", label: "15 days" },
+  headline: "15 days to 2 years",
+  headlineLong: "a written warranty of 15 days to 2 years, depending on the repair and part",
+} as const;
 
-export const HOURS = [
-  { day: "Monday",    open: "9 am - 10 pm" },
-  { day: "Tuesday",   open: "9 am - 10 pm" },
-  { day: "Wednesday", open: "9 am - 10 pm" },
-  { day: "Thursday",  open: "9 am - 10 pm" },
-  { day: "Friday",    open: "9 am - 10 pm" },
-  { day: "Saturday",  open: "9 am - 10 pm" },
-  { day: "Sunday",    open: "Closed" },
-] as const;
-
-// top services for nav + footer
-export const TOP_SERVICES = [
-  { label: "MacBook Screen Repair",     href: "/macbook-screen-repair-dubai",       price: 780 },
-  { label: "MacBook Battery Replacement", href: "/macbook-battery-replacement-dubai", price: 590 },
-  { label: "MacBook Keyboard Replacement", href: "/macbook-keyboard-repair-dubai", price: 460 },
-  { label: "MacBook Logic Board Repair", href: "/macbook-logic-board-repair-dubai", price: 1040 },
-  { label: "MacBook Water Damage Repair", href: "/macbook-water-damage-repair-dubai", price: 910 },
-  { label: "MacBook Trackpad Repair",   href: "/macbook-trackpad-repair-dubai",     price: 460 },
-  { label: "iMac Screen Repair",        href: "/imac-screen-repair-dubai",          price: 1040 },
-  { label: "iPhone Screen Repair",      href: "/iphone-screen-repair-dubai",        price: 460 },
-  { label: "iPad Screen Repair",        href: "/ipad-screen-repair-dubai",          price: 460 },
-  { label: "Data Recovery",             href: "/mac-data-recovery-dubai",               price: 520 },
-] as const;
+// The page templates carry a numeric `warrantyDays` per page. These helpers snap that
+// number to the canonical tiers for display + JSON-LD, so copy and schema never diverge:
+//   730 → 2-year (hardware) · 90 → 3-month (battery) · 15 → short (software/board/liquid/data) · 0 → unlock (no parts warranty)
+export function warrantyLabel(days: number): string {
+  if (days >= 730) return "2-year";
+  if (days >= 365) return "12-month";
+  if (days >= 90) return "3-month";
+  if (days > 0) return `${days}-day`;
+  return "";
+}
+// Sentence fragment, e.g. "a 12-month written warranty"; unlock services (0) carry none.
+export function warrantyClause(days: number): string {
+  const l = warrantyLabel(days);
+  return l ? `a ${l} written warranty` : "a written quote before any work";
+}
+// ISO-8601 duration for the JSON-LD WarrantyPromise; undefined = omit (unlock services).
+export function warrantyIso(days: number): string | undefined {
+  if (days <= 0) return undefined;
+  if (days >= 730) return "P2Y";
+  if (days >= 365) return "P1Y";
+  if (days >= 90) return "P3M";
+  return `P${days}D`;
+}
+// Infer the warranty tier (in days) from a service NAME, so auto-derived copy
+// (QuickAnswer) lands on the right tier without each caller passing it. Mirrors the
+// per-page classification: battery=90, screens=90, keyboard=15,
+// software/board/liquid/data/diagnostics=15, unlock=0, everything else (hardware)=730.
+export function warrantyDaysForService(name: string): number {
+  const n = name.toLowerCase();
+  if (/icloud|network unlock|activation lock|sim unlock/.test(n)) return 0;
+  if (/batter/.test(n)) return 90;
+  if (/screen|display|digiti[sz]er/.test(n)) return 90;   // screens (all devices): 3-month warranty
+  if (/keyboard|key cap/.test(n)) return 15;              // keyboard replacement: 15-day warranty
+  if (/water|liquid|logic board|\bgpu\b|graphics|data recovery|backup|reinstall|virus|software|diagnostic|safe mode|boot ?camp|performance|not turning on|won.?t turn on|overheat|thermal|fan clean|cleaning|maintenance|unlock/.test(n)) return 15;
+  return 730;
+}
 
 export const DEVICE_FAMILIES = [
   { label: "MacBook",     href: "/mac-repair-dubai" },
@@ -60,10 +134,35 @@ export const NAV_LINKS = [
 ] as const;
 
 export const USPS = [
-  { label: "Free diagnosis",       icon: "Search" },
-  { label: "No fix, no charge",    icon: "ShieldCheck" },
-  { label: "Same-day service",     icon: "Clock" },
-  { label: "Free pickup in Dubai", icon: "Truck" },
-  { label: "Since 2004",           icon: "Award" },
-  { label: "215+ five-star reviews", icon: "Star" },
+  { label: "Free diagnosis",              icon: "Search" },
+  { label: "No fix, no charge",           icon: "ShieldCheck" },
+  { label: "30-min appointment repair",   icon: "Clock" },
+  { label: "15-day to 2-year warranty",     icon: "BadgeCheck" },
+  { label: "Walk-in, Media City",         icon: "MapPin" },
+  { label: "Free loaner MacBook",         icon: "Laptop" },
+  { label: "Since 2004",                  icon: "Award" },
+  { label: `${REVIEW_COUNT}+ five-star reviews`, icon: "Star" },
+] as const;
+
+// Workshop technician roster, single source of truth for BOTH the About-page team
+// section AND the server-rendered Person JSON-LD (E-E-A-T: named, experienced techs).
+// Consumed by src/views/About.tsx (display) and src/lib/page-schema.ts (schema), so the
+// visible roster and the structured data can never drift. Keep names/years accurate.
+export const TEAM = [
+  // Abdul Aziz founded the business and works on Apple hardware himself; Shafiq runs the
+  // bench day to day. Both were previously described as "lead technician" - Abdul Aziz in a
+  // hardcoded Person node on the homepage, Shafiq here - so the structured data shipped two
+  // lead technicians with different years of experience. Distinct titles, one roster.
+  { name: "Abdul Aziz", years: NAP.yearsInBusiness, specialisation: "Founder · Apple Certified Mac Technician (ACMT)", credentials: ["Apple Certified Mac Technician (ACMT)"] },
+  { name: "Shafiq", years: 15, specialisation: "Lead technician · screens, batteries, water damage" },
+  { name: "Usman",  years: 11, specialisation: "Board-level repair · M-series logic boards" },
+  { name: "Ali",    years: 14, specialisation: "Data recovery · iMac and Mac mini" },
+  { name: "Hamza",  years: 7,  specialisation: "iPhone, iPad" },
+  // Added 2026-08-31 after a content-truth audit found them bylined on 55+ pages but absent
+  // here — the owner confirmed both are real staff. Shafeeq is a separate person from Shafiq
+  // (also owner-confirmed), despite the similar name. Specialisations distilled from the pages
+  // each already fronts; years are the values those pages have published consistently.
+  { name: "Mohammed", years: 14, specialisation: "Mac desktop repair · Mac mini, Studio & Pro" },
+  { name: "Sayed",    years: 12, specialisation: "macOS software · installs, migration & tune-up" },
+  { name: "Shafeeq",  years: 12, specialisation: "iPad repair · boards, ports & displays" },
 ] as const;

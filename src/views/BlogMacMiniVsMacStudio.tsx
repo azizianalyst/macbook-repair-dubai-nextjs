@@ -7,26 +7,37 @@ export default function BlogMacMiniVsMacStudio() {
   return (
     <BlogPostTemplate
       seoTitle="Mac Mini vs Mac Studio 2026 - Which to Buy? Dubai Guide"
-      seoDescription="Mac Mini M4 Pro AED 4,499 vs Mac Studio M4 Max AED 8,499. Where the line is - overlap, performance, thermals, ports, resale. Workflow-by-workflow verdict."
+      seoDescription="Mac Mini M4 Pro vs Mac Studio M4 Max. Where the line is - overlap, performance, thermals, ports, resale. Workflow-by-workflow verdict for Dubai buyers."
       path="/blog/mac-mini-vs-mac-studio-2026"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer by use case" },
+        { id: "mini-sweet-spot", label: "Mac Mini M4 sweet spot" },
+        { id: "overlap", label: "M4 Pro vs M4 Max overlap" },
+        { id: "when-studio", label: "When Studio is required" },
+        { id: "benchmarks", label: "Performance benchmarks" },
+        { id: "thermals", label: "Thermal handling" },
+        { id: "connectivity", label: "Connectivity and ports" },
+        { id: "resale", label: "Resale comparison" },
+      ]}
       category="Comparison · Mac desktop"
       h1="Mac Mini vs Mac Studio 2026 - Buying Guide"
-      hook="Mac Mini M4 Pro: AED 4,499. Mac Studio M4 Max: AED 8,499. Where's the line?"
-      quickAnswer="For 90% of Dubai buyers, Mac Mini M4 Pro (AED 4,499, 24 GB RAM) is enough - it handles 4K video, large Xcode projects and Logic Pro 50+ tracks. Choose Mac Studio M4 Max (AED 8,499, 36 GB RAM) only for sustained 8K video, live colour grading, big 3D renders or LLM inference, where its thermals win."
+      hook="Mac Mini M4 Pro vs Mac Studio M4 Max - where's the line? Here's the workflow-by-workflow verdict."
+      quickAnswer="For 90% of Dubai buyers, Mac Mini M4 Pro (24 GB RAM) is enough - it handles 4K video, large Xcode projects and Logic Pro 50+ tracks. Choose Mac Studio M4 Max (36 GB RAM) only for sustained 8K video, live colour grading, big 3D renders or LLM inference, where its thermals win."
       author={{ name: "Usman", role: "Pro Mac systems specialist" }}
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
-      featuredImageAlt="Mac Mini M4 Pro vs Mac Studio M4 Max 2026 comparison Dubai"
+      featuredImageAlt="Mac Mini Vs Mac Studio. Mac Mini M4 Pro vs Mac Studio M4 Max 2026 comparison Dubai"
       body={
         <>
-          <h2>Quick answer - by use case</h2>
+          <h2 id="quick-answer">Mac Mini Vs Mac Studio. Quick answer - by use case</h2>
           <BlogPriceTable
             caption="Mac Mini Pro vs Mac Studio - recommendation by workflow"
             headers={["Workflow", "Recommendation", "Reason"]}
             rows={[
-              { model: "Office, browsing, light creative", ours: "Mac Mini M4 (base AED 2,599)", apple: "Skip Pro entirely", note: "Don't overspend" },
-              { model: "Web dev, iOS dev, design", ours: "Mac Mini M4 Pro AED 4,499", apple: "Mini Pro overkill until heavy", note: "Future-proof for 5+ yrs" },
+              { model: "Office, browsing, light creative", ours: "Mac Mini M4 (base)", apple: "Skip Pro entirely", note: "Don't overspend" },
+              { model: "Web dev, iOS dev, design", ours: "Mac Mini M4 Pro", apple: "Mini Pro overkill until heavy", note: "Future-proof for 5+ yrs" },
               { model: "4K video editing (FCP, Premiere)", ours: "Mac Mini M4 Pro 24 GB", apple: "Or Studio Max if 8K", note: "Mini Pro handles 4K easily" },
               { model: "8K video, multi-cam grading", ours: "Mac Studio M4 Max", apple: "Studio's thermals win", note: "Sustained loads matter" },
               { model: "3D rendering (Blender, Cinema 4D)", ours: "Mac Studio M4 Max 64 GB+", apple: "GPU cores + RAM", note: "Mini Pro chokes" },
@@ -35,9 +46,9 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>Mac Mini M4 sweet spot uses</h2>
+          <h2 id="mini-sweet-spot">Mac Mini M4 sweet spot uses</h2>
           <p>
-            Mac Mini M4 Pro at AED 4,499 absolutely dominates the price/performance curve for these
+            Mac Mini M4 Pro absolutely dominates the price/performance curve for these
             workloads:
           </p>
           <ul className="list-disc list-inside space-y-xs">
@@ -52,7 +63,7 @@ export default function BlogMacMiniVsMacStudio() {
             For these uses, paying double for Mac Studio buys you headroom you'll rarely touch.
           </p>
 
-          <h2>Mac Mini M4 Pro vs Mac Studio M4 Max - overlap discussion</h2>
+          <h2 id="overlap">Mac Mini M4 Pro vs Mac Studio M4 Max - overlap discussion</h2>
           <p>
             Apple's 2024-2025 lineup created an awkward overlap. Mac Mini M4 Pro (12-core CPU / 16-core
             GPU) sits surprisingly close to Mac Studio M4 Max base (14-core CPU / 32-core GPU) on
@@ -62,7 +73,7 @@ export default function BlogMacMiniVsMacStudio() {
             caption="Mac Mini M4 Pro vs Mac Studio M4 Max base - spec head-to-head"
             headers={["Spec", "Mac Mini M4 Pro", "Mac Studio M4 Max"]}
             rows={[
-              { model: "Price (UAE base config, April 2026)", ours: "AED 4,499", apple: "AED 8,499", note: "" },
+              { model: "Price (UAE base config, April 2026)", ours: "Price on request", apple: "Price on request", note: "" },
               { model: "CPU cores", ours: "12 (8P + 4E)", apple: "14 (10P + 4E)", note: "" },
               { model: "GPU cores", ours: "16", apple: "32", note: "" },
               { model: "Base RAM", ours: "24 GB", apple: "36 GB", note: "" },
@@ -77,7 +88,7 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>When Studio is required (creative pro workloads)</h2>
+          <h2 id="when-studio">When Studio is required (creative pro workloads)</h2>
           <p>
             Mac Studio M4 Max becomes the right answer when:
           </p>
@@ -89,7 +100,7 @@ export default function BlogMacMiniVsMacStudio() {
             <li><strong>10 Gigabit Ethernet</strong> - only Studio offers it.</li>
           </ul>
 
-          <h2>Performance benchmarks compared</h2>
+          <h2 id="benchmarks">Performance benchmarks compared</h2>
           <BlogPriceTable
             caption="Real-world benchmarks (April 2026 averages, our shop testing)"
             headers={["Test", "Mac Mini M4 Pro", "Mac Studio M4 Max", "Studio advantage"]}
@@ -104,7 +115,7 @@ export default function BlogMacMiniVsMacStudio() {
             ]}
           />
 
-          <h2>Thermal handling differences</h2>
+          <h2 id="thermals">Thermal handling differences</h2>
           <p>
             Mac Mini's compact chassis runs warmer at sustained load. Internal temps hit 95-100°C
             under 30-minute Cinebench, triggering ~12% throttle. Mac Studio's larger fan and copper
@@ -113,7 +124,7 @@ export default function BlogMacMiniVsMacStudio() {
             ahead.
           </p>
 
-          <h2>Connectivity (Studio has more ports)</h2>
+          <h2 id="connectivity">Connectivity (Studio has more ports)</h2>
           <BlogPriceTable
             caption="Port count and types"
             headers={["Port", "Mac Mini M4 Pro", "Mac Studio M4 Max"]}
@@ -121,25 +132,25 @@ export default function BlogMacMiniVsMacStudio() {
               { model: "Thunderbolt 5", ours: "3 (rear)", apple: "4 rear + 2 front (TB5/USB4)", note: "" },
               { model: "USB-A 3.2", ours: "1 (rear)", apple: "2 (rear)", note: "" },
               { model: "HDMI 2.1", ours: "1", apple: "1", note: "" },
-              { model: "10 GbE Ethernet", ours: "Optional +AED 380", apple: "Standard", note: "" },
+              { model: "10 GbE Ethernet", ours: "Optional (paid upgrade)", apple: "Standard", note: "" },
               { model: "SDXC card slot", ours: "No", apple: "Yes (UHS-II, front)", note: "Photographers' favourite" },
               { model: "3.5mm headphone", ours: "1 (front)", apple: "1 (rear)", note: "" },
             ]}
           />
 
-          <h2>Resale comparison</h2>
+          <h2 id="resale">Resale comparison</h2>
           <p>
             Mac Studio holds value better than Mac Mini Pro. Two-year resale retention based on our
             buy-back data:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li>Mac Mini M4 Pro: ~58% retention after 2 years (AED 4,499 → AED 2,600).</li>
-            <li>Mac Studio M4 Max: ~65% retention after 2 years (AED 8,499 → AED 5,500).</li>
+            <li>Mac Mini M4 Pro: ~58% retention after 2 years.</li>
+            <li>Mac Studio M4 Max: ~65% retention after 2 years.</li>
             <li>Mac Studio M3 Ultra: ~70% (creative pros buy used Studios eagerly).</li>
           </ul>
           <p>
             Studio's higher resale partially offsets the higher upfront cost. Read the dedicated{" "}
-            <Link to="/blog/mac-studio-m3-ultra-vs-m4-max-which" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/mac-studio-m3-ultra-vs-m4-max-which" className="text-accent font-semibold hover:underline">
               M3 Ultra vs M4 Max guide
             </Link>{" "}
             if you've narrowed it to Studio.
@@ -152,7 +163,7 @@ export default function BlogMacMiniVsMacStudio() {
         { q: "Will Mac Studio M4 Max fans be audible at idle?", a: "Idle: completely silent (fan spins at 1,000 RPM, below human hearing threshold). Sustained heavy load: faint white noise at ~30 dB - quieter than most office air conditioning. Mac Mini Pro fan ramps higher under load (~38 dB) due to smaller chassis." },
         { q: "Can I daisy-chain displays from Mac Mini Pro?", a: "Yes - each Thunderbolt 5 port drives one 6K display + extension via daisy-chain. Mini Pro supports up to 3 external displays. Mac Studio Max supports up to 5 external displays." },
         { q: "Is Mac Mini Pro enough for a 4K colour grading workflow?", a: "Yes for HD and 4K up to ProRes 422 HQ on a single timeline with reference monitoring. For multi-stream 4K HDR with HDR scopes, fusion compositing, and noise reduction nodes, you'll want Mac Studio Max." },
-        { q: "Which is better for a long-term home server (Plex, Home Assistant, Docker)?", a: "Mac Mini base M4 (AED 2,599) - overkill for these workloads, sips power (~10 W idle), tiny footprint. Don't waste money on Mini Pro or Studio for server use." },
+        { q: "Which is better for a long-term home server (Plex, Home Assistant, Docker)?", a: "Mac Mini base M4 - overkill for these workloads, sips power (~10 W idle), tiny footprint. Don't waste money on Mini Pro or Studio for server use." },
       ]}
       relatedLinks={[
         { label: "Mac Mini M4 worth it?", href: "/blog/mac-mini-m4-worth-it", description: "Detailed Mini buyer's guide for 2026." },

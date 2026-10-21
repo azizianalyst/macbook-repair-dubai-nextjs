@@ -1,0 +1,30 @@
+"use client";
+import MacBookProGenerationPage from "@/components/blocks/MacBookProGenerationPage";
+
+export default function MacBookProM3Repair() {
+  return (
+    <MacBookProGenerationPage
+      path="/macbook-pro-m3-repair-dubai"
+      chip="M3"
+      years="2023 – 2024"
+      seoTitle="MacBook Pro M3 Repair Dubai - 14&quot; &amp; 16&quot; All M3 Models"
+      seoDescription="MacBook Pro M3 repair Dubai. All variants: 14&quot; M3 (A2918), M3 Pro (A2992), 16&quot; M3 Pro/Max (A2991). Same-day screen, battery &amp; logic board. Call 055 741 3706."
+      eyebrow="MacBook Pro M3 specialist"
+      h1="MacBook Pro M3 Repair Dubai"
+      heroDescription="The M3 MacBook Pro (2023–2024) brought hardware ray tracing and a 3nm chip. We service all four M3 variants, 14&quot; M3, M3 Pro, 16&quot; M3 Pro, and 16&quot; M3 Max, with same-day turnaround."
+      heroMeta={["All M3 variants", "Same-day screen & battery", "Logic board specialists"]}
+      models={[
+        { label: `16" M3 Max`, href: "/macbook-pro-16-m3-2023-repair-dubai", aNum: "A2991" },
+        { label: `16" M3 Pro`, href: "/macbook-pro-16-m3-2023-repair-dubai", aNum: "A2991" },
+        { label: `14" M3 Pro`, href: "/macbook-pro-14-m3-2023-repair-dubai", aNum: "A2992" },
+        { label: `14" M3`, href: "/macbook-pro-14-m3-2023-repair-dubai", aNum: "A2918" },
+      ]}
+      faqs={[
+        { q: "Which M3 MacBook Pro models do you repair?", a: "We repair all M3 variants: 14&quot; M3 (A2918), 14&quot; M3 Pro (A2992), 16&quot; M3 Pro (A2991), and 16&quot; M3 Max (A2991)." },
+        { q: "How much does MacBook Pro M3 screen repair cost in Dubai?", a: "It is quoted per size in writing - the 16&quot; costs more than the 14&quot; because the panel does. Same-day service for most models." },
+        { q: "Do you offer a warranty on M3 MacBook Pro repairs?", a: "Yes, in writing. Screens carry 90 days and batteries 3 months with an 80% capacity guarantee. Other hardware such as trackpads, ports and SSDs carries 15 days to 2 years; keyboard, logic board and liquid-damage work carries 15 days." },
+        { q: "Can you repair M3 MacBook Pro battery swelling?", a: "Yes. A swollen battery is a safety issue. Bring it in immediately. We replace the battery and inspect the chassis for any deformation caused by the swelling." },
+      ]}
+    />
+  );
+}

@@ -1,38 +1,45 @@
 "use client";
 // AI-citation block: 40-word factual answer at top of every service / model / blog page.
 // Renders Question + AcceptedAnswer microdata so crawlers (and AI Overviews) can lift it cleanly.
-// The wrapping `.quick-answer` class is referenced by SpeakableSpecification xpath in schema.ts.
+// The wrapping `.quick-answer` class is referenced by SpeakableSpecification cssSelector in schema.ts.
 import { ReactNode } from "react";
+import { warrantyClause, warrantyDaysForService, warrantyLabel } from "@/content/site";
 import { Reveal } from "@/components/blocks/Reveal";
 import { cn } from "@/lib/utils";
+import { aed, repairPricesForPath, typicalPrice } from "@/content/repair-prices";
 
 export interface QuickAnswerProps {
   question: string;
   answer: ReactNode;
   /** Optional eyebrow label, default "Quick answer" */
   label?: string;
-  /** "dark" for use on the bg-primary band; default light */
+  /** "dark" for use on the bg-bg-alt band; default light */
   tone?: "light" | "dark";
+  /** Extra classes on the outer section — lets a page embed the block inside its own grid */
+  className?: string;
+  /** Extra classes on the inner card — lets a page match surrounding card elevation/radius */
+  cardClassName?: string;
 }
 
-export function QuickAnswer({ question, answer, label = "Quick answer", tone = "light" }: QuickAnswerProps) {
+export function QuickAnswer({ question, answer, label = "Quick answer", tone = "light", className, cardClassName }: QuickAnswerProps) {
   const dark = tone === "dark";
   return (
     <section
-      className="quick-answer mx-auto max-w-content px-5 md:px-6 mt-xl"
+      className={cn("quick-answer mx-auto max-w-content px-5 md:px-6 mt-xl", className)}
       aria-label={label}
     >
-      <Reveal>
+      <Reveal className="h-full">
       <div
         className={cn(
-          "border-l-4 rounded-md p-lg max-w-[72ch]",
-          dark ? "border border-white/10 border-l-4 border-l-accent-bright bg-white/[0.04]" : "bg-bg-alt border-primary",
+          "border-l-4 rounded-md p-lg max-w-[72ch] h-full",
+          dark ? "border border-border border-l-4 border-l-accent bg-bg-card" : "bg-bg-alt border-primary",
+          cardClassName,
         )}
         itemScope
         itemType="https://schema.org/Question"
       >
         <h2
-          className={cn("text-[12px] uppercase tracking-wider font-bold mb-xs mono", dark ? "text-accent-bright" : "text-primary")}
+          className={cn("text-[12px] uppercase tracking-wider font-bold mb-xs mono", dark ? "text-accent" : "text-primary")}
           itemProp="name"
         >
           {question}
@@ -42,12 +49,12 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
           itemScope
           itemType="https://schema.org/Answer"
         >
-          <p className={cn("text-[10px] uppercase tracking-wider mono mb-xs", dark ? "text-on-primary-faint" : "text-text-faint")}>
+          <p className={cn("text-[12px] uppercase tracking-wider mono mb-xs", dark ? "text-accent" : "text-accent")}>
             {label}
           </p>
           <div
             itemProp="text"
-            className={cn("text-[16px] leading-relaxed", dark ? "text-on-primary" : "text-text")}
+            className={cn("text-[16px] leading-relaxed", dark ? "text-text" : "text-text")}
           >
             {answer}
           </div>
@@ -63,21 +70,63 @@ export function QuickAnswer({ question, answer, label = "Quick answer", tone = "
 /* when the page does not pass an explicit override.                  */
 /* ------------------------------------------------------------------ */
 
+// Most callers pass a serviceName that already ends in "Dubai" (e.g. "MacBook Wifi
+// Bluetooth Repair Dubai"), and this helper then appended " in Dubai" again - shipping
+// "…Repair Dubai in Dubai" on 138 pages, inside the QuickAnswer block, which is exactly
+// the answer-first text Google and LLMs quote. Strip a trailing city before appending.
+// (audit 2026-09-24)
+function withoutTrailingCity(name: string): string {
+  return name.replace(/[\s,\-–]+(?:in\s+)?Dubai\s*$/i, "").trim() || name;
+}
+
+// The answer states the page's own turnaround and warranty only. It used to close with
+// "All repairs include a 12-month written warranty ... and same-day completion on most
+// common services", which contradicted multi-tier hubs (screens 90 days, board work 15
+// days) and pages whose timeline is days, not hours (t20, 2026-10-08).
 export function deriveServiceQuickAnswer(opts: {
   serviceName: string;
   startingPrice: number;
   timeline: string;
   warrantyDays?: number;
+  /** Pre-rendered warranty wording; multi-tier hubs pass WARRANTY.headlineLong. */
+  warrantyText?: string;
+  /** Page path: when it has invoice prices (D17), the answer states them instead of "message us". */
+  pricePath?: string;
 }): { question: string; answer: string } {
-  const warranty = opts.warrantyDays ?? 90;
+  const warrantyDays = opts.warrantyDays ?? warrantyDaysForService(opts.serviceName);
+  const name = withoutTrailingCity(opts.serviceName);
+  const warranty = opts.warrantyText ?? (warrantyLabel(warrantyDays) ? warrantyClause(warrantyDays) : "");
+  const close = warranty
+    ? `Parts and labour carry ${warranty}. Walk in to our Media City workshop.`
+    : `Walk in to our Media City workshop, with a written quote before any work.`;
+  const rows = opts.pricePath ? repairPricesForPath(opts.pricePath) : [];
+  if (rows.length) {
+    const lo = rows.reduce((a, b) => (b.median < a.median ? b : a));
+    const hi = rows.reduce((a, b) => (b.median > a.median ? b : a));
+    const price = rows.length === 1
+      ? `typically costs ${typicalPrice(rows[0])}`
+      : `typically costs AED ${aed(lo.median)} to AED ${aed(hi.median)} depending on the model`;
+    const priced = `${name} at our Media City workshop ${price}, including 5% VAT, based on our own invoices. Final price after a free diagnosis. Typical turnaround: ${opts.timeline}. ${close}`;
+    const short = `${name} at our Media City workshop ${price}, including 5% VAT, based on our own invoices. Final price after a free diagnosis. Typical turnaround: ${opts.timeline}.`;
+    return { question: `How much does ${name} in Dubai cost?`, answer: wordCount(priced) > 60 ? short : priced };
+  }
+  const answer =
+    (opts.startingPrice > 0
+      ? `${name} in Dubai is priced per model and fault - your exact price is free to get and confirmed after we check your device's model and condition. Message us on WhatsApp for today's price. `
+      : `${name} in Dubai starts with a free diagnosis - we confirm the exact price before any work. Message us on WhatsApp. `) +
+    `Typical turnaround: ${opts.timeline}. ` +
+    close;
+  // The page standard caps the answer at 60 words. Long multi-step timelines and the hub
+  // warranty wording pushed some pages to 64-74 (t34); those get the same facts, said shorter.
+  const compact = `${name} in Dubai is quoted per model and fault after a free check. Message us on WhatsApp. Typical turnaround: ${opts.timeline}. ${close}`;
   return {
-    question: `How much does ${opts.serviceName} in Dubai cost?`,
-    answer:
-      `${opts.serviceName} in Dubai starts from AED ${opts.startingPrice}. ` +
-      `Typical turnaround: ${opts.timeline}. ` +
-      `All repairs include a ${warranty}-day written warranty on parts and labour, ` +
-      `free pickup and delivery across Dubai mainland, and same-day completion on most common services.`,
+    question: `How much does ${name} in Dubai cost?`,
+    answer: wordCount(answer) > 60 ? compact : answer,
   };
+}
+
+function wordCount(s: string): number {
+  return (s.match(/[A-Za-z0-9][\w'’.,/-]*/g) || []).length;
 }
 
 export function deriveFamilyQuickAnswer(opts: {
@@ -85,10 +134,10 @@ export function deriveFamilyQuickAnswer(opts: {
   startingPrice: number;
 }): { question: string; answer: string } {
   return {
-    question: `How much does ${opts.family} repair in Dubai cost?`,
+    question: `How much does ${withoutTrailingCity(opts.family)} repair in Dubai cost?`,
     answer:
-      `${opts.family} repair in Dubai starts from AED ${opts.startingPrice} with a 90-day written warranty. ` +
-      `Same-day to 5 days depending on the model and fault. Free pickup and delivery across Dubai. ` +
+      `${withoutTrailingCity(opts.family)} repair in Dubai is priced per model and fault - your exact quote is free and confirmed after we check your model and its condition. Message us on WhatsApp for today's price. Written warranty of 15 days to 2 years. ` +
+      `Same-day to 5 days depending on the model and fault. Walk in to our Media City workshop. ` +
       `Genuine or OEM-grade parts. Quote in 4 minutes on WhatsApp.`,
   };
 }

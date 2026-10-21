@@ -20,6 +20,19 @@ export default function BlogMacMiniRunningSlow() {
       seoTitle="Mac Mini Running Slow? 8 Fixes That Work - 2026 Guide"
       seoDescription="Mac Mini slow? Most causes are software. Fix in order: Activity Monitor, free SSD space, reset NVRAM, clear cache, First Aid, update macOS, then the fan."
       path="/blog/mac-mini-running-slow-fix"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "activity-monitor", label: "Step 1. Activity Monitor" },
+        { id: "storage-full", label: "Step 2. Storage full" },
+        { id: "smc-nvram", label: "Step 3. Reset SMC and NVRAM" },
+        { id: "clear-cache", label: "Step 4. Clear browser cache" },
+        { id: "first-aid", label: "Step 5. First Aid on SSD" },
+        { id: "update-macos", label: "Step 6. Update macOS" },
+        { id: "heat-fan", label: "Step 7. Heat and fan" },
+        { id: "external-drive", label: "External drive bottleneck" },
+        { id: "upgrade-vs-repair", label: "Upgrade vs repair" },
+      ]}
       category="Repair guide · Mac Mini"
       h1="Mac Mini Running Slow? 8 Fixes That Work"
       hook="Most Mac Mini slowdowns are software. Here's the diagnostic order."
@@ -39,13 +52,13 @@ export default function BlogMacMiniRunningSlow() {
       ]}
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Mac Mini Running Slow. Quick answer</h2>
           <p>
             Mac Mini slowdowns are 90% software, 10% hardware. Work through the eight steps below in
             order - most users find the cause in steps 1-3.
           </p>
 
-          <h2>Step 1 - Restart and check Activity Monitor</h2>
+          <h2 id="activity-monitor">Step 1 - Restart and check Activity Monitor</h2>
           <p>
             Restart first (Apple menu → Restart). Many slowdowns are background processes that have
             run away from memory. After login, open Activity Monitor (Spotlight → "Activity Monitor")
@@ -58,7 +71,7 @@ export default function BlogMacMiniRunningSlow() {
             (pause if needed), Photos analysis (overnight task - let it finish).
           </p>
 
-          <h2>Step 2 - Storage full (Mac Mini base 256 GB fills fast)</h2>
+          <h2 id="storage-full">Step 2 - Storage full (Mac Mini base 256 GB fills fast)</h2>
           <p>
             macOS slows dramatically below 10% free space because it can't swap memory effectively.
             Apple menu → About This Mac → More Info → Storage. Target: 30 GB+ free at all times.
@@ -75,7 +88,7 @@ export default function BlogMacMiniRunningSlow() {
             <li>Uninstall unused apps via Launchpad or AppCleaner.</li>
           </ul>
 
-          <h2>Step 3 - Reset SMC and NVRAM (Intel Mini only)</h2>
+          <h2 id="smc-nvram">Step 3 - Reset SMC and NVRAM (Intel Mini only)</h2>
           <p>
             Apple Silicon Mac Minis (M1, M2, M4) have no SMC. The chip handles power management
             internally; a clean shutdown + restart serves the same purpose. NVRAM also auto-resets on
@@ -87,7 +100,7 @@ export default function BlogMacMiniRunningSlow() {
             20 seconds (you'll hear the chime twice on Intel Mini).
           </p>
 
-          <h2>Step 4 - Clear browser cache and quit background apps</h2>
+          <h2 id="clear-cache">Step 4 - Clear browser cache and quit background apps</h2>
           <p>
             Browsers are by far the biggest performance hog on a Mac Mini.
           </p>
@@ -98,7 +111,7 @@ export default function BlogMacMiniRunningSlow() {
             <li><strong>Background apps</strong>: System Settings → General → Login Items → review "Open at Login" + "Allow in Background". Disable anything you don't recognise.</li>
           </ul>
 
-          <h2>Step 5 - Run First Aid on the SSD</h2>
+          <h2 id="first-aid">Step 5 - Run First Aid on the SSD</h2>
           <p>
             Filesystem corruption silently slows file operations. Run First Aid weekly:
             Applications → Utilities → Disk Utility → select your APFS container (not the volume) →
@@ -110,14 +123,14 @@ export default function BlogMacMiniRunningSlow() {
             means data loss without a recent backup.
           </p>
 
-          <h2>Step 6 - Update macOS and reboot weekly</h2>
+          <h2 id="update-macos">Step 6 - Update macOS and reboot weekly</h2>
           <p>
             System Settings → General → Software Update. Each macOS point release fixes performance
             regressions. Critical: reboot at least weekly to clear accumulated memory leaks. Many
             Mac Mini users leave them on for months - performance degrades subtly over that time.
           </p>
 
-          <h2>Step 7 - Mac Mini-specific issues (heat, fan)</h2>
+          <h2 id="heat-fan">Step 7 - Mac Mini-specific issues (heat, fan)</h2>
           <p>
             Mac Mini's tiny chassis (12.7 cm square on M4, 19.7 cm on older models) makes it
             thermally sensitive:
@@ -125,11 +138,11 @@ export default function BlogMacMiniRunningSlow() {
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Inside a cabinet</strong>: ambient air heats up, CPU throttles, performance drops 15-25%. Move to open desk or add active ventilation.</li>
             <li><strong>Stacked under a USB hub or external SSD</strong>: blocks the bottom intake. Lift on rubber feet or move hub off-Mini.</li>
-            <li><strong>Dust in fan</strong>: reduces airflow. After 18+ months, the fan accumulates desk dust. We clean for AED 250 (includes thermal paste reapplication on Intel Minis).</li>
+            <li><strong>Dust in fan</strong>: reduces airflow. After 18+ months, the fan accumulates desk dust. We clean it (includes thermal paste reapplication on Intel Minis) - message us on WhatsApp for today's price on your model.</li>
             <li><strong>Hot summer ambient</strong>: Dubai homes without good AC put the Mac Mini at 32°C+ ambient - reduces thermal headroom. Keep room under 28°C for sustained performance.</li>
           </ul>
 
-          <h2>External drive bottleneck</h2>
+          <h2 id="external-drive">External drive bottleneck</h2>
           <p>
             If your data lives on an external drive connected via USB-C (not Thunderbolt), you're
             capped at ~1 GB/s vs ~6-7 GB/s internal SSD. Symptoms: Lightroom / Final Cut feels slow
@@ -141,18 +154,18 @@ export default function BlogMacMiniRunningSlow() {
             users this is constant - consider a 1 TB internal SSD upgrade at purchase next time.
           </p>
 
-          <h2>When to upgrade vs repair</h2>
+          <h2 id="upgrade-vs-repair">When to upgrade vs repair</h2>
           <p>
             Software fixes are free. Hardware repairs make sense up to a point:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Intel Mac Mini 2018 or older + slow + needs SSD repair</strong>: repair AED 1,200+, value AED 1,200 → don't repair, upgrade to M4 Mini.</li>
-            <li><strong>Mac Mini M1 + needs fan / thermal service</strong>: repair AED 350, value AED 1,800 → repair worth it, M1 still runs current macOS.</li>
+            <li><strong>Intel Mac Mini 2018 or older + slow + needs SSD repair</strong>: repair cost usually approaches its resale value → often better to upgrade to an M4 Mini. Message us for the exact repair price first.</li>
+            <li><strong>Mac Mini M1 + needs fan / thermal service</strong>: repair is well worth it - the M1 still runs current macOS and service costs a fraction of its value. Message us for the exact price.</li>
             <li><strong>Mac Mini M2 / M4 + any hardware issue</strong>: still under 4 years old, repair via us or AppleCare+ if active.</li>
           </ul>
           <p>
             Free diagnosis at our{" "}
-            <Link to="/mac-mini-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-mini-repair-dubai" className="text-accent font-semibold hover:underline">
               Mac Mini repair Dubai
             </Link>{" "}
             workshop - we'll tell you honestly if repair vs replacement is the better call.

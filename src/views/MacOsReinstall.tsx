@@ -4,12 +4,12 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function MacOsReinstall() {
   return (
     <SubServicePageTemplate
-      seoTitle="macOS Reinstall Dubai - Clean Install Service | AED 300 | Same Day"
-      seoDescription="macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. AED 300, 2-4 hours."
+      seoTitle="MacBook macOS Reinstall Dubai - Clean Install Service | | Same Day"
+      seoDescription="macOS reinstall Dubai. Internet Recovery, clean install of macOS Sequoia / Sonoma / Ventura. Optional data preservation. 2-4 hours."
       path="/macos-reinstall-dubai"
       eyebrow="macOS reinstall"
-      h1="macOS Reinstall Dubai - Clean Install Service"
-      subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall fixes 90% of software problems. AED 300, same-day, with or without data preservation."
+      h1="MacBook macOS Reinstall Dubai - Clean Install Service"
+      subtitle="Slow, glitchy, full of clutter? A clean macOS reinstall clears most software problems. Same-day, flat quoted fee, with or without data preservation."
       startingPrice={300}
       timeline="Same day (2-4 hours)"
       whatsappPrefill="Hi, I need a macOS reinstall - model and current macOS version:"
@@ -19,13 +19,13 @@ export default function MacOsReinstall() {
         { name: "macOS Reinstall", path: "/macos-reinstall-dubai" },
       ]}
       technician={{ name: "Shafeeq", years: 12, specialisation: "macOS recovery & system service" }}
-      serviceName="macOS Reinstall"
+      serviceName="macOS Reinstall Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>macOS reinstall in Dubai</strong> is the cure for the things software updates and trying-too-many-tools won't fix: kernel panics, runaway processes, corrupted preferences, half-installed apps that won't uninstall, mysterious slowdowns, broken Spotlight, iCloud sync that's stuck. We do clean installs of macOS Sequoia 15, Sonoma 14, Ventura 13, or whichever is the latest your Mac supports. AED 300, same-day.
+            <strong>macOS reinstall in Dubai</strong> is the cure for the things software updates and trying-too-many-tools won't fix: kernel panics, runaway processes, corrupted preferences, half-installed apps that won't uninstall, mysterious slowdowns, broken Spotlight, iCloud sync that's stuck. We do clean installs of macOS Sequoia 15, Sonoma 14, Ventura 13, or whichever is the latest your Mac supports. Flat quoted fee, same-day.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Two flavours: <strong>clean install with data preservation</strong> (we Time Machine your user folder, wipe, reinstall, restore your data - apps need re-installing fresh) or <strong>full clean install</strong> (everything wiped, fresh start, you reinstall apps yourself afterwards). We recommend with data preservation for most users.
           </p>
         </>
@@ -46,7 +46,7 @@ export default function MacOsReinstall() {
         { title: "Wipe + clean install", body: "Disk Utility erase, fresh macOS install, set up your user account, restore preferences and data (if you chose with-data option)." },
         { title: "Verify + handover", body: "Sign in to iCloud, Apple Music, App Store. Confirm hardware checks pass. Sign-off." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the macOS install itself and our data restore.",
         "Excludes future macOS updates and third-party app issues.",
@@ -64,8 +64,11 @@ export default function MacOsReinstall() {
       reviewNames={["Polycarp", "Mariia Chymyrysova", "Daniel Vyskoc"]}
       related={[
         { label: "MacBook Repair Hub",       href: "/",            description: "All MacBook services in one place." },
-        { label: "MacBook Virus Removal",    href: "/macbook-virus-removal-dubai",     description: "Persistent malware? Reinstall is the cure. AED 350." },
-        { label: "MacBook Data Recovery",    href: "/macbook-data-recovery-dubai",     description: "Lost data before reinstall? Recovery first. From AED 800." },
+        { label: "MacBook Virus Removal",    href: "/macbook-virus-removal-dubai",     description: "Persistent malware? Reinstall is the cure." },
+        { label: "MacBook Data Recovery",    href: "/macbook-data-recovery-dubai",     description: "Lost data before reinstall? Recovery first." },
+        { label: "iMac macOS Reinstall",     href: "/imac-os-reinstall-dubai",         description: "Reinstalling on an iMac instead? Same clean-install service." },
+        { label: "Mac mini/Studio/Pro Reinstall", href: "/mac-os-reinstall-dubai",     description: "Desktop Mac needs a clean macOS? We do those too." },
+        { label: "403 Forbidden in macOS Recovery", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Reinstall stopped with a 403? Try these fixes before you book." },
       ]}
       blogLink={{ label: "When to reinstall macOS (and when it won't help)", href: "/blog/macbook-running-slow-10-fixes" }}
     />

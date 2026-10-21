@@ -7,27 +7,38 @@ export default function BlogMacBookLogicBoardCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Logic Board Repair Cost Dubai: Chip vs Swap"
-      seoDescription="Apple swaps the whole MacBook logic board for AED 4,000+; we fix the failing chip for AED 800-1,500. Component-level repair explained, and what we can't fix."
+      seoDescription="Apple swaps the whole MacBook logic board; we fix the failing chip at component level. How it works, what we can and can't fix - message us on WhatsApp for your quote."
       path="/blog/macbook-logic-board-repair-cost-dubai"
+      wide
+      toc={[
+        { id: "component-vs-board-swap", label: "Component vs board swap" },
+        { id: "pricing-tiers", label: "Pricing tiers" },
+        { id: "what-we-can-fix", label: "What we can fix" },
+        { id: "what-we-cant-fix", label: "What we can't fix" },
+        { id: "soldered-ssd-recovery", label: "Soldered SSD recovery" },
+        { id: "why-shops-swap", label: "Why shops swap boards" },
+        { id: "apple-policy", label: "Apple's repair policy" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · MacBook"
       h1="MacBook Logic Board Repair Dubai - Component vs Board Swap"
-      hook="Apple swaps the whole logic board. AED 4,000. We fix the failing chip. AED 800-1,500. Same outcome, 70% less money - here's how component-level repair actually works."
-      quickAnswer="MacBook logic board repair in Dubai costs AED 800-1,500 at MacBook Repair Dubai for component-level fixes (water damage cleanup, power IC, charging chip, GPU reflow) versus AED 4,000-6,000 for Apple Store's whole-board swap. Same diagnostic, much better economics - but only some faults can be component-fixed."
+      hook="Apple swaps the whole logic board. We fix the failing chip. Same outcome, far less money - here's how component-level repair actually works, and message us on WhatsApp for your exact quote."
+      quickAnswer="MacBook logic board repair in Dubai at MacBook Repair Dubai is done at component level (water damage cleanup, power IC, charging chip, GPU reflow) rather than the Apple Store's whole-board swap. Same diagnostic, much better economics - but only some faults can be component-fixed. Message us on WhatsApp for today's exact price on your model."
       author={{ name: "Ali", role: "Senior MacBook board-level engineer" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-06-16"
       readingMinutes={13}
-      featuredImageAlt="MacBook logic board repair Dubai - microscope component-level rework on bench"
+      featuredImageAlt="MacBook Logic Board Repair Cost Dubai. MacBook logic board repair Dubai - microscope component-level rework on bench"
       body={
         <>
-          <h2>Component-level repair vs board swap - the BIG difference</h2>
+          <h2 id="component-vs-board-swap">MacBook Logic Board Repair Cost Dubai. Component-level repair vs board swap - the BIG difference</h2>
           <p>
             Apple's official repair workflow for any MacBook logic board fault is{" "}
             <strong>replace the entire logic board</strong>. That logic board includes the SoC
             (M-chip), the soldered SSD, the soldered RAM, the I/O controller, the charging
             circuitry, and dozens of other components. Replacing it means losing all your data on
-            M-series machines (the SSD swaps with the board) and paying AED 4,000-6,000 for a part
-            that costs Apple AED 800 to manufacture.
+            M-series machines (the SSD swaps with the board) and paying a premium for a part that
+            costs Apple a fraction of that to manufacture.
           </p>
           <p>
             <strong>Component-level repair</strong> is what we and a small handful of other
@@ -40,21 +51,21 @@ export default function BlogMacBookLogicBoardCost() {
             For those 80%, component-level repair is faster, cheaper, and preserves your data.
           </p>
 
-          <h2>The MacBook logic board pricing tiers - April 2026</h2>
+          <h2 id="pricing-tiers">The MacBook logic board pricing tiers - April 2026</h2>
           <BlogPriceTable
             caption="MacBook logic board component-level repair pricing - April 2026"
             rows={[
-              { model: "Water damage cleanup (no component damage)", ours: "AED 700", apple: "AED 4,000+", note: "Ultrasonic + reseal" },
-              { model: "Charging IC failure (won't charge or charges slowly)", ours: "AED 800-1,000", apple: "AED 4,000+", note: "Most common M-chip fault" },
-              { model: "USB-C port controller (port dead or intermittent)", ours: "AED 900-1,100", apple: "AED 4,000+", note: "Tigris/Thunderbolt IC" },
-              { model: "Power IC / SMC failure (won't power on)", ours: "AED 1,000-1,300", apple: "AED 4,500+", note: "Multiple-chip diagnostic" },
-              { model: "GPU reflow (graphics artifacts on Intel only)", ours: "AED 1,200-1,500", apple: "AED 4,500+", note: "2018-2019 Pro 15 mainly" },
-              { model: "Multiple-component water damage", ours: "AED 1,500-2,500", apple: "AED 5,000+", note: "Tier 3 water damage" },
-              { model: "M-chip itself (the SoC) failed", ours: "Not repairable", apple: "AED 5,500-6,500", note: "Whole board swap only option" },
+              { model: "Water damage cleanup (no component damage)", ours: "Price on request", apple: "Whole-board swap", note: "Ultrasonic + reseal" },
+              { model: "Charging IC failure (won't charge or charges slowly)", ours: "Price on request", apple: "Whole-board swap", note: "Most common M-chip fault" },
+              { model: "USB-C port controller (port dead or intermittent)", ours: "Price on request", apple: "Whole-board swap", note: "Tigris/Thunderbolt IC" },
+              { model: "Power IC / SMC failure (won't power on)", ours: "Price on request", apple: "Whole-board swap", note: "Multiple-chip diagnostic" },
+              { model: "GPU reflow (graphics artifacts on Intel only)", ours: "Price on request", apple: "Whole-board swap", note: "2018-2019 Pro 15 mainly" },
+              { model: "Multiple-component water damage", ours: "Price on request", apple: "Whole-board swap", note: "Tier 3 water damage" },
+              { model: "M-chip itself (the SoC) failed", ours: "Not repairable", apple: "Whole board swap only option", note: "Whole board swap only option" },
             ]}
           />
 
-          <h2>What we can fix on a logic board</h2>
+          <h2 id="what-we-can-fix">What we can fix on a logic board</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Power management ICs (PMICs)</strong> - chip not powering up, no current draw on bench supply</li>
             <li><strong>Charging circuit</strong> - ISL9241 (Intel), CD3217/CD3215 (M-series) for charging negotiation</li>
@@ -67,7 +78,7 @@ export default function BlogMacBookLogicBoardCost() {
             <li><strong>Intel GPU reflow</strong> - temporary fix for 2018-2019 15″ Pro AMD discrete GPU artifacts</li>
           </ul>
 
-          <h2>What we can't fix (be honest)</h2>
+          <h2 id="what-we-cant-fix">What we can't fix (be honest)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li>
               <strong>The M-chip itself</strong> (M1, M2, M3, M4, M5 SoC). Apple's SoCs are
@@ -93,26 +104,29 @@ export default function BlogMacBookLogicBoardCost() {
             </li>
           </ul>
 
-          <h2>M-chip soldered SSD - data recovery implications</h2>
+          <h2 id="soldered-ssd-recovery">M-chip soldered SSD - data recovery implications</h2>
           <p>
-            On Intel MacBooks (2010-2020) the SSD is removable - even if the logic board is dead,
-            we pull the SSD module, plug it into a reader, and recover your data 95%+ of the time.
-            AED 300-500 typical fee.
+            On older Intel MacBooks with a removable SSD (such as 2012-2015 MacBook Pros and MacBook
+            Airs up to 2017), even if the logic board is dead we pull the SSD, read it in an adapter,
+            and recover your data if the SSD itself is healthy. T2 Intel MacBooks (2018-2020) have a
+            soldered SSD encrypted by the T2 chip, so they follow the M-series rule below. Message us
+            on WhatsApp for the exact recovery fee on your model.
           </p>
           <p>
             On M-series MacBooks (2020+) the SSD is <strong>soldered to the logic board AND
-            cryptographically paired to the M-chip</strong>. To recover data we have two paths:
+            cryptographically paired to the M-chip</strong>. Recovery works like this:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>
-              <strong>Bring the board back to life</strong> long enough to image the SSD over
-              Target Disk Mode or a connected Mac. Possible in about 70% of M-series water-damage
-              cases.
+              <strong>Bring the board back to life</strong> long enough to copy the data off over
+              sharing mode or a connected Mac. This is the only route, and whether it is possible
+              depends on the damage - the free diagnosis tells you.
             </li>
             <li>
-              <strong>NAND chip-off</strong> - desolder the NAND flash chips and read them
-              directly. Works only if we can also recover the encryption keys from a still-living
-              M-chip. About 30% success rate, AED 1,500-2,500 fee.
+              <strong>No chip-off.</strong> Desoldering the storage chips yields only encrypted
+              data, because the key never leaves the M-chip. If the chip or the storage is
+              destroyed, nobody can recover the data - message us on WhatsApp and we will say
+              honestly which case you are in.
             </li>
           </ol>
           <p>
@@ -120,7 +134,7 @@ export default function BlogMacBookLogicBoardCost() {
             If your MacBook dies, you have one shot at recovery and it's not cheap.
           </p>
 
-          <h2>Why most repair shops just swap boards</h2>
+          <h2 id="why-shops-swap">Why most repair shops just swap boards</h2>
           <p>
             Component-level MacBook repair requires four things most shops don't have:
           </p>
@@ -132,8 +146,8 @@ export default function BlogMacBookLogicBoardCost() {
               of MacBook-specific experience.
             </li>
             <li>
-              <strong>A proper microscope and hot-air rework station.</strong> Minimum AED 25,000
-              of equipment that needs years of practice to use without lifting solder pads.
+              <strong>A proper microscope and hot-air rework station.</strong> A serious investment
+              in equipment that needs years of practice to use without lifting solder pads.
             </li>
             <li>
               <strong>A donor-board parts library.</strong> We keep dozens of damaged-but-partially-good
@@ -146,7 +160,7 @@ export default function BlogMacBookLogicBoardCost() {
             </li>
           </ol>
 
-          <h2>Apple's policy on board-level repair</h2>
+          <h2 id="apple-policy">Apple's policy on board-level repair</h2>
           <p>
             Apple's Independent Repair Provider (IRP) program covers screens, batteries, top-cases,
             and a few other module-level repairs. It explicitly does NOT include logic board
@@ -161,14 +175,14 @@ export default function BlogMacBookLogicBoardCost() {
             and we're proud to be one.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             Logic board diagnosis is free at our workshop - bring or ship the MacBook, we open it,
             measure rails on the bench, and quote you the exact repair before doing anything. No
             obligation, no diagnostic fee.
           </p>
           <p>
-            <Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook logic board repair service page
             </Link>{" "}
             - or WhatsApp 055 741 3706 with your model and symptoms. We'll tell you up front
@@ -179,7 +193,7 @@ export default function BlogMacBookLogicBoardCost() {
       faqs={[
         {
           q: "What's the difference between component-level repair and board swap?",
-          a: "Apple swaps the entire logic board (SoC, SSD, RAM, all I/O) for any board fault - AED 4,000-6,000. Component-level means we diagnose to the specific failed chip and replace just that chip on the existing board - AED 800-1,500. About 80% of MacBook board faults are 1-3 components, perfect for component-level.",
+          a: "Apple swaps the entire logic board (SoC, SSD, RAM, all I/O) for any board fault. Component-level means we diagnose to the specific failed chip and replace just that chip on the existing board - far more economical. About 80% of MacBook board faults are 1-3 components, perfect for component-level. Message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Will I lose my data if you do component-level repair?",

@@ -17,6 +17,13 @@ export default function BlogMacBookWifiNotWorking() {
       seoTitle="MacBook Won't Connect to Wi-Fi? Fixes (2026)"
       seoDescription="MacBook Wi-Fi not connecting or dropping out? Six fixes in order - forget the network, restart the router, renew DHCP, Safe Mode - then know when it's the antenna or the board."
       path="/blog/macbook-wifi-not-working-fix"
+      wide
+      toc={[
+        { id: "mac-router-or-setting", label: "Mac, router, or setting?" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost-dubai", label: "What it costs in Dubai" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Won't Connect to Wi-Fi? Fixes & Causes"
       hook="Nine times in ten a MacBook that won't hold Wi-Fi is the router, a stale network setting, or a VPN getting in the way - all free to fix from your sofa. The hardware faults are rare, and a quick test tells you if you're in that unlucky tenth."
@@ -25,7 +32,7 @@ export default function BlogMacBookWifiNotWorking() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={8}
-      featuredImageAlt="MacBook Wi-Fi repair in Dubai - technician checking the antenna cable and wireless module at the Media City workshop"
+      featuredImageAlt="MacBook Wifi Not Working Fix. MacBook Wi-Fi repair in Dubai - technician checking the antenna cable and wireless module at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a MacBook that won't connect to Wi-Fi in six steps",
         description: "Six diagnostic steps for a MacBook that won't connect to Wi-Fi or keeps dropping out, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookWifiNotWorking() {
       })]}
       body={
         <>
-          <h2>Is it the Mac, the router, or a setting?</h2>
+          <h2 id="mac-router-or-setting">MacBook Wifi Not Working Fix. Is it the Mac, the router, or a setting?</h2>
           <p>
             Almost every Wi-Fi problem is software or the router, not a broken laptop, so the trick is
             to rule those out before you worry about hardware. The good news is that genuine wireless
@@ -42,7 +49,7 @@ export default function BlogMacBookWifiNotWorking() {
             rarely fails on its own. When a Wi-Fi job does reach our Dubai Media City bench, it's
             almost always after a spill or a clumsy screen repair that disturbed the antenna. If it
             does turn out to be hardware, our{" "}
-            <Link to="/macbook-wifi-bluetooth-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-wifi-bluetooth-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook Wi-Fi and Bluetooth repair
             </Link>{" "}
             covers it after a free diagnostic.
@@ -58,7 +65,7 @@ export default function BlogMacBookWifiNotWorking() {
             That's when the antenna or the board comes into it.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Run these top to bottom and stop the moment you're back online. Most Wi-Fi jobs never get
             past step three.
@@ -103,7 +110,7 @@ export default function BlogMacBookWifiNotWorking() {
             VPN. If pages come back, the radio was working the whole time.
           </p>
 
-          <h2>When it's hardware: the rare causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the rare causes</h2>
           <p>
             If you've run the list and the Mac still can't see a single network, it's one of three
             things, and none of them is common. Here's what we actually find on the bench.
@@ -120,7 +127,7 @@ export default function BlogMacBookWifiNotWorking() {
             A spill that reaches the board can corrode the wireless module or its connector. Wi-Fi and
             Bluetooth often go together because they share a chip. We cover the first steps after a
             spill in our{" "}
-            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent font-semibold hover:underline">
               MacBook cleaning and thermal guide
             </Link>{" "}
             and on the water-damage service page.
@@ -132,17 +139,18 @@ export default function BlogMacBookWifiNotWorking() {
             before any quote.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost-dubai">What does it cost to fix in Dubai?</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's the antenna, a spill or the board before you commit.
-            The prices below are VAT-inclusive and depend on the model.
+            The price depends on the model and what the fault turns out to be.
           </p>
           <p>
-            Re-seating or replacing an antenna cable runs AED 300 to 600. Spill cleaning around the
-            wireless module starts from AED 400 depending on the corrosion. Board-level module repair
-            starts from AED 800. If you'd rather we check it first, book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            Re-seating or replacing an antenna cable, spill cleaning around the wireless module and
+            board-level module repair each price differently depending on the corrosion and the model,
+            so message us on WhatsApp for today's exact price on yours. If you'd rather we check it
+            first, book a{" "}
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             and we'll give you a fixed quote.
@@ -161,7 +169,7 @@ export default function BlogMacBookWifiNotWorking() {
         },
         {
           q: "How much does a MacBook Wi-Fi repair cost in Dubai?",
-          a: "It depends what it is, and the diagnostic to find out is free. Re-seating or replacing the antenna cable is AED 300 to 600. Spill cleaning around the module starts from AED 400. Board-level wireless repair starts from AED 800. All prices are VAT-inclusive. Most software causes cost nothing to fix once we point you at them.",
+          a: "It depends what it is, and the diagnostic to find out is free. Re-seating or replacing the antenna cable, spill cleaning around the module and board-level wireless repair each cost differently by model, so message us on WhatsApp for today's exact price on yours. Most software causes cost nothing to fix once we point you at them.",
         },
         {
           q: "Will a Mac say connected to Wi-Fi but have no internet?",

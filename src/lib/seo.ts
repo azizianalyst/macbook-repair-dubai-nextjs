@@ -69,7 +69,8 @@ export function buildSeo(input: SeoInput) {
   const title = clampTitle(rawTitle, TITLE_MAX);
   // Enforce the meta description cap. Short descriptions pass through unchanged.
   const description = clampWords(input.description, DESC_MAX);
-  const canonical = SITE.url + input.path;
+  // Trailing-slash canonical form (matches next.config trailingSlash:true). Root -> "/".
+  const canonical = SITE.url + (input.path === "/" ? "/" : input.path.replace(/\/$/, "") + "/");
   const ogImage = input.ogImage
     ? (input.ogImage.startsWith("http") ? input.ogImage : SITE.url + input.ogImage)
     : `${SITE.url}/og-default.jpg`;

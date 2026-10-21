@@ -17,7 +17,7 @@ export default function GuideCleanMacBookKeyboard() {
     <BlogPostTemplate
       seoTitle="How to Clean a MacBook Pro Keyboard Safely"
       seoDescription="Clean a MacBook Pro keyboard safely: isopropyl on the cloth not the keys, compressed air at Apple's 75 degree angle, sticky-key fixes, plus Dubai service."
-      path="/how-to-clean-macbook-pro-keyboard"
+      path="/blog/how-to-clean-macbook-pro-keyboard"
       category="How-to · MacBook"
       h1="How to Clean a MacBook Pro Keyboard"
       hook="A clean keyboard types better, lasts longer, and holds resale value - but one wrong move with liquid can mean a logic-board repair. Here's the safe, technician-approved method."
@@ -46,7 +46,7 @@ export default function GuideCleanMacBookKeyboard() {
           <p>
             Done carefully, cleaning your keyboard is a five-minute job you can do at home. Done
             carelessly, it's how a lot of the{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               water-damage repairs
             </Link>{" "}
             on our bench start.
@@ -133,11 +133,12 @@ export default function GuideCleanMacBookKeyboard() {
             Sugary or sticky drinks are the most dangerous because they leave a conductive,
             corrosive residue even after the liquid dries. The safest move is to bring it straight to
             us for{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook water damage repair in Dubai
             </Link>{" "}
-            (from AED 700) so the internals can be opened, cleaned, and dried properly before any
-            corrosion sets in. We offer free pickup and a free diagnosis.
+            so the internals can be opened, cleaned, and dried properly before any
+            corrosion sets in. Walk in to our Media City workshop for a free diagnosis - message us on
+            WhatsApp for today's exact price on your model.
           </p>
 
           <h2>When a key or the whole keyboard needs replacing</h2>
@@ -152,16 +153,17 @@ export default function GuideCleanMacBookKeyboard() {
           </ul>
           <p>
             On most MacBooks individual keycaps and the keyboard assembly are replaceable. Our{" "}
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair in Dubai
             </Link>{" "}
-            starts from AED 350, and if the fault is borderline we'll run a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            covers individual keycaps or a full assembly - message us on WhatsApp for
+            today's exact price - and if the fault is borderline we'll run a{" "}
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               free full diagnostic
             </Link>{" "}
             first so you only pay for what actually needs doing. Sticky issues that turn out to be the
             trackpad rather than the keyboard fall under our{" "}
-            <Link to="/macbook-trackpad-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-trackpad-repair-dubai" className="text-accent font-semibold hover:underline">
               trackpad repair
             </Link>{" "}
             instead.
@@ -176,7 +178,7 @@ export default function GuideCleanMacBookKeyboard() {
           </ul>
           <p>
             If your MacBook also feels sluggish while you're in there cleaning it up, our guide on{" "}
-            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">
               fixing a slow MacBook
             </Link>{" "}
             walks through the 10-minute checklist we use at the bench.
@@ -194,7 +196,7 @@ export default function GuideCleanMacBookKeyboard() {
         },
         {
           q: "How do I fix a sticky key on my MacBook?",
-          a: "Lightly moisten a cotton swab with 70% isopropyl alcohol and work it around the edges of the key - don't soak it. Let it dry fully, then test the key. If it still sticks after cleaning and drying, the mechanism is likely damaged and needs professional repair from AED 350.",
+          a: "Lightly moisten a cotton swab with 70% isopropyl alcohol and work it around the edges of the key - don't soak it. Let it dry fully, then test the key. If it still sticks after cleaning and drying, the mechanism is likely damaged and needs professional repair - message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "Why do butterfly keyboards (2016-2019) fail so easily?",
@@ -210,7 +212,7 @@ export default function GuideCleanMacBookKeyboard() {
         },
         {
           q: "How much does MacBook keyboard repair cost in Dubai?",
-          a: "MacBook keyboard repair starts from AED 350, covering individual keycaps or a full keyboard assembly. We run a free diagnostic first, offer free pickup across Dubai, and back the work with a 90-day warranty. Water damage repair, if a spill got inside, starts from AED 700.",
+          a: "MacBook keyboard repair covers individual keycaps or a full keyboard assembly. We run a free diagnostic first at our Media City workshop and back the work with a 15-day warranty. For the exact price on your model - or for water damage repair if a spill got inside - message us on WhatsApp.",
         },
         {
           q: "How often should I clean my MacBook keyboard?",
@@ -218,8 +220,8 @@ export default function GuideCleanMacBookKeyboard() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Dead, sticky, or repeating keys fixed from AED 350 with a 90-day warranty." },
-        { label: "MacBook water damage repair Dubai", href: "/macbook-water-damage-repair-dubai", description: "Spilled something? Free pickup and proper internal cleaning before corrosion sets in." },
+        { label: "MacBook keyboard repair Dubai", href: "/macbook-keyboard-repair-dubai", description: "Dead, sticky, or repeating keys fixed with a 15-day warranty." },
+        { label: "MacBook water damage repair Dubai", href: "/macbook-water-damage-repair-dubai", description: "Spilled something? Bring it in for proper internal cleaning before corrosion sets in." },
         { label: "MacBook trackpad repair Dubai", href: "/macbook-trackpad-repair-dubai", description: "Sticky clicks that turn out to be the trackpad rather than the keyboard." },
       ]}
     />

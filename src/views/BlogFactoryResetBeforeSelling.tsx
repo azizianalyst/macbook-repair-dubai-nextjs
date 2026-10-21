@@ -17,6 +17,18 @@ export default function BlogFactoryResetBeforeSelling() {
       seoTitle="How to Factory Reset iPhone Before Selling - 2026 Step Guide"
       seoDescription="Five steps to wipe an iPhone before selling: sign out of iCloud, iMessage and FaceTime, unpair Watch, Erase All Content. Avoid Activation Lock issues."
       path="/blog/how-to-factory-reset-iphone-before-selling"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer: the 5 steps" },
+        { id: "step-1-backup", label: "Step 1: Back up" },
+        { id: "step-2-icloud", label: "Step 2: Sign out of iCloud" },
+        { id: "step-3-imessage", label: "Step 3: iMessage and FaceTime" },
+        { id: "step-4-watch", label: "Step 4: Unpair Apple Watch" },
+        { id: "step-5-erase", label: "Step 5: Erase all content" },
+        { id: "what-not-to-do", label: "What not to do" },
+        { id: "verify-reset", label: "Verifying the reset" },
+        { id: "buyer-cant-activate", label: "If buyer can't activate" },
+      ]}
       category="How-to · iPhone"
       h1="How to Factory Reset iPhone Before Selling"
       hook="5 critical steps. Skip one and the buyer can't use your phone - or you risk privacy."
@@ -36,7 +48,7 @@ export default function BlogFactoryResetBeforeSelling() {
       ]}
       body={
         <>
-          <h2>Quick answer - the 5 steps</h2>
+          <h2 id="quick-answer">How To Factory Reset iPhone. Quick answer - the 5 steps</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Back up to iCloud or Mac.</li>
             <li>Sign out of iCloud (removes Activation Lock - critical).</li>
@@ -45,13 +57,13 @@ export default function BlogFactoryResetBeforeSelling() {
             <li>Settings → General → Transfer or Reset iPhone → Erase All Content and Settings.</li>
           </ol>
 
-          <h2>Step 1 - Back up to iCloud or Mac</h2>
+          <h2 id="step-1-backup">Step 1 - Back up to iCloud or Mac</h2>
           <p>
             Once you erase, your photos, messages, app data, and settings are gone forever. Choose one
             of these:
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iCloud (easiest)</strong>: Settings → [Your Name] → iCloud → iCloud Backup → Back Up Now. Wi-Fi required. 5 GB free, AED 3.99/mo for 50 GB.</li>
+            <li><strong>iCloud (easiest)</strong>: Settings → [Your Name] → iCloud → iCloud Backup → Back Up Now. Wi-Fi required. 5 GB free, with paid tiers available if you need more space for the backup.</li>
             <li><strong>Mac (best for privacy)</strong>: Connect via cable → open Finder → select iPhone in sidebar → "Back up all data on iPhone" → tick "Encrypt local backup" → set password. Encrypted backup also saves Health, Keychain, Wi-Fi passwords.</li>
             <li><strong>PC</strong>: Apple Devices app (Windows 11) or iTunes (Windows 10). Same options.</li>
           </ul>
@@ -60,7 +72,7 @@ export default function BlogFactoryResetBeforeSelling() {
             successful backup: just now". Or in Finder, the timestamp under "Latest Backup".
           </p>
 
-          <h2>Step 2 - Sign out of iCloud (CRITICAL - removes Activation Lock)</h2>
+          <h2 id="step-2-icloud">Step 2 - Sign out of iCloud (CRITICAL - removes Activation Lock)</h2>
           <p>
             Activation Lock is Apple's anti-theft system. If you erase the iPhone <em>without</em>
             signing out first, the buyer hits a screen demanding YOUR Apple ID password to activate
@@ -73,7 +85,7 @@ export default function BlogFactoryResetBeforeSelling() {
             calendars, etc. on the iPhone (doesn't matter - about to be erased). Confirm.
           </p>
 
-          <h2>Step 3 - Sign out of iMessage and FaceTime</h2>
+          <h2 id="step-3-imessage">Step 3 - Sign out of iMessage and FaceTime</h2>
           <p>
             Settings → Messages → toggle <strong>iMessage</strong> off. Wait for "Activating…" to
             disappear (10-30 seconds). Then Settings → FaceTime → toggle <strong>FaceTime</strong> off.
@@ -81,11 +93,11 @@ export default function BlogFactoryResetBeforeSelling() {
           <p>
             <strong>Why this matters:</strong> if you skip this, your friends' iMessages to the buyer's
             new SIM may continue routing to your Apple ID for weeks. Apple's deregister tool
-            (<a href="https://selfsolve.apple.com/deregister-imessage" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">selfsolve.apple.com/deregister-imessage</a>)
+            (<a href="https://selfsolve.apple.com/deregister-imessage" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">selfsolve.apple.com/deregister-imessage</a>)
             fixes this if you forgot, but it's an extra week of half-delivered messages.
           </p>
 
-          <h2>Step 4 - Unpair Apple Watch (if paired)</h2>
+          <h2 id="step-4-watch">Step 4 - Unpair Apple Watch (if paired)</h2>
           <p>
             On the iPhone, open the Watch app → All Watches → tap (i) next to your watch →
             <strong> Unpair Apple Watch</strong> → enter Apple ID password.
@@ -96,7 +108,7 @@ export default function BlogFactoryResetBeforeSelling() {
             still-linked Watch is a common reason for activation issues on the next phone.
           </p>
 
-          <h2>Step 5 - Erase All Content and Settings</h2>
+          <h2 id="step-5-erase">Step 5 - Erase All Content and Settings</h2>
           <p>
             Settings → General → Transfer or Reset iPhone → <strong>Erase All Content and Settings</strong>.
             iOS shows a summary of what's connected (eSIM, Apple ID, Wallet) - confirm. Enter passcode,
@@ -113,16 +125,16 @@ export default function BlogFactoryResetBeforeSelling() {
             number on a new device, transfer eSIM via the carrier's app first.
           </p>
 
-          <h2>What NOT to do (just deleting Apple ID is wrong)</h2>
+          <h2 id="what-not-to-do">What NOT to do (just deleting Apple ID is wrong)</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Don't</strong> delete your Apple ID account at appleid.apple.com - this loses your purchases, photos, iCloud everywhere. You only need to <em>sign out</em> on this iPhone.</li>
             <li><strong>Don't</strong> erase via "Erase iPhone" in Settings without signing out of iCloud first - Activation Lock will trap the buyer.</li>
             <li><strong>Don't</strong> rely on DFU mode to bypass Activation Lock. It doesn't. Apple checks the activation server on every restore.</li>
             <li><strong>Don't</strong> trust "iCloud unlock" sellers on Dubizzle or Telegram. Scams. See our{" "}
-              <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent-bright font-semibold hover:underline">iCloud lock honest guide</Link>.</li>
+              <Link to="/blog/icloud-locked-iphone-what-to-do" className="text-accent font-semibold hover:underline">iCloud lock honest guide</Link>.</li>
           </ul>
 
-          <h2>Verifying the reset worked</h2>
+          <h2 id="verify-reset">Verifying the reset worked</h2>
           <p>
             Before handing over the iPhone:
           </p>
@@ -133,12 +145,12 @@ export default function BlogFactoryResetBeforeSelling() {
             <li>Optional: in Settings → General → About on a different Apple device, the IMEI should show "Activation Lock: Off" via Apple's free checker (for iPhones running iOS 17+).</li>
           </ol>
 
-          <h2>If buyer can't activate - what went wrong</h2>
+          <h2 id="buyer-cant-activate">If buyer can't activate - what went wrong</h2>
           <p>
             99% of the time it's because Step 2 was skipped. Fix:
           </p>
           <ol className="list-decimal list-inside space-y-xs">
-            <li>You: log in at <a href="https://icloud.com/find" target="_blank" rel="noopener noreferrer" className="text-accent-bright font-semibold hover:underline">icloud.com/find</a> on any browser.</li>
+            <li>You: log in at <a href="https://icloud.com/find" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">icloud.com/find</a> on any browser.</li>
             <li>All Devices → select the sold iPhone → Erase iPhone (yes again, even though it's already erased) → wait for completion.</li>
             <li>Once erased, click "Remove from Account" on the same screen.</li>
             <li>Buyer can now activate normally on their Wi-Fi.</li>

@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Lightweight device-family hub. Built to fix breadcrumb gaps and orphan model pages.
 // Lists all model pages + relevant sub-services for the family on a single landing.
 import { ReactNode } from "react";
@@ -19,7 +20,7 @@ import { localBusiness, organization, service as serviceSchema, pageWithSpeakabl
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveFamilyQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import { imageForFamily } from "@/lib/page-images";
 
 export type FamilyHubLink = { label: string; href: string; sub?: string };
@@ -52,9 +53,8 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
       organization(),
       serviceSchema({
         name: `${p.family} Repair Dubai`,
-        price: p.startingPrice,
         timeline: "Same-day to 5 days",
-        warranty: "P90D",
+        warranty: "P2Y",
         url: p.path,
         description: p.seoDescription,
       }),
@@ -98,7 +98,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         {/* Service grid */}
         <section>
           <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-            <Wrench size={28} className="text-accent" aria-hidden /> {p.family} repairs we do
+            <Wrench size={28} className="text-accent" aria-hidden /> What {p.family} repairs do you do?
           </h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
             Pick the symptom - each link goes to a dedicated service page with pricing, timeline, and warranty.
@@ -122,7 +122,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
 
         {/* Model grid - primary orphan-killer */}
         <section>
-          <h2 className="text-[28px] md:text-[32px] mb-md">Every {p.family} model we service</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Which {p.family} models do you service?</h2>
           <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">
             From the oldest model still in active use through Apple's current 2026 lineup. Click any model for
             specific pricing, common issues, and parts availability.
@@ -148,7 +148,7 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
               <Star size={28} className="text-star fill-star" aria-hidden /> Reviews from {p.family} customers
             </h2>
             <p className="text-[14px] text-text-muted mb-lg">
-              Verbatim from Google. <Link to="/reviews" className="text-primary font-semibold hover:underline">Read all 215+ →</Link>
+              Verbatim from Google. <Link to="/reviews" className="text-primary font-semibold hover:underline">Read all {REVIEW_COUNT_LABEL} →</Link>
             </p>
             <ReviewGrid reviews={reviews} />
           </section>
@@ -163,29 +163,29 @@ export default function FamilyHubTemplate(p: FamilyHubProps) {
         {/* Warranty */}
         <section className="bg-bg-card border border-border rounded-md p-lg">
           <h2 className="text-[22px] mb-md flex items-center gap-sm">
-            <ShieldCheck size={22} className="text-accent" aria-hidden /> 90-day written warranty
+            <ShieldCheck size={22} className="text-accent" aria-hidden /> What warranty do you offer on {p.family} repairs?
           </h2>
           <p className="text-[15px]">
-            Every {p.family} repair includes a 90-day warranty on parts and labour, dated and signed on your invoice.
+            Every {p.family} repair includes a warranty of 15 days to 2 years on parts and labour, dated and signed on your invoice.
             Same fault returns inside the window? We re-do it free.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[28px] md:text-[32px] mb-lg">Where to bring your {p.family}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Where can I bring my {p.family} for repair?</h2>
           <LocationBlock />
         </section>
 
         {/* Final CTA */}
         <section>
-          <div className="bg-primary text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
-            <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
-            <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
-              Send the model and a photo of the issue. Free pickup across Dubai mainland. 90-day written warranty on every job.
+          <div className="bg-bg-alt text-text rounded-md p-xl md:p-2xl flex flex-col items-start gap-md shadow-md">
+            <h2 className="text-text text-[28px] md:text-[32px] max-w-[28ch]">{p.family} repair quote in 4 minutes on WhatsApp</h2>
+            <p className="text-text-muted text-[16px] max-w-[60ch]">
+              Send the model and a photo of the issue, then walk in to our Media City workshop. Written warranty of 15 days to 2 years, depending on the repair.
             </p>
             <div className="flex flex-wrap gap-sm">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> Message on WhatsApp
                 </a>
               </Button>

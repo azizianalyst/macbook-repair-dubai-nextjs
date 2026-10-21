@@ -17,6 +17,20 @@ export default function BlogIPhone15ProOverheating() {
       seoTitle="iPhone 15 Pro Overheating? Fixes and When to Worry"
       seoDescription="iPhone 15 Pro running hot? 6 fixes: close apps, kill runaway processes, Always-On Display, 5G, iOS update. Why titanium holds heat and when to book service."
       path="/blog/iphone-15-pro-overheating-fix"
+      wide
+      toc={[
+        { id: "why-runs-hot", label: "Why it runs hot" },
+        { id: "normal-vs-concerning", label: "Normal vs concerning heat" },
+        { id: "step-close-apps", label: "Step 1. Close background apps" },
+        { id: "step-runaway-processes", label: "Step 2. Runaway processes" },
+        { id: "step-always-on-display", label: "Step 3. Always-On Display" },
+        { id: "step-check-5g", label: "Step 4. Check 5G use" },
+        { id: "step-update-ios", label: "Step 5. Update iOS" },
+        { id: "step-reset-settings", label: "Step 6. Reset all settings" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "vs-17-pro-thermal", label: "15 Pro vs 17 Pro thermals" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Problem solving · iPhone"
       h1="iPhone 15 Pro Overheating? Fix Guide for 2026"
       hook="Some heat during heavy use is normal - the titanium frame conducts heat from the A17 Pro chip to the surface. Here's when to worry and what to actually fix."
@@ -25,7 +39,7 @@ export default function BlogIPhone15ProOverheating() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={10}
-      featuredImageAlt="iPhone 15 Pro overheating Dubai - titanium frame thermal diagnostic on bench"
+      featuredImageAlt="iPhone 15 Pro Overheating Fix, iPhone 15 Pro overheating Dubai - titanium frame thermal diagnostic on bench"
       extraSchemas={[howTo({
         name: "Fix iPhone 15 Pro overheating in 6 steps",
         description: "Six software fixes for iPhone 15 Pro overheating, in priority order, before considering hardware service.",
@@ -34,7 +48,7 @@ export default function BlogIPhone15ProOverheating() {
       })]}
       body={
         <>
-          <h2>Why iPhone 15 Pro runs hot - titanium frame and A17 Pro</h2>
+          <h2 id="why-runs-hot">iPhone 15 Pro Overheating Fix. Why iPhone 15 Pro runs hot - titanium frame and A17 Pro</h2>
           <p>
             iPhone 15 Pro was Apple's first iPhone with a titanium frame and the first 3nm A17 Pro
             chip. Both contribute to the perceived "running hot" complaint:
@@ -61,7 +75,7 @@ export default function BlogIPhone15ProOverheating() {
             </li>
           </ul>
 
-          <h2>Normal vs concerning heat levels</h2>
+          <h2 id="normal-vs-concerning">Normal vs concerning heat levels</h2>
           <p><strong>Normal warmth (no action needed):</strong></p>
           <ul className="list-disc list-inside space-y-xs">
             <li>Slight warmth around the camera bump during 4K video recording</li>
@@ -78,7 +92,7 @@ export default function BlogIPhone15ProOverheating() {
             <li>Heat persists for 30+ minutes after you stop using it</li>
           </ul>
 
-          <h2>Step 1 - Close background apps</h2>
+          <h2 id="step-close-apps">Step 1 - Close background apps</h2>
           <p>
             iOS doesn't normally throttle background apps to zero - they can briefly process
             updates, location, and audio. With 15+ apps in the App Switcher, that background
@@ -86,7 +100,7 @@ export default function BlogIPhone15ProOverheating() {
             swipe up on each app card.
           </p>
 
-          <h2>Step 2 - Check for runaway processes</h2>
+          <h2 id="step-runaway-processes">Step 2 - Check for runaway processes</h2>
           <p>
             Settings → Battery → scroll down to "Battery Usage by App". Set the toggle to
             "Last 10 Days" for clearest patterns. Any single app showing above 30% usage that
@@ -98,7 +112,7 @@ export default function BlogIPhone15ProOverheating() {
             top again the next day, delete and reinstall the app.
           </p>
 
-          <h2>Step 3 - Disable Always-On Display temporarily</h2>
+          <h2 id="step-always-on-display">Step 3 - Disable Always-On Display temporarily</h2>
           <p>
             iPhone 15 Pro's Always-On Display refreshes the OLED at 1Hz. Low frequency, but it
             still adds a small constant heat load. As a thermal-isolation test:
@@ -106,7 +120,7 @@ export default function BlogIPhone15ProOverheating() {
             If overheating reduces, you have your culprit. Some users prefer to leave it off.
           </p>
 
-          <h2>Step 4 - Check 5G use</h2>
+          <h2 id="step-check-5g">Step 4 - Check 5G use</h2>
           <p>
             5G modems run hotter than LTE, especially under sustained data download (streaming
             video, large file sync). To isolate:
@@ -115,7 +129,7 @@ export default function BlogIPhone15ProOverheating() {
             so the iPhone uses 5G only when needed.
           </p>
 
-          <h2>Step 5 - Update iOS</h2>
+          <h2 id="step-update-ios">Step 5 - Update iOS</h2>
           <p>
             iOS 17.0.3 (October 2023) was specifically released to fix iPhone 15 Pro overheating
             from a runaway crash reporter. iOS 17.1, 17.2, and 17.4 added further thermal
@@ -123,7 +137,7 @@ export default function BlogIPhone15ProOverheating() {
             management. Settings → General → Software Update.
           </p>
 
-          <h2>Step 6 - Reset all settings (last resort)</h2>
+          <h2 id="step-reset-settings">Step 6 - Reset all settings (last resort)</h2>
           <p>
             Settings → General → Transfer or Reset iPhone → Reset → Reset All Settings. This does
             NOT erase your data, photos, or apps - only resets WiFi/Bluetooth pairings, system
@@ -131,29 +145,32 @@ export default function BlogIPhone15ProOverheating() {
             steps 1-5 didn't catch. About 15-minute restoration of WiFi credentials needed after.
           </p>
 
-          <h2>When overheating means hardware issue</h2>
+          <h2 id="hardware-causes">When overheating means hardware issue</h2>
           <p>If the 6 software steps don't help, the hardware causes are:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li>
               <strong>Battery cell degradation</strong> - old or swelling cells generate excess
-              heat under charging. Settings → Battery → Battery Health. Replacement AED 350-450.
+              heat under charging. Check Settings → Battery → Battery Health; the iPhone 15 Pro shows its
+              cycle count there too, and our{" "}
+              <Link to="/blog/iphone-battery-health-when-to-replace/">iPhone battery health guide</Link>{" "}
+              explains what the numbers mean. Message us on WhatsApp for the replacement price on your model.
             </li>
             <li>
               <strong>Charging IC fault</strong> - overheating specifically during charging.
-              Component-level repair AED 400-700.
+              Component-level repair - message us for the exact price.
             </li>
             <li>
               <strong>Liquid damage</strong> - corrosion creating partial short circuits that
-              waste energy as heat. Look for green corrosion in SIM tray slot. Tier 2/3 repair
-              AED 700-1,500.
+              waste energy as heat. Look for green corrosion in SIM tray slot. Tier 2/3 repair -
+              message us for a quote after diagnosis.
             </li>
             <li>
               <strong>A17 Pro thermal interface failure</strong> - the chip's thermal paste has
-              dried out (rare in a 2-year-old phone, but we've seen it). Repaste AED 350.
+              dried out (rare in a 2-year-old phone, but we've seen it). Message us for the repaste price.
             </li>
           </ul>
 
-          <h2>iPhone 15 Pro vs iPhone 17 Pro thermal handling</h2>
+          <h2 id="vs-17-pro-thermal">iPhone 15 Pro vs iPhone 17 Pro thermal handling</h2>
           <p>
             The iPhone 17 Pro (2025) addressed the 15 Pro's thermal complaints with a vapour
             chamber bonded directly to the OLED panel - a first for iPhone. The 17 Pro runs
@@ -163,17 +180,17 @@ export default function BlogIPhone15ProOverheating() {
           <p>
             For repair, this means iPhone 17 Pro screens are harder to replace (the vapour chamber
             adds 25-35 minutes labour) and cost more. See our{" "}
-            <Link to="/blog/iphone-15-vs-iphone-17-repair-cost-comparison" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-15-vs-iphone-17-repair-cost-comparison" className="text-accent font-semibold hover:underline">
               iPhone 15 vs 17 cost comparison
             </Link>.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
             If software fixes don't resolve the heat, walk in for a free diagnostic at our Dubai
             Media City workshop. We measure the iPhone's thermal pattern with an infrared camera
             on the bench in 5 minutes.{" "}
-            <Link to="/iphone-15-pro-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/iphone-15-pro-repair-dubai" className="text-accent font-semibold hover:underline">
               iPhone 15 Pro repair page
             </Link>{" "}
             for full service options.

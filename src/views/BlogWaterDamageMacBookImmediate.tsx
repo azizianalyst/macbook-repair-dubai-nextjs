@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { Button } from "@/components/ui/button";
@@ -11,17 +12,31 @@ export default function BlogWaterDamageMacBookImmediate() {
     { name: "Power off immediately - hold the power button 10 seconds", text: "Do not try to see if it still works. Every second of current flow through wet circuits accelerates corrosion. Hold the power button for 10 full seconds." },
     { name: "Unplug everything", text: "Disconnect MagSafe or USB-C charger, unplug all peripherals. Yank the MagSafe end first if the wall socket is far away." },
     { name: "Flip upside down in V (tent) shape", text: "Open the lid to about 90 degrees and rest the MacBook upside-down on a clean towel. Lets liquid drain away from the keyboard and screen rather than pooling on the logic board." },
-    { name: "Do NOT use rice", text: "Rice absorbs almost no moisture from a sealed device and rice dust gets into ports. The 24 hours wasted in rice is the difference between a AED 700 repair and a AED 2,500 repair." },
+    { name: "Do NOT use rice", text: "Rice absorbs almost no moisture from a sealed device and rice dust gets into ports. The 24 hours wasted in rice is the difference between a light cleanup and a heavy board repair - message us for the exact price." },
     { name: "Do NOT use a hairdryer", text: "Heated air drives moisture deeper into the logic board and can warp components. Same for an oven, the sun, or any heat source." },
     { name: "Do NOT plug in to test", text: "Powering on a wet MacBook causes electrolytic corrosion to start instantly under every chip. The single most damaging thing you can do." },
-    { name: "Bring to repair shop within 24 hours", text: "WhatsApp 055 741 3706 - we send the free pickup driver same day for any mainland Dubai address. Recovery rate drops from 80-90% at 24 hours to 40-50% at 72 hours." },
+    { name: "Bring to repair shop within 24 hours", text: "Walk in to our Media City workshop, or book any same-day courier app to send it and WhatsApp 055 741 3706 the tracking link. Recovery rate drops from 80-90% at 24 hours to 40-50% at 72 hours." },
   ];
 
   return (
     <BlogPostTemplate
       seoTitle="Spilled Water on MacBook? Do This Right Now (2026)"
-      seoDescription="MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Free pickup."
+      seoDescription="MacBook water spill emergency steps. Power off in 10 seconds, flip upside down, no rice, no hairdryer. 80-90% recovery if seen within 24 hours. Walk in today."
       path="/blog/water-damage-macbook-immediate-action"
+      wide
+      toc={[
+        { id: "power-off", label: "Step 1. Power off immediately" },
+        { id: "unplug", label: "Step 2. Unplug everything" },
+        { id: "flip-v-shape", label: "Step 3. Flip upside down" },
+        { id: "no-rice", label: "Step 4. Do not use rice" },
+        { id: "no-hairdryer", label: "Step 5. Do not use a hairdryer" },
+        { id: "no-plug-in", label: "Step 6. Do not plug in to test" },
+        { id: "bring-in-24h", label: "Step 7. Bring in within 24 hours" },
+        { id: "corrosion-timeline", label: "Why time matters" },
+        { id: "salt-vs-fresh", label: "Salt water vs fresh water" },
+        { id: "what-we-do", label: "What we do when you bring it in" },
+        { id: "cost-expectations", label: "Cost expectations" },
+      ]}
       category="Emergency · MacBook"
       h1="Spilled Water on MacBook? Do This Right Now"
       hook="Stop reading after Step 1. Power off. Now read Step 2."
@@ -30,7 +45,7 @@ export default function BlogWaterDamageMacBookImmediate() {
       datePublished="2026-04-25"
       dateModified="2026-04-25"
       readingMinutes={9}
-      featuredImageAlt="MacBook water damage emergency Dubai - flip upside down V shape on towel"
+      featuredImageAlt="Water Damage MacBook. MacBook water damage emergency Dubai - flip upside down V shape on towel"
       extraSchemas={[howTo({
         name: "Save a MacBook after water spill",
         description: "Emergency seven-step procedure for the first 30 minutes after spilling liquid on a MacBook.",
@@ -47,7 +62,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             </p>
             <div className="flex flex-wrap gap-sm mt-md">
               <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                   <MessageCircle aria-hidden /> WhatsApp emergency
                 </a>
               </Button>
@@ -59,7 +74,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             </div>
           </aside>
 
-          <h2>Step 1 - Power off immediately</h2>
+          <h2 id="power-off">Water Damage MacBook. Step 1 - Power off immediately</h2>
           <p>
             Hold the power button for 10 full seconds. Force shutdown. Do not try to see if it
             still works. Every second of current flow through wet circuits causes electrolytic
@@ -67,14 +82,14 @@ export default function BlogWaterDamageMacBookImmediate() {
             is enormous.
           </p>
 
-          <h2>Step 2 - Unplug everything</h2>
+          <h2 id="unplug">Step 2 - Unplug everything</h2>
           <p>
             Disconnect the MagSafe or USB-C charger, unplug all peripherals (USB-C dongles,
             external displays, headphones). If the MacBook was charging, the wall current is
             still feeding the wet board until you pull the cable.
           </p>
 
-          <h2>Step 3 - Flip upside down (V tent shape)</h2>
+          <h2 id="flip-v-shape">Step 3 - Flip upside down (V tent shape)</h2>
           <p>
             Open the lid to about 90 degrees and rest the MacBook upside-down on a clean towel,
             forming a V or A-tent shape. Gravity pulls remaining liquid away from the keyboard,
@@ -82,16 +97,17 @@ export default function BlogWaterDamageMacBookImmediate() {
             12+ hours minimum.
           </p>
 
-          <h2>Step 4 - Do NOT use rice</h2>
+          <h2 id="no-rice">Step 4 - Do NOT use rice</h2>
           <p>
             The rice trick is internet folklore from 2010 and it does almost nothing. Rice absorbs
             ambient moisture only marginally faster than open air, and rice dust gets sucked into
             ports and fans. Meanwhile, corrosion has already started inside the MacBook within
             minutes of the spill - rice cannot stop corrosion. Wasting 24 hours in rice is the
-            difference between a AED 700 Tier 1 repair and a AED 2,500 Tier 3 repair.
+            difference between a light Tier 1 cleanup and a heavy Tier 3 board repair - message us
+            on WhatsApp for today's exact price on your model.
           </p>
 
-          <h2>Step 5 - Do NOT use a hairdryer</h2>
+          <h2 id="no-hairdryer">Step 5 - Do NOT use a hairdryer</h2>
           <p>
             Heated air drives moisture deeper into the logic board (it pushes liquid past chip
             edges that surface tension was previously holding) and can warp PCB components. Same
@@ -99,7 +115,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             Room temperature only.
           </p>
 
-          <h2>Step 6 - Do NOT plug in to test</h2>
+          <h2 id="no-plug-in">Step 6 - Do NOT plug in to test</h2>
           <p>
             Plugging the wet MacBook back in to "see if it still works" is the single most
             damaging thing you can do. Powering on a wet board causes instant electrolytic damage
@@ -107,24 +123,24 @@ export default function BlogWaterDamageMacBookImmediate() {
             an hour - recoverable cases that became unrecoverable. Resist the urge.
           </p>
 
-          <h2>Step 7 - Bring to a repair shop within 24 hours</h2>
+          <h2 id="bring-in-24h">Step 7 - Bring to a repair shop within 24 hours</h2>
           <p>
-            WhatsApp <strong>055 741 3706</strong> with a photo of the MacBook and we'll send the
-            free pickup driver same day for any mainland Dubai address. Or visit our workshop at
-            Concord Tower, Dubai Media City, 9am-10pm Saturday to Thursday.
+            Visit our workshop at Concord Tower, Dubai Media City (Monday to Thursday and Saturday
+            9am-7pm, Friday 9am-12pm and 2pm-7pm). If you can't come in, book any same-day courier app
+            and WhatsApp <strong>055 741 3706</strong> a photo of the MacBook and the tracking link.
           </p>
 
-          <h2>Why time matters - corrosion timeline</h2>
+          <h2 id="corrosion-timeline">Why time matters - corrosion timeline</h2>
           <p>Recovery success rate by hours since spill, based on our 2024-2025 case data:</p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>0-24 hours:</strong> 80-90% recovery, mostly Tier 1 (AED 700 cleanup)</li>
-            <li><strong>24-48 hours:</strong> 70-80% recovery, often Tier 2 (AED 1,000-1,500 with component repair)</li>
-            <li><strong>48-72 hours:</strong> 50-60% recovery, usually Tier 3 (AED 1,500-2,500)</li>
+            <li><strong>0-24 hours:</strong> 80-90% recovery, mostly Tier 1 (cleanup only)</li>
+            <li><strong>24-48 hours:</strong> 70-80% recovery, often Tier 2 (cleanup with component repair)</li>
+            <li><strong>48-72 hours:</strong> 50-60% recovery, usually Tier 3 (heavier board work)</li>
             <li><strong>72+ hours:</strong> 30-40% recovery, often unrecoverable (data recovery only)</li>
             <li><strong>1 week+:</strong> Below 20% - copper traces eaten away, board often beyond repair</li>
           </ul>
 
-          <h2>Salt water (beach/pool) vs fresh water (coffee/tea)</h2>
+          <h2 id="salt-vs-fresh">Salt water (beach/pool) vs fresh water (coffee/tea)</h2>
           <p>
             Salt water is roughly 10× more destructive than fresh water because dissolved salts
             keep conducting current even after the water itself evaporates. Beach spills (Jumeirah,
@@ -134,7 +150,7 @@ export default function BlogWaterDamageMacBookImmediate() {
             longer ultrasonic cleaning.
           </p>
 
-          <h2>What we do when you bring it in</h2>
+          <h2 id="what-we-do">What we do when you bring it in</h2>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Open the MacBook within 30 minutes of arrival to halt corrosion</li>
             <li>Remove battery, screen, keyboard, all flex connectors</li>
@@ -145,13 +161,14 @@ export default function BlogWaterDamageMacBookImmediate() {
             <li>Reassemble with new gaskets, full 4-hour stress test before handover</li>
           </ol>
 
-          <h2>Cost expectations - honest</h2>
+          <h2 id="cost-expectations">Cost expectations - honest</h2>
           <p>
-            Tier 1 (clean only, MacBook boots fine): <strong>AED 700</strong>. Tier 2 (clean +
-            1-2 damaged ICs): <strong>AED 1,000-1,500</strong>. Tier 3 (heavy board damage):
-            <strong> AED 1,800-2,500</strong>. Apple Store charges AED 4,000-6,000 for the same
-            damage because they swap the entire logic board. See our{" "}
-            <Link to="/blog/macbook-water-damage-repair-cost-success-rates" className="text-accent-bright font-semibold hover:underline">
+            Water damage falls into three tiers: Tier 1 (clean only, MacBook boots fine), Tier 2
+            (clean plus 1-2 damaged ICs) and Tier 3 (heavy board damage). Our component-level
+            approach repairs the damaged parts, where Apple's out-of-warranty route is a whole logic
+            board swap, and we quote before any work so you can compare. Message us on WhatsApp with a photo for today's exact price on your
+            model, or see our{" "}
+            <Link to="/blog/macbook-water-damage-repair-cost-success-rates" className="text-accent font-semibold hover:underline">
               full cost guide
             </Link>{" "}
             for tier-by-tier detail.
@@ -173,20 +190,20 @@ export default function BlogWaterDamageMacBookImmediate() {
         },
         {
           q: "Will Apple repair my water-damaged MacBook?",
-          a: "Apple's official policy is to replace the entire logic board for any liquid damage - AED 4,000-6,000. AppleCare+ covers liquid damage at AED 367 deductible per incident. If you have AppleCare+, use it. If not, our component-level approach saves AED 2,500-4,000 versus the Apple quote.",
+          a: "Apple's official policy is to replace the entire logic board for any liquid damage, which is expensive. AppleCare+ covers liquid damage for a small deductible per incident. If you have AppleCare+, use it. If not, our component-level approach saves you a lot versus the Apple quote - message us on WhatsApp for today's exact price on your model.",
         },
         {
           q: "Will my data be safe if the MacBook is water-damaged?",
           a: "Intel MacBook (2010-2020): SSD is removable, data recovery 95%+ even if board is dead. M-series MacBook (2020+): SSD is soldered to the board, recovery requires keeping the board alive long enough to image. About 70% success rate. Time Machine backup is essential on M-series.",
         },
         {
-          q: "Do you offer pickup for water-damaged MacBooks?",
-          a: "Yes - free door-to-door pickup anywhere in mainland Dubai, same day if WhatsApp'd before 6pm. Sharjah and Abu Dhabi pickup AED 50 surcharge. The driver carries a sealed dry bag for transport.",
+          q: "What if I can't bring the water-damaged MacBook in myself?",
+          a: "Book any same-day courier app, hand the MacBook to the driver powered off and wrapped in a dry towel inside a bag, and WhatsApp 055 741 3706 the tracking link. It reaches us within the day. We don't arrange pickup ourselves, so walking in to our Media City workshop is the other fast option.",
         },
       ]}
       relatedLinks={[
         { label: "MacBook water damage repair cost & success rates", href: "/blog/macbook-water-damage-repair-cost-success-rates", description: "Full pricing tiers and recovery data." },
-        { label: "MacBook water damage service page", href: "/macbook-water-damage-repair-dubai", description: "Process, pickup, and warranty." },
+        { label: "MacBook water damage service page", href: "/macbook-water-damage-repair-dubai", description: "Process, visiting the workshop, and warranty." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "When the board is unrecoverable." },
       ]}
     />

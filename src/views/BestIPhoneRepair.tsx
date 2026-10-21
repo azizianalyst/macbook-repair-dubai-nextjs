@@ -1,0 +1,272 @@
+"use client";
+import { withSlash } from "@/lib/utils";
+import { Star, CheckCircle2, Phone, MessageCircle, Shield, Clock, Wrench, Award } from "lucide-react";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
+import { PageShell } from "@/components/layout/PageShell";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
+import { USPStrip } from "@/components/blocks/USPStrip";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { VsAppleStore } from "@/components/blocks/VsAppleStore";
+import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
+import { useSeo } from "@/hooks/use-seo";
+import { REVIEWS } from "@/content/reviews";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
+
+const REPAIRS = [
+  { label: "Screen replacement",   price: "Price on request",  time: "40 min",   note: "OLED True Tone on iPhone 11–17" },
+  { label: "Battery replacement",  price: "Price on request",  time: "30 min",   note: "3-month warranty, 80% capacity guarantee" },
+  { label: "Back glass repair",    price: "Price on request",  time: "Same day", note: "iPhone 8 through 16 Pro Max" },
+  { label: "Face ID repair",       price: "Price on request",  time: "Same day", note: "Dot-projector assembly, iPhone X–17" },
+  { label: "Charging port repair", price: "Price on request",  time: "1 hr",     note: "Lightning and USB-C" },
+  { label: "Water damage",         price: "Price on request",  time: "1–2 days", note: "Ultrasonic clean + board inspection" },
+  { label: "Camera repair",        price: "Price on request",  time: "Same day", note: "Front, rear, periscope zoom modules" },
+  { label: "Logic board repair",   price: "Price on request",  time: "2–5 days", note: "Component-level micro-soldering" },
+];
+
+const CRITERIA = [
+  { icon: Wrench,   title: "Genuine-grade OLED panels",      body: "The best iPhone repair shops in Dubai use OLED panels with True Tone calibration for iPhone 11 and above. Cheap LCD replacements on OLED phones have visibly lower contrast, no True Tone, and typically fail within 6 months." },
+  { icon: Clock,    title: "Screen replaced in 40 minutes",  body: "A shop that takes more than 90 minutes to replace an iPhone screen is either using a difficult process or low-skill technicians. iPhone screen replacement is a well-practised job, 40 minutes is standard." },
+  { icon: Shield,   title: "Written warranty, not verbal",   body: "The best iPhone repair in Dubai comes with a written warranty card: device serial number, repair type, parts used, and expiry date. A verbal 'we'll fix it if it breaks' is not a warranty." },
+  { icon: Award,    title: "No Face ID damage after screen", body: "A poorly replaced iPhone screen can break Face ID, the dot projector sits behind the earpiece bracket and must be re-seated precisely. Ask any shop: 'Will my Face ID still work after the screen?' If they hesitate, walk out." },
+];
+
+const COMPARISONS = [
+  { shop: "MacBook Repair Dubai (us)", screen: "Price on request", time: "40 min", warranty: "90 days (screens)", faceId: "Preserved", walkIn: "Yes, no appointment" },
+  { shop: "Apple Store / AASP",        screen: "Price on request", time: "3–5 days", warranty: "90 days",         faceId: "Preserved", walkIn: "Usually by appointment" },
+  { shop: "Karama / generic shops",    screen: "Price on request", time: "30–60 min", warranty: "Verbal / 1 month", faceId: "Risk of damage", walkIn: "Varies" },
+];
+
+const WHY_US = [
+  "iPhone 6 through iPhone 17 Pro Max, 11 active generations in stock",
+  "OLED panels with True Tone calibration for iPhone 11–17",
+  "Face ID preserved on every screen replacement we do",
+  "Screen in 40 minutes, battery in 30 minutes",
+  "Walk-in workshop by the Palm Jumeirah tram stop, parking on site",
+  "Written warranty of 15 days to 2 years",
+  "Free diagnosis, no fix, no charge",
+  `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews · Since 2004`,
+];
+
+const FAQS = [
+  { q: "What is the best iPhone repair shop in Dubai?",
+    a: `The best iPhone repair in Dubai uses genuine-grade OLED panels with True Tone, preserves Face ID on every screen replacement, gives a written warranty on every repair, and replaces the screen in 40 minutes. We've done this since 2004 at Concord Tower, Dubai Media City, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews.` },
+  { q: "How much does the best iPhone screen repair cost in Dubai?",
+    a: "Quality iPhone screen repair in Dubai depends on your exact model, from older LCD phones to the iPhone 17 Pro Max OLED, so message us on WhatsApp for today's exact price on yours. Cheap shops use grey-market panels without True Tone that dim and yellow within months. The best repair is not the cheapest, it's the one with the best OLED and a written warranty that states its period up front." },
+  { q: "Can iPhone Face ID be damaged during a screen repair?",
+    a: "Yes, if the repair technician damages the dot-projector flex cable during screen removal, Face ID stops working permanently (Apple ties it to the original module and can't be replaced independently). The best iPhone repair shops in Dubai use screen-removal tools that protect the dot-projector bracket. We guarantee Face ID works after every screen replacement." },
+  { q: "Is it better to use Apple Store or an independent shop for iPhone repair in Dubai?",
+    a: "Under AppleCare+ the Apple Store is hard to beat. Out of warranty, compare quotes: Apple lists its UAE out-of-warranty screen prices on its support site (for example AED 1,279 plus VAT for an iPhone 17 or iPhone 18 Pro), and we quote before any work so you can compare. For logic board issues, independent specialists can repair at component level, where Apple's out-of-warranty route is a unit replacement. Message us on WhatsApp for today's exact price on your model." },
+  { q: "How fast can you fix my iPhone in Dubai?",
+    a: "Screen replacement: 40 minutes. Battery replacement: 30 minutes. Back glass: same day. Face ID repair: same day. Water damage: 1–2 days. Logic board: 2–5 days. Walk in before 4 pm and screen and battery jobs are done the same day." },
+  { q: "Do you offer iPhone repair at home in Dubai?",
+    a: "Most iPhone repairs are best done at our Concord Tower workshop, where the tools and microscopes are. If you can't come in, book any same-day courier app to send the iPhone to us and WhatsApp the tracking link. A paid onsite visit can also be arranged when a technician is free, with the charge quoted on WhatsApp first." },
+];
+
+const FEATURED_REVIEW_INDEXES = [1, 4, 8, 14, 20, 25];
+
+export default function BestIPhoneRepair() {
+  const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
+
+  useSeo({
+    title: "Best iPhone Repair Dubai: What to Look For in 2026",
+    description:
+      "What makes a good iPhone repair shop in Dubai: genuine-grade parts, Face ID kept, True Tone restored, a written warranty. Free diagnosis. WhatsApp us.",
+    path: "/best-iphone-repair-dubai",
+  });
+
+  // Scaffolded with image={undefined} and an alt already written for an image
+  // that was never wired up (audit 2026-09-23). Uses the route's own topic
+  // image, so src and alt can never drift apart.
+  const heroImg = imageForRoute("/best-iphone-repair-dubai");
+
+  return (
+    <PageShell>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+        <Hero
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
+          variant="device"
+          tone="dark"
+          eyebrow="Buyer’s guide · Dubai · Since 2004"
+          title="Finding the best iPhone repair in Dubai"
+          subtitle={`OLED True Tone · Face ID preserved · Written warranty of 15 days to 2 years · ${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · WhatsApp us for your exact price.`}
+        >
+          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
+            <span>·</span>
+            <span>iPhone 6 through 17 Pro Max</span>
+            <span>·</span>
+            <span>40 min screen repair</span>
+          </p>
+        </Hero>
+
+        <USPStrip tone="dark" />
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "iPhone Repair Dubai", path: "/iphone-repair-dubai" }, { name: "Best iPhone Repair Dubai", path: "/best-iphone-repair-dubai" }]} />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <QuickAnswer
+            tone="dark"
+            question="What is the best iPhone repair in Dubai?"
+            answer={`The best iPhone repair in Dubai is at Concord Tower, Office #45, Dubai Media City, with OLED True Tone screens, Face ID preserved, written warranty of 15 days to 2 years, 40-minute screen replacement, walk in 3 minutes from the Palm Jumeirah tram stop. ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews since 2004. WhatsApp us for today's exact price on your model.`}
+          />
+        </section>
+
+        {/* What to look for */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">4 things to check before choosing an iPhone repair shop in Dubai</h2>
+          <div className="grid gap-md md:grid-cols-2">
+            {CRITERIA.map(({ icon: Icon, title, body }) => (
+              <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <Icon size={24} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[17px] font-bold mb-sm">{title}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Comparison */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">iPhone repair comparison. Dubai 2026</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[14px] border-collapse">
+                <thead>
+                  <tr className="border-b border-border text-left text-text-muted">
+                    <th className="py-sm pr-lg font-semibold">Shop type</th>
+                    <th className="py-sm pr-lg font-semibold">Screen price</th>
+                    <th className="py-sm pr-lg font-semibold">Time</th>
+                    <th className="py-sm pr-lg font-semibold">Warranty</th>
+                    <th className="py-sm pr-lg font-semibold">Face ID</th>
+                    <th className="py-sm font-semibold">Walk-in</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARISONS.map((row, i) => (
+                    <tr key={row.shop} className={`border-b border-border ${i === 0 ? "bg-accent/5" : ""}`}>
+                      <td className="py-sm pr-lg font-medium">{row.shop}{i === 0 && <span className="ml-sm text-accent text-[12px] font-bold">← us</span>}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.screen}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.time}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.warranty}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.faceId}</td>
+                      <td className="py-sm text-text-muted">{row.walkIn}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Repairs */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">iPhone repairs, prices & times</h2>
+          <div className="overflow-x-auto mt-lg">
+            <table className="w-full text-[14px] border-collapse">
+              <thead>
+                <tr className="border-b border-border text-left text-text-muted">
+                  <th className="py-sm pr-lg font-semibold">Repair</th>
+                  <th className="py-sm pr-lg font-semibold">Price</th>
+                  <th className="py-sm pr-lg font-semibold">Time</th>
+                  <th className="py-sm font-semibold">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {REPAIRS.map((row) => (
+                  <tr key={row.label} className="border-b border-border">
+                    <td className="py-sm pr-lg font-medium">{row.label}</td>
+                    <td className="py-sm pr-lg"><PriceCTA compact message={`Hi, price for iPhone ${row.label.toLowerCase()} in Dubai?`} /></td>
+                    <td className="py-sm pr-lg text-text-muted whitespace-nowrap"><span className="inline-flex items-center gap-1"><Clock size={12} aria-hidden /> {row.time}</span></td>
+                    <td className="py-sm text-text-muted">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Why us */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Why customers rate us {RATING_LABEL} on Google</h2>
+          <ul className="grid gap-sm md:grid-cols-2">
+            {WHY_US.map((item) => (
+              <li key={item} className="flex items-start gap-sm text-[15px]">
+                <CheckCircle2 size={18} className="text-accent shrink-0 mt-[2px]" aria-hidden />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <VsAppleStore tone="dark" />
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+            <div className="flex-1">
+              <h2 className="text-[22px] font-bold mb-sm">Get the best iPhone repair in Dubai today</h2>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed quote · 40-min screen · Face ID preserved · Warranty 15 days to 2 years.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-sm shrink-0">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+                <MessageCircle size={18} aria-hidden /> WhatsApp
+              </a>
+              <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
+                <Phone size={18} aria-hidden /> {NAP.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">{REVIEW_COUNT_LABEL} reviews, what customers say</h2>
+            <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Best iPhone repair Dubai. FAQ</h2>
+          <FAQAccordion items={FAQS} injectSchema />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[22px] font-bold mb-md">More repair options in Dubai</h2>
+          <div className="flex flex-wrap gap-sm">
+            {[
+              { label: "iPhone Repair Dubai", href: "/iphone-repair-dubai" },
+              { label: "iPhone Repair Near Me Dubai", href: "/iphone-repair-near-me-dubai" },
+              { label: "Best MacBook Repair Dubai", href: "/best-macbook-repair-dubai" },
+              { label: "Best Apple Repair Dubai", href: "/best-apple-repair-dubai" },
+              { label: "MacBook Repair Dubai", href: "/" },
+              { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },
+            ].map(({ label, href }) => (
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Find us. Concord Tower, Dubai Media City</h2>
+          <LocationBlock tone="dark" />
+        </section>
+      </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath="/best-iphone-repair-dubai" defaultDeviceType="iPhone" />
+      </section>
+
+      <RelatedArticles path="/best-iphone-repair-dubai" />
+    </PageShell>
+  );
+}

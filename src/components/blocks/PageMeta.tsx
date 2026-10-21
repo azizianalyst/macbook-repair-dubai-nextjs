@@ -12,7 +12,7 @@ export function PageMeta({ lastUpdated, author, readingMinutes }: Props) {
   return (
     <p className="flex flex-wrap items-center gap-md text-[13px] text-text-muted mono">
       {lastUpdated && <span className="flex items-center gap-1"><CalendarDays size={14} aria-hidden /> Last updated: {lastUpdated}</span>}
-      {author && <span className="flex items-center gap-1"><User size={14} aria-hidden /> {author}</span>}
+      {author && <span className="flex items-center gap-1"><User size={14} aria-hidden /> Reviewed by {author}</span>}
       {readingMinutes && <span className="flex items-center gap-1"><Clock size={14} aria-hidden /> {readingMinutes} min read</span>}
     </p>
   );

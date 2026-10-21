@@ -17,6 +17,13 @@ export default function BlogMacBookScreenFlickering() {
       seoTitle="MacBook Screen Flickering? Causes & Fixes (2026)"
       seoDescription="MacBook screen flickering or flashing lines? Work through six fixes in order - macOS update, Safe Mode, NVRAM, external monitor test - then know when it's the cable or panel."
       path="/blog/macbook-screen-flickering-fix"
+      wide
+      toc={[
+        { id: "software-or-hardware", label: "Software or hardware flicker" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost-dubai", label: "What it costs in Dubai" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Screen Flickering? Causes & Fixes"
       hook="A flickering MacBook screen is software about half the time and a tired display cable most of the rest. You can tell which in about five minutes, and several of the software causes you can clear yourself before paying anyone."
@@ -25,7 +32,7 @@ export default function BlogMacBookScreenFlickering() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={9}
-      featuredImageAlt="MacBook screen flickering diagnostic in Dubai - technician checking the display flex cable at the Media City workshop"
+      featuredImageAlt="MacBook Screen Flickering Fix. MacBook screen flickering diagnostic in Dubai - technician checking the display flex cable at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a flickering MacBook screen in six steps",
         description: "Six diagnostic steps for a MacBook screen that flickers, flashes or shows horizontal lines, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookScreenFlickering() {
       })]}
       body={
         <>
-          <h2>Software flicker or hardware flicker?</h2>
+          <h2 id="software-or-hardware">MacBook Screen Flickering Fix. Software flicker or hardware flicker?</h2>
           <p>
             Almost every flickering screen falls into one of two camps, and which one you have decides
             whether this is a free fix tonight or a trip to the bench. The good news: about half the
@@ -42,10 +49,10 @@ export default function BlogMacBookScreenFlickering() {
             software, cleared with an update or a setting. The other half are a worn cable or a panel,
             and those we sort the same day on the common models. Either way you can find out which in
             five minutes, and if it does need a panel our{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair
             </Link>{" "}
-            starts at AED 600.
+            team can sort it, usually the same day — message us on WhatsApp for today's exact price on your model.
           </p>
           <p>
             <strong>Software flicker</strong> tends to come and go. It shows up after a macOS update,
@@ -58,7 +65,7 @@ export default function BlogMacBookScreenFlickering() {
             display flex cable. This is the one that gets worse over weeks rather than better.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Run these top to bottom and stop the moment the flicker goes. Don't skip ahead to the
             cable test before you've ruled out the software causes, because most people who think
@@ -107,7 +114,7 @@ export default function BlogMacBookScreenFlickering() {
             its backlight driver.
           </p>
 
-          <h2>When it's hardware: the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the common causes</h2>
           <p>
             If you've worked through the list and the screen still flickers, it's usually one of three
             things. Here's what we actually pull off the bench, roughly in the order we see it across
@@ -119,7 +126,7 @@ export default function BlogMacBookScreenFlickering() {
             2016 and 2017 MacBook Pro this is the well-known Flexgate fault, and it starts as flicker
             or a "stage light" band before the screen goes dark for good. We swap these constantly.
             The full background, including how to catch it early, is in our{" "}
-            <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">
               Flexgate explainer
             </Link>.
           </p>
@@ -135,24 +142,24 @@ export default function BlogMacBookScreenFlickering() {
             If an external monitor flickers too, the fault is past the lid, in the graphics processor
             or the board that drives it. This is more common on older 15″ and 16″ Pros that ran their
             discrete GPU hot. It's bench work, and our{" "}
-            <Link to="/macbook-gpu-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-gpu-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook GPU repair
             </Link>{" "}
             covers it.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost-dubai">What does it cost to fix in Dubai?</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
-            is free, so you'll know which of the three it is before you commit to anything. The prices
-            below are VAT-inclusive and depend on the model.
+            is free, so you'll know which of the three it is before you commit to anything. The price
+            depends on the model and which fault it turns out to be, and it's always VAT-inclusive.
           </p>
           <p>
-            A display or flex-cable replacement runs AED 600 to 1,200. A backlight or panel-driver
-            board repair is AED 350 to 800, since we work at component level where we can rather than
-            replacing the whole screen. GPU and logic-board work starts from AED 800. If you'd rather
-            we just check it first, book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            A display or flex-cable replacement is the most common fix. A backlight or panel-driver
+            board repair is often cheaper, since we work at component level where we can rather than
+            replacing the whole screen. GPU and logic-board work is bench work. Message us on WhatsApp
+            with your model for today's exact price, or if you'd rather we just check it first, book a{" "}
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             and we'll give you a fixed quote.
@@ -172,7 +179,7 @@ export default function BlogMacBookScreenFlickering() {
         },
         {
           q: "How much does it cost to fix a flickering MacBook screen in Dubai?",
-          a: "It depends which fault it is, and the diagnostic to find out is free. A display or flex-cable replacement is AED 600 to 1,200. A backlight or panel-driver board repair is AED 350 to 800. GPU and board work starts from AED 800. All prices are VAT-inclusive. WhatsApp the serial first for a tighter estimate.",
+          a: "It depends which fault it is, and the diagnostic to find out is free. A display or flex-cable replacement is the most common fix; a backlight or panel-driver board repair is often cheaper; GPU and board work is bench work. All prices are VAT-inclusive. WhatsApp the serial with your model and we'll send the exact price for your MacBook.",
         },
         {
           q: "Is a flickering screen the Flexgate problem?",

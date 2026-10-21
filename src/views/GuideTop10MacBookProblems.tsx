@@ -6,11 +6,11 @@ export default function GuideTop10MacBookProblems() {
   return (
     <BlogPostTemplate
       seoTitle="Top 10 Common MacBook Problems and Fixes"
-      seoDescription="The 10 most common MacBook problems in Dubai: won't turn on, battery, screen flicker, overheating, water damage and more, with DIY checks and real prices."
+      seoDescription="The 10 most common MacBook problems in Dubai: won't turn on, battery, screen flicker, overheating, water damage and more, with DIY checks and free diagnosis."
       path="/top-10-common-macbook-problems-and-how-to-fix-them"
       category="Problem solving · MacBook"
       h1="Top 10 Common MacBook Problems and How to Fix Them"
-      hook="After 21 years on the bench in Dubai, we see the same ten MacBook faults again and again. Here's how to spot each one, what you can safely try yourself, and when it's time to let a technician take over."
+      hook="After two decades on the bench in Dubai, we see the same ten MacBook faults again and again. Here's how to spot each one, what you can safely try yourself, and when it's time to let a technician take over."
       quickAnswer="The most common MacBook problems are: won't turn on, battery draining or not charging, screen flicker/lines, overheating, running slow, sticking keys, liquid damage, Wi-Fi/Bluetooth dropouts, full storage, and kernel panics. Most have a quick DIY check first; hardware faults (screen, battery, logic board, water damage) need professional repair."
       author={{ name: "Shafiq", role: "Founder & senior Apple technician" }}
       datePublished="2026-05-30"
@@ -20,12 +20,12 @@ export default function GuideTop10MacBookProblems() {
       body={
         <>
           <p>
-            We've repaired MacBooks in Dubai since 2004 - that's more than 21 years and tens of
+            We've repaired MacBooks in Dubai since 2004 - tens of
             thousands of machines. In that time, roughly nine out of ten MacBooks that come through
             our Dubai Media City workshop fall into one of just ten problem categories. Below we
             walk through each, with the symptoms, a safe DIY check you can do at home, and an honest
-            note on when it's cheaper and safer to bring it in. Diagnosis is always free, and we
-            offer free pickup across Dubai mainland.
+            note on when it's cheaper and safer to bring it in. Diagnosis is always free, and you can
+            walk in without an appointment.
           </p>
 
           <h2>1. MacBook won't turn on (no chime, no display)</h2>
@@ -45,15 +45,15 @@ export default function GuideTop10MacBookProblems() {
             with backlight, it's usually a power-delivery fault on the logic board or a failed
             charging circuit. This is bench work - we run a free diagnostic and most no-power faults
             trace to the{" "}
-            <Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              logic board (component-level repair from AED 800)
+            <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">
+              logic board (component-level repair)
             </Link>{" "}
             or the{" "}
-            <Link to="/macbook-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">
               charging port
             </Link>
             . See our full guide on{" "}
-            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent font-semibold hover:underline">
               MacBook not turning on
             </Link>
             .
@@ -69,7 +69,7 @@ export default function GuideTop10MacBookProblems() {
             note the maximum capacity and "cycle count". Below 80% capacity, or a "Service
             Recommended" flag, means the cell is worn. Also check Battery settings for which apps are
             using significant energy in the background. See our{" "}
-            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent font-semibold hover:underline">
               battery health check guide
             </Link>
             .
@@ -77,10 +77,10 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> Worn cells don't recover - and a swelling battery
             (trackpad lifting, case bulging) is a safety risk that needs immediate attention. Our{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
-              MacBook battery replacement starts at AED 450
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
+              MacBook battery replacement
             </Link>{" "}
-            with a 90-day warranty. If it charges erratically but the battery is healthy, the fault
+            comes with a 3-month warranty. If it charges erratically but the battery is healthy, the fault
             is often the charging port.
           </p>
 
@@ -98,8 +98,8 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> Cracked panels, flexgate cables and dead backlights are
             all display-assembly work. Our{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              MacBook screen repair starts from AED 600
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
+              MacBook screen repair
             </Link>
             . Dubai's heat and dust can accelerate flex-cable wear, so don't ignore early flicker.
           </p>
@@ -119,10 +119,10 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> After a few years in Dubai, fan blades and heatsink
             fins clog with fine dust, and the thermal paste dries out. Our{" "}
-            <Link to="/macbook-overheating-fix-dubai" className="text-accent-bright font-semibold hover:underline">
-              fan and thermal cleaning service is AED 200
+            <Link to="/macbook-overheating-fix-dubai" className="text-accent font-semibold hover:underline">
+              fan and thermal cleaning service
             </Link>{" "}
-            and usually restores normal temperatures and silent fans the same day.
+            usually restores normal temperatures and silent fans the same day.
           </p>
 
           <h2>5. MacBook running slow</h2>
@@ -134,7 +134,7 @@ export default function GuideTop10MacBookProblems() {
             <strong>DIY check:</strong> Keep at least 15% of your SSD free (macOS uses it as swap).
             Empty Downloads and Trash, audit Login Items (System Settings → General → Login Items),
             close excess browser tabs, and run a free Malwarebytes scan for hidden adware. Our{" "}
-            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-running-slow-10-fixes" className="text-accent font-semibold hover:underline">
               10 fixes for a slow MacBook
             </Link>{" "}
             covers the full checklist.
@@ -143,12 +143,12 @@ export default function GuideTop10MacBookProblems() {
             <strong>When to service:</strong> If it's still slow after the software checks, the cause
             is usually adware, a worn battery throttling the chip, or - on Intel Macs - a tired hard
             drive. We offer{" "}
-            <Link to="/macbook-virus-removal-dubai" className="text-accent-bright font-semibold hover:underline">
-              virus and adware removal for AED 200
+            <Link to="/macbook-virus-removal-dubai" className="text-accent font-semibold hover:underline">
+              virus and adware removal
             </Link>{" "}
             and{" "}
-            <Link to="/macbook-ssd-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">
-              SSD upgrades from AED 700
+            <Link to="/macbook-ssd-upgrade-dubai" className="text-accent font-semibold hover:underline">
+              SSD upgrades
             </Link>{" "}
             that transform older Intel MacBooks.
           </p>
@@ -167,12 +167,12 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> If cleaning doesn't fix it, the key mechanism or the
             keyboard's flex membrane has failed. Our{" "}
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              MacBook keyboard repair starts at AED 350
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
+              MacBook keyboard repair
             </Link>
             . If the trackpad has also gone unresponsive, see our{" "}
-            <Link to="/macbook-trackpad-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              trackpad repair (from AED 350)
+            <Link to="/macbook-trackpad-repair-dubai" className="text-accent font-semibold hover:underline">
+              trackpad repair
             </Link>
             .
           </p>
@@ -191,10 +191,10 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> Same day, ideally within hours. We perform ultrasonic
             cleaning and corrosion treatment before damage spreads.{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              Water damage repair starts at AED 700
-            </Link>
-            , with free diagnosis and a no-fix-no-charge ethos on the diagnostic itself.
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
+              Water damage repair
+            </Link>{" "}
+            comes with free diagnosis and a no-fix-no-charge ethos on the diagnostic itself.
           </p>
 
           <h2>8. Wi-Fi and Bluetooth dropping out</h2>
@@ -212,8 +212,8 @@ export default function GuideTop10MacBookProblems() {
             <strong>When to service:</strong> If software resets don't help, the Wi-Fi/Bluetooth
             antenna (often routed through the display hinge) or the wireless module on the logic
             board may be faulty. Bring it in for a free diagnostic; antenna and{" "}
-            <Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              logic board level repairs start at AED 800
+            <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">
+              logic board level repairs
             </Link>
             .
           </p>
@@ -231,15 +231,15 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> If you've genuinely outgrown the drive, an Intel
             MacBook can be upgraded to a larger, faster SSD -{" "}
-            <Link to="/macbook-ssd-upgrade-dubai" className="text-accent-bright font-semibold hover:underline">
-              SSD upgrades start from AED 700
-            </Link>
-            . On Apple Silicon the storage is soldered and can't be enlarged, so iCloud or an
+            <Link to="/macbook-ssd-upgrade-dubai" className="text-accent font-semibold hover:underline">
+              SSD upgrades
+            </Link>{" "}
+            can help here. On Apple Silicon the storage is soldered and can't be enlarged, so iCloud or an
             external drive is the answer. If the drive itself is failing, ask about{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               our full diagnostic
             </Link>{" "}
-            (free) and data recovery from AED 400.
+            (free) and data recovery.
           </p>
 
           <h2>10. Kernel panics and random restarts</h2>
@@ -257,28 +257,28 @@ export default function GuideTop10MacBookProblems() {
           <p>
             <strong>When to service:</strong> If panics persist in Safe Mode or Apple Diagnostics
             returns a hardware code, it's typically RAM, a failing SSD, or a logic-board fault. Our{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full diagnostic is free
             </Link>
             ; on older Intel models a{" "}
-            <Link to="/macbook-logic-board-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              logic board repair (from AED 800)
+            <Link to="/macbook-logic-board-repair-dubai" className="text-accent font-semibold hover:underline">
+              logic board repair
             </Link>{" "}
-            or RAM upgrade (Intel only, from AED 400) often resolves it.
+            or RAM upgrade (Intel only) often resolves it.
           </p>
 
           <h2>Still stuck? We'll diagnose it free</h2>
           <p>
             If your MacBook problem isn't on this list, or the DIY checks didn't help, bring it to
             our workshop at Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, or
-            call us on 055 741 3706. We're open Monday to Saturday, 9am-10pm, offer free pickup
-            across Dubai mainland, free diagnosis on every repair, and back our work with a 90-day
-            warranty. You can also{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            call us on 055 741 3706. We're open Monday to Saturday, 9am-7pm (Friday break 12-2pm),
+            and we're a 3-minute walk from the Palm Jumeirah tram stop. Diagnosis is free on every repair, and we back our work with a written warranty of 15 days to 2 years,
+            depending on the repair. You can also{" "}
+            <Link to="/" className="text-accent font-semibold hover:underline">
               see our full MacBook repair services
             </Link>{" "}
             or{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               get in touch
             </Link>
             .
@@ -288,31 +288,31 @@ export default function GuideTop10MacBookProblems() {
       faqs={[
         {
           q: "What is the most common MacBook problem in Dubai?",
-          a: "Overheating and loud fans, by a wide margin. Dubai's heat and fine dust clog the fans and heatsink and dry out the thermal paste, causing the chip to throttle. A professional fan and thermal cleaning is AED 200 and usually fixes it the same day.",
+          a: "Overheating and loud fans, by a wide margin. Dubai's heat and fine dust clog the fans and heatsink and dry out the thermal paste, causing the chip to throttle. A professional fan and thermal cleaning usually fixes it the same day - message us on WhatsApp for today's price.",
         },
         {
           q: "How much does it cost to fix a MacBook that won't turn on?",
-          a: "Diagnosis is always free. The repair depends on the cause - a charging port or charging circuit fault is at the lower end, while component-level logic board repair starts at AED 800. We tell you the exact price after the free diagnostic, before any work begins.",
+          a: "Diagnosis is always free. The repair depends on the cause - a charging port or charging circuit fault is at the lower end, while component-level logic board repair costs more. We tell you the exact price after the free diagnostic, before any work begins.",
         },
         {
           q: "Can you fix a water-damaged MacBook?",
-          a: "Often yes, if you act fast. Power it off immediately, don't try to turn it on, skip the rice myth, and bring it in within hours. We do ultrasonic cleaning and corrosion treatment. Water damage repair starts at AED 700, with free diagnosis first.",
+          a: "Often yes, if you act fast. Power it off immediately, don't try to turn it on, skip the rice myth, and bring it in within hours. We do ultrasonic cleaning and corrosion treatment, with free diagnosis first - message us on WhatsApp for a same-day quote.",
         },
         {
           q: "Is it worth replacing a MacBook battery or buying a new Mac?",
-          a: "Almost always worth replacing. A battery replacement from AED 450 with a 90-day warranty restores full runtime and removes the performance throttling that worn cells cause - far cheaper than a new MacBook for a machine that's otherwise fine.",
+          a: "Almost always worth replacing. A battery replacement with a 3-month warranty restores full runtime and removes the performance throttling that worn cells cause - far cheaper than a new MacBook for a machine that's otherwise fine. Message us on WhatsApp for the exact price.",
         },
         {
           q: "Why does my MacBook screen flicker or show lines?",
-          a: "Connect an external monitor: if it's clean, the fault is the display panel or its flex cable (including the 'flexgate' fault on 2016-2017 13\" Pros); if the external also shows artefacts, it's the GPU. Screen repair starts from AED 600.",
+          a: "Connect an external monitor: if it's clean, the fault is the display panel or its flex cable (including the 'flexgate' fault on 2016-2017 13\" Pros); if the external also shows artefacts, it's the GPU. Message us on WhatsApp for a screen repair quote on your model.",
         },
         {
           q: "Can I upgrade the storage or RAM on my MacBook?",
-          a: "On Intel MacBooks, yes - SSD upgrades start from AED 700 and RAM upgrades from AED 400. On Apple Silicon (M1 and later) both the SSD and RAM are soldered to the chip and cannot be upgraded, so iCloud or an external drive is the workaround.",
+          a: "On Intel MacBooks, yes - both SSD and RAM can be upgraded. On Apple Silicon (M1 and later) both the SSD and RAM are soldered to the chip and cannot be upgraded, so iCloud or an external drive is the workaround. Message us on WhatsApp for upgrade pricing.",
         },
         {
-          q: "Do you offer pickup and warranty?",
-          a: "Yes. We offer free pickup across Dubai mainland, free diagnosis on every repair, and a 90-day warranty on the work we do. We're open Monday to Saturday, 9am-10pm, in Dubai Media City.",
+          q: "Can I walk in, and is the work under warranty?",
+          a: "Yes. Walk in to our Concord Tower workshop, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Diagnosis is free on every repair, and the work carries a warranty of 15 days to 2 years. We're open Monday to Saturday, 9am-7pm, with a Friday break from 12 to 2pm.",
         },
         {
           q: "How do I know if a MacBook problem is software or hardware?",

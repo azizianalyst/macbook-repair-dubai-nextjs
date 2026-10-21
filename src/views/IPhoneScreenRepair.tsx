@@ -1,92 +1,177 @@
 "use client";
-import IPhonePageTemplate from "@/components/blocks/IPhonePageTemplate";
+// /iphone-screen-repair-dubai: REPAIR intent. Rebuilt 2026-09-26 on IPhoneMoneyPage
+// (docs/seo-master-plan-2026-09-26.md Phase 2.1 screen pair, 2.4, Phase 3 build 3).
+// Targets: iphone screen repair · iphone screen repair dubai · iphone screen replacement dubai ·
+// iphone screen repair near me · iphone display · iphone screen · cracked iphone screen · fix broken
+// iphone screen · iphone lcd repair · iphone x screen glass, plus the old-model terms (6, 6 Plus, 6s,
+// 7 Plus, 8, 11, 11 Pro screen replacement) in the By model section.
+// Cost intent lives on /iphone-screen-repair-cost-dubai (Apple's list prices by model): this page
+// carries no price table and links there instead. Symptoms live on /blog/iphone-screen-problems-dubai.
+// Display type verified per model: LCD on the 6-8, SE (2nd/3rd), XR and 11; OLED on the X, XS,
+// 11 Pro and every iPhone from the 12 on. iPhone 18 Pro facts: docs/apple-lineup-2026-09-26.md §4b.
+// Warranty from site.ts: 90 days on screens.
+import IPhoneMoneyPage, { A, ByModelSection, PageSection, WhatsAppButton } from "@/components/blocks/IPhoneMoneyPage";
+import { topicForPath } from "@/lib/page-images";
+import { NAP } from "@/content/site";
+
+const PATH = "/iphone-screen-repair-dubai";
+const SERVICE = "iPhone screen repair";
+const HERO = topicForPath(PATH);
 
 export default function IPhoneScreenRepair() {
   return (
-    <IPhonePageTemplate
-      seoTitle="iPhone Screen Repair Dubai - From AED 350 | All Models | Same-Day"
-      seoDescription="iPhone screen repair Dubai from AED 350. OLED & LCD, True Tone calibration, all models 6 to 17. Same-day, 90-day warranty. WhatsApp 055 741 3706."
-      path="/iphone-screen-repair-dubai"
-      eyebrow="iPhone Screen Repair"
-      h1="iPhone Screen Repair Dubai - From AED 350 | All Models"
-      subtitle="Cracked glass, dead touch, green tint, no display. iPhone 6 through iPhone 17 - OLED and LCD, True Tone preserved. Same-day on most models, 90-day written warranty."
-      startingPrice={350}
-      timeline="Same day · 1 day"
-      whatsappPrefill="Hi, iPhone screen repair quote please. Model: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Display & micro-soldering" }}
-      serviceName="iPhone Screen Repair"
-      pricingRows={[
-        { model: "iPhone 6 / 6s / 7",                price: 350, timeline: "Same day" },
-        { model: "iPhone 8 / 8 Plus / SE 2 / SE 3",  price: 350, timeline: "Same day" },
-        { model: "iPhone X / XR / XS",               price: 450, timeline: "Same day" },
-        { model: "iPhone 11 / 11 Pro",               price: 500, timeline: "Same day" },
-        { model: "iPhone 12 / 12 Pro / 13 / 13 Pro", price: 650, timeline: "Same day" },
-        { model: "iPhone 14 / 14 Pro / 15 / 15 Pro", price: 750, timeline: "Same day · 1 day" },
-        { model: "iPhone 16 / 16 Pro / 16e",         price: 850, timeline: "Same day · 1 day" },
-        { model: "iPhone 17 / Air / 17 Pro / 17e",   price: 950, timeline: "1 day" },
+    <IPhoneMoneyPage
+      path={PATH}
+      crumbs={[
+        { name: "Home", path: "/" },
+        { name: "iPhone Repair", path: "/iphone-repair-dubai" },
+        { name: "iPhone Screen Repair", path: PATH },
       ]}
-      pricingCaption="Pro Max sizes add AED 150. Original Apple OLED add AED 200-400 (preserves True Tone)."
-      intro={
-        <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
-            iPhone screen repair in Dubai starts at AED 350 for the iPhone 6 through iPhone 8, and finishes the same day on every model up to the iPhone 16 Pro Max when stock is on the shelf. The workshop has fitted more than 6,800 iPhone screens since 2014 - when the iPhone 6 first brought the larger 4.7" panel to the bench. Every replacement is bench-tested for touch responsiveness, 3D Touch / Haptic Touch where applicable, P3 colour gamut, and pixel uniformity before the phone leaves the workshop. True Tone is preserved on genuine Apple OLED panels by transferring the calibration chip from the original screen with a dedicated programmer.
-          </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
-            The split between OLED and LCD matters for both price and method. Every iPhone from the iPhone X onward (except XR, 11, SE 2, SE 3) uses an OLED panel - Samsung E2/E3 or LG-built - bonded to a digitiser and an under-screen sensor stack. LCD models (iPhone 6 through 8, XR, 11, SE 2/3) use a backlit IPS panel with a separate digitiser layer. OLED replacements are more expensive because the panel itself costs more and the bonding tolerance is tighter. The workshop quotes both genuine and high-grade aftermarket on every WhatsApp ticket so the choice stays with the customer.
-          </p>
-        </>
-      }
-      problems={[
-        { title: "Cracked glass, touch still works", body: "Most common iPhone ticket. Glass is bonded to the digitiser and OLED in one assembly from iPhone X onward - full panel swap, no glass-only option. AED 450 to AED 950 depending on model." },
-        { title: "Green tint or pink line across the OLED", body: "Pixel-driver IC on the panel is failing, or the display flex is partially disconnected after a drop. Reseating fixes around 10% of cases at no charge - full panel swap on the rest." },
-        { title: "Dead touch, image fine (ghost touch)", body: "Digitiser flex damage, common after a fall on a corner. iPhone 11/12/13 are particularly prone. Panel swap restores normal touch - AED 500 to AED 750." },
-        { title: "Black screen, phone vibrates and rings", body: "Backlight circuit on LCD models, or panel-side power IC on OLED. Free diagnosis confirms whether the panel or the logic-board backlight rail needs work." },
-        { title: "True Tone disabled after a previous repair", body: "Aftermarket panels skip the EEPROM calibration chip. The workshop transfers the original chip from the broken screen onto the replacement - True Tone restored, AED 100 add-on." },
-        { title: "Face ID greyed out after screen swap", body: "On iPhone 11-17, the proximity and ambient-light sensors live behind the OLED. They must be transferred from the original assembly. Done correctly Face ID stays active. AED 0 if we did the original repair." },
-        { title: "Screen lifting from the chassis", body: "Battery swelling pushes the OLED out of the frame. Common on iPhone X, XS, 11, 12 after 3-4 years. Battery replacement (AED 250) plus reseat solves it without a panel swap if the OLED is undamaged." },
-        { title: "Vertical pink or yellow lines", body: "Source driver IC failure on the panel. Not fixable at IC level - full panel replacement. Often appears 6-18 months after a previous low-grade repair." },
-        { title: "Touch works in some areas, dead in others", body: "Digitiser controller IC failure or hairline crack in the flex. Panel swap restores 100% touch grid. Tested with multi-touch validation tool before handover." },
-        { title: "Cracked glass on the iPhone 17 Air", body: "The titanium-edge Air is thinner than any prior iPhone - drops on edges fracture the OLED almost every time. AED 950 panel swap, 1 day, genuine-only available so far." },
+      hero={{
+        eyebrow: "iPhone screen repair · Dubai Media City",
+        title: "iPhone Screen Repair Dubai: Cracked Screen and Display Replacement",
+        subtitle:
+          "Cracked glass, a black display, lines or dead touch. OLED and LCD screens for every iPhone from the 6 to the 18 Pro Max, with the part grade on a written quote.",
+        image: HERO?.src ?? "/images/topics/iphone-screen-repair-dubai.jpg",
+        imageAlt: HERO?.alt ?? "iPhone screen repair Dubai",
+      }}
+      quickAnswer={{
+        question: "Where can I get my iPhone screen repaired in Dubai?",
+        answer:
+          "At our independent workshop in Concord Tower, Dubai Media City. We replace cracked and faulty iPhone screens on every model from the iPhone 6 to the iPhone 18 Pro Max, OLED or LCD to match the original. Diagnosis is free, the written quote names the part grade, and screens carry a 90-day warranty.",
+      }}
+      reviewer={{ name: "Shafiq" }}
+      takeaways={[
+        "The iPhone 6 to 8, SE, XR and 11 use LCD screens; the X, XS, 11 Pro and every iPhone from the 12 use OLED.",
+        "A cracked screen is replaced as one assembly: glass, touch layer and display are bonded together.",
+        "We quote genuine Apple and quality-tested screens where both exist, and name the grade in writing.",
+        "On the iPhone 11 and later, iOS can flag a non-genuine screen. We tell you beforehand.",
+        "On the iPhone 18 Pro, Face ID's infrared camera sits under the display.",
+        "Screens carry a 90-day warranty, and you can walk in without an appointment.",
       ]}
-      steps={[
-        { title: "WhatsApp the model + photo", body: "Send the iPhone model from Settings > General > About and a photo of the cracked screen. Quote back in 4-8 minutes during business hours." },
-        { title: "Free pickup or walk in", body: "Free pickup across Dubai mainland or walk into Office #45, Concord Tower, Media City. Diagnosis on the spot - about 10 minutes." },
-        { title: "Panel swap on the bench", body: "Pentalobe screws out, screen detached at 70 °C, OLED disconnected, sensor stack transferred (proximity, ambient light, earpiece, Face ID flood/dot). Under microscope from start to finish." },
-        { title: "True Tone & sensor calibration", body: "Original EEPROM chip transferred to the new panel with a dedicated programmer. True Tone re-enabled. Face ID re-tested. Multi-touch grid validated." },
-        { title: "QC - 32-point checklist", body: "Touch grid, P3 colour, max brightness 800 nits (1,000 nits HDR), proximity sensor (auto-off during call), ambient light auto-brightness, 3D / Haptic Touch on supported models." },
-        { title: "Free delivery + 90-day warranty", body: "Same day on iPhone 6 to iPhone 16. Next day on iPhone 17 line. Warranty card lists panel batch - covers manufacturing defects and post-repair touch failure." },
-      ]}
-      warrantyDays={90}
-      warrantyBullets={[
-        "Covered: dead pixels, backlight bleed, digitiser failure, ghost touch, True Tone calibration loss caused by the part.",
-        "Not covered: new physical damage, water damage after the repair, software issues unrelated to the display.",
-        "Genuine Apple OLED carries the same 90-day warranty plus Apple's own 1-year warranty (when sourced from authorised distributor - confirmed on every quote).",
-      ]}
-      comparisonRows={[
-        ["Repair window",          "Same day on iPhone 6 to 16",                "5 to 10 business days, mail-in"],
-        ["iPhone 11 panel",         "AED 500",                                   "AED 1,099 (Apple list, AE)"],
-        ["iPhone 14 Pro panel",     "AED 750",                                   "AED 1,599 (Apple list, AE)"],
-        ["iPhone 16 Pro Max panel", "AED 1,000",                                 "AED 1,899 (Apple list, AE)"],
-        ["Free pickup in Dubai",   "Yes",                                        "No, customer must visit/courier"],
-        ["True Tone preserved",     "Yes - chip transfer included",              "Yes - only with genuine repair"],
-        ["Vintage models (6, 6s)", "Yes - AED 350",                              "Refused, model obsolete"],
-        ["Warranty",                "90 days written",                           "90 days"],
-        ["No-fix-no-charge",        "Yes",                                       "No, diagnostic fee charged"],
-      ]}
+      faqHeading="iPhone screen repair: common questions"
       faqs={[
-        { q: "How much does iPhone screen replacement cost in Dubai?", a: "From AED 350 for iPhone 6 through 8 and SE. AED 450-500 for iPhone X, XR, 11. AED 650 for iPhone 12 and 13. AED 750 for iPhone 14 and 15. AED 850 for iPhone 16. AED 950 for iPhone 17 line. Pro Max sizes add AED 150. Original Apple OLED option adds AED 200 to AED 400." },
-        { q: "Is the screen original Apple or aftermarket?", a: "Both options are quoted on every WhatsApp ticket. Genuine Apple OLED is sourced from a local Apple-authorised distributor with traceable batch numbers - keeps True Tone and HDR brightness identical. A-grade aftermarket comes from the same Samsung and LG factories that build the Apple panel, sold without the Apple label. Both carry the 90-day workshop warranty." },
-        { q: "Will Face ID still work after a screen replacement?", a: "Yes. The proximity sensor, flood illuminator, and ambient-light sensor are transferred from the original screen to the replacement. The dot projector and IR camera live in the chassis, not the screen, so they are untouched. Face ID is tested before the phone leaves the bench." },
-        { q: "Will True Tone work after a non-Apple screen?", a: "Only if the EEPROM calibration chip from the original screen is transferred. The workshop does this transfer as standard on iPhone 8 and later - no extra charge on most models. On the iPhone 17 line the genuine panel is required for full True Tone - aftermarket disables it." },
-        { q: "How long does iPhone screen repair take?", a: "Same day on iPhone 6 through iPhone 16 - typically 60 to 90 minutes at the bench plus a 30-minute adhesive cure. The iPhone 17 line is 1 day because the genuine OLED is special-ordered. WhatsApp the model first to confirm stock." },
-        { q: "Can you replace just the cracked glass?", a: "Only on iPhone 6, 6s, 7, and 8 LCD models - AED 350 glass-only swap. From iPhone X onward the glass is fused to the OLED - no reliable glass-only option exists, full panel must be replaced." },
-        { q: "What if the touch screen stops working but the phone seems fine otherwise?", a: "Digitiser failure - phone receives calls and notifications but you cannot interact. Panel swap restores 100% touch. AED 350 to AED 950 depending on model. Same day." },
-        { q: "Will my screen replacement void Apple warranty?", a: "If the iPhone is still inside Apple's 1-year warranty or AppleCare+, going to Apple keeps full coverage. The workshop is the right fit when the warranty has expired, the device is vintage, or you need same-day turnaround. The workshop's own 90-day warranty covers the repair itself." },
-        { q: "My iPhone fell in water and the screen has dark patches - is it the display?", a: "Often yes - the OLED layer is moisture-sensitive. Panel swap fixes the display, but a water-damage clean (AED 250 on top) is recommended to prevent corrosion on the logic board long-term. Both done same day in most cases." },
-        { q: "Do you offer free pickup for screen repair?", a: "Yes - free pickup and delivery across Dubai mainland: Marina, Downtown, JBR, JLT, Palm, Business Bay, Al Barsha, Jumeirah, Internet City, Knowledge Village. Sharjah and Abu Dhabi are AED 100 each way." },
+        { q: "How much does iPhone screen repair cost in Dubai?", a: "It depends on the model, OLED or LCD, and the part grade. Apple's UAE list prices by model are on our iPhone screen repair cost page for reference. For our price, WhatsApp your model and a photo; the written quote comes before any work." },
+        { q: "Can you fix my iPhone screen the same day?", a: "Often, yes, when the part is in stock for a common model. The newest models may need the part ordered, and water damage or a bent frame adds time. We confirm timing on WhatsApp before you travel." },
+        { q: "Will Face ID and True Tone work after a screen replacement?", a: "Face ID should: its core parts stay in the phone, and we test it before handover. True Tone depends on the display's calibration data; we carry it over where the model and part allow, and tell you first if we can't." },
+        { q: "Can you replace just the cracked glass?", a: "No. We replace the full display assembly on every model, LCD or OLED, because the glass, touch layer and display are bonded at the factory and separating them risks the panel. Your written quote names the part grade before any work starts." },
+        { q: "Should I go to Apple instead?", a: "If you have AppleCare+, usually yes: Apple's accidental-damage fee is lower than its out-of-warranty price. Apple's standard warranty doesn't cover a crack. Without AppleCare+, or on an older model, an independent repair is the practical choice." },
       ]}
-      reviewNames={["Saeed Alam", "Tim Quick", "Sergej Schlegel", "Wellington Academy"]}
-      relatedSlugs={["/iphone-battery-replacement-dubai", "/iphone-back-glass-repair-dubai", "/iphone-water-damage-repair-dubai"]}
-    />
+      leadHeading="Get your iPhone screen repair quote"
+      cta={{
+        headline: "Send your iPhone model and a photo of the screen",
+        description: "Free diagnosis, a written quote that names the part grade, and a 90-day screen warranty.",
+        prefill: "Hi, iPhone screen repair quote please. Model: ",
+      }}
+      related={[
+        { label: "iPhone screen repair cost", to: "/iphone-screen-repair-cost-dubai" },
+        { label: "iPhone screen problems guide", to: "/blog/iphone-screen-problems-dubai" },
+        { label: "iPhone back glass repair", to: "/iphone-back-glass-repair-dubai" },
+        { label: "iPhone repair Dubai", to: "/iphone-repair-dubai" },
+        { label: "iPhone battery replacement", to: "/iphone-battery-replacement-dubai" },
+        { label: "iPhone Face ID repair", to: "/iphone-face-id-repair-dubai" },
+        { label: "iPhone water damage repair", to: "/iphone-water-damage-repair-dubai" },
+      ]}
+      sources={[
+        { label: "Apple UAE: iPhone screen repair", href: "https://support.apple.com/en-ae/iphone/repair/screen-replacement", note: "Out-of-warranty estimates, excluding VAT." },
+        { label: "iFixit's iPhone 18 Pro teardown (9to5Mac)", href: "https://9to5mac.com/2026/09/20/ifixit-tears-down-iphone-18-pro-explores-variable-aperture-finds-concerning-repair-issue/", note: "Display access and under-display Face ID." },
+      ]}
+      reviewNames={["Tim Quick", "Wellington Academy", "B Parker"]}
+    >
+      <PageSection id="what" eyebrow="What we replace" title="iPhone screen replacement: OLED or LCD, matched to your model">
+        <p>
+          A cracked iPhone screen is replaced as a complete display assembly, because the glass, touch layer and panel
+          are bonded at the factory. On an iPhone X, for example, cracked screen glass is laminated to the OLED, and
+          separating them risks the panel.
+        </p>
+        <ul>
+          <li><strong>LCD</strong> (iPhone LCD repair): iPhone 6 to 8 and their Plus models, SE (2nd and 3rd gen), XR and 11.</li>
+          <li><strong>OLED</strong>: iPhone X, XS, XS Max, 11 Pro, 11 Pro Max, and every iPhone from the 12 on.</li>
+        </ul>
+        <p>
+          Lines, black spots, a yellow tint or dead touch can also be a setting or a board fault. Our{" "}
+          <A to="/blog/iphone-screen-problems-dubai">iPhone screen problems guide</A> helps you tell them apart.
+        </p>
+      </PageSection>
+
+      <PageSection id="grades" eyebrow="Genuine or alternative" title="Genuine Apple screen or a quality alternative?">
+        <p>
+          We quote both where both exist. A <strong>genuine Apple screen</strong> matches the original exactly and costs
+          more. A <strong>quality-tested alternative</strong> costs less; beware very cheap offers for OLED iPhones, as
+          some are LCD panels, thicker and dimmer. Your quote names the panel type. Apple&apos;s UAE list prices by
+          model are on the <A to="/iphone-screen-repair-cost-dubai">iPhone screen repair cost</A> page.
+        </p>
+      </PageSection>
+
+      <PageSection id="face-id" eyebrow="True Tone and Face ID" title="True Tone, Face ID and the genuine-display message">
+        <p>
+          <strong>True Tone</strong> (iPhone 8 and later) uses calibration data tied to the original display. We carry it
+          over where the model and part allow, and tell you before you approve if it can&apos;t be.
+        </p>
+        <p>
+          <strong>Face ID</strong> parts are paired to the logic board. We move the sensors on the old screen across and
+          test Face ID before handover. On the <strong>iPhone 18 Pro</strong>, iFixit found the infrared camera now sits
+          under the display, and the display frame lifted on 3 of 4 teardown units, so we confirm the part first.
+        </p>
+        <p>
+          On the iPhone 11 and later, iOS may list a non-genuine display under Parts and Service History; the screen
+          still works normally.
+        </p>
+      </PageSection>
+
+      <PageSection id="process" eyebrow="How it works" title="How we fix a broken iPhone screen">
+        <ol>
+          <li><strong>WhatsApp the model</strong> (Settings &gt; General &gt; About) and a photo.</li>
+          <li><strong>Free diagnosis</strong> confirms it&apos;s the screen, not the board.</li>
+          <li><strong>Written quote:</strong> grade, price and timing. Nothing starts until you approve.</li>
+          <li><strong>Replace and test</strong> touch, True Tone, Face ID or Touch ID, earpiece and proximity sensor.</li>
+        </ol>
+        <p>
+          Common models are often done the same day when the part is in stock; the newest may need it ordered.
+        </p>
+      </PageSection>
+
+      <ByModelSection
+        id="by-model"
+        title="iPhone screen replacement by model"
+        service={SERVICE}
+        intro={<p>Tap WhatsApp on your model for a quote.</p>}
+        groups={[
+          { name: "iPhone 6 and 6 Plus", heading: "iPhone 6 and iPhone 6 Plus screen replacement", body: <>LCD. Your original Home button moves across, since Touch ID is paired to the logic board.</> },
+          { name: "iPhone 6s and 6s Plus", heading: "iPhone 6s and 6s Plus screen replacement", body: <>LCD with 3D Touch, tested on the new screen. Home button transferred for Touch ID.</> },
+          { name: "iPhone 7 and 7 Plus", heading: "iPhone 7 and 7 Plus screen replacement", body: <>LCD touch screen replacement. The solid-state Home button is transferred and tested.</> },
+          { name: "iPhone 8, 8 Plus and SE (2nd and 3rd gen)", heading: "iPhone 8, 8 Plus and iPhone SE screen replacement", body: <>LCD with True Tone, which first shipped on the iPhone 8, 8 Plus and X. We tell you if it carries over.</> },
+          { name: "iPhone X, XS and XS Max", heading: "iPhone X and XS screen replacement", body: <>The first OLED iPhones. Cracked iPhone X screen glass means a full OLED assembly.</> },
+          { name: "iPhone XR and iPhone 11", heading: "iPhone XR and iPhone 11 screen replacement", body: <>Both LCD. The iPhone 11 checks whether its display is genuine.</> },
+          { name: "iPhone 11 Pro and 11 Pro Max", heading: "iPhone 11 Pro and 11 Pro Max screen replacement", body: <>OLED. Alternative panels vary widely here, so the type is on your quote.</> },
+          { name: "iPhone 12 and 13 (including mini)", body: <>All OLED. The 13 Pro models need a ProMotion-capable panel.</> },
+          { name: "iPhone 14 and 15 families", body: <>OLED, with the Dynamic Island on the 14 Pro models and every iPhone 15.</> },
+          { name: "iPhone 16 family and 16e", modelPage: "/iphone-16-repair-dubai", body: <>OLED. If yours has AppleCare+, compare Apple&apos;s accidental-damage fee first.</> },
+          { name: "iPhone 17, 17e and iPhone Air", modelPage: "/iphone-air-repair-dubai", body: <>OLED. Apple&apos;s warranty doesn&apos;t cover a crack; AppleCare+ does, for a fee.</> },
+          { name: "iPhone 17 Pro and 17 Pro Max", modelPage: "/iphone-17-pro-repair-dubai", body: <>OLED. Discontinued in September 2026 and widely used; we confirm the part first.</> },
+          { name: "iPhone 18 Pro and 18 Pro Max", modelPage: "/iphone-18-pro-repair-dubai", body: <>On sale since 18 September 2026. Under-display Face ID camera, so the part is confirmed before quoting.</> },
+        ]}
+      />
+
+      <PageSection id="near-me" eyebrow="Walk in or send it by courier" title="iPhone screen repair near me in Dubai">
+        <p>
+          <strong>Walk in</strong> at {NAP.street}, {NAP.area}, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site.
+          WhatsApp a photo first for a quote. Coming from <strong>Abu Dhabi or Sharjah</strong>, where we have no branch? Book any
+          same-day courier app, hand the phone over, and WhatsApp us the tracking link. See the <A to="/iphone-repair-near-me-dubai">iPhone repair near me</A> page
+          for the areas we cover.
+        </p>
+      </PageSection>
+
+      <PageSection id="warranty" eyebrow="Warranty" title="Screen warranty: 90 days">
+        <p>
+          Every screen we fit carries a 90-day warranty on the part and our workmanship. A new crack from a drop is
+          accidental damage and isn&apos;t covered. Full terms: <A to="/warranty">warranty page</A>. Back cracked too?
+          See <A to="/iphone-back-glass-repair-dubai">iPhone back glass repair</A>.
+        </p>
+        <div>
+          <WhatsAppButton text="Hi, iPhone screen repair quote please. Model: " label="WhatsApp your screen quote" />
+        </div>
+      </PageSection>
+    </IPhoneMoneyPage>
   );
 }

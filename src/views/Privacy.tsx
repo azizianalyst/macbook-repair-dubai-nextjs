@@ -1,4 +1,5 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { LegalLayout, LegalSection } from "@/components/layout/LegalLayout";
 import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
@@ -50,9 +51,9 @@ export default function Privacy() {
         <h3>Contact details</h3>
         <ul>
           <li>Name (first name plus last initial accepted for repair tickets)</li>
-          <li>Mobile number, used for WhatsApp updates and pickup coordination</li>
+          <li>Mobile number, used for WhatsApp quotes and repair updates</li>
           <li>Email address, only when a printed invoice is requested</li>
-          <li>Pickup or delivery address, only when free door-to-door service is requested</li>
+          <li>Visit address, only when a paid onsite visit is booked</li>
         </ul>
         <h3>Device data</h3>
         <ul>
@@ -74,16 +75,16 @@ export default function Privacy() {
         <ul>
           <li><strong>Generate a repair quote</strong> - your model and fault description are used to send a price on WhatsApp, usually within 4 minutes during business hours.</li>
           <li><strong>Run the repair</strong> - name and phone are linked to the device on the workshop ticket.</li>
-          <li><strong>Send pickup confirmation</strong> - one WhatsApp message when the device is ready.</li>
-          <li><strong>Post-repair check-in</strong> - exactly one follow-up message 7 days after pickup. No marketing list, no newsletter, no second message unless you reply.</li>
-          <li><strong>Verify warranty claims</strong> - the repair ticket and serial number are used to confirm the 90-day warranty applies.</li>
+          <li><strong>Send a ready-to-collect message</strong> - one WhatsApp message when the device is ready.</li>
+          <li><strong>Post-repair check-in</strong> - exactly one follow-up message 7 days after you collect the device. No marketing list, no newsletter, no second message unless you reply.</li>
+          <li><strong>Verify warranty claims</strong> - the repair ticket and serial number are used to confirm the warranty of 15 days to 2 years applies.</li>
           <li><strong>Improve the website</strong> - anonymised analytics are reviewed monthly to fix slow pages and broken links.</li>
         </ul>
       </LegalSection>
 
       <LegalSection id="retention" title="4. How long data is kept">
         <ul>
-          <li><strong>Customer repair records:</strong> 3 years from pickup date, then permanently deleted from the workshop database.</li>
+          <li><strong>Customer repair records:</strong> 3 years from the collection date, then permanently deleted from the workshop database.</li>
           <li><strong>Printed invoices and warranty cards:</strong> 5 years in a locked cabinet at the Concord Tower office, as required by UAE Federal Tax Authority regulations.</li>
           <li><strong>WhatsApp message history:</strong> retained on the business phone for 12 months, then deleted in batches.</li>
           <li><strong>Google Analytics data:</strong> 14 months, then auto-deleted by Google per the property setting.</li>
@@ -96,7 +97,7 @@ export default function Privacy() {
         <ul>
           <li><strong>Payment processors:</strong> Network International, Visa, and Mastercard receive the card transaction data when you pay by card. Cash payments leave no third-party trail.</li>
           <li><strong>Apple Inc.:</strong> serial numbers are sometimes checked against Apple's GSX database to confirm warranty status before quoting. Your name is not sent.</li>
-          <li><strong>Courier partner:</strong> for free pickup and delivery, the courier sees only your name, address, and phone.</li>
+          <li><strong>Couriers:</strong> we have no courier partner. If you send a device with a courier you book yourself, that courier's own privacy terms apply. When we book a courier to return a device, we give that courier only the name, phone number and address needed for the delivery.</li>
           <li><strong>Google LLC:</strong> anonymous analytics events only (see Cookie Policy).</li>
           <li><strong>Legal authorities:</strong> data is disclosed only when compelled by a Dubai Court order or a Dubai Police request that complies with UAE law.</li>
         </ul>
@@ -118,7 +119,7 @@ export default function Privacy() {
       <LegalSection id="cookies" title="7. Cookies">
         <p>
           A short cookie banner appears on first visit. The full list of cookies set by this website,
-          with the option to disable each, is documented in the <a href="/cookies">Cookie Policy</a>.
+          with the option to disable each, is documented in the <a href="/cookies/">Cookie Policy</a>.
         </p>
       </LegalSection>
 
@@ -126,8 +127,8 @@ export default function Privacy() {
         <ul>
           <li><strong>Email:</strong> <a href="mailto:info@macbook-repair-dubai.ae">info@macbook-repair-dubai.ae</a></li>
           <li><strong>Phone (English / Russian / Arabic):</strong> <a href={`tel:${NAP.phoneE164}`}>{NAP.phoneDisplay}</a></li>
-          <li><strong>WhatsApp:</strong> <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">{NAP.phoneDisplay}</a></li>
-          <li><strong>In person:</strong> {NAP.street}, {NAP.area}, Monday - Saturday, 9 am - 10 pm</li>
+          <li><strong>WhatsApp:</strong> <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">{NAP.phoneDisplay}</a></li>
+          <li><strong>In person:</strong> {NAP.street}, {NAP.area}, Monday - Saturday, 9 am - 7 pm</li>
         </ul>
       </LegalSection>
 

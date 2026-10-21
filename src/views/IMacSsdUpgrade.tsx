@@ -5,7 +5,7 @@ export default function IMacSsdUpgrade() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac SSD Upgrade Dubai - Fusion Drive to NVMe | 055 741 3706"
-      seoDescription="iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. AED 700 labor. 1-2 days."
+      seoDescription="iMac SSD upgrade Dubai. Replace slow Fusion Drive in 2017-2020 27-inch iMac with fast NVMe. Massive speed boost. Message us for a price. 1-2 days."
       path="/imac-ssd-upgrade-dubai"
       eyebrow="iMac SSD upgrade"
       h1="iMac SSD Upgrade Dubai - Fusion Drive to NVMe"
@@ -15,17 +15,17 @@ export default function IMacSsdUpgrade() {
       whatsappPrefill="Hi, I'd like to upgrade SSD on my iMac - model and current storage:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iMac Repair",     path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",     path: "/imac-repair-dubai" },
         { name: "SSD Upgrade",     path: "/imac-ssd-upgrade-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "iMac display removal and storage upgrades" }}
-      serviceName="iMac SSD Upgrade"
+      serviceName="iMac SSD Upgrade Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The Fusion Drive in older iMacs is the single biggest performance bottleneck on the machine.</strong> Apple paired a tiny SSD with a slow 5400rpm or 7200rpm spinning hard drive. When the SSD cache fills up, everything crashes back to spinning-disk speeds - Lightroom freezes, macOS updates take hours, the beachball appears for the simplest tasks.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Swapping the whole storage stack for a single 1TB or 2TB NVMe SSD turns a tired iMac into a fast machine again. It is a real procedure though: the entire 5K display has to come off, the adhesive stripped, the new drive installed and the display re-laminated dust-free. We do this every week and we have the proper tools and clean bench. M-series 24" iMac SSDs are soldered - we'll tell you up front if your model can be upgraded.
           </p>
         </>
@@ -45,10 +45,10 @@ export default function IMacSsdUpgrade() {
         { title: "Re-laminate display",      body: "Fresh Apple-spec adhesive strips applied in our dust-controlled bench. Display refit, edges sealed, weighted overnight." },
         { title: "Install macOS + restore",  body: "Latest supported macOS for your iMac installed clean, then we restore your data and apps from your backup. You collect a working machine, not a project." },
       ]}
-      warrantyDays={365}
+      warrantyDays={730}
       warrantyBullets={[
         "1-year warranty on the SSD itself (manufacturer + us).",
-        "90-day warranty on the display reassembly and adhesive seal.",
+        "3-month warranty on the display reassembly and adhesive seal.",
         "Free re-seal if the display lifts at the edge in warranty.",
       ]}
       faqs={[

@@ -1,0 +1,246 @@
+{
+  "source": "docs/prices-from-pos-2026-10-19.md",
+  "decision": "D17",
+  "approved": "2026-10-19",
+  "window": {
+    "from": "2025-09-13",
+    "to": "2026-09-12"
+  },
+  "basis": "Middle half (25th-75th percentile) of taxed POS invoices, whole AED, incl. 5% VAT; per Apple model number where it has 5+ invoices",
+  "rows": [
+    {
+      "id": "screen-a2337",
+      "repair": "Screen replacement",
+      "model": "MacBook Air (M1, 2020)",
+      "modelNumbers": [
+        "A2337"
+      ],
+      "min": 1011,
+      "max": 1191,
+      "median": 1129,
+      "invoices": 40,
+      "partMedian": 881,
+      "partInvoices": 15
+    },
+    {
+      "id": "screen-a2681",
+      "repair": "Screen replacement",
+      "model": "MacBook Air (13-inch, M2, 2022)",
+      "modelNumbers": [
+        "A2681"
+      ],
+      "min": 949,
+      "max": 1305,
+      "median": 999,
+      "invoices": 18,
+      "partMedian": 908,
+      "partInvoices": 12
+    },
+    {
+      "id": "screen-a3113",
+      "repair": "Screen replacement",
+      "model": "MacBook Air (13-inch, M3, 2024)",
+      "modelNumbers": [
+        "A3113"
+      ],
+      "min": 973,
+      "max": 1370,
+      "median": 1161,
+      "invoices": 6
+    },
+    {
+      "id": "screen-a2159",
+      "repair": "Screen replacement",
+      "model": "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+      "modelNumbers": [
+        "A2159"
+      ],
+      "min": 1092,
+      "max": 1168,
+      "median": 1100,
+      "invoices": 6
+    },
+    {
+      "id": "screen-a2338",
+      "repair": "Screen replacement",
+      "model": "MacBook Pro (13-inch, M1, 2020) and (13-inch, M2, 2022)",
+      "modelNumbers": [
+        "A2338"
+      ],
+      "min": 1099,
+      "max": 1240,
+      "median": 1190,
+      "invoices": 30,
+      "partMedian": 934,
+      "partInvoices": 5
+    },
+    {
+      "id": "screen-a2442",
+      "repair": "Screen replacement",
+      "model": "MacBook Pro (14-inch, 2021), M1 Pro or M1 Max",
+      "modelNumbers": [
+        "A2442"
+      ],
+      "min": 1961,
+      "max": 2291,
+      "median": 2110,
+      "invoices": 12
+    },
+    {
+      "id": "screen-a2991",
+      "repair": "Screen replacement",
+      "model": "MacBook Pro (16-inch, Nov 2023), M3 Pro or M3 Max",
+      "modelNumbers": [
+        "A2991"
+      ],
+      "min": 2055,
+      "max": 2490,
+      "median": 2380,
+      "invoices": 5
+    },
+    {
+      "id": "screen-a2141",
+      "repair": "Screen replacement",
+      "model": "MacBook Pro (16-inch, 2019)",
+      "modelNumbers": [
+        "A2141"
+      ],
+      "min": 1400,
+      "max": 1750,
+      "median": 1550,
+      "invoices": 7
+    },
+    {
+      "id": "battery-a1989",
+      "repair": "Battery replacement",
+      "model": "MacBook Pro (13-inch, 2018 and 2019, Four Thunderbolt 3 ports)",
+      "modelNumbers": [
+        "A1989"
+      ],
+      "min": 419,
+      "max": 488,
+      "median": 451,
+      "invoices": 8
+    },
+    {
+      "id": "battery-a2141",
+      "repair": "Battery replacement",
+      "model": "MacBook Pro (16-inch, 2019)",
+      "modelNumbers": [
+        "A2141"
+      ],
+      "min": 620,
+      "max": 651,
+      "median": 620,
+      "invoices": 5
+    },
+    {
+      "id": "screen-pro13-intel-other",
+      "repair": "Screen replacement",
+      "model": "Other MacBook Pro 13-inch Intel (2016 to 2020)",
+      "modelNumbers": [
+        "A1706",
+        "A1708",
+        "A1989",
+        "A2251",
+        "A2289"
+      ],
+      "min": 811,
+      "max": 1073,
+      "median": 980,
+      "invoices": 14,
+      "partMedian": 819,
+      "partInvoices": 10
+    },
+    {
+      "id": "screen-pro14-other",
+      "repair": "Screen replacement",
+      "model": "MacBook Pro 14-inch, M2 Pro to M4 (2023 and 2024)",
+      "modelNumbers": [
+        "A2779",
+        "A2918",
+        "A2992",
+        "A3112",
+        "A3185",
+        "A3401"
+      ],
+      "min": 2154,
+      "max": 2426,
+      "median": 2195,
+      "invoices": 12
+    },
+    {
+      "id": "battery-pro13-intel-other",
+      "repair": "Battery replacement",
+      "model": "Other MacBook Pro 13-inch Intel (2016 to 2020)",
+      "modelNumbers": [
+        "A1706",
+        "A1708",
+        "A2159",
+        "A2251",
+        "A2289"
+      ],
+      "min": 368,
+      "max": 410,
+      "median": 395,
+      "invoices": 16
+    },
+    {
+      "id": "battery-air-intel",
+      "repair": "Battery replacement",
+      "model": "MacBook Air 13-inch Intel Retina (2018 to 2020)",
+      "modelNumbers": [
+        "A1932",
+        "A2179"
+      ],
+      "min": 380,
+      "max": 440,
+      "median": 420,
+      "invoices": 7
+    },
+    {
+      "id": "battery-pro15-intel",
+      "repair": "Battery replacement",
+      "model": "MacBook Pro 15-inch Intel (2012 to 2019)",
+      "modelNumbers": [
+        "A1398",
+        "A1707",
+        "A1990"
+      ],
+      "min": 440,
+      "max": 577,
+      "median": 505,
+      "invoices": 8
+    },
+    {
+      "id": "board-any",
+      "repair": "Logic board / no-power repair",
+      "model": "Any MacBook",
+      "modelNumbers": [],
+      "min": 578,
+      "max": 788,
+      "median": 656,
+      "invoices": 12
+    },
+    {
+      "id": "liquid-any",
+      "repair": "Liquid damage repair",
+      "model": "Any MacBook",
+      "modelNumbers": [],
+      "min": 705,
+      "max": 1318,
+      "median": 800,
+      "invoices": 5
+    },
+    {
+      "id": "trackpad-any",
+      "repair": "Trackpad replacement",
+      "model": "Any MacBook",
+      "modelNumbers": [],
+      "min": 361,
+      "max": 495,
+      "median": 455,
+      "invoices": 6
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+"use client";
+import { withSlash } from "@/lib/utils";
+// MacBook Pro Screen Repair — Pro-only spoke under /macbook-screen-repair-dubai.
+// Goes deep on Pro display generations the generic page only touches: Liquid Retina XDR
+// mini-LED (14"/16" 2021+, M1 Pro through M5 — no MacBook has an OLED screen), ProMotion 120Hz, Touch Bar Retina (2016-2020),
+// classic Retina (2012-2015) and Flexgate. Same dark design system + component API as
+// MacBookScreenRepair.tsx so it reads as a sibling and rankings/UX stay consistent.
+import { type ReactNode } from "react";
+import {
+  Monitor, MessageCircle, Phone, ShieldCheck, AlertTriangle, Wrench, Star,
+  Check, Clock, MapPin, ExternalLink, ParkingCircle, ChevronDown, ArrowRight,
+} from "lucide-react";
+import { Link } from "@/lib/router-compat";
+import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { LinkifyProse } from "@/lib/linkify";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { Reveal } from "@/components/blocks/Reveal";
+import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
+import { Button } from "@/components/ui/button";
+import { useSeo } from "@/hooks/use-seo";
+import { faqPage, localBusiness, organization, service as serviceSchema } from "@/lib/schema";
+import { pickReviews } from "@/lib/find-reviews";
+import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ScreenGrades } from "@/components/blocks/ScreenGrades";
+import { SCREEN_WARRANTY_LINE } from "@/content/part-grades";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+
+
+// Pro-only rows — mirror the generic screen page
+// so the two pages never quote different numbers for the same panel.
+const COMMON_PROBLEMS = [
+  { title: "Flexgate — stage-light effect or no backlight",
+    body: 'MacBook Pro 13" and 15" 2016-2017 (A1706, A1707, A1708). The display flex cable wears through after ~10,000 lid cycles: uneven "stage-light" backlight at the bottom first, then full backlight death. Cable swap on 2016-2017, full panel on 2018+. The revised cable is 2 mm longer to stop the wear returning.' },
+  { title: "Mini-LED blooming or uneven local dimming",
+    body: 'Liquid Retina XDR on the 14"/16" M1 Pro through M5 uses thousands of mini-LEDs grouped into local dimming zones. A halo around bright objects on a black background is normal HDR blooming — not a fault. A fixed bright/dark patch that stays in one spot is a failed dimming zone and needs a panel swap.' },
+  { title: "ProMotion judder or stuck at 60Hz",
+    body: "120Hz ProMotion (14\"/16\" 2021+) dropping to 60Hz is usually a Display setting or a third-party app capping refresh, not hardware. If the panel physically tears or judders at 120Hz after a knock, the timing-controller ribbon is the suspect — free diagnosis tells panel from board." },
+  { title: "Cracked glass on a bonded Pro panel",
+    body: 'From the 2016 Touch Bar models onward Apple bonds the glass to the LCD/mini-LED as one assembly, so there is no glass-only repair — a full panel swap, quoted by size. Only the 2012-2015 Retina takes a glass-only repair, which costs far less than a panel.' },
+  { title: "Pink, green or purple tint across the display",
+    body: 'Loose or oxidised eDP cable, or a failing T-CON board — most common on the 15" Retina 2013-2015. Reseating the cable clears ~30% of these at no charge; the rest need a panel swap.' },
+  { title: "Dark zone, lines or pressure marks on the M5",
+    body: 'The 14"/16" M5, M5 Pro and M5 Max (2025-2026) keep the mini-LED Liquid Retina XDR — no MacBook has an OLED screen, so there is no OLED burn-in to worry about. The faults are the familiar XDR ones: a failed dimming zone, lines after a knock, key marks from closing the lid on an object, or a crack. Each is a full display assembly swap; we fit genuine Apple assemblies on the M5 and match nano-texture and lid colour by serial.' },
+  { title: "Backlight bleed in the corners",
+    body: 'Manufacturing defect on the 2012-2015 Retina and some early Touch Bar units. LCD swap with a tested A-grade panel. Mini-LED 14"/16" panels do not have edge-lit bleed — a glow there means a cracked panel instead.' },
+  { title: "Screen flickers below 20% battery",
+    body: "PMIC voltage sag on the display rail, not the panel. Capacitor/PMIC work on the logic board — no panel swap needed in ~80% of these tickets." },
+  { title: "Built-in display dead, external monitor works",
+    body: "Confirms a panel-side or backlight fault, not a logic-board GPU fault (the external output is a separate circuit). 70% are panel swaps; the rest are the backlight chip on the board." },
+  { title: "True Tone lost after a panel change",
+    body: "Genuine Apple panels keep True Tone — we calibrate it against the original board serial during reassembly. A-grade aftermarket panels disable True Tone in macOS; every other metric (P3 colour, brightness, 120Hz) is identical. Ask for the genuine option at quote time if True Tone matters." },
+];
+
+const STEPS = [
+  { title: "WhatsApp the model + a photo",
+    body: 'Send the serial from  > About This Mac (or the A-number on the underside) and a photo of the damage. We tell Retina from Touch Bar from XDR (and nano-texture) by serial and quote in 4-8 minutes, 9 am-7 pm Mon-Sat.' },
+  { title: "Walk in or send it by courier",
+    body: "Walk in to Office #45, Concord Tower, Media City, or book any same-day courier app and WhatsApp us the tracking link. On-the-spot diagnosis in about 15 minutes — panel-side vs board-side confirmed before any work." },
+  { title: "Panel swap under the microscope",
+    body: "Lid off in ~25 minutes. Adhesive heated, panel disconnected, replacement seated, eDP/mini-LED ribbon routed and strain-tested, lid re-bonded. Mini-LED and XDR ribbons are handled with the Pro's exact torque spec." },
+  { title: "True Tone + XDR calibration",
+    body: "On genuine panels True Tone re-calibrates against the original board serial. XDR/HDR brightness and the P3 colour curve are verified against reference before the lid press cures for 90 minutes at 45 °C." },
+  { title: "Display QC — 47-point checklist",
+    body: "Backlight/zone uniformity, dead-pixel scan at 8 colours, 120Hz ProMotion sweep, hinge torque, lid sensor, brightness curve, P3 gamut, ribbon strain test. The signed checklist is shown to you at handover." },
+  { title: "Collection + warranty card",
+    body: 'Ready same day on 13"/14" in-stock panels, next day on the 16". The warranty card lists the panel batch number; cover stays with the serial and transfers once free of charge.' },
+];
+
+type FAQ = { q: string; a: string };
+const FAQS: FAQ[] = [
+  { q: "How much does MacBook Pro screen repair cost in Dubai?",
+    a: 'It depends on the panel: a 13-inch Retina or Touch Bar, a 15-inch Retina, and the 14 or 16-inch XDR mini-LED are all different assemblies. Diagnosis is free and your exact model is quoted before any work starts.' },
+  { q: "What is the difference between repairing a 14\"/16\" XDR screen and an older Retina Pro?",
+    a: 'The 14"/16" (2021+) use a Liquid Retina XDR panel — an LCD lit by thousands of mini-LEDs in local dimming zones — with a 120Hz ProMotion timing controller — a more involved, higher-cost assembly. The 2012-2015 Retina is a conventional LCD where a cheaper glass-only repair is still possible. The 2016-2020 Touch Bar models sit in between: bonded LCD, full-panel only.' },
+  { q: "Do you repair Flexgate on the 2016-2017 MacBook Pro?",
+    a: "Yes. Flexgate on the A1706/A1707/A1708 is fixed with a revised flex cable that is 2 mm longer than Apple's original - one flat quoted job, same day, 3-month warranty. If the cable tore late and damaged the backlight strip (under 15% of cases) it becomes a full panel job, quoted by size." },
+  { q: "Is mini-LED blooming on my MacBook Pro a fault?",
+    a: 'A soft halo around bright objects on a dark background is normal HDR behaviour on every Liquid Retina XDR panel — not a defect and not repairable, because it is how mini-LED local dimming works. A fixed bright or dead patch that stays in one place regardless of content is a failed zone and needs a panel swap.' },
+  { q: "Can the 2025-2026 M5 MacBook Pro screen be replaced?",
+    a: "Yes. The M5 uses the same mini-LED Liquid Retina XDR display as the M1 Pro to M4 models — it is not OLED — and the repair is a full display assembly swap. We fit genuine Apple assemblies on the M5. Blooming around bright objects is normal; a fixed dark zone, lines or a crack is an assembly replacement. WhatsApp the serial to confirm stock, nano-texture and lead time." },
+  { q: "Will True Tone and ProMotion still work after the screen is replaced?",
+    a: "True Tone works on genuine Apple panels — we calibrate it against the original logic-board serial. ProMotion 120Hz works on any correct-spec panel for that model. With A-grade aftermarket panels True Tone is disabled by macOS, but 120Hz, P3 colour and full brightness are retained. Every panel we fit, genuine or A-grade, carries a 90-day (3-month) warranty." },
+  { q: "Can you replace just the cracked glass on a MacBook Pro?",
+    a: 'Only on the 2012-2015 Retina, where a glass-only repair is possible. Every MacBook Pro from the 2016 Touch Bar onward has the glass bonded to the LCD or mini-LED panel as one assembly, so the full panel must be replaced — we will not charge for glass-only on bonded models because the result is unreliable.' },
+  { q: "My MacBook Pro display is black but it chimes and the external monitor works — is that the screen?",
+    a: "Yes — that pattern confirms a panel or backlight fault, not a logic-board GPU fault (the external output is a separate circuit). Free diagnosis isolates the LCD/mini-LED panel, the eDP ribbon, or the backlight chip. Around 70% are panel swaps." },
+  { q: "Do you use genuine Apple screens for the MacBook Pro?",
+    a: `Yes. Our standard screen is an original pull-out: a genuine Apple panel taken from another MacBook and tested before it is fitted. New Apple original panels cost more and are the only option we fit on the M5; new OEM and brand new (aftermarket) panels cost less. The grade is named on your quote and invoice. Warranty: ${SCREEN_WARRANTY_LINE}.` },
+  { q: "How long does MacBook Pro screen replacement take in Dubai?",
+    a: 'Same day on the 13" Retina/Touch Bar and the 14" XDR when the panel is in stock (3-5 hours including the 90-minute adhesive cure). The 16" XDR is often 1-2 days; the M5 can be 1-3 days while genuine assembly stock is sourced from the local Apple distributor.' },
+];
+
+const COMPARISON = [
+  ["Repair window",            'Same day on 13" Retina & 14" XDR when in stock', "Set by Apple after inspection"],
+  ['Price (14" XDR)',          "Free diagnosis, then a quote",             "Not published; quoted after inspection"],
+  ['Price (16" XDR)',          "Free diagnosis, then a quote",             "Not published; quoted after inspection"],
+  ["Flexgate cable-only fix",  "Yes on 2016-2017",                          "No, full assembly only"],
+  ["Walk in, no appointment",  "Yes, diagnosis in about 15 minutes",        "Check with the store"],
+  ["Vintage/obsolete Pros",    "Yes — 2012 Retina onward",                  "Not serviced once Apple lists a model as obsolete"],
+  ["Warranty",                 "3 months (original pull-out, Apple original); 15 days (new OEM, aftermarket)",         "Apple's own repair terms"],
+];
+
+const TIMELINE = [
+  { tone: "good" as const, head: 'Same day (3 to 5 hours)',
+    body: 'MacBook Pro 13" Retina/Touch Bar and 14" Liquid Retina XDR (M1-M4) when the panel is in stock — including the 90-minute adhesive cure. WhatsApp the serial first to confirm stock.' },
+  { tone: "mid" as const, head: "1 to 2 days",
+    body: 'MacBook Pro 16" XDR (panel ordered from the local parts supplier), and the 15" Retina 2013-2015 when an original panel must be sourced.' },
+  { tone: "mid" as const, head: "1 to 3 days (M5)",
+    body: "Genuine Apple Liquid Retina XDR assemblies for the 2025-2026 M5, M5 Pro and M5 Max while supply builds. Always shipped from the local Apple distributor — never grey-market, never from China." },
+];
+
+const RELATED = [
+  { label: "MacBook screen repair (all models)", href: "/macbook-screen-repair-dubai", description: "The full MacBook screen service — Air, Pro and Intel." },
+  { label: "MacBook Pro repair Dubai",           href: "/macbook-pro-repair-dubai",     description: "Every MacBook Pro repair: battery, board, keyboard, water damage." },
+  { label: "MacBook Pro battery replacement",    href: "/macbook-pro-battery-replacement-dubai", description: "Pro battery service — 14\"/16\"/Intel, cycle-count check, pricing." },
+];
+
+const TRUST = [
+  { value: "3,400+", label: "Displays fitted since 2004" },
+  { value: "Free", label: "Diagnosis on every model" },
+  { value: "Genuine", label: "Apple panels for M3-M5" },
+  { value: "3 months", label: "Written warranty" },
+];
+
+const MAPS_EMBED = "https://www.google.com/maps?q=Concord+Tower+Dubai+Media+City&output=embed";
+const DIRECTIONS = "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
+
+
+export default function MacBookProScreenRepair() {
+  const reviews = pickReviews([
+    "Mariia Chymyrysova",
+    "Daniel Layzell",
+    "Maja Pilirani",
+    "Quickbooks & Tax Services",
+    "Oliver Tritton",
+    "Faizal Hussain",
+  ]);
+
+  useSeo(
+    {
+      title: "MacBook Pro Screen Repair Dubai — Same-Day XDR & Retina",
+      description:
+        "MacBook Pro screen repair Dubai. XDR mini-LED 14\"/16\" M1 Pro to M5, ProMotion, Flexgate. Same-day, genuine panels, 3-month warranty. 055 741 3706.",
+      path: "/macbook-pro-screen-repair-dubai",
+    },
+    [
+      localBusiness(),
+      organization(),
+      serviceSchema({
+        name: "MacBook Pro Screen Repair Dubai",
+        timeline: "Same day to 3 days",
+        warranty: "P3M",
+        url: "/macbook-pro-screen-repair-dubai",
+        description:
+          "MacBook Pro screen and panel replacement in Dubai. Liquid Retina XDR mini-LED (M1 Pro to M5), ProMotion 120Hz, Touch Bar Retina, classic Retina and Flexgate. 13/14/15/16-inch, Intel and Apple Silicon.",
+      }),
+    ],
+  );
+
+  return (
+    <PageShell>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+
+        {/* ── Hero ───────────────────────────────────────────────── */}
+        <section data-hero-tone="light" className="relative overflow-hidden pt-[120px] pb-3xl md:pb-4xl">
+          <div className="relative mx-auto max-w-content px-5 md:px-6">
+            <BreadcrumbTrail trail={[{ name: "Home", path: "/" }, { name: "MacBook Pro Repair", path: "/macbook-pro-repair-dubai" }, { name: "Screen Repair", path: "/macbook-screen-repair-dubai" }, { name: "MacBook Pro", path: "/macbook-pro-screen-repair-dubai" }]} />
+
+            <div className="grid gap-2xl md:grid-cols-12 items-start">
+              <div className="md:col-span-7">
+                <p className="m-0 inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-text-muted">
+                  <Monitor size={14} className="text-accent" aria-hidden /> MacBook Pro screen repair · Media City
+                </p>
+                <h1 className="mt-lg text-[clamp(2rem,4.6vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.01em] text-text">
+                  MacBook Pro Screen Repair Dubai — <span className="text-accent">Same Day</span>
+                </h1>
+                <p className="mt-lg max-w-[64ch] text-[17px] leading-relaxed text-text-muted">
+                  Liquid Retina XDR mini-LED from M1 Pro to M5, ProMotion 120Hz, Touch Bar Retina and Flexgate.
+                  13″, 14″, 15″, 16″ — Intel through M5. Same-day on most models, 90-day (3-month) warranty.
+                </p>
+                <div className="mt-xl flex flex-wrap gap-sm">
+                  <Button asChild variant="whatsapp" size="lg">
+                    <a href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi Shafiq, MacBook Pro screen repair quote please. Model: ")}`)} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle aria-hidden /> Get a quote on WhatsApp
+                    </a>
+                  </Button>
+                  <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
+                    <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call {NAP.phoneDisplay}</a>
+                  </Button>
+                </div>
+                <p className="mt-lg text-[12.5px] text-text-faint">
+                  Updated June 2026 · Reviewed by Shafiq Ahmed, Lead MacBook Technician · 9 min read
+                </p>
+              </div>
+
+              <div className="md:col-span-5">
+                <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-lg">
+                  <ResponsiveImage
+                    src="/images/topics/blog-screen-display-dubai.jpg"
+                    alt="MacBook Pro Liquid Retina XDR display assembly and common screen failure modes explained"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 92vw, 420px"
+                    imgClassName="w-full h-auto"
+                  />
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Answer-first capsule (AEO/BLUF) */}
+        <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
+          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook Pro screen repair", pricePath: "/macbook-pro-screen-repair-dubai", startingPrice: 600, timeline: "same-day on most models" })} />
+          <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg shadow-lg backdrop-blur-md">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent"><Monitor size={22} aria-hidden /></span>
+                <div>
+                  <p className="m-0 font-semibold leading-tight text-text">Pro Screen Repair</p>
+                  <p className="m-0 text-[12px] text-text-faint">XDR · ProMotion · Retina · Flexgate</p>
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[12px] font-medium text-accent">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden /> Online
+              </span>
+            </div>
+            <ul className="mt-lg space-y-2.5 list-none p-0 border-t border-border pt-md">
+              {[["Diagnosis", "Free"], ["Turnaround", "Same day · 1-3 days"], ["Warranty", "90 days (3 months)"], ["Diagnosis", "FREE"]].map(([k, v]) => (
+                <li key={k} className="flex items-center justify-between gap-2 text-[14px]">
+                  <span className="text-text-faint">{k}</span>
+                  <span className="font-semibold text-text">{v}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-md flex items-center justify-between gap-2 border-t border-border pt-md text-[12.5px]">
+              <span className="inline-flex items-center gap-1.5 text-text-faint"><Clock size={13} aria-hidden /> Mon-Sat · 9 am - 7 pm</span>
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer" className="min-h-[44px] inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"><MessageCircle size={13} aria-hidden /> WhatsApp now</a>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* ── Broken-glass warranty notice ───────────────────────── */}
+        <div className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <GlassWarrantyNotice device="screen" />
+        </div>
+
+        {/* ── Trust strip ────────────────────────────────────────── */}
+        <section className="border-y border-border bg-bg-alt">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-2xl grid gap-xl grid-cols-2 lg:grid-cols-4 text-center">
+            {TRUST.map((s) => (
+              <Reveal key={s.label}>
+                <p className="mono text-[22px] md:text-[26px] font-bold text-text leading-none mb-1">{s.value}</p>
+                <p className="text-[13px] text-text-muted m-0">{s.label}</p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Intro ──────────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
+          <LinkifyProse selfHref="/macbook-pro-screen-repair-dubai"><p className="max-w-[78ch] text-[17px] leading-relaxed text-text-muted m-0">
+            MacBook Pro screen repair in Dubai finishes the same day on the 13″ Retina, Touch Bar and 14″ Liquid Retina XDR when the panel is in stock. The MacBook Pro is the harder display to get right: the 14″ and 16″ (2021 onward) use mini-LED XDR panels — an LCD lit by thousands of mini-LEDs in local dimming zones — with a 120Hz ProMotion timing controller (the M5 keeps this design; no MacBook has an OLED screen), and the 2016-2017 models suffer the well-known Flexgate cable failure. We fit genuine Apple panels on the M3, M4 and M5 to keep True Tone and ProMotion intact, and tested A-grade Samsung/LG panels on the 2012-2022 range. Every panel is bench-tested for dead pixels, zone uniformity, P3 colour and 120Hz before it leaves the workshop. For Air or Intel models, see the <Link to="/macbook-screen-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">full MacBook screen repair</Link> page.
+          </p></LinkifyProse>
+        </section>
+
+        {/* ── Models + pricing ───────────────────────────────────── */}
+        <section className="bg-bg-alt border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <SectionHead eyebrow="Every Pro panel, one place" title="MacBook Pro models we repair" intro="From the 2012 Retina through the 2025-2026 M5. Prices are panel + labour + warranty all-in — no diagnostic fee, no adhesive surcharge. The exact figure is pinned to your serial." />
+            <RepairPriceTable path="/macbook-pro-screen-repair-dubai" variant="inline" />
+            <p className="mt-md text-[13px] text-text-faint mono max-w-[72ch]">
+              Glass-only repair is possible on 2012-2015 Retina. From the 2016 Touch Bar the glass is bonded to the panel — full assembly only.
+            </p>
+          </div>
+        </section>
+
+
+        {/* ── Common problems ────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead
+            eyebrow="Match the symptom"
+            title="Common MacBook Pro screen problems"
+            intro="The highest-volume Pro display tickets at the workshop — including the XDR, ProMotion and M5 faults the generic screen page does not cover. Match the symptom in bold to the typical fix and price."
+            icon={<AlertTriangle size={26} className="text-accent" aria-hidden />}
+          />
+          <div className="grid gap-lg md:grid-cols-2">
+            {COMMON_PROBLEMS.map((p, i) => (
+              <Reveal key={p.title} delay={(i % 2) * 60}>
+                <Card className="h-full">
+                  <h3 className="m-0 mb-2 text-text text-[16px] font-bold">{p.title}</h3>
+                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{p.body}</p>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Process ────────────────────────────────────────────── */}
+        <section className="bg-bg-alt border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <SectionHead
+              eyebrow="Simple & transparent"
+              title="Our MacBook Pro screen repair process"
+              intro="Six steps from WhatsApp to handover, each with a fixed time estimate."
+              icon={<Wrench size={26} className="text-accent" aria-hidden />}
+            />
+            <ol className="grid gap-lg md:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
+              {STEPS.map((s, i) => (
+                <Reveal as="li" key={s.title} delay={(i % 3) * 70} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+                  <span aria-hidden className="mb-md flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 font-heading text-[18px] font-bold text-accent">{i + 1}</span>
+                  <p className="font-semibold text-[16px] m-0 mb-1 text-text">{s.title}</p>
+                  <p className="text-[13.5px] text-text-muted leading-relaxed m-0">{s.body}</p>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* ── Timeline ───────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead eyebrow="Turnaround" title="How long does MacBook Pro screen repair take?" />
+          <div className="grid gap-lg md:grid-cols-3">
+            {TIMELINE.map((t) => (
+              <Card key={t.head} className={t.tone === "good" ? "border-accent/30 bg-accent/[0.06]" : ""}>
+                <h3 className="m-0 mb-2 text-text text-[18px] font-bold">{t.head}</h3>
+                <p className="m-0 text-[14px] text-text-muted leading-relaxed">{t.body}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Parts ──────────────────────────────────────────────── */}
+        <section className="bg-bg-alt border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <SectionHead eyebrow="What goes in your MacBook Pro" title="Four screen grades to choose from" intro="A Pro panel comes in four grades, and the price and warranty move with the grade. The typical prices above are for our standard screen, an original pull-out. On the M5 we fit genuine Apple display assemblies only." />
+            <ScreenGrades />
+            <p className="mt-md text-[14px] text-text-muted leading-relaxed max-w-[78ch]">
+              Warranty: {SCREEN_WARRANTY_LINE}. The WhatsApp quote shows every grade we can supply for your model side by side, with the exact price once we have the serial. We refuse the cheapest unbranded panels because failure rates above 20% are normal in that grade.
+            </p>
+          </div>
+        </section>
+
+        {/* ── Warranty ───────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead eyebrow="Backed in writing" title="Warranty" icon={<ShieldCheck size={26} className="text-accent" aria-hidden />} />
+          <Card>
+            <ul className="space-y-2.5 text-[15px] text-text-muted list-none p-0 m-0">
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">90 days (3 months)</strong> — written warranty on parts and labour, dated and signed, on genuine and A-grade panels alike.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Covered:</strong> manufacturing defects, dead pixels appearing post-repair, failed mini-LED zones, backlight bleed, eDP/ribbon cable failure, hinge alignment.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Not covered:</strong> new physical damage, liquid damage after repair, normal HDR blooming on mini-LED XDR panels (this is not a fault).</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">How to claim:</strong> WhatsApp the warranty card photo to {NAP.phoneDisplay}. Bring it back to the workshop, or send it by a courier you book; replacement panel fitted within 48 hours.</span></li>
+              <li className="flex items-start gap-2"><Check size={16} className="text-accent mt-1 shrink-0" aria-hidden /> <span><strong className="text-text">Transferable:</strong> once, free of charge, if the MacBook Pro is sold within the warranty period.</span></li>
+            </ul>
+          </Card>
+        </section>
+
+        {/* ── Pricing recap + CTA ────────────────────────────────── */}
+        <section className="bg-bg-alt border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <SectionHead eyebrow="Transparent pricing" title="MacBook Pro Screen Repair Dubai — pricing guide" intro="No hidden fees. The price quoted on WhatsApp is the price paid on collection — see the full per-model list above. No diagnostic fee, no adhesive surcharge, no VAT add-on." />
+            <p className="text-[14px] text-text-faint mono max-w-[78ch]">
+              All prices in AED, VAT inclusive. Payment on collection — cash, Visa, Mastercard, Apple Pay, Samsung Pay, or bank transfer to Emirates NBD.
+            </p>
+
+            <div className="mt-2xl relative overflow-hidden rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl md:p-2xl">
+              <div className="relative flex flex-col gap-md md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="m-0 mono text-[12px] uppercase tracking-wider text-accent mb-2">MacBook Pro Screen Repair · Same day · 1-3 days</p>
+                  <h3 className="m-0 text-text text-[24px] md:text-[26px]">Get your Pro screen quote in 4 minutes</h3>
+                  <p className="m-0 mt-2 text-text-muted text-[15px]">Free diagnosis, then a firm quote. WhatsApp the model + a photo of the damage.</p>
+                </div>
+                <CtaRow whatsappMessage="Hi Shafiq, MacBook Pro screen repair quote please. Model: " />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Comparison ─────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead eyebrow="Side by side" title="MacBook Pro Screen Repair vs Apple Store Dubai" />
+          <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
+            <table className="w-full border-collapse text-left text-[14px] min-w-[640px]">
+              <thead>
+                <tr className="border-b border-border text-accent">
+                  <th className="px-md py-md font-semibold">Factor</th>
+                  <th className="px-md py-md font-semibold">MacBook Repair Dubai</th>
+                  <th className="px-md py-md font-semibold">Apple Store / AASP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON.map((row) => (
+                  <tr key={row[0]} className="border-b border-border last:border-0 align-top">
+                    <td className="px-md py-sm font-semibold text-text">{row[0]}</td>
+                    <td className="px-md py-sm text-text">{row[1]}</td>
+                    <td className="px-md py-sm text-text-muted">{row[2]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Reveal>
+          <p className="mt-md text-[13px] text-text-faint mono max-w-[80ch]">
+            Apple publishes only battery prices for Mac laptops; screen damage is quoted after inspection (support.apple.com/en-ae/mac-laptops/repair, checked September 2026). We are an independent Apple specialist, not an Apple Authorised Service Provider — the right fit when the device is out of warranty, the model is vintage/obsolete, or you need same-day turnaround.
+          </p>
+        </section>
+
+        {/* ── Reviews ────────────────────────────────────────────── */}
+        <section className="bg-bg-alt border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <div className="mb-2xl flex items-end justify-between gap-md flex-wrap">
+              <div>
+                <p className="mono text-[12px] uppercase tracking-wider text-accent mb-3">{REVIEW_AVERAGE.toFixed(1)} average · Google verified</p>
+                <h2 className="m-0 text-text">Real MacBook Pro repair reviews</h2>
+              </div>
+              <Link to="/reviews" className="text-[15px] font-semibold text-accent hover:underline inline-flex items-center gap-1">All {REVIEW_COUNT}+ reviews <ArrowRight size={15} aria-hidden /></Link>
+            </div>
+            <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-3">
+              {reviews.map((r) => (
+                <Reveal key={r.name} className="flex h-full flex-col rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-semibold text-text">{r.name}</span>
+                    <span className="flex" aria-hidden>{Array.from({ length: 5 }).map((_, i) => <Star key={i} size={13} className="fill-star text-star" />)}</span>
+                  </div>
+                  <p className="mt-2 text-[14px] leading-relaxed text-text-muted m-0 flex-1">“{r.text}”</p>
+                  <p className="mt-md mb-0 text-[12px] text-text-faint">{r.date ? `${r.date} · ` : ""}Google review</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ────────────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage(FAQS)) }} />
+          <SectionHead eyebrow="Before you ask" title="MacBook Pro screen repair FAQ" />
+          <ul className="grid md:grid-cols-2 md:gap-x-2xl border-t border-border list-none p-0 m-0">
+            {FAQS.map((f, i) => (
+              <li key={i} className="border-b border-border">
+                <details className="group">
+                  <summary className="flex cursor-pointer items-start justify-between gap-md py-md list-none [&::-webkit-details-marker]:hidden">
+                    <span className="text-[16px] md:text-[17px] font-semibold text-text">{f.q}</span>
+                    <ChevronDown size={18} className="mt-1 shrink-0 text-accent transition-transform group-open:rotate-180" aria-hidden />
+                  </summary>
+                  <p className="pb-md text-[15px] leading-relaxed text-text-muted max-w-[70ch] m-0">{f.a}</p>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* ── Related ────────────────────────────────────────────── */}
+        <section className="bg-bg-alt border-y border-border">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <SectionHead eyebrow="Often booked together" title="Related MacBook Pro repairs" />
+            <div className="grid gap-lg md:grid-cols-3">
+              {RELATED.map((r) => (
+                <Link key={r.href} to={r.href} className="group rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-all duration-200 motion-safe:hover:-translate-y-1 hover:border-accent/40 hover:bg-bg-alt">
+                  <h3 className="m-0 mb-1 text-text text-[17px] group-hover:text-accent">{r.label}</h3>
+                  <p className="m-0 text-[14px] text-text-muted leading-relaxed">{r.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Location ───────────────────────────────────────────── */}
+        <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+          <SectionHead eyebrow="Walk in, no appointment" title="Where do I bring my MacBook Pro in Dubai?" />
+          <div className="grid gap-lg md:grid-cols-2 items-stretch">
+            <div className="overflow-hidden rounded-2xl border border-border">
+              <iframe src={MAPS_EMBED} title={`Map to ${NAP.name}`} width="100%" height="320" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block w-full h-[320px] border-0" />
+            </div>
+            <div className="flex flex-col gap-md">
+              <h3 className="m-0 text-text">Find us in Media City</h3>
+              <p className="flex items-start gap-sm text-[15px] text-text-muted m-0"><MapPin size={18} className="text-accent mt-1 shrink-0" aria-hidden /><span>{NAP.street}<br />{NAP.area}<br />{NAP.city}, UAE</span></p>
+              <p className="flex items-start gap-sm text-[14px] text-text-faint m-0"><ParkingCircle size={18} className="text-accent mt-1 shrink-0" aria-hidden /> Paid parking on-site and nearby. 3-minute walk from the Palm Jumeirah tram stop.</p>
+              <a href={withSlash(DIRECTIONS)} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-accent hover:underline">Get directions <ExternalLink size={14} aria-hidden /></a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Final CTA ──────────────────────────────────────────── */}
+        <section className="relative overflow-hidden border-t border-border">
+          <div className="relative mx-auto max-w-content px-5 md:px-6 py-4xl text-center">
+            <h2 className="text-text m-0 mb-md max-w-[30ch] mx-auto">Cracked Pro screen? WhatsApp the model — quote in 4 minutes</h2>
+            <p className="text-text-muted max-w-[60ch] mx-auto mb-xl text-[17px]">
+              Year, screen size, processor, photo of the damage. Walk in to Media City or send it by courier. Up to 3 months warranty, by panel grade.
+            </p>
+            <div className="flex flex-wrap justify-center gap-sm">
+              <Button asChild variant="whatsapp" size="lg"><a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Message on WhatsApp</a></Button>
+              <Button asChild size="lg" variant="secondary" className="bg-white"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> {NAP.phoneDisplay}</a></Button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="quote" className="mx-auto max-w-content px-5 md:px-6 mt-3xl scroll-mt-24">
+        <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get your free repair quote</h2>
+        <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">Two quick steps, your device, then how to reach you. Free diagnosis, written quote, 90-day (3-month) warranty.</p>
+        <LeadForm variant="compact" defaultDeviceType="MacBook" sourcePath="/macbook-pro-screen-repair-dubai" />
+      </section>
+      <RelatedArticles path="/macbook-pro-screen-repair-dubai" />
+    </PageShell>
+  );
+}
+
+/* ── local helpers (dark) ──────────────────────────────────── */
+function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return <div className={`rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg ${className}`}>{children}</div>;
+}
+
+function SectionHead({ eyebrow, title, intro, icon }: { eyebrow: string; title: string; intro?: string; icon?: ReactNode }) {
+  return (
+    <div className="mb-2xl max-w-[64ch]">
+      <Reveal as="p" className="mono text-[12px] uppercase tracking-wider text-accent mb-3">{eyebrow}</Reveal>
+      <Reveal as="h2" className="m-0 text-text flex items-center gap-sm">{icon}{title}</Reveal>
+      {intro && <Reveal as="p" className="mt-md text-[17px] text-text-muted leading-relaxed">{intro}</Reveal>}
+    </div>
+  );
+}
+
+function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
+  const href = whatsappMessage ? `${NAP.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}` : NAP.whatsappUrl;
+  return (
+    <div className="flex flex-wrap gap-sm shrink-0">
+      <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
+      <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
+    </div>
+  );
+}

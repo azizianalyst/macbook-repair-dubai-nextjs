@@ -2,10 +2,27 @@
 // inject via <script type="application/ld+json">{JSON.stringify(...)}</script>
 
 import { SITE } from "./seo";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
+import { SITE_SETTINGS } from "@/content/settings.generated";
 
 export const ORG_ID = `${SITE.url}/#organization`;
 export const BUSINESS_ID = `${SITE.url}/#localbusiness`;
 export const WEBSITE_ID = `${SITE.url}/#website`;
+
+// Canonical absolute URL for a route PATH in trailing-slash form (matches next.config
+// trailingSlash:true), so JSON-LD url/@id values agree with the <link rel="canonical">.
+// Only for page paths — never image/file URLs.
+export const pageUrl = (path: string): string =>
+  SITE.url + (path === "/" ? "/" : "/" + path.replace(/^\/+|\/+$/g, "") + "/");
+
+// Entity-consolidation links. The Google Business Profile, the website and this schema all use
+// the SAME public name ("MacBook Repair Dubai"), so the primary local entity is already
+// consolidated on Maps. Azizi Technologies is the legal operator — declared via legalName, NOT
+// as a competing consumer name (an alternateName Google can't corroborate on the GBP would
+// re-fragment the entity). The sister site azizitechnologies.ae is bridged via sameAs so any
+// legacy "Azizi" link equity consolidates onto this entity. See SEO recovery plan, Cause 3.
+const GBP_MAPS_URL = "https://maps.app.goo.gl/X5easM2GnxoZnqhU7";
+const SISTER_SITE = "https://azizitechnologies.ae";
 
 const slugify = (s: string) =>
   s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -16,46 +33,68 @@ export function localBusiness() {
     "@type": "ElectronicsStore",
     "@id": BUSINESS_ID,
     name: SITE.name,
-    alternateName: "Azizi Technologies",
+    legalName: "Azizi Technologies",
+    description:
+      `Independent Mac repair specialist in Concord Tower, Dubai Media City since 2004 — MacBook Air, MacBook Pro, MacBook Neo, iMac, Mac mini, Mac Studio and Mac Pro. Screen, battery, keyboard, water-damage, logic-board and data-recovery work carried out at component level on our own bench, not sent away. iPhone and iPad are repaired too. Walk-in workshop with parking on site, send-in by customer-booked courier, paid onsite visits subject to technician availability, free diagnosis, no-fix-no-charge, and a written warranty. Rated ${RATING_LABEL} from ${REVIEW_COUNT_LABEL} Google reviews.`,
+    // LocalBusiness.image tells Google "these are photographs of this business",
+    // so it must only ever hold real documentary photos. It previously listed the
+    // three /images/brand/* AI-generated placeholders - including a synthetic
+    // storefront carrying an Apple logo, which independent repair shops may not
+    // display. Swapped for genuine Concord Tower photos (audit 2026-09-23).
     image: [
-      `${SITE.url}/images/brand/brand-storefront.jpg`,
-      `${SITE.url}/images/brand/workshop-wide.jpg`,
-      `${SITE.url}/images/brand/team-portrait.jpg`,
+      `${SITE.url}/images/real/team/team-workshop-dubai.jpg`,
+      `${SITE.url}/images/real/team/macbook-bench-repairs-dubai.jpg`,
+      `${SITE.url}/images/real/lab/repair-workbench-dubai.jpg`,
     ],
     logo: `${SITE.url}/logo-mrd.png`,
     url: SITE.url,
     telephone: SITE.phoneE164,
-    email: "info@macbook-repair-dubai.ae",
-    priceRange: "AED 60 - AED 4,550",
+    email: NAP.email || "info@macbook-repair-dubai.ae",
+    // priceRange intentionally omitted — prices are not shown to visitors, and structured data
+    // must not carry a figure the page doesn't display.
     currenciesAccepted: "AED",
     paymentAccepted: ["Cash", "Credit Card", "Visa", "Mastercard", "American Express"],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh",
-      addressLocality: "Dubai Media City",
+      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City",
+      addressLocality: "Dubai",
       addressRegion: "Dubai",
-      addressCountry: { "@type": "Country", name: "AE" },
+      addressCountry: "AE",
     },
     geo: { "@type": "GeoCoordinates", latitude: 25.0978143, longitude: 55.1561949 },
-    hasMap: "https://maps.app.goo.gl/X5easM2GnxoZnqhU7",
+    hasMap: GBP_MAPS_URL,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
         opens: "09:00",
-        closes: "22:00",
+        closes: "19:00",
       },
+      // Friday closes 12:00-14:00 for Jumu'ah prayer (matches the Google Business Profile).
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "09:00", closes: "12:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "14:00", closes: "19:00" },
     ],
-    // NOTE: AggregateRating intentionally NOT here - it would render on every page that uses
-    // localBusiness(). It is scoped to home + /reviews via the prerender (and the aggregateRating()
-    // helper) to avoid sitewide review-snippet spam.
+    // NOTE: AggregateRating NOT here by design. localBusiness() is used on every page and Google
+    // does not show stars for self-collected reviews of the business itself. Home deliberately
+    // uses localBusiness() too (see Home.tsx); localBusinessWithRating() is currently unused.
     parentOrganization: { "@id": `${SITE.url}/#organization` },
-    founder: { "@type": "Organization", name: "Azizi Technologies" },
+    // Fact sheet (VERIFIED): Abdul Aziz is the one and only founder. "Azizi Technologies" is the
+    // unverified legal operator (owner decision D3), so it must not appear as the founder.
+    founder: { "@type": "Person", name: "Abdul Aziz", jobTitle: "Founder" },
     foundingDate: "2004-10-10",
+    // Matches the emirates/cities the site has dedicated landing pages for (customers from
+    // these cities visit the Dubai workshop). Trim any the business does not serve.
     areaServed: [
       { "@type": "City", name: "Dubai" },
       { "@type": "City", name: "Sharjah" },
       { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "City", name: "Ajman" },
+      { "@type": "City", name: "Al Ain" },
+      { "@type": "City", name: "Fujairah" },
+      { "@type": "City", name: "Ras Al Khaimah" },
+      { "@type": "City", name: "Umm Al Quwain" },
+      { "@type": "City", name: "Khor Fakkan" },
+      { "@type": "City", name: "Kalba" },
     ],
     knowsLanguage: ["en", "ar", "ur", "hi", "ru", "fr", "de"],
     contactPoint: {
@@ -66,38 +105,78 @@ export function localBusiness() {
       availableLanguage: ["en", "ar", "ru"],
       areaServed: { "@type": "City", name: "Dubai" },
     },
+    // Offers carry no price — prices are not shown to visitors, so structured data must not
+    // quote one. The catalogue still declares what is offered, which is what Google needs.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Apple Repair Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Screen Repair" }, price: "780", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Battery Replacement" }, price: "590", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iPhone Screen Repair" }, price: "460", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Water Damage Repair" }, price: "910", priceCurrency: "AED" },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iMac Screen Repair" }, price: "1040", priceCurrency: "AED" },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Screen Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Battery Replacement" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "MacBook Water Damage Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iPhone Screen Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "iMac Screen Repair" } },
       ],
     },
-    sameAs: [
-      "https://www.facebook.com/macbookrepairdubai.ae/",
-      "https://www.instagram.com/azizitechnologies/",
-      "https://www.youtube.com/@AziziTechnologies",
-    ],
+    sameAs: [NAP.facebook, NAP.instagram, NAP.youtube, GBP_MAPS_URL, SISTER_SITE],
+  };
+}
+
+// Use ONLY on pages where the aggregate rating is visible (home, /reviews).
+// Nesting the rating inside LocalBusiness is required for Google to associate them
+// as a rich-result eligible entity. localBusiness() omits it intentionally so that
+// pages which embed localBusiness() without a visible rating don't emit misleading markup.
+export function localBusinessWithRating(ratingValue: number, reviewCount: number) {
+  return {
+    ...localBusiness(),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(ratingValue),
+      reviewCount: String(reviewCount),
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+}
+
+// Parse an ISO-8601 duration ("P1Y", "P6M", "P15D") into a WarrantyPromise.
+// Falls back to 12 months if the string doesn't parse.
+function warrantyPromise(iso: string) {
+  const m = iso.match(/^P(\d+)([DWMY])$/i);
+  if (!m) return { "@type": "WarrantyPromise", durationOfWarranty: { "@type": "QuantitativeValue", value: 12, unitCode: "MON" } };
+  const unitCode = { D: "DAY", W: "WEE", M: "MON", Y: "ANN" }[m[2].toUpperCase()] ?? "DAY";
+  return {
+    "@type": "WarrantyPromise",
+    durationOfWarranty: { "@type": "QuantitativeValue", value: Number(m[1]), unitCode },
   };
 }
 
 export function service(opts: {
   name: string;
-  price: number;
+  /** Omit under the hide-prices policy: the Offer is then emitted without a figure, which
+      still declares the service is offered without publishing a price to rich results. */
+  price?: number;
   priceMax?: number;
   description?: string;
   url?: string;
-  warranty?: string;     // "P90D"
+  warranty?: string;     // ISO-8601, e.g. "P1Y" · "P6M" · "P15D"
   timeline?: string;     // human readable
   serviceType?: string;
   category?: string;
 }) {
   const url = opts.url;
-  const offers = opts.priceMax
+  // No price supplied -> a priceless Offer. schema.org allows an Offer with availability and
+  // no price; it keeps the Service discoverable without shipping a figure. This is what stops
+  // a page whose visible copy says "message us for a price" from still publishing "price":"600"
+  // in JSON-LD — which is exactly what the homepage was doing.
+  const offers = opts.price === undefined
+    ? {
+        "@type": "Offer",
+        url,
+        availability: "https://schema.org/InStock",
+        warranty: opts.warranty ? warrantyPromise(opts.warranty) : undefined,
+      }
+    : opts.priceMax
     ? {
         "@type": "AggregateOffer",
         url,
@@ -119,9 +198,7 @@ export function service(opts: {
           valueAddedTaxIncluded: true,
           description: opts.timeline ? `Starting price. Turnaround: ${opts.timeline}.` : "Starting price.",
         },
-        warranty: opts.warranty
-          ? { "@type": "WarrantyPromise", durationOfWarranty: { "@type": "QuantitativeValue", value: 90, unitCode: "DAY" } }
-          : undefined,
+        warranty: opts.warranty ? warrantyPromise(opts.warranty) : undefined,
       };
 
   return {
@@ -139,7 +216,7 @@ export function service(opts: {
     },
     url,
     category: opts.category ?? "Computer Repair Service",
-    termsOfService: `${SITE.url}/warranty`,
+    termsOfService: pageUrl("/warranty"),
     offers,
   };
 }
@@ -158,7 +235,6 @@ export function reviewSchema(r: {
     datePublished: r.datePublished,
     reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5", worstRating: "1" },
     reviewBody: r.body,
-    publisher: { "@type": "Organization", name: "Google" },
   };
 }
 
@@ -194,8 +270,76 @@ export function breadcrumbs(trail: Array<{ name: string; path: string }>) {
       "@type": "ListItem",
       position: i + 1,
       name: t.name,
-      item: SITE.url + t.path,
+      item: pageUrl(t.path),
     })),
+  };
+}
+
+// Licensable ImageObject - drives the "Licensable" badge in Google Images and
+// states our reuse terms (free embed WITH a dofollow link credit - see
+// /image-usage-license). Permanently attributes every topic image to us.
+export function licensedImage(opts: { src: string; alt: string; pagePath: string; geo?: boolean; width?: number; height?: number }) {
+  const imageUrl = SITE.url + opts.src;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": `${imageUrl}#image`,
+    contentUrl: imageUrl,
+    url: imageUrl,
+    name: opts.alt,
+    description: opts.alt,
+    // Local-SEO geo anchor: ties the image to the Dubai Media City workshop.
+    ...(opts.geo ? {
+      contentLocation: {
+        "@type": "Place",
+        name: "MacBook Repair Dubai - Concord Tower, Dubai Media City",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Concord Tower, Dubai Media City",
+          addressLocality: "Dubai",
+          addressCountry: "AE",
+        },
+      },
+    } : {}),
+    width: { "@type": "QuantitativeValue", value: opts.width ?? 1600, unitText: "px" },
+    height: { "@type": "QuantitativeValue", value: opts.height ?? 1200, unitText: "px" },
+    license: pageUrl("/image-usage-license"),
+    acquireLicensePage: pageUrl("/image-usage-license"),
+    creditText: "MacBook Repair Dubai (macbook-repair-dubai.ae)",
+    creator: { "@id": ORG_ID },
+    copyrightNotice: `© ${NAP.name} - Azizi Technologies, Dubai`,
+    copyrightHolder: { "@id": ORG_ID },
+    representativeOfPage: true,
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl(opts.pagePath) },
+    inLanguage: "en-AE",
+  };
+}
+
+export function videoObject(opts: {
+  name: string;
+  description: string;
+  contentUrl: string;   // site-relative, e.g. /videos/foo.mp4
+  thumbnailUrl: string; // site-relative poster jpg
+  uploadDate: string;   // ISO date
+  duration: string;     // ISO 8601, e.g. "PT8S"
+  pagePath?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${SITE.url}${opts.contentUrl}#video`,
+    name: opts.name,
+    description: opts.description,
+    contentUrl: SITE.url + opts.contentUrl,
+    thumbnailUrl: SITE.url + opts.thumbnailUrl,
+    uploadDate: opts.uploadDate,
+    duration: opts.duration,
+    creator: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    copyrightNotice: `© ${NAP.name} - Azizi Technologies, Dubai`,
+    copyrightHolder: { "@id": ORG_ID },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl(opts.pagePath ?? "/") },
+    inLanguage: "en-AE",
   };
 }
 
@@ -207,11 +351,12 @@ export function article(opts: {
   datePublished: string;  // ISO
   dateModified: string;   // ISO
   image?: string;
+  type?: "Article" | "BlogPosting" | "NewsArticle";  // Rank Math–style schema type; default Article
 }) {
-  const url = SITE.url + opts.path;
+  const url = pageUrl(opts.path);
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": opts.type ?? "Article",
     "@id": `${url}#article`,
     headline: opts.title,
     description: opts.description,
@@ -257,6 +402,8 @@ export function person(opts: {
   yearsExperience?: number;
   slug?: string;
   knowsAbout?: string[];
+  /** Professional certifications, e.g. "Apple Certified Mac Technician (ACMT)". */
+  credentials?: string[];
 }) {
   const slug = opts.slug ?? slugify(opts.name);
   return {
@@ -268,6 +415,12 @@ export function person(opts: {
     image: opts.image,
     worksFor: { "@id": ORG_ID },
     knowsAbout: opts.knowsAbout,
+    hasCredential: opts.credentials?.map((c) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: c,
+      recognizedBy: { "@type": "Organization", name: "Apple" },
+    })),
     description: opts.yearsExperience
       ? `${opts.yearsExperience} years repairing Apple devices.`
       : undefined,
@@ -291,10 +444,10 @@ export function place(opts: {
     description: opts.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh",
-      addressLocality: "Dubai Media City",
+      streetAddress: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City",
+      addressLocality: "Dubai",
       addressRegion: "Dubai",
-      addressCountry: { "@type": "Country", name: "AE" },
+      addressCountry: "AE",
     },
     geo: { "@type": "GeoCoordinates", latitude: lat, longitude: lng },
     containedInPlace: {
@@ -311,7 +464,8 @@ export function organization() {
     "@type": "Organization",
     "@id": `${SITE.url}/#organization`,
     name: SITE.name,
-    alternateName: "Azizi Technologies",
+    legalName: "Azizi Technologies",
+    slogan: SITE_SETTINGS.tagline || undefined,
     url: SITE.url,
     logo: {
       "@type": "ImageObject",
@@ -319,11 +473,22 @@ export function organization() {
       width: 600,
       height: 60,
     },
-    sameAs: [
-      "https://www.facebook.com/macbookrepairdubai.ae/",
-      "https://www.instagram.com/azizitechnologies/",
-      "https://www.youtube.com/@AziziTechnologies",
-    ],
+    sameAs: [NAP.facebook, NAP.instagram, NAP.youtube, GBP_MAPS_URL, SISTER_SITE],
+  };
+}
+
+// WebSite entity node. Provides WEBSITE_ID so WebPage.isPartOf / speakable refs resolve into a
+// connected graph. No SearchAction — the site has no on-site search, so a sitelinks searchbox
+// would be invalid markup.
+export function webSite() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    name: SITE.name,
+    url: SITE.url,
+    publisher: { "@id": ORG_ID },
+    inLanguage: "en-AE",
   };
 }
 
@@ -366,24 +531,29 @@ export function webPage(opts: {
 
 // SpeakableSpecification - tells voice assistants / AI Overviews which DOM nodes
 // hold the most quotable content. Referenced from WebPage via `speakable`.
-export function speakable(xpaths?: string[]) {
+// Uses cssSelector rather than xpath deliberately. An xpath value starts with "/html/...",
+// which Googlebot resolved against the origin and crawled as a URL — Search Console logged
+// /html/body//section[contains(@class,'quick-answer')] as a 404. cssSelector cannot be
+// mistaken for a path, and Google supports it equivalently for speakable.
+export function speakable(selectors?: string[]) {
   return {
     "@type": "SpeakableSpecification",
-    xpath: xpaths ?? [
-      "/html/body//section[contains(@class,'quick-answer')]",
-      "/html/body//section[contains(@class,'quick-answer')]//*[@itemprop='text']",
-    ],
+    cssSelector: selectors ?? [".quick-answer", ".quick-answer [itemprop='text']"],
   };
 }
 
 // Convenience: WebPage node that points to the quick-answer block as speakable.
-export function pageWithSpeakable(opts: { url: string; name?: string }) {
+export function pageWithSpeakable(opts: { url: string; name?: string; dateModified?: string }) {
+  // Normalise to trailing-slash canonical form (matches trailingSlash:true), so the WebPage
+  // @id/url agree with <link rel="canonical"> regardless of how the caller built the URL.
+  const url = opts.url.replace(/\/$/, "") + "/";
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${opts.url}#webpage`,
+    "@id": `${url}#webpage`,
     name: opts.name,
-    url: opts.url,
+    url,
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },
     publisher: { "@id": ORG_ID },

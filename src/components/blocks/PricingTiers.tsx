@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 export type PricingTier = {
   name: string;
@@ -34,17 +34,17 @@ export default function PricingTiers({
   className,
 }: PricingTiersProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         {(heading || subheading) && (
           <div className="mb-2xl max-w-[680px]">
             {heading && (
-              <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+              <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
                 {heading}
               </h2>
             )}
             {subheading && (
-              <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-on-primary-muted">
+              <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-text-muted">
                 {subheading}
               </p>
             )}
@@ -58,10 +58,10 @@ export default function PricingTiers({
               <div
                 key={i}
                 className={cn(
-                  "relative flex flex-col rounded-2xl border p-lg",
+                  "relative flex flex-col rounded-md border p-lg",
                   t.highlighted
-                    ? "border-accent-bright/60 bg-white/[0.06] ring-2 ring-accent-bright/50 md:-mt-2 md:mb-2"
-                    : "border-white/10 bg-white/[0.04]",
+                    ? "border-accent/60 bg-bg-card ring-2 ring-accent/50 md:-mt-2 md:mb-2"
+                    : "border-border bg-bg-card",
                 )}
               >
                 {t.highlighted && (
@@ -70,21 +70,21 @@ export default function PricingTiers({
                   </span>
                 )}
 
-                <h3 className="text-[18px] font-bold text-on-primary">{t.name}</h3>
+                <h3 className="text-[18px] font-bold text-text">{t.name}</h3>
 
                 <div className="mt-md flex items-end gap-1">
-                  <span className="text-[32px] font-bold leading-none tracking-tight text-on-primary">
+                  <span className="text-[32px] font-bold leading-none tracking-tight text-text">
                     {t.price}
                   </span>
                   {t.period && (
-                    <span className="pb-1 text-[14px] text-on-primary-muted">
+                    <span className="pb-1 text-[14px] text-text-muted">
                       {t.period}
                     </span>
                   )}
                 </div>
 
                 {t.description && (
-                  <p className="mt-sm text-[14px] leading-relaxed text-on-primary-muted">
+                  <p className="mt-sm text-[14px] leading-relaxed text-text-muted">
                     {t.description}
                   </p>
                 )}
@@ -93,11 +93,11 @@ export default function PricingTiers({
                   {t.features.map((f, fi) => (
                     <li
                       key={fi}
-                      className="flex items-start gap-sm text-[14px] leading-relaxed text-on-primary"
+                      className="flex items-start gap-sm text-[14px] leading-relaxed text-text"
                     >
                       <Check
                         size={18}
-                        className="mt-[2px] shrink-0 text-accent-bright"
+                        className="mt-[2px] shrink-0 text-accent"
                         aria-hidden
                       />
                       <span>{f}</span>
@@ -114,7 +114,7 @@ export default function PricingTiers({
                   >
                     {isExternal ? (
                       <a
-                        href={t.cta.href}
+                        href={withSlash(t.cta.href)}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

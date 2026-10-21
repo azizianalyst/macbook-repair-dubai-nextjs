@@ -1,0 +1,155 @@
+{
+  "savedAt": "2026-10-11T06:30:00Z",
+  "note": "Decision watcher (j02) state. Compare War Room decisions, clusters and Owner log entries against this.",
+  "decisions": {
+    "D1": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D10": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D11": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D12": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D13": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D14": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D15": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D2": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D3": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D4": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D5": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D6": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D7": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D8": {
+      "answer": "",
+      "answeredAt": null
+    },
+    "D9": {
+      "answer": "",
+      "answeredAt": null
+    }
+  },
+  "clusters": {
+    "apple-general-general": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "ipad-battery": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "ipad-general": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "ipad-screen": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "iphone-back-glass": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "iphone-battery": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "iphone-camera": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "iphone-general": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "iphone-screen": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "iphone-water-damage": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "laptop-general": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "laptop-screen": {
+      "decision": "",
+      "decidedAt": null
+    },
+    "mac-desktop-general": {
+      "decision": "Target",
+      "decidedAt": "2026-09-30T10:00:00Z"
+    },
+    "mac-desktop-storage-ram": {
+      "decision": "Target",
+      "decidedAt": "2026-09-30T10:00:00Z"
+    },
+    "macbook-battery": {
+      "decision": "Target",
+      "decidedAt": "2026-09-30T10:00:00Z"
+    },
+    "macbook-general": {
+      "decision": "Target",
+      "decidedAt": "2026-09-30T10:00:00Z"
+    },
+    "macbook-keyboard": {
+      "decision": "Target",
+      "decidedAt": "2026-09-30T10:00:00Z"
+    },
+    "macbook-screen": {
+      "decision": "Target",
+      "decidedAt": "2026-09-30T10:00:00Z"
+    }
+  },
+  "jobs": {
+    "j00": "active",
+    "j01": "active",
+    "j02": "active",
+    "j03": "active",
+    "j04": "active",
+    "j05": "active",
+    "j06": "active",
+    "j07": "active",
+    "j08": "active",
+    "j09": "active",
+    "j10": "active",
+    "j11": "active"
+  },
+  "ownerLogIds": []
+}

@@ -5,7 +5,7 @@ export default function MacProGpuRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Pro GPU Repair Dubai - MPX Modules & W6800X | 055 741 3706"
-      seoDescription="Mac Pro 2019 GPU repair Dubai. AMD Radeon Pro W6800X / W5700X / Vega II MPX modules. M2 Ultra integrated GPU limits explained. From AED 1,200. 3-7 days."
+      seoDescription="Mac Pro 2019 GPU repair Dubai. AMD Radeon Pro W6800X / W5700X / Vega II MPX modules. M2 Ultra integrated GPU limits explained. 3-7 days."
       path="/mac-pro-gpu-repair-dubai"
       eyebrow="Mac Pro GPU repair"
       h1="Mac Pro GPU Repair Dubai - MPX Modules"
@@ -19,13 +19,13 @@ export default function MacProGpuRepair() {
         { name: "GPU Repair",      path: "/mac-pro-gpu-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac Pro and high-end Mac repair" }}
-      serviceName="Mac Pro GPU Repair"
+      serviceName="Mac Pro GPU Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Mac Pro 2019 Intel is the only modern Mac with truly modular GPUs.</strong> Apple's MPX modules slot into the chassis and combine an AMD Radeon Pro GPU with the internal Thunderbolt 3 routing that feeds the front and rear ports. The cards themselves can be repaired at component level: VRM failures, fan bearings, capacitor leaks, occasionally the GPU silicon itself for reflow.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Honest about the M2 Ultra Mac Pro: there are no MPX slots, no discrete GPU, nothing to swap. The GPU is integrated into the M2 Ultra SoC and shares the same fate as the chip. If GPU performance is the issue, we diagnose for free and tell you whether it's a software cause (driver issue, runaway process) or a hardware issue requiring whole-board replacement. We don't sell repairs that aren't possible.
           </p>
         </>
@@ -43,12 +43,12 @@ export default function MacProGpuRepair() {
         { title: "Module out, bench test",        body: "MPX module pulled, tested on our bench rig outside the Mac Pro chassis. Confirms whether the card or the chassis routing is the issue." },
         { title: "Repair or replace decision",    body: "Fan bearing or VRM failure: we repair at component level. GPU silicon failure: usually whole-module replacement, sometimes a careful reflow can recover it. We tell you the honest path and price." },
         { title: "Source genuine MPX or refurb",  body: "Apple MPX modules are scarce. We have refurbished W5700X and W5500X in stock most of the time. W6800X and Vega II Duo are special-order, 5-10 working days." },
-        { title: "Install + 24-hour burn-in",     body: "Module fitted, Mac Pro stress-tested under sustained GPU load (Final Cut render or DaVinci Resolve render) for 24 hours before pickup." },
+        { title: "Install + 24-hour burn-in",     body: "Module fitted, Mac Pro stress-tested under sustained GPU load (Final Cut render or DaVinci Resolve render) for 24 hours before you collect it." },
       ]}
-      warrantyDays={180}
+      warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on MPX module replacements.",
-        "90-day warranty on component-level repairs (fan, VRM, caps).",
+        "15-day written warranty on component-level repairs (fan, VRM, caps), as on all board-level work.",
         "Honest 'no, we can't' verdict for M2 Ultra GPU faults - free diagnosis only.",
       ]}
       faqs={[

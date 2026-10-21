@@ -1,0 +1,61 @@
+{
+ "raw_rows": 8421,
+ "relevant": 6184,
+ "by_device": {
+  "macbook": 2830,
+  "iphone": 1908,
+  "mac-desktop": 644,
+  "ipad": 369,
+  "apple-watch": 155,
+  "apple-general": 147,
+  "laptop": 94,
+  "airpods": 19,
+  "other": 18
+ },
+ "by_type": {
+  "product": 2414,
+  "service": 1310,
+  "howto": 1295,
+  "problem": 708,
+  "cost": 312,
+  "sell-tradein": 145
+ },
+ "by_competition": {
+  "not-measured": 5600,
+  "easy": 370,
+  "medium": 117,
+  "very-easy": 89,
+  "hard": 8
+ },
+ "by_status": {
+  "partial-page": 2943,
+  "gap": 2535,
+  "page-exists-not-ranking": 564,
+  "striking-4-20": 83,
+  "ranking-21-100": 30,
+  "ranking-top3": 29
+ },
+ "low_kd_fit": 452,
+ "low_kd_fit_volume": 282980,
+ "low_kd_fit_gap": 344,
+ "fit3": 2130,
+ "fit3_volume": 44770,
+ "watch_airpods_demand": 1770,
+ "topics": 623,
+ "topics_by_status": {
+  "not-ranking": 391,
+  "gap": 174,
+  "striking": 32,
+  "winning": 14,
+  "weak": 12
+ },
+ "topics_by_type": {
+  "blog post (awareness)": 193,
+  "service page": 189,
+  "blog post": 137,
+  "problem page": 87,
+  "sell/trade-in page": 17
+ },
+ "competitor_gap": 260,
+ "competitor_gap_fit3": 68
+}

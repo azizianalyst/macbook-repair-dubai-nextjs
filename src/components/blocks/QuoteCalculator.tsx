@@ -1,8 +1,9 @@
 "use client";
-// Instant-quote calculator (gap-audit strategic wedge — no UAE competitor has a working
-// AED estimator). Reads our REAL per-model pricing from the model JSON data files, so every
-// figure shown is a genuine published starting price — zero fabrication. WhatsApp is the
-// finish step (prefilled with the exact model + service + estimate).
+import { withSlash } from "@/lib/utils";
+// Instant-quote picker (gap-audit strategic wedge — no UAE competitor has a working
+// device + repair selector). Reads our real per-model service list from the model JSON data
+// files, then hands off to WhatsApp for today's exact price (prefilled with the exact model
+// + service). We quote on request — no figure is shown to the visitor.
 import { useState } from "react";
 import { MessageCircle, Wallet, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -68,7 +69,7 @@ const servicesFor = (m: Model) => {
 const aed = (n: number) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const SELECT =
-  "w-full rounded-md border border-white/15 bg-white/[0.06] px-3.5 h-11 text-[15px] text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright";
+  "w-full rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3.5 h-11 text-[15px] text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 
 export function QuoteCalculator() {
   const [typeIdx, setTypeIdx] = useState(0);
@@ -93,55 +94,55 @@ export function QuoteCalculator() {
     setService(servicesFor(m)[0]);
   };
 
-  const priceLabel = price === 0 ? "Free" : price != null ? `From AED ${aed(price)}` : "—";
-  const msg = `Hi, I'd like a quote for ${SERVICE_LABELS[activeService] ?? activeService} on my ${model?.name}. Your site estimates ${priceLabel.toLowerCase()}. Can you confirm?`;
+  const priceLabel = price === 0 ? "Free" : "Price on request";
+  const msg = `Hi, I'd like a quote for ${SERVICE_LABELS[activeService] ?? activeService} on my ${model?.name}. Can you send me today's exact price?`;
   const waHref = `${NAP.whatsappUrl}?text=${encodeURIComponent(msg)}`;
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg md:p-xl">
+    <div className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl">
       <div className="grid gap-md sm:grid-cols-3">
         <label className="block">
-          <span className="mb-1.5 block text-[13px] font-semibold text-on-primary-muted">Device</span>
+          <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Device</span>
           <select className={SELECT} value={typeIdx} onChange={(e) => onType(Number(e.target.value))} aria-label="Device type">
             {GROUPS.map((g, i) => <option key={g.type} value={i}>{g.type}</option>)}
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-[13px] font-semibold text-on-primary-muted">Model</span>
+          <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Model</span>
           <select className={SELECT} value={model?.slug} onChange={(e) => onModel(e.target.value)} aria-label="Model">
             {models.map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-[13px] font-semibold text-on-primary-muted">Repair</span>
+          <span className="mb-1.5 block text-[13px] font-semibold text-text-muted">Repair</span>
           <select className={SELECT} value={activeService} onChange={(e) => setService(e.target.value)} aria-label="Repair type">
             {services.map((k) => <option key={k} value={k}>{SERVICE_LABELS[k] ?? k}</option>)}
           </select>
         </label>
       </div>
 
-      <div className="mt-lg flex flex-col gap-md rounded-xl border border-accent-bright/30 bg-accent-bright/[0.07] p-lg sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-lg flex flex-col gap-md rounded-md border border-accent/30 bg-accent/[0.07] p-lg sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-3">
-          <Wallet size={22} className="mt-0.5 shrink-0 text-accent-bright" aria-hidden />
+          <Wallet size={22} className="mt-0.5 shrink-0 text-accent" aria-hidden />
           <div>
-            <p className="m-0 text-[13px] text-on-primary-muted">{SERVICE_LABELS[activeService] ?? activeService} · {model?.name}</p>
-            <p className="m-0 text-[28px] font-bold leading-tight text-on-primary">{priceLabel}</p>
-            <p className="m-0 text-[12.5px] text-on-primary-faint">Indicative starting price · same-day on most repairs</p>
+            <p className="m-0 text-[13px] text-text-muted">{SERVICE_LABELS[activeService] ?? activeService} · {model?.name}</p>
+            <p className="m-0 text-[28px] font-bold leading-tight text-text">{priceLabel}</p>
+            <p className="m-0 text-[12.5px] text-text-faint">Message us for today&apos;s exact price · free diagnosis, no fix no fee</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-sm shrink-0">
           <Button asChild variant="whatsapp" size="lg">
-            <a href={waHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Confirm on WhatsApp</a>
+            <a href={withSlash(waHref)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> Confirm on WhatsApp</a>
           </Button>
-          <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
+          <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt">
             <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call</a>
           </Button>
         </div>
       </div>
 
-      <p className="mt-md mb-0 text-[13px] leading-relaxed text-on-primary-muted">
-        Prices are our published starting rates from real per-model data. The exact price is fixed in
-        writing after a free 20-minute diagnosis — and we&apos;ll tell you honestly if an Apple Store or
+      <p className="mt-md mb-0 text-[13px] leading-relaxed text-text-muted">
+        Pick your model and repair, then message us on WhatsApp for today&apos;s exact price. The price is
+        fixed in writing after a free 20-minute diagnosis — and we&apos;ll tell you honestly if an Apple Store or
         AppleCare+ claim is the better route. iPhone repairs: WhatsApp us your model for a quote.
       </p>
     </div>

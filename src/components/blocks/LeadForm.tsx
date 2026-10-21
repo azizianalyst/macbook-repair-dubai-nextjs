@@ -1,15 +1,22 @@
 "use client";
 import { useState } from "react";
+import { trackLeadSubmit } from "@/lib/analytics";
 import { Check, Loader2, MessageCircle, ChevronLeft, ChevronRight, Wrench, User } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 import { NAP } from "@/content/site";
 import { LeadSchema, DEVICE_TYPES, CONTACT_METHODS, type Lead } from "@/lib/lead-schema";
+import type { FormPreset } from "@/data/form-presets";
 
+/**
+ * Fallback chips for pages with no preset. Kept deliberately generic — a page
+ * that resolves to a preset never sees this list. See src/data/form-presets.ts
+ * for which slugs are unmatched on purpose.
+ */
 const ISSUES = [
   "Screen / display",
   "Battery",
@@ -25,7 +32,7 @@ const ISSUES = [
 type Errors = Partial<Record<keyof Lead, string>>;
 
 const FIELD =
-  "mt-1 bg-white/[0.04] border border-white/10 text-on-primary placeholder:text-on-primary-faint focus:border-accent-bright";
+  "mt-1 bg-bg-card border border-border text-text placeholder:text-text-faint focus:border-accent";
 
 const STEP_FIELDS: (keyof Lead)[][] = [
   ["deviceType", "model", "issue", "details"],
@@ -39,10 +46,12 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "rounded-full border px-4 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright",
+        // min-h-[44px]: chips were px-4 py-2 (~38px tall) and failed the 44px
+        // tap-target rule the template standard requires. Measured, not eyeballed.
+        "inline-flex items-center min-h-[44px] rounded-full border px-4 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
         active
-          ? "border-accent-bright bg-accent/15 text-on-primary font-semibold"
-          : "border-white/12 bg-white/[0.04] text-on-primary-muted hover:border-accent-bright/40 hover:text-on-primary",
+          ? "border-accent bg-accent/10 text-text font-semibold"
+          : "border-border bg-bg-card text-text-muted hover:border-accent/40 hover:text-text",
       )}
     >
       {children}
@@ -56,6 +65,14 @@ export type LeadFormProps = {
   defaultIssue?: string;
   sourcePath?: string;
   variant?: "full" | "compact";
+  /**
+   * Topic preset from src/data/form-presets.ts. When set, it supplies the
+   * heading, the device subset, the issue chips and an optional third
+   * qualifier, and declares which team the lead routes to. When omitted the
+   * form behaves exactly as before — that fallback is the contract that makes
+   * rolling this out page by page safe.
+   */
+  preset?: FormPreset | null;
   className?: string;
 };
 
@@ -65,8 +82,11 @@ export function LeadForm({
   defaultIssue = "",
   sourcePath = "",
   variant = "full",
+  preset = null,
   className,
 }: LeadFormProps) {
+  /** Answer to the preset's optional third question, folded into `details`. */
+  const [qualifier, setQualifier] = useState("");
   const [step, setStep] = useState(0); // 0 device · 1 contact · 2 review
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [errors, setErrors] = useState<Errors>({});
@@ -105,7 +125,19 @@ export function LeadForm({
   }
 
   function next() {
-    if (validateStep(step)) setStep((s) => Math.min(s + 1, 2));
+    if (validateStep(step)) {
+      setStep((s) => Math.min(s + 1, 2));
+      return;
+    }
+    // Validation failed: without this the function returned silently, leaving the
+    // error text unreachable and unannounced. Focus the first invalid control so the
+    // linked aria-describedby message is read out. (audit 2026-09-23)
+    if (typeof document !== "undefined") {
+      requestAnimationFrame(() => {
+        const firstInvalid = document.querySelector<HTMLElement>('[aria-invalid="true"]');
+        firstInvalid?.focus();
+      });
+    }
   }
   function back() {
     setStep((s) => Math.max(s - 1, 0));
@@ -127,13 +159,41 @@ export function LeadForm({
     }
     setStatus("submitting");
     try {
-      const res = await fetch("/api/lead", {
+      /**
+       * Routing is taken from the preset's declared `route`, never inferred by
+       * matching words in the free text. A chip answer like "Repairs for
+       * several devices" contains no token that identifies the motion, so
+       * regex inference would silently misroute it.
+       */
+      const payload: Lead = {
+        ...form,
+        details: qualifier
+          ? `${form.details ? form.details + "\n" : ""}- [${preset?.qualifier?.name ?? "qualifier"}] ${qualifier}`
+          : form.details,
+        route: preset?.route,
+        presetId: preset?.id,
+      };
+      // Trailing slash matters: next.config sets trailingSlash:true, so "/api/lead"
+      // answers 308 and every real submission paid an extra round trip on the
+      // conversion path. (audit 2026-09-23)
+      const res = await fetch("/api/lead/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
+        // A completed quote form is the highest-value conversion on the site and
+        // was the ONLY lead path GA never saw - the click handler in analytics.ts
+        // covers tel:/WhatsApp/mailto but cannot observe a fetch. (audit 2026-09-23)
+        //
+        // Gate on data.id, not data.ok: a filled honeypot also answers {ok:true}
+        // (deliberately, so bots see success), and counting those would inflate
+        // conversions with submissions that were never stored. An id comes back
+        // only for a lead that actually landed.
+        if (data.id != null) {
+          trackLeadSubmit(preset?.id ? `form:${preset.id}` : "form:lead-form");
+        }
         setStatus("success");
         return;
       }
@@ -159,18 +219,18 @@ export function LeadForm({
 
   if (status === "success") {
     return (
-      <div className={cn("rounded-2xl border border-white/10 bg-white/[0.04] p-xl text-center", className)}>
-        <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent-bright">
+      <div className={cn("rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-xl text-center", className)}>
+        <div className="mx-auto mb-md flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
           <Check size={24} aria-hidden />
         </div>
-        <h3 className="text-[22px] font-bold text-on-primary">Request received</h3>
-        <p className="mt-sm text-[15px] text-on-primary-muted max-w-[42ch] mx-auto">
+        <h3 className="text-[22px] font-bold text-text">Request received</h3>
+        <p className="mt-sm text-[15px] text-text-muted max-w-[42ch] mx-auto">
           Thanks {form.name.split(" ")[0]} — we&apos;ll reply on {form.preferredContact.toLowerCase()} shortly with a
           quote and next steps. For an instant response you can also message us now.
         </p>
         <div className="mt-lg flex flex-wrap justify-center gap-sm">
           <Button asChild variant="whatsapp" size="lg">
-            <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
               <MessageCircle aria-hidden /> Message on WhatsApp
             </a>
           </Button>
@@ -189,25 +249,39 @@ export function LeadForm({
   ];
 
   return (
-    <div className={cn("rounded-2xl border border-white/10 bg-white/[0.04] p-lg md:p-xl", className)}>
+    <div className={cn("rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg md:p-xl", className)}>
+      {/* Preset heading. A page that sets no preset keeps the form exactly as
+          it was — no heading, straight into the steps. */}
+      {preset && (
+        <div className="mb-lg">
+          <h3 className="text-[22px] font-bold leading-tight text-text">{preset.heading}</h3>
+          <p className="mt-sm max-w-[58ch] text-[15px] leading-relaxed text-text-muted">{preset.description}</p>
+        </div>
+      )}
+
       {/* progress / step indicator */}
       <div className="mb-lg">
+        {/* Polite live region: the only thing that tells a screen-reader user the panel
+            changed, since the step swap is a silent DOM replacement. */}
+        <p className="sr-only" aria-live="polite">
+          {`Step ${step + 1} of ${stepMeta.length}: ${stepMeta[step]?.label ?? ""}`}
+        </p>
         <div className="flex items-center justify-between gap-2">
           {stepMeta.map((m, i) => (
-            <div key={m.n} className="flex flex-1 items-center gap-2">
+            <div key={m.n} className="flex flex-1 items-center gap-2" aria-current={i === step ? "step" : undefined}>
               <span
                 className={cn(
                   "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold",
-                  i <= step ? "bg-accent-bright text-on-primary" : "bg-white/10 text-on-primary-faint",
+                  i <= step ? "bg-accent text-white" : "bg-bg-card text-text-faint",
                 )}
               >
                 {i < step ? <Check size={14} aria-hidden /> : m.n}
               </span>
-              <span className={cn("text-[13px] hidden sm:inline", i <= step ? "text-on-primary" : "text-on-primary-faint")}>
+              <span className={cn("text-[13px] hidden sm:inline", i <= step ? "text-text" : "text-text-faint")}>
                 {m.label}
               </span>
               {i < stepMeta.length - 1 && (
-                <span className={cn("mx-1 h-px flex-1", i < step ? "bg-accent-bright" : "bg-white/10")} aria-hidden />
+                <span className={cn("mx-1 h-px flex-1", i < step ? "bg-accent" : "bg-bg-card")} aria-hidden />
               )}
             </div>
           ))}
@@ -230,29 +304,65 @@ export function LeadForm({
       {step === 0 && (
         <div className="grid gap-md">
           <div>
-            <Label className="text-on-primary-muted">What device needs repair?</Label>
+            <Label className="text-text-muted">
+              {preset?.route === "buyback" ? "What are you selling?" : "What device needs repair?"}
+            </Label>
             <div className="mt-2 flex flex-wrap gap-2">
-              {DEVICE_TYPES.map((d) => (
+              {/* A preset may narrow the device list but never widen it — every
+                  option must stay a real DEVICE_TYPES member or LeadSchema
+                  rejects the submission server-side. */}
+              {(preset?.devices ?? DEVICE_TYPES).map((d) => (
                 <Chip key={d} active={form.deviceType === d} onClick={() => set("deviceType", d)}>{d}</Chip>
               ))}
             </div>
           </div>
           <div>
-            <Label htmlFor="model" className="text-on-primary-muted">Model <span className="text-on-primary-faint">(optional)</span></Label>
+            <Label htmlFor="model" className="text-text-muted">Model <span className="text-text-faint">(optional)</span></Label>
             <Input id="model" value={form.model} maxLength={80} onChange={(e) => set("model", e.target.value)}
               className={FIELD} placeholder='e.g. MacBook Pro 14" M2, iPhone 15 Pro' />
           </div>
           <div>
-            <Label className="text-on-primary-muted">What&apos;s wrong?</Label>
+            <Label className="text-text-muted">
+              {preset?.route === "buyback" ? "What condition is it in?" : "What's wrong?"}
+            </Label>
             <div className="mt-2 flex flex-wrap gap-2">
-              {ISSUES.map((it) => (
-                <Chip key={it} active={form.issue === it} onClick={() => set("issue", it)}>{it}</Chip>
+              {(preset?.issues ?? ISSUES).map((it) => (
+                <Chip
+                  key={it}
+                  active={form.issue === it}
+                  onClick={() => {
+                    set("issue", it);
+                    // Changing this answer invalidates the qualifier revealed
+                    // below it — a stale answer must not ride along into the
+                    // message.
+                    setQualifier("");
+                  }}
+                >
+                  {it}
+                </Chip>
               ))}
             </div>
-            {errors.issue && <p className="mt-1 text-[13px] text-danger">{errors.issue}</p>}
+            {errors.issue && <p id="issue-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.issue}</p>}
           </div>
+
+          {/* Third question, revealed only once the one above it is answered,
+              so the visitor never meets a wall of chips. */}
+          {preset?.qualifier && form.issue && (
+            <div>
+              <Label className="text-text-muted">
+                {preset.qualifier.label} <span className="text-text-faint">(optional)</span>
+              </Label>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {preset.qualifier.options.map((o) => (
+                  <Chip key={o} active={qualifier === o} onClick={() => setQualifier(qualifier === o ? "" : o)}>
+                    {o}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+          )}
           <div>
-            <Label htmlFor="details" className="text-on-primary-muted">Describe the problem <span className="text-on-primary-faint">(optional)</span></Label>
+            <Label htmlFor="details" className="text-text-muted">Describe the problem <span className="text-text-faint">(optional)</span></Label>
             <Textarea id="details" value={form.details} maxLength={1000} onChange={(e) => set("details", e.target.value)}
               className={cn(FIELD, "min-h-[90px]")} placeholder="When it started, any drops/spills, error messages…" />
           </div>
@@ -263,25 +373,25 @@ export function LeadForm({
       {step === 1 && (
         <div className="grid gap-md">
           <div>
-            <Label htmlFor="name" className="text-on-primary-muted">Your name</Label>
+            <Label htmlFor="name" className="text-text-muted">Your name</Label>
             <Input id="name" value={form.name} maxLength={80} autoComplete="name" onChange={(e) => set("name", e.target.value)}
-              className={FIELD} aria-invalid={!!errors.name} />
-            {errors.name && <p className="mt-1 text-[13px] text-danger">{errors.name}</p>}
+              className={FIELD} aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-err" : undefined} />
+            {errors.name && <p id="name-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.name}</p>}
           </div>
           <div>
-            <Label htmlFor="phone" className="text-on-primary-muted">Phone / WhatsApp number</Label>
+            <Label htmlFor="phone" className="text-text-muted">Phone / WhatsApp number</Label>
             <Input id="phone" value={form.phone} maxLength={20} type="tel" inputMode="tel" autoComplete="tel"
-              onChange={(e) => set("phone", e.target.value)} className={FIELD} placeholder="+971 5x xxx xxxx" aria-invalid={!!errors.phone} />
-            {errors.phone && <p className="mt-1 text-[13px] text-danger">{errors.phone}</p>}
+              onChange={(e) => set("phone", e.target.value)} className={FIELD} placeholder="+971 5x xxx xxxx" aria-invalid={!!errors.phone} aria-describedby={errors.phone ? "phone-err" : undefined} />
+            {errors.phone && <p id="phone-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.phone}</p>}
           </div>
           <div>
-            <Label htmlFor="email" className="text-on-primary-muted">Email <span className="text-on-primary-faint">(optional)</span></Label>
+            <Label htmlFor="email" className="text-text-muted">Email <span className="text-text-faint">(optional)</span></Label>
             <Input id="email" value={form.email} maxLength={120} type="email" autoComplete="email"
-              onChange={(e) => set("email", e.target.value)} className={FIELD} aria-invalid={!!errors.email} />
-            {errors.email && <p className="mt-1 text-[13px] text-danger">{errors.email}</p>}
+              onChange={(e) => set("email", e.target.value)} className={FIELD} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-err" : undefined} />
+            {errors.email && <p id="email-err" role="alert" className="mt-1 text-[13px] text-danger">{errors.email}</p>}
           </div>
           <div>
-            <Label className="text-on-primary-muted">Best way to reach you</Label>
+            <Label className="text-text-muted">Best way to reach you</Label>
             <div className="mt-2 flex flex-wrap gap-2">
               {CONTACT_METHODS.map((m) => (
                 <Chip key={m} active={form.preferredContact === m} onClick={() => set("preferredContact", m)}>{m}</Chip>
@@ -289,7 +399,7 @@ export function LeadForm({
             </div>
           </div>
           <div>
-            <Label htmlFor="area" className="text-on-primary-muted">Your area in Dubai <span className="text-on-primary-faint">(optional — for free pickup)</span></Label>
+            <Label htmlFor="area" className="text-text-muted">Your area in Dubai <span className="text-text-faint">(optional)</span></Label>
             <Input id="area" value={form.area} maxLength={80} onChange={(e) => set("area", e.target.value)}
               className={FIELD} placeholder="e.g. Dubai Marina, Business Bay" />
           </div>
@@ -299,8 +409,8 @@ export function LeadForm({
       {/* STEP 3 — REVIEW */}
       {step === 2 && (
         <div className="grid gap-md">
-          <h3 className="text-[18px] font-bold text-on-primary">Review &amp; send</h3>
-          <dl className="rounded-md border border-white/10 bg-white/[0.03] p-md text-[14px]">
+          <h3 className="text-[18px] font-bold text-text">Review &amp; send</h3>
+          <dl className="rounded-md border border-border bg-bg-alt p-md text-[14px]">
             {[
               ["Device", `${form.deviceType}${form.model ? " · " + form.model : ""}`],
               ["Issue", form.issue],
@@ -311,13 +421,13 @@ export function LeadForm({
               ["Prefers", form.preferredContact],
               ["Area", form.area || "—"],
             ].map(([k, v]) => (
-              <div key={k} className="flex gap-3 border-b border-white/5 py-1.5 last:border-0">
-                <dt className="w-24 shrink-0 text-on-primary-faint">{k}</dt>
-                <dd className="text-on-primary">{v}</dd>
+              <div key={k} className="flex gap-3 border-b border-border py-1.5 last:border-0">
+                <dt className="w-24 shrink-0 text-text-faint">{k}</dt>
+                <dd className="text-text">{v}</dd>
               </div>
             ))}
           </dl>
-          <p className="text-[12px] text-on-primary-faint">
+          <p className="text-[12px] text-text-faint">
             By sending you agree we may contact you about your repair. We never share your details.
           </p>
         </div>
@@ -341,13 +451,31 @@ export function LeadForm({
         )}
       </div>
 
-      {variant === "full" && (
-        <p className="mt-md text-center text-[13px] text-on-primary-muted">
-          Prefer to chat now?{" "}
-          <button type="button" onClick={whatsappFallback} className="font-semibold text-accent-bright hover:underline">
-            Message us on WhatsApp
-          </button>
-        </p>
+      {/* Urgent presets lead with WhatsApp — somebody whose only copy of their
+          data is on a failing drive should not be waiting on email. The form
+          stays, demoted to the secondary action. */}
+      {preset?.primaryCta === "whatsapp" ? (
+        <div className="mt-lg rounded-md border border-accent/30 bg-accent/5 p-md text-center">
+          <p className="text-[14px] text-text-muted">
+            Faster for urgent cases — we usually reply within minutes during workshop hours.
+          </p>
+          <Button variant="whatsapp" size="lg" className="mt-sm" onClick={whatsappFallback}>
+            <MessageCircle aria-hidden /> Message us on WhatsApp
+          </Button>
+        </div>
+      ) : (
+        variant === "full" && (
+          <p className="mt-md text-center text-[13px] text-text-muted">
+            Prefer to chat now?{" "}
+            <button
+              type="button"
+              onClick={whatsappFallback}
+              className="inline-flex min-h-[44px] items-center font-semibold text-accent hover:underline"
+            >
+              Message us on WhatsApp
+            </button>
+          </p>
+        )
       )}
     </div>
   );

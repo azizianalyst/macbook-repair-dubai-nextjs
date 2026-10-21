@@ -28,6 +28,8 @@ export const IPHONE_MODEL_LINKS: IphoneModelLink[] = [
   { slug: "/iphone-17-pro-repair-dubai",      label: "iPhone 17 Pro" },
   { slug: "/iphone-17-pro-max-repair-dubai",  label: "iPhone 17 Pro Max" },
   { slug: "/iphone-17e-repair-dubai",         label: "iPhone 17e" },
+  { slug: "/iphone-18-pro-repair-dubai",      label: "iPhone 18 Pro" },
+  { slug: "/iphone-18-pro-max-repair-dubai",  label: "iPhone 18 Pro Max" },
   { slug: "/iphone-air-repair-dubai",         label: "iPhone Air" },
   { slug: "/iphone-se-3rd-gen-repair-dubai",  label: "iPhone SE (3rd gen)" },
 ];

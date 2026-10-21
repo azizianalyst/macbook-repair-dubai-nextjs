@@ -1,341 +1,370 @@
 "use client";
-import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
-import { Link } from "@/lib/router-compat";
-import { PageShell } from "@/components/layout/PageShell";
-import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { Hero } from "@/components/blocks/Hero";
-import { USPStrip } from "@/components/blocks/USPStrip";
-import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
-import { FAQAccordion } from "@/components/blocks/FAQAccordion";
-import { VsAppleStore } from "@/components/blocks/VsAppleStore";
-import { LocationBlock } from "@/components/blocks/LocationBlock";
-import { Button } from "@/components/ui/button";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+/**
+ * MacBook Pro Repair Dubai — rebuilt 2026-09-26 onto the Azizi page standard
+ * (SEO master plan, Phase 2.3 item 8).
+ *
+ * Keywords given their own H2s: "macbook pro repair dubai" (#2 via the homepage today),
+ * "apple macbook pro screen repair", "macbook pro battery replacement dubai",
+ * "apple macbook pro service center near me" (comparison headline), "macbook pro
+ * keeps restarting / won't turn on" ("macbook pro frozen" is owned by /macbook-freezing-repair-dubai/), the older-model terms (2012, 2015, A1278, A1398) and
+ * "macbook pro price in dubai" via Apple's own attributed list prices. Screen and battery
+ * sections are short and hand off to /macbook-pro-screen-repair-dubai/ and
+ * /macbook-pro-battery-replacement-dubai/, the plan 2.1 targets for those clusters.
+ *
+ * Removed as untrue or unsourced: "current M5 OLED" (no MacBook ships OLED — the 14/16-inch
+ * use mini-LED), the "30-minute appointment repair … or the repair is free" guarantee and
+ * its stat tile (open owner claim in TRUST-CLAIMS.md), "we train monthly on each release",
+ * "100% genuine … or certified OEM", the 6-month paid logic-board warranty extension (not
+ * a site.ts tier), and unverified M4/M5 A-numbers. useSeo() dropped — meta comes from
+ * metaForPath() in page.tsx, schema from <PageSchema/>.
+ *
+ * Facts on the current line, Apple's UAE prices and the iFixit 4/10 score come from
+ * docs/apple-lineup-2026-09-26.md only. Warranty tiers from site.ts WARRANTY.
+ */
+import {
+  Keyboard, Droplets, PlugZap, MousePointer2, Fingerprint, Fan,
+  Search, ShieldCheck, Clock, MapPin,
+} from "lucide-react";
 
-const SIBLINGS = [
-  { label: "MacBook Air", href: "/macbook-air-repair-dubai" },
-  { label: "iMac", href: "/imac-repair-dubai" },
-  { label: "Mac Pro", href: "/mac-pro-repair-dubai" },
-  { label: "Mac mini", href: "/mac-mini-repair-dubai" },
-  { label: "Mac Studio", href: "/mac-studio-repair-dubai" },
-];
+import { AziziMoneyPage, InLink, WaLink, waHref } from "@/components/azizi/AziziMoneyPage";
+import { PRESETS } from "@/data/form-presets";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
+import { NAP, TEAM } from "@/content/site";
 
-// Faithful model labels from the old page; href links to the dedicated model page where one exists.
-type Model = { label: string; href?: string };
-const MODELS: Model[] = [
-  { label: `16" M5 Max (2026)`, href: "/macbook-pro-16-m5-max-2026-repair-dubai" },
-  { label: `16" M5 Pro (2026)`, href: "/macbook-pro-16-m5-pro-2026-repair-dubai" },
-  { label: `14" M5 Max (2026)`, href: "/macbook-pro-14-m5-max-2026-repair-dubai" },
-  { label: `14" M5 Pro (2026)`, href: "/macbook-pro-14-m5-pro-2026-repair-dubai" },
-  { label: `14" M5 (2025)`, href: "/macbook-pro-14-m5-2025-repair-dubai" },
-  { label: `A8624 16" M4 Max (2024)`, href: "/macbook-pro-16-m4-2024-repair-dubai" },
-  { label: `A8895 16" M4 Pro (2024)`, href: "/macbook-pro-16-m4-2024-repair-dubai" },
-  { label: `A8894 14" M4 Pro (2024)`, href: "/macbook-pro-14-m4-2024-repair-dubai" },
-  { label: `A8623 14" M4 (2024)`, href: "/macbook-pro-14-m4-2024-repair-dubai" },
-  { label: `A2991 16" M3 Max (2024)`, href: "/macbook-pro-16-m3-2023-repair-dubai" },
-  { label: `A2991 16" M3 Pro (2024)`, href: "/macbook-pro-16-m3-2023-repair-dubai" },
-  { label: `A2992 14" M3 Pro (2024)`, href: "/macbook-pro-14-m3-2023-repair-dubai" },
-  { label: `A2992 14" M3 (2024)`, href: "/macbook-pro-14-m3-2023-repair-dubai" },
-  { label: `A2780 16" M2 Max (2023)`, href: "/macbook-pro-16-m2-pro-2023-repair-dubai" },
-  { label: `A2780 16" M2 Pro (2023)`, href: "/macbook-pro-16-m2-pro-2023-repair-dubai" },
-  { label: `A2779 14" M2 Max (2023)`, href: "/macbook-pro-14-m2-pro-2023-repair-dubai" },
-  { label: `A2779 14" M2 Pro (2023)`, href: "/macbook-pro-14-m2-pro-2023-repair-dubai" },
-  { label: `A2338 13" M2 (2022)`, href: "/macbook-pro-13-m2-2022-repair-dubai" },
-  { label: `A2442 14" M1 Pro (2021)`, href: "/macbook-pro-14-m1-pro-2021-repair-dubai" },
-  { label: `A2485 16" M1 Max (2021)`, href: "/macbook-pro-16-m1-pro-2021-repair-dubai" },
-  { label: `A2338 13" M1 (2020)`, href: "/macbook-pro-13-m1-2020-repair-dubai" },
-  { label: `A2289 13" (2020) - 2 ports Thunderbolt 3`, href: "/macbook-pro-13-intel-2020-repair-dubai" },
-  { label: `A2141 16" (2019)` },
-  { label: `A1990 15" (2019)` },
-  { label: `A1990 15" (2018)` },
-  { label: `A1989 13" (2018) - 4 ports Thunderbolt 3`, href: "/macbook-pro-13-intel-2019-repair-dubai" },
-  { label: `A1707 15" (2017)` },
-  { label: `A1706 13" (2017) - 4 ports Thunderbolt 3`, href: "/macbook-pro-13-intel-2019-repair-dubai" },
-  { label: `A1708 13" (2017) - 2 ports Thunderbolt 3`, href: "/macbook-pro-13-intel-2019-repair-dubai" },
-];
+const PATH = "/macbook-pro-repair-dubai";
+const WA_MSG = "Hi, I need a MacBook Pro repair quote. Model/year: ... Fault: ...";
+const REVIEWER = TEAM.find((t) => t.name === "Shafiq");
 
-const SERVICES = [
-  { title: "Keyboard Repair", body: "As a result of constant use, the keys on your MacBook can become loose over time. It is also possible for them to stick due to dirt and other factors. Our repair service can fix any problem with your keyboard. We can clean up and fix or replace the keys on your MacBook." },
-  { title: "Screen Repair and Replacement", body: "An incident or a technology glitch could affect the screen on your MacBook Pro. We repair or replace the screen on your MacBook - LCD, LED, or Retina." },
-  { title: "Battery Replacement", body: "Have you noticed a recent rise in your MacBook Pro's temperature? A few adjustments to the system settings often resolve this issue. If you have an older battery that has gone through many charge cycles, consider getting a new one for your MacBook." },
-  { title: "Water Damage Repair", body: "We can help you if you knocked something over and got water on your MacBook Pro. Our professionals can fix the damage, and your laptop will work again." },
-  { title: "Not Charging Fix", body: "It can be frustrating when your MacBook Pro doesn't charge. Rest assured, we can diagnose the issue and get it charged again for you." },
-  { title: "Trackpad Repair", body: "We can help if the trackpad on your MacBook Pro doesn't respond or work right. If it breaks, we can fix it or get a new one." },
-  { title: "Hinge Repair", body: "Is the joint on your MacBook Pro broken or loose? If the hinge on your laptop doesn't work right, we can fix it or replace it." },
-  { title: "Software Issues", body: "If the software on your MacBook Pro is broken, it's tough to use. We can help you figure out what's wrong and fix it." },
-  { title: "Data Recovery", body: "Don't worry if you lose important info or files on your MacBook Pro. We can get back the information you lost and help you recover it." },
-  { title: "Hardware Upgrade", body: "Want to speed up or add more space to your MacBook Pro? We can improve the tech on your laptop so that it works better." },
-  { title: "Overheating Fix", body: "Is the inside of your MacBook Pro getting too hot? To help cool it down, we can clean the fans and apply new thermal paste." },
-  { title: "Won't Turn On", body: "It can be alarming when your MacBook Pro won't turn on. We can figure out what's wrong with your laptop and get it back in working order." },
-  { title: "Running Slow", body: "Are you noticing a slower start-up time on your MacBook Pro? To improve performance and enhance network speed, we'll address these issues promptly." },
-  { title: "System Crashing", body: "Having your MacBook Pro crash all the time can be annoying. We can figure out what makes the crashes happen and stop them." },
-  { title: "Freezing Trouble", body: "Is your MacBook Pro freezing up or not working at all? We can figure out what's wrong and fix it so it doesn't freeze again." },
-  { title: "Wi-Fi Problems", body: "Sometimes your MacBook Pro has trouble connecting to Wi-Fi, which can be a pain. We can figure out what's wrong and get you online again." },
-  { title: "Bluetooth Issue", body: "Is it hard for your MacBook Pro to connect to Bluetooth devices? We can find and fix any Bluetooth problems so that everything works properly." },
-  { title: "Sound Not Working", body: "Having trouble with your MacBook Pro's sound can be annoying. You can get your sound back up and running after we figure out what's wrong." },
-];
+/* Every MacBook Pro generation, newest first: chip hubs then dated model pages. */
+const MODEL_LINKS = [
+  { label: "MacBook Pro M5 — all models", to: "/macbook-pro-m5-repair-dubai" },
+  { label: "MacBook Pro M4 — all models", to: "/macbook-pro-m4-repair-dubai" },
+  { label: 'MacBook Pro 16" M4 (2024)', to: "/macbook-pro-16-m4-2024-repair-dubai" },
+  { label: 'MacBook Pro 14" M4 (2024)', to: "/macbook-pro-14-m4-2024-repair-dubai" },
+  { label: "MacBook Pro M3 — all models", to: "/macbook-pro-m3-repair-dubai" },
+  { label: 'MacBook Pro 16" M3 (2023, A2991)', to: "/macbook-pro-16-m3-2023-repair-dubai" },
+  { label: 'MacBook Pro 14" M3 (2023, A2918/A2992)', to: "/macbook-pro-14-m3-2023-repair-dubai" },
+  { label: "MacBook Pro M2 — all models", to: "/macbook-pro-m2-repair-dubai" },
+  { label: 'MacBook Pro 16" M2 Pro/Max (2023, A2780)', to: "/macbook-pro-16-m2-pro-2023-repair-dubai" },
+  { label: 'MacBook Pro 14" M2 Pro/Max (2023, A2779)', to: "/macbook-pro-14-m2-pro-2023-repair-dubai" },
+  { label: 'MacBook Pro 13" M2 (2022, A2338)', to: "/macbook-pro-13-m2-2022-repair-dubai" },
+  { label: "MacBook Pro M1 — all models", to: "/macbook-pro-m1-repair-dubai" },
+  { label: 'MacBook Pro 16" M1 Pro/Max (2021, A2485)', to: "/macbook-pro-16-m1-pro-2021-repair-dubai" },
+  { label: 'MacBook Pro 14" M1 Pro/Max (2021, A2442)', to: "/macbook-pro-14-m1-pro-2021-repair-dubai" },
+  { label: 'MacBook Pro 13" M1 (2020, A2338)', to: "/macbook-pro-13-m1-2020-repair-dubai" },
+  { label: "MacBook Pro Intel (2016–2020)", to: "/macbook-pro-intel-repair-dubai" },
+  { label: 'MacBook Pro 13" Intel (2020, A2251/A2289)', to: "/macbook-pro-13-intel-2020-repair-dubai" },
+  { label: 'MacBook Pro 13" Intel (2019, A2159)', to: "/macbook-pro-13-intel-2019-repair-dubai" },
+] as const;
 
-const PROCESS = [
-  { title: "Transparent Quote", body: "As soon as we find out the problem, we'll give you a clear breakdown of the issue and a price quote for fixing it. Parts and labour costs will be part of this price. The repair is completely transparent, and you decide whether to proceed." },
-  { title: "Repair Process", body: "If you agree to the price, our expert technicians will start the repair. They will only use original Apple parts or the best parts available. We value fast turnaround times, and your MacBook Pro might be fixed the same day depending on the repair." },
-  { title: "Quality Check and Safeguarding of Data", body: "After fixing your MacBook Pro, our techs will test it carefully to make sure everything is working right. We care about keeping your personal information safe and private throughout the process." },
-];
+const PRO_SERVICES = [
+  { label: "MacBook Pro screen repair", to: "/macbook-pro-screen-repair-dubai" },
+  { label: "MacBook Pro battery replacement", to: "/macbook-pro-battery-replacement-dubai" },
+  { label: "MacBook Pro M5 screen repair", to: "/macbook-pro-m5-screen-repair-dubai" },
+  { label: "MacBook Pro M5 battery replacement", to: "/macbook-pro-m5-battery-replacement-dubai" },
+  { label: "MacBook flexgate repair", to: "/macbook-flexgate-repair-dubai" },
+  { label: "MacBook keyboard repair", to: "/macbook-keyboard-repair-dubai" },
+  { label: "MacBook Touch Bar repair", to: "/macbook-touch-bar-repair-dubai" },
+  { label: "MacBook charging port repair", to: "/macbook-charging-port-repair-dubai" },
+  { label: "MacBook trackpad repair", to: "/macbook-trackpad-repair-dubai" },
+  { label: "MacBook hinge repair", to: "/macbook-hinge-repair-dubai" },
+  { label: "MacBook water damage repair", to: "/macbook-water-damage-repair-dubai" },
+  { label: "MacBook logic board repair", to: "/macbook-logic-board-repair-dubai" },
+  { label: "MacBook overheating fix", to: "/macbook-overheating-fix-dubai" },
+  { label: "MacBook freezing repair", to: "/macbook-freezing-repair-dubai" },
+  { label: "MacBook SSD upgrade", to: "/macbook-ssd-upgrade-dubai" },
+  { label: "Mac not turning on", to: "/mac-not-turning-on-dubai" },
+  { label: "Mac data recovery", to: "/mac-data-recovery-dubai" },
+] as const;
 
-const SIGNS = [
-  "Running more slowly than normal, long startup times, or trouble with simple tasks.",
-  "Gets very hot even when it isn't running any heavy programs - a fan, vent, or cooling issue.",
-  "Clicking, whirring, or grinding sounds, which can mean the hard drive, fan, or other internal parts are failing.",
-  "The battery drains too quickly, doesn't charge right, or shows signs of swelling.",
-  "The screen is cracked or has problems with brightness or sharpness.",
-  "Keys aren't responding, the keyboard sticks, or the trackpad doesn't work.",
-  "The ports aren't working right, or you're having trouble connecting to Wi-Fi or Bluetooth.",
-  "Frequent crashes, which could be a software or hardware issue.",
-  "You spilled something - turn it off right away and bring it in so the damage doesn't get worse.",
-  "Strange smells like burning or melting, which can signal serious problems that need help right away.",
-];
-
-const WHY = [
-  { title: "Skilled Technicians", body: "Every technician here has been fixing MacBooks for years and is skilled at fixing all kinds of MacBook models. With each new product release, training is done monthly to keep our people up to date." },
-  { title: "Customer Satisfaction First", body: "We believe in being honest and making sure our customers are happy. You won't go ahead with the repair until you agree to the price, and you don't pay until you've thoroughly checked how well the laptop works." },
-  { title: "Everything In One Place", body: "We can fix all kinds of hardware problems with MacBook Pros - from broken screens, keyboards, and trackpads to internal parts. Our techs keep extra parts on hand so they can fix most hardware problems right away." },
-  { title: "Choosing the Best Parts", body: "We use the same original spare parts that the maker of your MacBook Pro recommends. We can fix your MacBook Pro in Dubai with no hidden costs - you only pay for the work done." },
-  { title: "Protecting Your Privacy", body: "Whatever you use your MacBook Pro for - work, study, entertainment - we can recover your sensitive information, and we strictly keep your data private." },
-];
-
-const PERFORMANCE = [
-  "To free up space on your hard drive, get rid of files, apps, and downloads you don't use.",
-  "Upgrade the RAM to make your MacBook Pro run much faster - especially with large files or many apps at once.",
-  "On older models, speed things up by lowering or turning off visual features like motion and transparency.",
-  "Always keep macOS and your apps up to date for the best speed, bug fixes, and security patches.",
-  "Use Activity Monitor to find apps that take up too many resources, and close them when you're done.",
-  "Clear your browser's cache and remove add-ons you don't use for a faster, cleaner experience.",
-];
-
-const TESTIMONIALS = [
-  { name: "Alina", body: "The best place to get your MacBook fixed. I thought it wouldn't work again after spilling coffee on it. When I contacted the repair team, they assured me they would fix the issue - and they did. Thanks to the team, I highly recommend their services." },
-  { name: "Green Light", body: "Another great job by the repair service. They saved me money because I didn't have to replace the whole MacBook Pro like Apple Support told me." },
-  { name: "Maxwell", body: "This morning, I fixed my MacBook Pro! Quick and cheap home service. Email and WhatsApp make it easy to talk to people. People you can trust - honest and hard-working. Thanks a lot! I would recommend it to anyone." },
-];
+const RELATED_HUBS = [
+  { label: "MacBook Repair Dubai", to: "/macbook-repair-dubai" },
+  { label: "MacBook Air Repair Dubai", to: "/macbook-air-repair-dubai" },
+  { label: "Mac Repair Dubai", to: "/mac-repair-dubai" },
+  { label: "iMac Repair Dubai", to: "/imac-repair-dubai" },
+  { label: "Apple Repair Dubai", to: "/apple-repair-dubai" },
+  { label: "MacBook Repair Abu Dhabi", to: "/macbook-repair-abu-dhabi" },
+  { label: "MacBook Repair Sharjah", to: "/macbook-repair-sharjah" },
+  { label: "MacBook Air vs MacBook Pro (2026)", to: "/blog/macbook-air-vs-macbook-pro-2026" },
+] as const;
 
 const FAQS = [
-  { q: "How long will it take to fix my Mac?", a: "Most Mac repairs are completed on the same day. However, in some cases the damage may be more complex and require more time." },
-  { q: "Will my Mac's data be safe during the repair?", a: "Absolutely. We respect our customers' data privacy and take it very seriously. Our technicians follow strict confidentiality and safety procedures, and a quality test ensures your Mac has no unreported issues both before and after the repair. We always recommend backing up your data beforehand as a precaution." },
-  { q: "My MacBook Pro is really slow - should I get a new one?", a: "No. Almost all MacBooks are upgradeable. Faster RAM and newer storage devices significantly improve the speed and performance of your MacBook. Our repair specialists can upgrade components and enhance the functionality of your device." },
-  { q: "Do you use original Apple parts for repairs?", a: "Yes. We use 100% genuine Apple parts or high-quality OEM replacements, depending on your preference and budget. This ensures your MacBook Pro maintains its original performance and reliability." },
-  { q: "Can I get a quote before the repair?", a: "Of course! We provide a transparent, no-obligation quote after diagnosing your MacBook Pro. The quote includes both parts and labour costs, and no repair work begins until you approve the price." },
+  {
+    q: "How much does MacBook Pro repair cost in Dubai?",
+    a: "It depends on the model and the fault; a screen on a 16-inch M5 Max is a very different job from a battery on a 2019 13-inch. We quote after a free diagnosis — send the model and symptom on WhatsApp — and nothing starts until you approve. No fix, no charge.",
+  },
+  {
+    q: "Do you offer same-day MacBook Pro repair?",
+    a: "Screen, battery, keyboard, charging-port and trackpad jobs are usually done the same day, often within 2–3 hours, when the part is in stock. Logic board and liquid-damage repairs usually take 24–48 hours. We confirm the timeline at diagnosis.",
+  },
+  {
+    q: "Do you use genuine Apple parts?",
+    a: "Genuine where supply allows and quality-tested otherwise. We tell you which one you are getting before it is fitted, so the choice is yours.",
+  },
+  {
+    q: "What warranty do you give on MacBook Pro repairs?",
+    a: "It depends on the repair: 90 days on screens, 3 months on batteries with an 80% capacity guarantee, up to 2 years on other hardware such as ports, trackpads and hinges, and 15 days on keyboard, logic-board, liquid-damage and software work.",
+  },
+  {
+    q: "Can you recover data from a broken MacBook Pro?",
+    a: "Often. If the fault is power or display, the data is usually untouched. On T2 and Apple silicon models the SSD is soldered and encrypted to the logic board, so recovery means repairing that board rather than moving the drive. Our Mac data recovery page explains the limits.",
+  },
+  {
+    q: "My MacBook Pro won't turn on. What should I check first?",
+    a: "Try a different power adapter and cable, and leave it charging for 15 minutes. Then hold the power button for 10 seconds and press it again. If the fans or keyboard light come on but the screen stays black, connect an external display. Tell us what you saw on WhatsApp; it narrows the fault before the free diagnosis.",
+  },
+  {
+    q: "Is it worth repairing an older Intel MacBook Pro?",
+    a: "Often, when the fault is a battery, screen or port and the MacBook still runs the macOS version you need. A board fault on a model that no longer gets macOS updates is a closer call. After the free diagnosis we give you the total so you can compare it with replacing the MacBook.",
+  },
+  {
+    q: "Do you repair the latest MacBook Pro M5, M5 Pro and M5 Max?",
+    a: "Yes. If it is still inside Apple's one-year warranty or AppleCare+, go to Apple first and we will tell you so. For accidental damage or out-of-warranty faults we confirm part availability on WhatsApp before you bring it in.",
+  },
+  {
+    q: "Do you repair MacBook Pros from Abu Dhabi or Sharjah?",
+    a: "Yes, at our Dubai workshop - we have no branch outside Dubai. Customers from Sharjah and Abu Dhabi WhatsApp photos and the serial number first for a quote, then either walk in to Concord Tower, Dubai Media City, or book a courier themselves to send the MacBook to the workshop and WhatsApp us the tracking link. When it's fixed, we book a courier to send it back, arranged on WhatsApp.",
+  },
 ];
 
-function CallButtons() {
-  return (
-    <div className="flex flex-wrap gap-sm">
-      <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
-      </Button>
-      <Button asChild variant="secondary" size="lg">
-        <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
-      </Button>
-    </div>
-  );
-}
-
 export default function MacBookProRepair() {
-  useSeo(
-    {
-      title: "MacBook Pro Repair Dubai - M1-M4 Screen, Battery & Logic Fix",
-      description:
-        "Expert MacBook Pro repair in Dubai for M1, M2, M3 & M4 models. Screen, battery, keyboard & logic board services by experienced Apple technicians. Genuine parts, same-day service.",
-      path: "/macbook-pro-repair-dubai",
-    },
-    [localBusiness(), organization()],
-  );
+  const reviews = pickReviews([], { devices: reviewDevicesForPath(PATH), min: 3, seed: PATH });
 
   return (
-    <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
-      <Hero
-        variant="device"
-        tone="dark"
-        eyebrow="MacBook Pro specialist"
-        title="Best Quality MacBook Pro Repair Dubai"
-        subtitle="Apple has dominated the market with the MacBook series. Like other Apple devices, the MacBook Pro is known for its high quality, elegant design, and portability. Even the best technology can malfunction from time to time - that's when our Apple-authorized service centre steps in. Contact us today."
-      >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Apple-authorized service centre</span>
-          <span>·</span>
-          <span>Genuine Apple parts</span>
-          <span>·</span>
-          <span>Free pickup across Dubai</span>
-        </p>
-      </Hero>
+    <AziziMoneyPage
+      path={PATH}
+      preset={PRESETS.repair}
+      leadFormDeviceType="MacBook"
 
-      <USPStrip tone="dark" />
+      breadcrumb={[
+        { name: "Home", path: "/" },
+        { name: "MacBook Repair Dubai", path: "/macbook-repair-dubai" },
+        { name: "MacBook Pro Repair Dubai", path: PATH },
+      ]}
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <BreadcrumbTrail tone="dark" trail={[
-          { name: "Home", path: "/" },
-          { name: "Apple Repair", path: "/apple-repair-dubai" },
-          { name: "MacBook Repair", path: "/" },
-          { name: "MacBook Pro Repair", path: "/macbook-pro-repair-dubai" },
-        ]} />
-      </section>
+      hero={{
+        eyebrow: "MacBook Pro specialist · 13-, 14- and 16-inch · Intel to M5 Max",
+        title: "MacBook Pro Repair Dubai",
+        subtitle:
+          "Screen, battery, keyboard, charging and logic-board repair on every MacBook Pro, from the Intel Touch Bar models to the current 14-inch M5 and 14- and 16-inch M5 Pro and M5 Max. Free diagnosis at Concord Tower, Dubai Media City.",
+        timeline: "Same day when the part is in stock",
+        image: "/images/real/lab/macbook-pro-internal-layout-dubai.jpg",
+        imageAlt:
+          "MacBook Pro internal layout, logic board, dual fans and battery open on the workshop bench at MacBook Repair Dubai",
+        ctaLabel: "WhatsApp for a free diagnosis",
+      }}
 
-      {/* Other devices */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-on-primary-muted">
-          <span className="font-semibold text-on-primary">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-accent-bright hover:bg-white/10 transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
+      authorByline={{
+        author: REVIEWER ? REVIEWER.name : "MacBook Repair Dubai workshop team",
+        role: REVIEWER ? `Lead technician, ${REVIEWER.years} years` : "Concord Tower, Dubai Media City",
+        updated: "October 2026",
+      }}
 
-      {/* Models */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">MacBook Pro models we repair</h2>
-        <p className="text-[15px] text-on-primary-muted max-w-[70ch] mb-md">Tap a linked model for its dedicated repair page.</p>
-        <ul className="flex flex-wrap gap-2">
-          {MODELS.map((m) => (
-            <li key={m.label}>
-              {m.href ? (
-                <Link to={m.href} className="block px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-accent-bright hover:bg-white/10 transition-colors mono">{m.label}</Link>
-              ) : (
-                <span className="block px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-on-primary mono">{m.label}</span>
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
+      quickAnswer={{
+        question: "Where can I get a MacBook Pro repaired in Dubai?",
+        answer:
+          "MacBook Repair Dubai repairs every MacBook Pro — 13-, 14- and 16-inch, Intel through M5 Max — at its workshop in Concord Tower, Dubai Media City. Diagnosis is free, logic boards are repaired at component level rather than swapped, and you approve a written quote on WhatsApp before any work starts.",
+      }}
 
-      {/* Services */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Our MacBook Pro Repair Dubai Services</h2>
-          <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s) => (
-              <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">{s.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{s.body}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-lg"><CallButtons /></div>
-        </div>
-      </section>
+      keyTakeaways={{
+        updated: "October 2026",
+        lead:
+          "MacBook Repair Dubai is an independent workshop that repairs every MacBook Pro generation at Concord Tower, Dubai Media City.",
+        items: [
+          "The current MacBook Pro is the 14-inch M5 and the 14- and 16-inch M5 Pro and M5 Max.",
+          "No MacBook Pro has an OLED screen: the 14- and 16-inch use mini-LED, older models LCD.",
+          "iFixit scores the 14-inch M5 MacBook Pro 4/10, largely because the battery sits under almost everything else.",
+          "Screens and batteries are usually same-day when the part is in stock.",
+          "Logic boards are repaired at component level, not swapped whole.",
+          "Diagnosis is free, and there is no charge if the fault cannot be fixed.",
+        ],
+      }}
 
-      {/* Book appointment */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm text-on-primary">Book Your MacBook Pro Repair Appointment</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-lg">
-          Ready to get your MacBook Pro repaired? Our experienced technicians are here to help. Book your repair appointment today, and we'll have your device running like new in no time.
-        </p>
-        <CallButtons />
-      </section>
+      whatIs={{
+        heading: "What fails on each MacBook Pro generation?",
+        entityName: "MacBook Pro repair",
+        definition: (
+          <>
+            <p>
+              Intel MacBook Pros from 2016 to 2020 have two well-known weak points: the butterfly keyboard used
+              on most models until 2019, which fails from dust, and on the 2016–2017 models the display flex
+              cable that wears through as the lid opens and closes (&ldquo;flexgate&rdquo;).
+            </p>
+            <p>
+              The 14- and 16-inch Apple silicon models are better built but harder to repair. The mini-LED
+              display is an expensive assembly, the battery sits deep in the chassis, and the SSD is soldered to
+              the logic board, so a liquid spill becomes a board-level repair with your data on the line.
+            </p>
+          </>
+        ),
+        benefits: [
+          { icon: Search, title: "Free diagnosis", body: "The actual fault is found before any quote." },
+          { icon: Clock, title: "Same day on most jobs", body: "Screens and batteries when the part is in stock." },
+          { icon: ShieldCheck, title: "Written warranty", body: "15 days to 2 years, depending on the repair." },
+          { icon: MapPin, title: "Walk in", body: "Concord Tower, Dubai Media City. Parking on site." },
+        ],
+      }}
 
-      {/* Process */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Our Process</h2>
-          <ol className="space-y-md max-w-[80ch]">
-            {PROCESS.map((step, i) => (
-              <li key={step.title} className="flex gap-md">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-bright/15 text-accent-bright font-bold flex items-center justify-center">{i + 1}</span>
-                <div>
-                  <h3 className="text-[17px] font-bold mb-1 text-on-primary">{step.title}</h3>
-                  <p className="text-[15px] text-on-primary-muted leading-relaxed">{step.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      sections={[
+        {
+          id: "pro-screen",
+          heading: "Can you replace a MacBook Pro screen?",
+          body: (
+            <>
+              <p>
+                The 14- and 16-inch MacBook Pros since 2021 use a mini-LED Liquid Retina XDR display; the 13-inch
+                and Intel models use an LCD Retina panel. None is OLED. A cracked 14- or 16-inch panel usually
+                means a full display assembly.
+              </p>
+              <p>
+                On 2016–2017 models, a backlight that dies past a certain lid angle is usually the flex cable, which
+                can be replaced without a new screen — see{" "}
+                <InLink to="/macbook-flexgate-repair-dubai">flexgate repair</InLink>. Screens carry a 90-day
+                warranty. Full details on{" "}
+                <InLink to="/macbook-pro-screen-repair-dubai">MacBook Pro screen repair</InLink> and{" "}
+                <InLink to="/macbook-pro-m5-screen-repair-dubai">M5 screen repair</InLink>.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "pro-battery",
+          heading: "When does a MacBook Pro battery need replacing?",
+          body: (
+            <>
+              <p>
+                Replace it when System Settings &gt; Battery says &ldquo;Service Recommended&rdquo;, when the Mac
+                shuts down at a healthy-looking percentage, or at once if the case or trackpad is lifting. On the
+                14-inch M5, iFixit found that reaching the battery means removing nearly every other component.
+              </p>
+              <p>
+                For comparison, Apple lists battery service at AED 879 for the 14-inch M5, M5 Pro and M5 Max, and AED 959 for the 16-inch, excluding VAT.
+                Our battery replacements carry 3 months&rsquo; warranty with an 80% capacity guarantee. See{" "}
+                <InLink to="/macbook-pro-battery-replacement-dubai">MacBook Pro battery replacement</InLink>.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "pro-power",
+          heading: "Why won't my MacBook Pro turn on, or why does it keep restarting?",
+          body: (
+            <p>
+              A frozen screen or restart loop is often software, so we rule out macOS first. Repeated kernel
+              panics, shutdowns at a healthy battery level or no power at all point to hardware: a failing SSD,
+              a power-rail fault or corrosion from an old spill. We trace it on the board and quote the actual
+              fault. See <InLink to="/mac-not-turning-on-dubai">Mac not turning on</InLink>,{" "}
+              <InLink to="/macbook-freezing-repair-dubai">MacBook Pro frozen</InLink> and{" "}
+              <InLink to="/macbook-logic-board-repair-dubai">MacBook logic board repair</InLink>.
+            </p>
+          ),
+        },
+        {
+          id: "pro-m5",
+          heading: "Can you repair the MacBook Pro M5, M5 Pro and M5 Max?",
+          body: (
+            <>
+              <p>
+                The 14-inch M5 arrived in October 2025; the 14- and 16-inch M5 Pro and M5 Max followed in March 2026.
+                Apple lists the 14-inch M5 from AED 7,199, the 14-inch M5 Pro from AED 9,299 and the 16-inch M5 Pro from AED 11,499.
+                That is the figure any repair should be weighed against.
+              </p>
+              <p>
+                Most are still inside Apple&rsquo;s warranty, so use Apple for defects; we handle accidental
+                damage and out-of-warranty faults, and{" "}
+                <WaLink message="Hi, is the part in stock for my MacBook Pro M5? Model: ...">confirm part availability on WhatsApp</WaLink>{" "}
+                first. See <InLink to="/macbook-pro-m5-repair-dubai">MacBook Pro M5 repair</InLink>.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "pro-older",
+          heading: "Do you still repair 2012–2015 and Intel Touch Bar MacBook Pros?",
+          body: (
+            <p>
+              Pre-2016 machines — the A1278, A1398 and A1502 — are often still worth a battery or storage
+              upgrade: the 2012–2015 Retina models take a removable SSD blade and the A1278 a standard 2.5-inch
+              drive. A board fault on a 2012 machine can cost more than it is worth, and we will say so. Send the
+              model number on WhatsApp and we confirm the part first. Touch Bar models are covered on{" "}
+              <InLink to="/macbook-pro-intel-repair-dubai">MacBook Pro Intel repair</InLink>.
+            </p>
+          ),
+        },
+      ]}
 
-      {/* Signs */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-sm text-on-primary">Signs Your MacBook Pro Needs Expert Attention</h2>
-        <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
-          {SIGNS.map((s) => (
-            <li key={s} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {s}</li>
-          ))}
-        </ul>
-      </section>
+      features={{
+        heading: "What other MacBook Pro repairs do you do?",
+        subheading: "All at component level in our Media City workshop.",
+        features: [
+          { icon: Keyboard, name: "Keyboard", description: "Butterfly and Magic Keyboard repairs, single keys where possible." },
+          { icon: Droplets, name: "Liquid damage", description: "Ultrasonic clean and component rework. Power off first." },
+          { icon: PlugZap, name: "Charging port and MagSafe", description: "Charger, port and charging circuit tested in that order." },
+          { icon: MousePointer2, name: "Trackpad", description: "Force Touch trackpads that stop clicking or tracking." },
+          { icon: Fingerprint, name: "Touch Bar and Touch ID", description: "Dead or flickering Touch Bars on 2016–2020 Intel models and the 13-inch M1 and M2." },
+          { icon: Fan, name: "Overheating and fans", description: "Fans cleaned or replaced, thermal paste renewed." },
+        ],
+      }}
 
-      {/* Why choose us */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Why Choose Us?</h2>
-          <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
-            {WHY.map((w) => (
-              <article key={w.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <h3 className="text-[18px] font-bold mb-sm text-on-primary">{w.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{w.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      comparison={{
+        eyebrow: "Independent vs Apple",
+        headline: "Looking for an Apple MacBook Pro service center? How we differ",
+        description:
+          "We are an independent workshop, not an Apple service center or Authorised Service Provider. The trade-offs run both ways.",
+        leftLabel: "MacBook Repair Dubai",
+        rightLabel: "Apple Store / AASP",
+        rows: [
+          { feature: "Diagnosis", left: "Free, walk in", right: "Appointment required" },
+          { feature: "Logic board faults", left: "Component-level repair", right: "Whole-board replacement" },
+          { feature: "Older Intel models", left: "Repaired while parts exist", right: "Refused once classed obsolete" },
+          { feature: "If it cannot be fixed", left: "No charge", right: "Diagnostic fee may apply" },
+          { feature: "Inside Apple warranty", left: "We send you to Apple", right: "The right choice" },
+        ],
+      }}
 
-      {/* Performance tips */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">How to Improve the Performance of Your MacBook Pro</h2>
-        <ul className="space-y-sm max-w-[85ch]">
-          {PERFORMANCE.map((p) => (
-            <li key={p} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {p}</li>
-          ))}
-        </ul>
-      </section>
+      showLocation
+      showTeam
+      showStats
 
-      {/* Testimonials */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
-        <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Testimonials</h2>
-          <div className="grid gap-md md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" aria-label="5 star rating">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-                </div>
-                <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="mt-lg border border-white/10 bg-white/[0.04] rounded-md p-lg max-w-[60ch]">
-            <h3 className="text-[18px] font-bold mb-sm text-on-primary">Business Hours</h3>
-            <p className="text-[15px] text-on-primary-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-            <p className="text-[15px] text-on-primary-muted">Sunday: our technicians are resting, but onsite service is available.</p>
-          </div>
-        </div>
-      </section>
+      relatedServices={{ heading: "MacBook Pro services and related repairs", links: PRO_SERVICES }}
 
-      {/* FAQ */}
-      <VsAppleStore tone="dark" />
+      relatedPosts
+      relatedPostsTopics={["m5", "intel"]}
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md text-on-primary">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} injectSchema tone="dark" />
-      </section>
+      faqs={{
+        heading: "MacBook Pro repair Dubai: common questions",
+        intro: "Straight answers to what we are asked most.",
+        items: FAQS,
+      }}
 
-      {/* Location */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-lg text-on-primary">Where to Find Us</h2>
-        <LocationBlock tone="dark" />
-      </section>
+      sources={{
+        heading: "Sources and Apple documentation",
+        links: [
+          { label: "Apple — check your coverage", href: "https://checkcoverage.apple.com/", note: "Check warranty or AppleCare+ status first." },
+          { label: "Apple UAE — Mac laptop repair and battery service", href: "https://support.apple.com/en-ae/mac-laptops/repair?services=service", note: "Apple's UAE battery-service prices." },
+          { label: "Apple UAE Newsroom — MacBook Pro with M5 Pro and M5 Max", href: "https://www.apple.com/ae/newsroom/2026/03/apple-introduces-macbook-pro-with-all-new-m5-pro-and-m5-max/", note: "The current line and UAE pricing." },
+          { label: "9to5Mac — iFixit tears down the M5 MacBook Pro", href: "https://9to5mac.com/2025/10/24/ifixit-tears-down-the-m5-macbook-pro-and-finds-small-but-welcome-repairability-improvements/", note: "The 4/10 repairability score." },
+        ],
+      }}
 
-      {/* CTA */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Ready to get your MacBook Pro repaired?</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
-            Our experienced technicians are here to help. Book your repair appointment today, and we'll have your device running like new in no time.
-          </p>
-          <div className="relative"><CallButtons /></div>
-        </div>
-      </section>
-      </div>
-    <RelatedArticles path="/macbook-pro-repair-dubai" />
-    </PageShell>
+      relatedHubs={{ heading: "Other Apple repair hubs", links: RELATED_HUBS }}
+
+      hubLinks={{
+        eyebrow: "Every model covered",
+        heading: "MacBook Pro models we repair",
+        links: MODEL_LINKS,
+      }}
+
+      reviews={reviews}
+      reviewsHeading="What MacBook Pro customers say"
+
+      finalCta={{
+        eyebrow: "Ready when you are",
+        headline: "Free diagnosis, no charge if we cannot fix it",
+        description: "Send the model and what it is doing, and we will tell you what is involved before you commit.",
+        primary: { label: "Message us on WhatsApp", href: waHref(WA_MSG) },
+        secondary: { label: `Call ${NAP.phoneDisplay}`, href: `tel:${NAP.phoneE164}` },
+      }}
+    />
   );
 }

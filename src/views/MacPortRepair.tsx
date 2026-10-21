@@ -5,7 +5,7 @@ export default function MacPortRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Port Repair Dubai - TB4/TB5, HDMI | 055 741 3706"
-      seoDescription="Mac desktop port repair Dubai. Thunderbolt 4/5, HDMI, Ethernet, USB-C/A, Mac Studio front ports. AED 400. 2 days. Free clean if that's all it needs."
+      seoDescription="Mac desktop port repair Dubai. Thunderbolt 4/5, HDMI, Ethernet, USB-C/A, Mac Studio front ports. 2 days. Free clean if that's all it needs."
       path="/mac-port-repair-dubai"
       eyebrow="Mac port repair"
       h1="Mac Mini, Studio & Pro Port Repair Dubai"
@@ -19,13 +19,13 @@ export default function MacPortRepair() {
         { name: "Port Repair",     path: "/mac-port-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac desktop board-level port work" }}
-      serviceName="Mac Mini, Studio and Pro Port Repair"
+      serviceName="Mac Mini, Studio and Pro Port Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Before we charge you for a port replacement we check the obvious.</strong> Roughly half the "broken Thunderbolt port" calls we get turn out to be debris in the port itself or a worn-out cable - five-minute fixes we don't bill for. The other half are real port failures that need the assembly replaced and the work is straightforward.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Mac Studio M4 Max ships with Thunderbolt 5 (TB5) front ports - newer, faster, and a different physical assembly to TB4. Mac Mini M4 Pro has TB5 too, on the rear. Mac Pro 2019 Intel has eight TB3 ports across MPX modules. We work on all of them. The board-level work is meticulous because Thunderbolt controllers don't tolerate sloppy soldering - we use a hot-air rework station and microscope, not a soldering iron and hope.
           </p>
         </>
@@ -44,9 +44,9 @@ export default function MacPortRepair() {
         { title: "Port assembly replacement",    body: "If the port itself has failed, we de-solder the old assembly and fit a tested replacement. Hot-air rework, no iron damage to surrounding components." },
         { title: "Cross-test all ports",         body: "After the swap we test every port on the same controller (TB ports come in pairs sharing a controller). Confirms no collateral damage." },
       ]}
-      warrantyDays={90}
+      warrantyDays={730}
       warrantyBullets={[
-        "90-day warranty on the port replacement work.",
+        "warranty of 15 days to 2 years on the port replacement work.",
         "Free clean is covered for 30 days - same debris won't bother you twice.",
         "Honest 'come back if the new port acts up' policy.",
       ]}
@@ -56,7 +56,7 @@ export default function MacPortRepair() {
         { q: "Can you fix a Thunderbolt 5 port on the new Mac Mini M4 Pro?", a: "Yes - we have TB5 assemblies in stock for the most common models and source others within 48 hours. The work itself is the same procedure as TB4." },
         { q: "What if the port damage spread to the Thunderbolt controller chip?", a: "Then it becomes a logic-board-level repair (different service, higher cost). We diagnose this for free first and tell you honestly which path you're on before any work begins." },
         { q: "Can a bad cable damage my Mac's port?", a: "Cheap or counterfeit USB-C/Thunderbolt cables can - they sometimes have wrong pin assignments that stress the controller. Stick to Apple, Anker, OWC, Belkin or Cable Matters for Thunderbolt cables." },
-        { q: "Will my Mac need to come in for the diagnostic?", a: "Yes - five-minute job at our Media City workshop. For Mac Pro (heavy) we offer free pickup across Dubai mainland." },
+        { q: "Will my Mac need to come in for the diagnostic?", a: "Yes - five-minute job at our Media City workshop. For a heavy Mac Pro you can walk in (parking on site), send it by a same-day courier you book, or ask for a paid onsite visit, subject to technician availability and quoted on WhatsApp." },
       ]}
       reviewNames={["Ali Hassan", "Shah nawaz", "Marianne Chehade El Dfouni"]}
       related={[

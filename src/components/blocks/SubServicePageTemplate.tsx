@@ -2,7 +2,7 @@
 // shorter sibling of DevicePageTemplate - for sub-service pages (800-1,200 words).
 // no full pricing table, no comparison table, no honesty callout slot - focused & quick.
 import { ReactNode } from "react";
-import { Wrench, ShieldCheck, Star, MessageCircle, Phone } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
@@ -17,15 +17,20 @@ import { RelatedServices } from "@/components/blocks/RelatedServices";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { WarrantyBar } from "@/components/blocks/WarrantyBar";
 import { QuoteBand } from "@/components/blocks/QuoteBand";
-import { Button } from "@/components/ui/button";
-import { useSeo, preloadFromHero } from "@/hooks/use-seo";
+import { StatBand } from "@/components/blocks/StatBand";
+import { CtaBand } from "@/components/blocks/CtaBand";
+import { SectionHeading } from "@/components/blocks/SectionHeading";
+import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema, pageWithSpeakable } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
-import { pickReviews } from "@/lib/find-reviews";
-import { NAP } from "@/content/site";
-import { imageForSlug, imageForService } from "@/lib/page-images";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
+import { warrantyLabel, warrantyClause, warrantyIso, WARRANTY } from "@/content/site";
+import { imageForSlug, imageForService, topicForPath } from "@/lib/page-images";
+import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { LinkifyProse } from "@/lib/linkify";
+import { familyFromPath } from "@/lib/related-articles";
+import { relatedServices, withCoverage } from "@/lib/related-services";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { deviceTypeFromPath } from "@/lib/lead-schema";
 import { relatedIphoneModels } from "@/content/iphone-model-links";
@@ -55,38 +60,63 @@ export type SubServiceProps = {
   steps: Step[];
   warrantyDays: number;
   warrantyBullets: string[];
+  /** Opt-in for hub pages that span several warranty tiers (screens 90 days, batteries
+   *  3 months, hardware 15 days to 2 years...): render WARRANTY.headlineLong ("a written
+   *  warranty of 15 days to 2 years, depending on the repair") instead of the single-tier
+   *  label derived from warrantyDays. Schema still uses warrantyDays. */
+  warrantyHeadline?: boolean;
+  glassNotice?: boolean;      // screen/back-glass pages: highlight that broken glass isn't covered
   faqs: FAQ[];
   reviewNames: string[];
-  related: { label: string; href: string; description: string }[];
+  /** Curated related repairs. Optional — when omitted, auto-resolved from the route registry. */
+  related?: { label: string; href: string; description: string }[];
   blogLink?: { label: string; href: string };
   /** Optional override for the auto-generated AI quick-answer block. */
   quickAnswer?: { question: string; answer: string };
 };
 
 export default function SubServicePageTemplate(p: SubServiceProps) {
-  const reviews = pickReviews(p.reviewNames);
+  // device-filtered + backfilled so an iPhone/iPad page never shows a MacBook review,
+  // and the section always has >=2 distinct on-topic reviews (fixes the single-review case).
+  const reviews = pickReviews(p.reviewNames, { devices: reviewDevicesForPath(p.path), min: 2, seed: p.path });
   // Prefer a service-specific lab photo (logic board, battery, fan, keyboard…)
   // and fall back to the device hero when the service has no dedicated shot.
   const heroImage = imageForService(p.path) ?? imageForSlug(p.path);
+  // Topic infographics carry their own SEO alt text; lab photos use the H1.
+  const topic = heroImage ? topicForPath(p.path) : undefined;
+  const heroAlt = topic && topic.src === heroImage ? topic.alt : p.h1;
   // Auto cross-link sibling iPhone models (only fires on iPhone model pages).
   const otherIphoneModels = relatedIphoneModels(p.path);
+  // Rendered warranty wording. Default: the single tier from warrantyDays ("a 12-month
+  // written warranty"). Multi-tier hubs opt in to the headline wording instead.
+  const warrantyText = p.warrantyHeadline ? WARRANTY.headlineLong : warrantyClause(p.warrantyDays);
+  // Unlock/diagnostic pages (warrantyDays 0) carry no parts warranty, and warrantyClause(0) already
+  // reads "a written quote before any work" - so CTA copy must not repeat the quote line.
+  const hasWarranty = Boolean(p.warrantyHeadline || warrantyLabel(p.warrantyDays));
+  const warrantyHeading = p.warrantyHeadline
+    ? WARRANTY.headlineLong[0].toUpperCase() + WARRANTY.headlineLong.slice(1)
+    : warrantyLabel(p.warrantyDays) ? `${warrantyLabel(p.warrantyDays)} written warranty` : "Written quote, no surprises";
   const qa = p.quickAnswer ?? deriveServiceQuickAnswer({
     serviceName: p.serviceName,
     startingPrice: p.startingPrice,
     timeline: p.timeline,
     warrantyDays: p.warrantyDays,
+    warrantyText: p.warrantyHeadline ? WARRANTY.headlineLong : undefined,
+    pricePath: p.path,
   });
 
+  // No preloadImage here: the hero LCP preload is emitted server-side by <PageSchema> (a client
+  // preload via useSeo/useEffect lands post-hydration — too late for LCP, and can re-fetch a
+  // different size than the <picture> chose). useSeo still injects the JSON-LD below.
   useSeo(
-    { title: p.seoTitle, description: p.seoDescription, path: p.path, preloadImage: preloadFromHero(heroImage) },
+    { title: p.seoTitle, description: p.seoDescription, path: p.path },
     [
       localBusiness(),
       organization(),
       serviceSchema({
         name: p.serviceName,
-        price: p.startingPrice,
         timeline: p.timeline,
-        warranty: `P${p.warrantyDays}D`,
+        warranty: warrantyIso(p.warrantyDays),
         url: p.path,
         description: p.seoDescription,
       }),
@@ -95,8 +125,10 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
   );
 
   return (
-    <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+    <PageShell hideContactCta>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+
+        {/* 1. HERO — H1, price, primary CTA */}
         <Hero
           variant="service"
           tone="dark"
@@ -106,56 +138,56 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
           startingPrice={p.startingPrice}
           timeline={p.timeline}
           image={heroImage}
-          imageAlt={p.h1}
+          imageAlt={heroAlt}
         >
           <PageMeta author={`${p.technician.name}, ${p.technician.specialisation}`} />
         </Hero>
 
+        {/* 2. QUICK ANSWER — AI/featured-snippet answer directly under H1 */}
         <QuickAnswer question={qa.question} answer={qa.answer} tone="dark" />
 
-        <WarrantyBar tone="dark" />
+        {/* 3. WARRANTY BAR — trust signals */}
+        {/* warrantyHeadline hubs omit warrantyDays → WarrantyBar's qualified "15-day to 2-year warranty" */}
+        <WarrantyBar tone="dark" warrantyDays={p.warrantyHeadline ? undefined : p.warrantyDays} />
 
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+        {/* 3b. STATS BAND — shared brand trust band (matches master template) */}
+        <StatBand />
+
+        {/* 4. BREADCRUMB — navigation context */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
           <BreadcrumbTrail trail={p.breadcrumb} tone="dark" />
         </section>
 
         <div className="mx-auto max-w-content px-5 md:px-6 mt-xl">
-          <div className="flex flex-col gap-2xl">
-            <section className="text-on-primary-muted">
-              {/* Contextual auto-linking only on MacBook-context pages — the keyword targets are
-                  MacBook service pages, so we must not mis-link iPad/iPhone/iMac copy to them. */}
-              {/macbook|^\/mac-|^\/macos/.test(p.path)
-                ? <LinkifyProse selfHref={p.path}>{p.intro}</LinkifyProse>
-                : p.intro}
+          <div className="flex flex-col gap-3xl">
+
+            {/* 5. INTRO — context and E-E-A-T opening */}
+            <section className="text-text-muted">
+              {/* Contextual auto-linking is family-scoped (see linkify.tsx): an iPhone page links
+                  /iphone-* services, an iMac page /imac-*, etc. — never cross-family. */}
+              <LinkifyProse selfHref={p.path} family={familyFromPath(p.path)}>{p.intro}</LinkifyProse>
             </section>
 
-            <section id="quote" className="scroll-mt-24">
-              <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">Get a free repair quote</h2>
-              <p className="text-[15px] text-on-primary-muted mb-lg max-w-[60ch]">
-                Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote, 90-day warranty.
-              </p>
-              <LeadForm variant="compact" defaultDeviceType={deviceTypeFromPath(p.path)} sourcePath={p.path} />
-            </section>
-
+            {/* 6. WHAT WE FIX — service scope */}
             <section>
-              <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">What we fix</h2>
+              <SectionHeading eyebrow="Service scope" title="What we fix" />
               <ul className="grid gap-sm md:grid-cols-2">
                 {p.whatWeFix.map((it, i) => (
-                  <li key={i} className="flex gap-sm text-[15px] leading-relaxed text-on-primary-muted">
-                    <span aria-hidden className="text-accent-bright font-bold mt-[2px]">•</span>
+                  <li key={i} className="flex gap-sm text-[15px] leading-relaxed text-text-muted">
+                    <span aria-hidden className="text-accent font-bold mt-[2px]">•</span>
                     <span>{it}</span>
                   </li>
                 ))}
               </ul>
             </section>
 
+            {/* 7. HOW IT WORKS — process steps */}
             <section>
-              <h2 className="text-[24px] md:text-[28px] mb-md flex items-center gap-sm text-on-primary">
-                <Wrench size={24} className="text-accent-bright" aria-hidden /> How it works
-              </h2>
+              <SectionHeading eyebrow="Our process" title="How it works" />
               <StepList steps={p.steps} tone="dark" />
             </section>
 
+            {/* 8. PRICING + WARRANTY — transparent cost and guarantee */}
             <section className="grid gap-md md:grid-cols-[2fr_3fr] items-stretch">
               <PriceCard
                 service={p.serviceName}
@@ -164,90 +196,94 @@ export default function SubServicePageTemplate(p: SubServiceProps) {
                 whatsappMessage={p.whatsappPrefill}
                 tone="dark"
               />
-              <div className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col justify-center">
-                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-on-primary">
-                  <ShieldCheck size={20} className="text-accent-bright" aria-hidden /> {p.warrantyDays}-day written warranty
+              <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col justify-center">
+                <h3 className="text-[18px] font-bold mb-sm flex items-center gap-sm text-text">
+                  <ShieldCheck size={20} className="text-accent" aria-hidden /> {warrantyHeading}
                 </h3>
-                <ul className="space-y-1 text-[14px] text-on-primary-muted">
+                <ul className="space-y-1 text-[14px] text-text-muted">
                   {p.warrantyBullets.map((b, i) => <li key={i}>• {b}</li>)}
                 </ul>
               </div>
+              {p.glassNotice && <div className="mt-md"><GlassWarrantyNotice device="screen or glass" /></div>}
             </section>
 
+            {/* 9. LEAD TECHNICIAN — E-E-A-T authority before social proof */}
+            <section className="bg-bg-card rounded-md p-lg border border-border">
+              <h2 className="text-[20px] mb-md text-text">Lead technician</h2>
+              <TechnicianBadge name={p.technician.name} years={p.technician.years} specialisation={p.technician.specialisation} tone="dark" />
+            </section>
+
+            {/* 10. REVIEWS — social proof after pricing and tech authority */}
+            {reviews.length > 0 && (
+              <section>
+                <SectionHeading eyebrow="What customers say" title="Reviews for this service" />
+                <ReviewGrid reviews={reviews} tone="dark" />
+              </section>
+            )}
+
+            {/* 11. MID-PAGE CTA — conversion after trust is established */}
             <QuoteBand
               service={p.serviceName}
               startingPrice={p.startingPrice}
               timeline={p.timeline}
               whatsappMessage={p.whatsappPrefill}
-              blurb={`Send the model and a photo of the issue. Free pickup across Dubai mainland, ${p.warrantyDays}-day written warranty.`}
+              blurb={`Send the model and a photo of the issue, then walk in to our Media City workshop${hasWarranty ? `. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}` : " for a written quote"}.`}
+              showWarranty={hasWarranty}
             />
 
-            <section className="bg-white/[0.04] rounded-md p-lg border border-white/10">
-              <h2 className="text-[20px] mb-md text-on-primary">Lead technician</h2>
-              <TechnicianBadge name={p.technician.name} years={p.technician.years} specialisation={p.technician.specialisation} tone="dark" />
+            {/* 12. LEAD FORM — full quote form after social proof */}
+            <section id="quote" className="scroll-mt-24">
+              <h2 className="text-[28px] md:text-[32px] mb-md text-text">Get a free repair quote</h2>
+              <p className="text-[15px] text-text-muted mb-lg max-w-[60ch]">
+                Two quick steps — tell us about your device, then how to reach you. Free diagnosis, written quote{hasWarranty ? ", warranty included" : ""}.
+              </p>
+              <LeadForm variant="compact" defaultDeviceType={deviceTypeFromPath(p.path)} sourcePath={p.path} />
             </section>
 
-            {reviews.length > 0 && (
-              <section>
-                <h2 className="text-[24px] md:text-[28px] mb-md flex items-center gap-sm text-on-primary">
-                  <Star size={24} className="text-star fill-star" aria-hidden /> Reviews for this service
-                </h2>
-                <ReviewGrid reviews={reviews} tone="dark" />
-              </section>
-            )}
 
+            {/* 13. FAQ — long-tail keywords and objection handling */}
             <section>
-              <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">FAQ</h2>
-              <FAQAccordion items={p.faqs} injectSchema tone="dark" />
+              <h2 className="text-[28px] md:text-[32px] mb-md text-text">FAQ</h2>
+              <FAQAccordion items={p.faqs} injectSchema />
             </section>
 
+            {/* 14. RELATED SERVICES — internal linking */}
             <section>
-              <RelatedServices items={p.related.slice(0, 3)} tone="dark" />
+              <RelatedServices items={withCoverage(p.related?.length ? p.related : relatedServices({ path: p.path }), p.path)} tone="dark" />
               {p.blogLink && (
-                <p className="mt-md text-[14px] text-on-primary-muted">
-                  Related reading: <Link to={p.blogLink.href} className="text-accent-bright font-semibold hover:underline">{p.blogLink.label}</Link>
+                <p className="mt-md text-[14px] text-text-muted">
+                  Related reading: <Link to={p.blogLink.href} className="text-accent font-semibold hover:underline">{p.blogLink.label}</Link>
                 </p>
               )}
             </section>
 
+            {/* 15. OTHER IPHONE MODELS — model cross-links (conditional) */}
             {otherIphoneModels.length > 0 && (
               <section>
-                <h2 className="text-[24px] md:text-[28px] mb-md text-on-primary">Other iPhone models we repair</h2>
+                <h2 className="text-[28px] md:text-[32px] mb-md text-text">Other iPhone models we repair</h2>
                 <div className="flex flex-wrap gap-sm">
                   {otherIphoneModels.map((m) => (
-                    <Link key={m.slug} to={m.slug} className="rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-[14px] text-on-primary-muted transition-colors hover:border-accent-bright/40 hover:text-on-primary">
+                    <Link key={m.slug} to={m.slug} className="rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-4 py-2 text-[14px] text-text-muted transition-colors hover:border-accent/40 hover:text-text">
                       {m.label} repair
                     </Link>
                   ))}
                 </div>
               </section>
             )}
+
           </div>
         </div>
 
+        {/* 16. RELATED ARTICLES — blog internal links */}
         <RelatedArticles path={p.path} tone="dark" />
 
-        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl mb-3xl">
-          <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] text-on-primary rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-            <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-            <h2 className="relative text-on-primary text-[24px] md:text-[28px] max-w-[28ch]">{p.h1} - book in 4 minutes on WhatsApp</h2>
-            <p className="relative text-on-primary-muted text-[16px] max-w-[60ch]">
-              From AED {p.startingPrice}. Free pickup across Dubai mainland. {p.warrantyDays}-day written warranty.
-            </p>
-            <div className="relative flex flex-wrap gap-sm">
-              <Button asChild variant="whatsapp" size="lg">
-                <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle aria-hidden /> Message on WhatsApp
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="secondary" className="border border-white/20 bg-white/[0.06] text-on-primary hover:bg-white/10">
-                <a href={`tel:${NAP.phoneE164}`}>
-                  <Phone aria-hidden /> {NAP.phoneDisplay}
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
+        {/* 17. FINAL CTA — last conversion opportunity (shared dark band, matches master) */}
+        <CtaBand
+          className="mt-3xl"
+          headline={`Book your ${p.serviceName} on WhatsApp`}
+          description={`Message us for today's exact price on your model, then walk in to our Media City workshop${hasWarranty ? `. ${warrantyText[0].toUpperCase() + warrantyText.slice(1)}` : " for a written quote"}.`}
+        />
+
       </div>
     </PageShell>
   );

@@ -1,0 +1,42 @@
+{
+  "home-service-screen-replacement": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_113727_976b3598-e709-49ad-a150-b9b1a842aaa7.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-service-keyboard-repair": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_113728_6c0faa0f-2c31-4faa-a292-e3a10fe48e0f.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-service-battery-replacement": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_113727_54613918-43c8-450f-b20f-6631f627d4c4.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-service-logic-board-repair": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_113805_87a9fb60-568b-47b8-8f1e-4d2148ffd1d8.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-process-30min-repair": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_113813_eacaee5b-3412-4772-9deb-33c9b3cdb140.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-process-whatsapp-quote": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_114112_1520fea1-8d4a-43a7-9542-5e26f69646d0.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-process-book-slot": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_114112_f31a77f8-6953-43a7-93fb-336c5742ee40.png",
+    "attempt": 0,
+    "generic": false
+  },
+  "home-hero-macbook-m5-exploded": {
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3ElH6nrcDpUrVX2tKMsRWWLL88q/hf_20260611_121416_2201e570-a2f7-436d-8a18-375f8d9fb026.png",
+    "attempt": 0,
+    "note": "hand-picked from 3 art-directed candidates (c3-stack)"
+  }
+}

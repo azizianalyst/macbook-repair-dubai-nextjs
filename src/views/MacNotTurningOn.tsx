@@ -5,7 +5,7 @@ export default function MacNotTurningOn() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Not Turning On Dubai | 055 741 3706"
-      seoDescription="Mac desktop won't turn on? Power supply, SMC reset, Mac Pro diagnostic LEDs, Mac Studio PSU. From AED 400. 1-3 days. Free diagnostic first."
+      seoDescription="Mac desktop won't turn on? Power supply, SMC reset, Mac Pro diagnostic LEDs, Mac Studio PSU. 1-3 days. Free diagnostic first."
       path="/mac-not-turning-on-dubai"
       eyebrow="Mac no power"
       h1="Mac Mini, Studio & Pro Not Turning On Dubai"
@@ -19,13 +19,13 @@ export default function MacNotTurningOn() {
         { name: "Not Turning On",  path: "/mac-not-turning-on-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "Mac desktop power and board diagnosis" }}
-      serviceName="Mac Mini, Studio and Pro Not Turning On"
+      serviceName="Mac Mini, Studio and Pro Not Turning On Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Most "won't turn on" Macs split into three causes.</strong> Failed power supply (cheapest fix). Failed SMC controller or stuck SMC state (often a free reset, sometimes a chip swap). Logic board fault - usually power-delivery components around the SoC (more involved). The diagnostic process tells us which cause yours is, and that diagnostic is free.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Mac Pro 2019 is unusually transparent because Apple put diagnostic LEDs on the logic board itself - they tell us in seconds whether power is reaching the board, whether the chassis is detecting the SMC, and whether the boot ROM has loaded. Mac Mini and Mac Studio are less verbose but still diagnosable: we have power-rail probing routines that find the fault on most boards within 30 minutes. Honest result either way - sometimes it's a wall socket or cable, sometimes it's a real repair.
           </p>
         </>
@@ -44,19 +44,19 @@ export default function MacNotTurningOn() {
         { title: "Quote the fix in writing",     body: "PSU swap, SMC chip replacement, or component-level board work - each has a different price. You see it in writing before any work begins." },
         { title: "Repair + verify",              body: "Component sourced, fitted, board powered on bench, then in chassis, then 24-hour burn-in stress test before you collect." },
       ]}
-      warrantyDays={180}
+      warrantyDays={15}
       warrantyBullets={[
         "6-month warranty on power-supply replacements.",
-        "6-month warranty on SMC and component-level board work.",
+        "15-day warranty on SMC and component-level board work, extendable to 6 months for a small flat fee.",
         "Free re-attempt if the same fault recurs inside warranty.",
       ]}
       faqs={[
         { q: "Have I tried everything before bringing it in?", a: "Try a different cable and wall socket. On Mac Mini, hold the power button 10 seconds for an SMC reset. On Mac Pro, check the diagnostic LEDs through the side window. If none of that revives it, bring it in for the free diagnostic." },
         { q: "What do the Mac Pro diagnostic LEDs mean?", a: "They sit near the lower-rear of the logic board and tell you which boot stage the Mac reached. We can read them in 5 seconds and tell you whether the issue is PSU, board power, or boot ROM." },
-        { q: "How much does a Mac Mini PSU cost to replace?", a: "Usually AED 400 labor plus AED 350-600 for the PSU depending on model. Total typically AED 750-1,000." },
+        { q: "How much does a Mac Mini PSU cost to replace?", a: "A flat labour fee plus the PSU itself at market price, which varies by model. We confirm the total in a written quote before starting." },
         { q: "Could it just be the wall socket?", a: "Surprisingly often, yes - especially on multi-strip outlets where one socket has died. Try a different known-good wall outlet first. We've handed Macs back unmodified after this 5-minute check." },
         { q: "Is data safe if it's a power issue?", a: "Yes - power supply faults don't touch the SSD. Once we've fixed the power side, your data is exactly where you left it. The exception is M-series Macs where a board fault has killed the SoC: then SSD recovery becomes much harder." },
-        { q: "Free pickup for Mac Pro?", a: "Yes - Mac Pro is heavy and awkward to transport. Free pickup and drop-off across Dubai mainland." },
+        { q: "Is there parking for bringing in a Mac Pro?", a: "Yes - Mac Pro is heavy and awkward to carry, and Concord Tower has parking on site. If moving it is not practical, a paid onsite visit can be booked, subject to technician availability, with the charge quoted on WhatsApp first." },
       ]}
       reviewNames={["Ali Hassan", "Marianne Chehade El Dfouni", "Shah nawaz"]}
       related={[

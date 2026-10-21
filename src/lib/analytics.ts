@@ -1,5 +1,5 @@
 // GA4 analytics + conversion tracking.
-// ACTIVATION: set VITE_GA_ID="G-XXXXXXXXXX" in a .env file (or the Hostinger build env)
+// ACTIVATION: set NEXT_PUBLIC_GA_ID="G-XXXXXXXXXX" in a .env file (or the Hostinger build env)
 // before `npm run build`. With no ID set, every function is a safe no-op (nothing loads).
 //
 // What it tracks once activated:
@@ -10,6 +10,14 @@
 // To use GTM instead of GA4, swap the inject below for the GTM container snippet.
 
 const GA_ID = (process.env.NEXT_PUBLIC_GA_ID as string | undefined)?.trim() || "";
+
+// True only when a GA4 Measurement ID was set at build time. The consent banner
+// uses this to stay dormant (no banner, no tracking) until an ID is configured.
+export function analyticsConfigured(): boolean {
+  return !!GA_ID;
+}
+
+let initialized = false;
 
 declare global {
   interface Window {
@@ -22,6 +30,20 @@ function send(...args: unknown[]) {
   window.gtag?.(...args);
 }
 
+/** Fire a GA4 event from anywhere. No-op until analytics is configured AND consented. */
+export function trackEvent(name: string, params: Record<string, unknown> = {}): void {
+  if (!GA_ID || typeof window === "undefined" || !initialized) return;
+  send("event", name, params);
+}
+
+/** Report a completed lead. Deliberately the SAME `contact` event the link handler
+ *  uses, with method:"form": that way ONE GA4 key event covers all four lead paths
+ *  (phone, WhatsApp, email, form) and segments by method, instead of splitting the
+ *  conversion across two events nobody remembers to mark. (audit 2026-09-23) */
+export function trackLeadSubmit(placement: string): void {
+  trackEvent("contact", { method: "form", placement, transport_type: "beacon" });
+}
+
 function contactMethod(href: string): string | null {
   const h = href.toLowerCase();
   if (h.startsWith("tel:")) return "phone";
@@ -31,7 +53,9 @@ function contactMethod(href: string): string | null {
 }
 
 export function initAnalytics(): void {
-  if (!GA_ID || typeof window === "undefined") return;
+  // Idempotent: safe to call on consent-accept AND on mount for returning visitors.
+  if (!GA_ID || typeof window === "undefined" || initialized) return;
+  initialized = true;
 
   // --- load gtag ---
   const s = document.createElement("script");
@@ -68,7 +92,28 @@ export function initAnalytics(): void {
       const link = (e.target as HTMLElement | null)?.closest?.("a");
       if (!link) return;
       const method = contactMethod(link.getAttribute("href") || "");
-      if (method) send("event", "contact", { method, transport_type: "beacon" });
+      // placement comes from data-track on the anchor (e.g. "hero-whatsapp",
+      // "sticky-bar-call") so GA can tell which CTA converts.
+      if (!method) return;
+      // Most contact CTAs never got a data-track attribute, so `placement` was
+      // "untagged" on roughly three quarters of clicks and the "which CTA converts"
+      // report was unusable. Fall back to the nearest identifiable container, then
+      // the link's own label, so every click lands somewhere meaningful.
+      const placement =
+        link.dataset.track ||
+        link.closest<HTMLElement>("[data-track]")?.dataset.track ||
+        link.closest<HTMLElement>("[data-section]")?.dataset.section ||
+        link.closest("header") && "header" ||
+        link.closest("footer") && "footer" ||
+        link.closest("nav") && "nav" ||
+        (link.getAttribute("aria-label") || link.textContent || "").trim().slice(0, 40).toLowerCase() ||
+        "untagged";
+      send("event", "contact", {
+        method,
+        placement,
+        page_path: window.location.pathname,
+        transport_type: "beacon",
+      });
     },
     { capture: true },
   );

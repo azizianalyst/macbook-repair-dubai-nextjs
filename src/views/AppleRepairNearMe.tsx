@@ -1,0 +1,237 @@
+"use client";
+import { withSlash } from "@/lib/utils";
+import { MapPin, Star, Phone, MessageCircle, Truck, Laptop, Smartphone, Tablet, Monitor } from "lucide-react";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
+import { PageShell } from "@/components/layout/PageShell";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
+import { USPStrip } from "@/components/blocks/USPStrip";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { useSeo } from "@/hooks/use-seo";
+import { REVIEWS } from "@/content/reviews";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
+
+const DEVICES = [
+  { icon: Laptop,     label: "MacBook",          link: "/",                     note: "Air, Pro 13–16\", Intel & M1–M5" },
+  { icon: Monitor,    label: "iMac",              link: "/imac-repair-dubai",    note: "21.5\", 24\", 27\" Retina 5K" },
+  { icon: Monitor,    label: "Mac mini & Studio", link: "/mac-mini-repair-dubai",note: "M1–M4 Mac mini, Mac Studio" },
+  { icon: Smartphone, label: "iPhone",            link: "/iphone-repair-dubai",  note: "iPhone 6 through 17 Pro Max" },
+  { icon: Tablet,     label: "iPad",              link: "/ipad-repair-dubai",    note: "mini, Air, standard, Pro 11/13\"" },
+];
+
+const AREAS = [
+  { area: "Dubai Media City / JLT / JBR",    time: "Walk in · or same-day courier" },
+  { area: "Downtown / DIFC / Business Bay",   time: "Walk in · or same-day courier" },
+  { area: "Jumeirah / Al Quoz / Umm Suqeim", time: "Walk in · or same-day courier" },
+  { area: "Deira / Bur Dubai / Karama",       time: "Walk in · or same-day courier" },
+  { area: "Dubai Hills / Al Barsha / Mirdif", time: "Walk in · or same-day courier" },
+  { area: "Sharjah / Abu Dhabi",              time: "Courier you book · WhatsApp us" },
+];
+
+const FAQS = [
+  { q: "Where is the nearest Apple repair shop to me in Dubai?",
+    a: "The nearest Apple specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. We repair MacBook, iMac, Mac mini, Mac Studio, iPhone and iPad. Walk in without an appointment, or send the device by a same-day courier you book. WhatsApp 055 741 3706." },
+  { q: "Do you repair all Apple devices near me in Dubai?",
+    a: "Yes. MacBook (Air, Pro, Intel through M5), iMac (21.5\", 24\", 27\"), Mac mini, Mac Studio, Mac Pro, iPhone (6 through 18 Pro Max) and iPad (all generations). One specialist for your Mac, iPhone and iPad, at Concord Tower Dubai Media City since 2004." },
+  { q: "How quickly can you repair my Apple device near me?",
+    a: "iPhone screen: 40 minutes. iPhone battery: 30 minutes. MacBook battery or keyboard: 1–3 hours. MacBook screen: same day. Logic board and water damage: 2–5 days. Same-day jobs are done the day you walk in, or the day your courier drops the device off." },
+  { q: "Can I get free Apple device pickup near me in Dubai?",
+    a: "No. We don't collect or deliver devices any more. The quickest route if you can't come in is a same-day courier app you book yourself: hand the device to the driver and WhatsApp 055 741 3706 the tracking link. Most repairs are finished the same day, ready to collect, or we book a courier to bring it back." },
+  { q: "How much does Apple repair cost near me in Dubai?",
+    a: "It depends on your exact model and the fault, so we quote each device individually. MacBook screen, battery and logic-board work, iPhone screen and battery, and iPad screen work are all covered. Diagnosis is free. WhatsApp 055 741 3706 with your exact model for a fixed written quote in under 4 minutes." },
+  { q: "Are you an Apple Authorised Service Provider near me in Dubai?",
+    a: "No, we are an independent Apple specialist, which means lower prices than Apple Store rates and more repair options: component-level logic board repair, out-of-warranty fixes, and repairs on devices Apple no longer services. Independent since 2004. Office #45, Concord Tower, Dubai Media City." },
+  { q: "Is there a warranty on Apple repair near me in Dubai?",
+    a: "Every repair carries a written warranty of 15 days to 2 years, regardless of device. Battery warranty is 3 months with an 80% capacity guarantee. The warranty card is issued with every paid repair and covers the device serial number, repair type, and parts." },
+];
+
+const FEATURED_REVIEW_INDEXES = [0, 4, 9, 15, 20, 26];
+
+export default function AppleRepairNearMe() {
+  const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
+
+  useSeo({
+    title: "Apple Repair Near Me Dubai | All Devices, Same-Day",
+    description:
+      "Apple repair near you in Dubai. MacBook, iPhone, iPad, iMac and Mac mini, same-day at Concord Tower, Media City. Walk in or WhatsApp 055 741 3706 today.",
+    path: "/apple-repair-near-me-dubai",
+  });
+
+  // Scaffolded with image={undefined} and an alt already written for an image
+  // that was never wired up (audit 2026-09-23). Uses the route's own topic
+  // image, so src and alt can never drift apart.
+  const heroImg = imageForRoute("/apple-repair-near-me-dubai");
+
+  return (
+    <PageShell>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+        <Hero
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
+          variant="device"
+          tone="dark"
+          eyebrow="Apple repair near you · Dubai Media City · Since 2004"
+          title="Apple Repair Near Me. Dubai"
+          subtitle="MacBook, iMac, Mac mini, iPhone and iPad repaired in-house. Walk in, no appointment. Same-day at Concord Tower."
+        >
+          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
+            <span>·</span>
+            <span className="flex items-center gap-1"><MapPin size={14} aria-hidden /> Concord Tower, Dubai Media City</span>
+            <span>·</span>
+            <span>6 Apple device families · Since 2004</span>
+          </p>
+        </Hero>
+
+        <USPStrip tone="dark" />
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <BreadcrumbTrail
+            tone="dark"
+            trail={[
+              { name: "Home", path: "/" },
+              { name: "Apple Repair Dubai", path: "/apple-repair-dubai" },
+              { name: "Apple Repair Near Me", path: "/apple-repair-near-me-dubai" },
+            ]}
+          />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <QuickAnswer
+            tone="dark"
+            question="Where can I get my Apple device repaired near me in Dubai?"
+            answer="The nearest Apple repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. MacBook, iMac, iPhone and iPad repaired in-house. Walk in without an appointment, with same-day service for most repairs. WhatsApp 055 741 3706 with your model for today's exact price."
+          />
+        </section>
+
+        {/* Device cards */}
+        <section aria-labelledby="devices" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 id="devices" className="text-[28px] md:text-[32px] mb-sm">Every Apple device repaired near you in Dubai</h2>
+          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">One workshop since 2004, the full Apple ecosystem, not a pick-and-choose list.</p>
+          <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
+            {DEVICES.map(({ icon: Icon, label, link, note }) => (
+              <a key={label} href={withSlash(link)} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm hover:border-accent transition-colors">
+                <div className="flex items-center gap-sm">
+                  <Icon size={22} className="text-accent shrink-0" aria-hidden />
+                  <h3 className="text-[17px] font-bold">{label}</h3>
+                </div>
+                <p className="text-[22px] font-bold text-accent">Price on request</p>
+                <p className="text-[13px] text-text-muted">{note}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Two options */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">Two ways to get your Apple device fixed near you</h2>
+            <div className="grid gap-md md:grid-cols-2">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
+                <MapPin size={28} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed mb-md">
+                  Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. A 3-minute walk from the Palm Jumeirah tram stop. Open Mon-Sat 9 am–7 pm. iPhone screen done in 40 minutes.
+                </p>
+                <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
+              </article>
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
+                <Truck size={28} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[20px] font-bold mb-sm">Send it by courier</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed mb-md">
+                  Can't come in? Book any same-day courier app, hand the device to the driver, and WhatsApp 055 741 3706 the tracking link. Most jobs are done the same day.
+                </p>
+                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp the tracking link →</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Areas */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">Apple repair near you, from every part of Dubai</h2>
+          <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
+            {AREAS.map(({ area, time }) => (
+              <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
+                <MapPin size={16} className="text-accent shrink-0 mt-[2px]" aria-hidden />
+                <div>
+                  <p className="text-[14px] font-semibold">{area}</p>
+                  <p className="text-[13px] text-text-muted">{time}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+            <div className="flex-1">
+              <h2 className="text-[22px] font-bold mb-sm">Get your Apple device repaired near you today</h2>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed price · Walk in · Same-day return for most repairs.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-sm shrink-0">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+                <MessageCircle size={18} aria-hidden /> WhatsApp Now
+              </a>
+              <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
+                <Phone size={18} aria-hidden /> {NAP.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">What customers near you say</h2>
+            <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Apple repair near me. FAQ</h2>
+          <FAQAccordion items={FAQS} injectSchema />
+        </section>
+
+        {/* Related */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[22px] font-bold mb-md">Specific device repair near you</h2>
+          <div className="flex flex-wrap gap-sm">
+            {[
+              { label: "iPhone Repair Near Me Dubai", href: "/iphone-repair-near-me-dubai" },
+              { label: "Mac Repair Near Me Dubai", href: "/mac-repair-near-me-dubai" },
+              { label: "Apple Repair Dubai", href: "/apple-repair-dubai" },
+              { label: "iPhone Repair Dubai", href: "/iphone-repair-dubai" },
+              { label: "MacBook Repair Dubai", href: "/" },
+            ].map(({ label, href }) => (
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">
+                {label}
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Location */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Find us. Concord Tower, Dubai Media City</h2>
+          <LocationBlock tone="dark" />
+        </section>
+      </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath="/apple-repair-near-me-dubai" defaultDeviceType="MacBook" />
+      </section>
+
+      <RelatedArticles path="/apple-repair-near-me-dubai" />
+    </PageShell>
+  );
+}

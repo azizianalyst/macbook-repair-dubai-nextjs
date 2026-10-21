@@ -9,7 +9,10 @@ export type FAQ = { q: string; a: string };
 type Props = {
   items: FAQ[];
   injectSchema?: boolean;     // emit FAQPage JSON-LD
-  tone?: "light" | "dark";    // "dark" for use on the bg-primary band; default light
+  // "dark" = sits on a genuinely dark band (the inline #1E2329 / #2C3137 sections).
+  // "light" (default) = the light bg-bg / bg-bg-alt bands. Passing the wrong one makes
+  // the text the same colour as the band, so keep it in sync with the enclosing section.
+  tone?: "light" | "dark";
 };
 
 // plus/minus toggle (NOT chevron). one open at a time.
@@ -28,25 +31,23 @@ export function FAQAccordion({ items, injectSchema = true, tone = "light" }: Pro
 
   return (
     <>
-      <ul className={cn("border-t", dark ? "border-white/10" : "border-border")}>
+      <ul className="border-t border-border">
         {items.map((item, i) => {
           const isOpen = open.has(i);
           const id = `faq-${i}`;
           return (
-            <li key={id} className={cn("border-b", dark ? "border-white/10" : "border-border")}>
+            <li key={id} className="border-b border-border">
               <h3 className="m-0">
                 <button
                   type="button"
-                  className={cn(
-                    "w-full flex items-start justify-between gap-md py-md text-left rounded focus-visible:outline-none focus-visible:ring-2",
-                    dark ? "focus-visible:ring-accent-bright" : "focus-visible:ring-accent",
-                  )}
+                  className="w-full flex items-start justify-between gap-md py-md text-left rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  id={`${id}-btn`}
                   aria-expanded={isOpen}
                   aria-controls={`${id}-panel`}
                   onClick={() => toggle(i)}
                 >
-                  <span className={cn("text-[16px] md:text-[17px] font-semibold", dark ? "text-on-primary" : "text-text")}>{item.q}</span>
-                  <span className={cn("mt-1 shrink-0", dark ? "text-accent-bright" : "text-text-muted")} aria-hidden>
+                  <span className={cn("text-[16px] md:text-[17px] font-semibold", dark ? "text-white" : "text-text")}>{item.q}</span>
+                  <span className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-text-muted")} aria-hidden>
                     {isOpen ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
                 </button>
@@ -54,6 +55,7 @@ export function FAQAccordion({ items, injectSchema = true, tone = "light" }: Pro
               <div
                 id={`${id}-panel`}
                 role="region"
+                aria-labelledby={`${id}-btn`}
                 hidden={!isOpen}
                 className={cn("pb-md text-[15px] leading-relaxed max-w-[70ch]", dark ? "text-on-primary-muted" : "text-text-muted")}
               >

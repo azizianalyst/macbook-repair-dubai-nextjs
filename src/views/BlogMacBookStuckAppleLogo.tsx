@@ -19,6 +19,13 @@ export default function BlogMacBookStuckAppleLogo() {
       seoTitle="MacBook Stuck on Apple Logo? Fixes for 2026"
       seoDescription="MacBook stuck on the Apple logo at startup? Work through 8 fixes in order, from waiting out an update to Recovery and First Aid, plus when it's a failing SSD."
       path="/blog/macbook-stuck-on-apple-logo"
+      wide
+      toc={[
+        { id: "why-it-freezes", label: "Why it freezes on the logo" },
+        { id: "fix-in-order", label: "Fix it in order" },
+        { id: "data-at-risk", label: "When your data is at risk" },
+        { id: "bring-it-in", label: "Bring it in" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Stuck on the Apple Logo? How to Fix It"
       hook="A frozen Apple logo is one of the most common boot faults we see on the bench. Most are software and fixable at home. A few are a dying SSD. Here's how to tell them apart, in order."
@@ -36,7 +43,7 @@ export default function BlogMacBookStuckAppleLogo() {
       })]}
       body={
         <>
-          <h2>Why a MacBook freezes on the Apple logo</h2>
+          <h2 id="why-it-freezes">MacBook Stuck On Apple Logo. Why a MacBook freezes on the Apple logo</h2>
           <p>
             The Apple logo appears early in the boot sequence, just after the firmware hands off to
             macOS. If your MacBook stops there, it means the firmware is fine but macOS can't finish
@@ -76,7 +83,7 @@ export default function BlogMacBookStuckAppleLogo() {
             and the gentle ones come first so you don't risk data before you have to.
           </p>
 
-          <h2>Fix it in order</h2>
+          <h2 id="fix-in-order">Fix it in order</h2>
 
           <h3>1. Wait, if there's a progress bar</h3>
           <p>
@@ -133,9 +140,9 @@ export default function BlogMacBookStuckAppleLogo() {
             Still stuck after First Aid? In Recovery, choose "Reinstall macOS". This rewrites the
             system files on top of what's there and keeps your data, apps, and settings, so it's not
             the scary option people assume. The one rule: pick your existing disk and never touch
-            Disk Utility's Erase button. A clean reinstall starts from AED 200 if you'd rather we do
-            it. See our{" "}
-            <Link to="/macos-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            Disk Utility's Erase button. Prefer we do it? We handle clean reinstalls without
+            erasing your data. Message us on WhatsApp for today's price. See our{" "}
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service
             </Link>{" "}
             for the full process.
@@ -146,30 +153,30 @@ export default function BlogMacBookStuckAppleLogo() {
             If First Aid throws an error it can't fix, or worse, the drive doesn't appear in Disk
             Utility at all, you're past software. That points to a failing SSD or a logic-board
             fault. On Apple Silicon the storage is soldered to the board, so a dead SSD often means
-            board-level work, which starts from AED 800. Don't keep power-cycling a drive that's
+            board-level work. Message us on WhatsApp for a price on your exact model. Don't keep power-cycling a drive that's
             throwing read errors; every retry can cost you more of your data.
           </p>
 
-          <h2>When your data is at risk</h2>
+          <h2 id="data-at-risk">When your data is at risk</h2>
           <p>
             Steps 1 through 7 are safe for your files. The danger zone is step 8. A drive that won't
             mount or won't repair is failing, and a failing drive degrades every time it spins up. If
             you've no recent backup and the disk is on its way out, stop trying to boot it and bring
-            it straight in. We pull data off failing MacBook drives most weeks, and recovery runs
-            between AED 600 and AED 3,000 depending on whether the controller still responds or we
-            need a chip-off. Our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            it straight in. We pull data off failing MacBook drives most weeks; the price depends on
+            whether the drive still responds or the board needs repair first (on T2 and Apple silicon
+            Macs, chip-off cannot work), so message us on WhatsApp for a quote. Our{" "}
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery service
             </Link>{" "}
             handles the soldered Apple Silicon drives most shops turn away.
           </p>
 
-          <h2>Bring it in</h2>
+          <h2 id="bring-it-in">Bring it in</h2>
           <p>
             If you've worked down the list and you're still staring at the logo, walk it in. The
             diagnostic is free, we measure the drive's health on the bench in a few minutes, and you
             get a clear answer before any work starts. Book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             at Concord Tower, Dubai Media City. No-fix-no-charge, and we've been doing this since
@@ -196,7 +203,7 @@ export default function BlogMacBookStuckAppleLogo() {
         },
         {
           q: "Can you recover data from a MacBook that won't boot?",
-          a: "Usually, yes. We recover from MacBooks stuck at the logo most weeks, including the soldered SSDs on Apple Silicon that many shops won't touch. Recovery runs AED 600 to AED 3,000 depending on whether the drive controller still responds. Bring it in before you keep retrying, since each boot attempt can lose you more.",
+          a: "Usually, yes. We recover from MacBooks stuck at the logo most weeks, including the soldered SSDs on Apple Silicon that many shops won't touch. The price depends on whether the drive controller still responds, so message us on WhatsApp for a quote. Bring it in before you keep retrying, since each boot attempt can lose you more.",
         },
         {
           q: "Do you offer same-day repair for this?",
@@ -204,11 +211,12 @@ export default function BlogMacBookStuckAppleLogo() {
         },
         {
           q: "How much is the diagnostic?",
-          a: "The diagnostic is free. We test the drive's health, check the boot, and tell you exactly what's wrong before any work starts, at our Concord Tower workshop in Dubai Media City. If it's a quick software fix, macOS reinstalls start from AED 200. Drive or board work starts from AED 800. No-fix-no-charge throughout.",
+          a: "The diagnostic is free. We test the drive's health, check the boot, and tell you exactly what's wrong before any work starts, at our Concord Tower workshop in Dubai Media City. Whether it's a quick macOS reinstall or drive or board work, message us on WhatsApp for today's exact price on your model. No-fix-no-charge throughout.",
         },
       ]}
       relatedLinks={[
-        { label: "macOS reinstall in Dubai", href: "/macos-reinstall-dubai", description: "Clean reinstall without losing data, from AED 200." },
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
+        { label: "macOS reinstall in Dubai", href: "/macos-reinstall-dubai", description: "Clean reinstall without losing data. Message us on WhatsApp for a price." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "Pulling data off failing and soldered Apple drives." },
         { label: "MacBook not turning on", href: "/blog/macbook-not-turning-on-fix-guide", description: "If it won't even reach the logo, start here." },
       ]}

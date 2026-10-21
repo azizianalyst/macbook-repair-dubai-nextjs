@@ -1,10 +1,16 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Mac Studio Repair Dubai - faithful rebuild of the live WordPress /mac-studio-repair-dubai page
 // (user: "same data", 2026-06-01; pulled from live site). Prior DevicePageTemplate version in git history.
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
@@ -25,6 +31,7 @@ const SIBLINGS = [
 ];
 
 const MODELS = [
+  "Mac Studio (M4 Max, 2025)", "Mac Studio (M3 Ultra, 2025)",
   "Mac Studio (M2 Max, 2023)", "Mac Studio (M2 Ultra, 2023)",
   "Mac Studio (M1 Max, 2022)", "Mac Studio (M1 Ultra, 2022)",
 ];
@@ -36,7 +43,7 @@ const SERVICES = [
   { title: "Hardware Upgrade", body: "Upgrade your Mac Studio's hardware to enhance performance. We can install additional RAM or storage to help your device run more efficiently." },
   { title: "Overheating", body: "When your device becomes excessively hot, causing slowdowns or shutdowns, it can be due to a faulty cooling system, dust build-up, or prolonged heavy usage." },
   { title: "Hard Drive Replacement", body: "If your Mac Studio's hard drive has failed, we can replace it with a new one and restore your data so you don't lose any important files." },
-  { title: "SSD Upgrade", body: "Experience a significant boost in speed and performance by upgrading to an SSD. Our technicians perform the upgrade and transfer your data seamlessly." },
+  { title: "SSD Upgrade", body: "Moving to a faster SSD cuts boot and app launch times. We copy your data across as part of the upgrade." },
   { title: "RAM Upgrade", body: "Increase your Mac Studio's RAM to handle more demanding tasks and run more smoothly. We install additional RAM to improve overall performance." },
   { title: "Graphics Card Problems", body: "Graphics card problems can cause glitches, flaws, or wrong rendering on screen - usually from hardware issues, overheating, or program compatibility." },
   { title: "Power Supply Issues", body: "Power issues may occur if your system won't turn on or shuts down suddenly. A bad power source, broken cables, or other electrical parts could be responsible." },
@@ -57,7 +64,7 @@ const PROCESS = [
   "Our team suggests the best way to fix your Mac Studio.",
   "We use genuine Apple parts to repair your device.",
   "We thoroughly test your Mac Studio to make sure it works well.",
-  "You get your fixed Mac Studio back, often on the same day.",
+  "You get your fixed Mac Studio back with a written warranty.",
 ];
 
 const SIGNS = [
@@ -91,13 +98,11 @@ const SPECS = [
   { title: "Mac Studio M2 Ultra Repair", items: ["24-core CPU", "Up to 76-core GPU", "Up to 192GB unified memory", "800GB/s memory bandwidth"] },
 ];
 
-const TESTIMONIALS = [
-  { name: "Khurram Shahid", body: "To handle my heavy video editing work, I had to add more RAM to my Mac Studio. The techs helped me pick the right RAM and quickly installed it. There's no more lag when I edit my movies." },
-  { name: "Sarah Omer", body: "I was worried about how long and how much it would cost to fix my cracked Mac Studio screen. The technicians fixed it really quickly and kept me informed the whole time. The team was very skilled and the service was great." },
-];
+// Hand-typed testimonials removed here (content-truth audit 2026-09-25): names not in the
+// verified Google review library. Real reviews render below via pickReviews().
 
 const FAQS = [
-  { q: "How much time will it take to fix my Mac Studio?", a: "The majority of repairs are completed the same day. The precise timing depends on the availability of parts and the device's diagnostic results." },
+  { q: "How much time will it take to fix my Mac Studio?", a: "Fan and thermal service is done the same day. Most other repairs take 1 to 4 days, and logic-board work 3 to 7 days, depending on the model and parts. Each Mac Studio model page lists its times." },
   { q: "Do I need to make an appointment for a repair?", a: "Walk-ins are welcome to drop off your device. But we ask all customers to call or book an appointment ahead of time so we can be ready to help you faster based on your problem." },
   { q: "Is it worth repairing an older Apple Mac Studio?", a: "Almost always, restoring an older Mac Studio is more cost-effective than buying a new one. They usually last between 3 and 8 years (longer if well cared for), and repairs are generally cheaper than buying a pricey new device." },
   { q: "Can you recover lost data from a Mac Studio?", a: "Absolutely. We provide professional data recovery services for Mac Studio devices affected by software crashes, drive corruption, or accidental deletion. Your data is handled safely and confidentially." },
@@ -107,7 +112,7 @@ function CallButtons() {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant="secondary" size="lg">
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -117,11 +122,12 @@ function CallButtons() {
 }
 
 export default function MacStudioRepair() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/mac-studio-repair-dubai"), min: 3, seed: "/mac-studio-repair-dubai" });
   useSeo(
     {
-      title: "Mac Studio Repair Dubai - Apple-Certified Logic Board & SSD Fix",
+      title: "Mac Studio Repair Dubai - Expert Logic Board & SSD Fix",
       description:
-        "Professional Mac Studio repair in Dubai. Certified Apple technicians repair logic boards, SSDs & power issues. M1 Ultra & M2 Ultra models supported.",
+        "Professional Mac Studio repair in Dubai by independent Apple specialists. Logic board, SSD & power-issue repair. M1 Ultra & M2 Ultra models supported.",
       path: "/mac-studio-repair-dubai",
     },
     [localBusiness(), organization()],
@@ -129,22 +135,31 @@ export default function MacStudioRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image="/images/topics/mac-studio-repair-dubai.jpg"
+        imageAlt="Mac Studio repair Dubai - M4 Max compact workstation teardown engineering infographic"
         tone="dark"
         variant="device"
         eyebrow="Mac Studio specialist"
         title="Mac Studio Repair Dubai"
         subtitle="Your Mac Studio may be malfunctioning. Don't worry - MacBook Repair Dubai is the best place for Mac Studio repair in Dubai. Our expert staff can fix all problems, whether the screen is broken or the motherboard is damaged. Get in touch with us today."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
           <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Expert Apple technicians</span>
           <span>·</span>
           <span>Genuine Apple parts</span>
           <span>·</span>
-          <span>Often same-day</span>
+          <span>Free diagnosis</span>
         </p>
       </Hero>
+
+      {/* Answer-first capsule (AEO/BLUF) */}
+      <QuickAnswer
+        tone="dark"
+        question="Where can I get my Mac Studio repaired in Dubai?"
+        answer="MacBook Repair Dubai repairs every Mac Studio. M1 Max, M1 Ultra, M2 Max, M2 Ultra, M3 Ultra and M4 Max, at its Concord Tower workshop in Dubai Media City. Services include logic-board repair, SSD upgrades, no-power diagnosis and macOS reinstalls, with free diagnosis, walk-in service near the Palm Jumeirah tram stop, OEM-grade parts and a written warranty of 15 days to 2 years."
+      />
 
       <USPStrip tone="dark" />
 
@@ -157,40 +172,58 @@ export default function MacStudioRepair() {
         ]} />
       </section>
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-on-primary-muted">
-          <span className="font-semibold text-on-primary">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-accent-bright hover:bg-white/[0.08] transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
+
 
       {/* Models */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Mac Studio models we repair</h2>
-        <p className="text-[15px] text-on-primary-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
         <div className="flex flex-wrap gap-2 mb-lg">
           {MAC_DESKTOP_MODELS.filter((m) => m.family === "studio").map((m) => (
-            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-accent-bright hover:bg-white/[0.08] transition-colors">{m.name} →</Link>
+            <Link key={m.slug} to={("mergedInto" in m && m.mergedInto) || `/${m.slug}`} className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
           ))}
         </div>
         <ul className="flex flex-wrap gap-2">
           {MODELS.map((m) => (
-            <li key={m} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-[13px] text-on-primary mono">{m}</li>
+            <li key={m} className="px-3 py-2 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-text mono">{m}</li>
           ))}
         </ul>
       </section>
 
+      {/* Repair by chip generation */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Repair by chip generation</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Jump to the chip-specific repair page for your Mac Studio.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-studio-m1-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M1 Max/Ultra (2022) →</Link>
+          <Link to="/mac-studio-m2-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M2 Max/Ultra (2023) →</Link>
+          <Link to="/mac-studio-m3-ultra-2025-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M3 Ultra (2025) →</Link>
+          <Link to="/mac-studio-m4-max-2025-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M4 Max (2025) →</Link>
+          <Link to="/mac-studio-m5-repair-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio M5 Max / M5 Ultra (2026) →</Link>
+        </div>
+      </section>
+
+      {/* Common Mac Studio services */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Common Mac Studio services</h2>
+        <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Go straight to the fix you need.</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mac-studio-not-turning-on-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio Not Turning On →</Link>
+          <Link to="/mac-studio-no-display-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio No Display →</Link>
+          <Link to="/mac-studio-overheating-fix-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio Overheating →</Link>
+          <Link to="/mac-studio-data-recovery-dubai" className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">Mac Studio Data Recovery →</Link>
+        </div>
+      </section>
+
       {/* Issues / services */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Mac Studio Issues We Deal With</h2>
           <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{s.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
               </article>
             ))}
           </div>
@@ -204,19 +237,19 @@ export default function MacStudioRepair() {
         <ol className="space-y-md max-w-[80ch]">
           {PROCESS.map((step, i) => (
             <li key={i} className="flex gap-md">
-              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-bright/15 text-accent-bright font-bold flex items-center justify-center">{i + 1}</span>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed pt-1">{step}</p>
+              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-bold flex items-center justify-center">{i + 1}</span>
+              <p className="text-[15px] text-text-muted leading-relaxed pt-1">{step}</p>
             </li>
           ))}
         </ol>
       </section>
 
       {/* Signs */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-sm">Indications your device needs repair</h2>
           <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
-            {SIGNS.map((s) => <li key={s} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {s}</li>)}
+            {SIGNS.map((s) => <li key={s} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {s}</li>)}
           </ul>
         </div>
       </section>
@@ -225,27 +258,27 @@ export default function MacStudioRepair() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">How to enhance Mac Studio performance</h2>
         <ul className="grid gap-sm sm:grid-cols-2 max-w-[90ch]">
-          {PERFORMANCE.map((p) => <li key={p} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {p}</li>)}
+          {PERFORMANCE.map((p) => <li key={p} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {p}</li>)}
         </ul>
       </section>
 
       {/* Why choose + specs */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Why Choose Us?</h2>
           <div className="grid gap-md md:grid-cols-3 mb-xl">
             {WHY.map((w) => (
-              <article key={w.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={w.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{w.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{w.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{w.body}</p>
               </article>
             ))}
           </div>
           <div className="grid gap-md sm:grid-cols-2">
             {SPECS.map((s) => (
-              <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{s.title}</h3>
-                <ul className="space-y-1">{s.items.map((it) => <li key={it} className="text-[14px] text-on-primary-muted">{it}</li>)}</ul>
+                <ul className="space-y-1">{s.items.map((it) => <li key={it} className="text-[14px] text-text-muted">{it}</li>)}</ul>
               </article>
             ))}
           </div>
@@ -255,27 +288,17 @@ export default function MacStudioRepair() {
       {/* Testimonials */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-        <div className="grid gap-md md:grid-cols-2">
-          {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-              <div className="flex gap-1 mb-sm" aria-label="5 star rating">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-              </div>
-              <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-              <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <ReviewGrid reviews={reviews} tone="dark" />
       </section>
 
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion tone="dark" items={FAQS} injectSchema />
-        <div className="mt-lg border border-white/10 bg-white/[0.04] rounded-md p-lg max-w-[60ch]">
+        <FAQAccordion items={FAQS} injectSchema />
+        <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-          <p className="text-[15px] text-on-primary-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-on-primary-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+          <p className="text-[15px] text-text-muted">Monday - Thursday and Saturday: 9:00 AM - 7:00 PM. Friday: 9:00 AM - 12:00 PM and 2:00 PM - 7:00 PM.</p>
+          <p className="text-[15px] text-text-muted">Sunday: closed.</p>
         </div>
       </section>
 
@@ -287,16 +310,21 @@ export default function MacStudioRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[30ch]">Contact us for immediate assistance</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[70ch]">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[30ch]">Contact us for immediate assistance</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Bring your Mac Studio to our repair centre and we'll diagnose it thoroughly before recommending a repair option. Begin the repair process immediately and get a free quote.
           </p>
           <div className="relative"><CallButtons /></div>
         </div>
       </section>
       </div>
+    {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+    <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+      <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+      <LeadForm preset={PRESETS.repair} sourcePath="/mac-studio-repair-dubai" defaultDeviceType="Mac mini / Studio / Pro" />
+    </section>
+
     <RelatedArticles path="/mac-studio-repair-dubai" />
     </PageShell>
   );

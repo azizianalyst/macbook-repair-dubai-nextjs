@@ -4,8 +4,8 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IMacVirusRemoval() {
   return (
     <SubServicePageTemplate
-      seoTitle="iMac Virus & Malware Removal Dubai - Home Visit | 055 741 3706"
-      seoDescription="iMac virus and malware removal Dubai. Browser hijackers, suspicious profiles, deep clean. AED 300. Same day. Free home visit available."
+      seoTitle="iMac Virus Removal Dubai. Same-Day Malware Removal"
+      seoDescription="iMac virus removal in Dubai: we clear adware, browser hijackers, fake cleaners and rogue profiles, then verify with three scanners. Same day. WhatsApp us."
       path="/imac-virus-removal-dubai"
       eyebrow="iMac malware removal"
       h1="iMac Virus & Malware Removal Dubai"
@@ -15,17 +15,17 @@ export default function IMacVirusRemoval() {
       whatsappPrefill="Hi, my iMac may have malware - what's happening:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Virus Removal",       path: "/imac-virus-removal-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS deep cleaning and security" }}
-      serviceName="iMac Virus and Malware Removal"
+      serviceName="iMac Virus and Malware Removal Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If Safari keeps opening to a different search engine, pop-ups appear over websites, or you can't change the homepage - that's malware, not a broken Mac.</strong> macOS adware and browser hijackers are common, especially after downloading a 'free' converter or codec from a Google Ad result.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We clean it all out: malicious launch agents, configuration profiles installed without you realising, browser extensions you didn't add, modified DNS settings, and rogue applications hiding in /Library and ~/Library. After cleaning we run three different scanners - Malwarebytes, KnockKnock and our own checklist - to confirm a clean machine. We also walk you through how it got in so it doesn't happen again.
           </p>
         </>
@@ -44,7 +44,7 @@ export default function IMacVirusRemoval() {
         { title: "Browser deep clean",         body: "Safari, Chrome and Firefox: extensions, search engines, homepage, notifications, opened-tab persistence, all reset. Bookmarks and passwords preserved." },
         { title: "Triple scan and verify",     body: "Malwarebytes, KnockKnock and a manual file system check confirm zero remaining threats. You leave with a written all-clear." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day re-clean if the same malware comes back from the same source.",
         "We show you what we removed and how to avoid it.",
@@ -53,7 +53,7 @@ export default function IMacVirusRemoval() {
       faqs={[
         { q: "Do Macs really get viruses?", a: "True self-replicating viruses are rare on macOS. What's common is adware, browser hijackers, scareware and unwanted profiles - all of which can be just as disruptive. Yes, your iMac can be 'infected' in the practical sense." },
         { q: "Will I lose my files or photos?", a: "No. Cleaning is targeted at malware files only. Documents, Photos library, iCloud and bookmarks are never touched." },
-        { q: "Can you come to my home or office?", a: "Yes. iMacs are heavy and awkward to transport - free home visit anywhere in Dubai mainland for virus removal jobs." },
+        { q: "Can you come to my home or office?", a: "Yes, when a technician is free. iMacs are heavy and awkward to move, so a paid onsite visit often makes sense for virus removal. We quote the visit charge on WhatsApp before you book. Or bring the iMac to our Concord Tower workshop in Dubai Media City." },
         { q: "Do I need to buy antivirus afterwards?", a: "Almost never. Built-in macOS protections (XProtect, Gatekeeper, MRT) plus careful download habits are enough for most users. We don't sell antivirus subscriptions." },
         { q: "How did this happen?", a: "Usually a download from a search-ad result that pretended to be a real app installer (VLC, Flash Player, video converters). We'll show you the install date and the source so you can avoid it next time." },
         { q: "Is my online banking safe now?", a: "Once we've fully cleaned and verified, yes. We still recommend changing important passwords from a different trusted device after any malware infection - better safe than sorry." },

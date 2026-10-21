@@ -37,7 +37,7 @@ import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { NAP } from "@/content/site";
 import { SITE } from "@/lib/seo";
 import { speakable, itemList } from "@/lib/schema";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 /** SEO props passed straight to <SEOHead>. */
 export type LandingSeo = {
@@ -86,7 +86,7 @@ export type LandingReviews = {
   ctaLabel?: string;
 };
 
-/** A column of quick facts (opening hours, pickup, location, payment) - AI-citable. */
+/** A column of quick facts (opening hours, getting here, location, payment) - AI-citable. */
 export type LandingInfoColumn = { icon?: LucideIcon; title: string; lines: string[] };
 
 /** A related blog post / guide card. */
@@ -146,7 +146,7 @@ export type LandingTemplateProps = {
   linkHub?: { heading?: string; clusters: LinkHubCluster[] };
   /** Customer reviews + aggregate rating (social proof). Renders after case studies. */
   reviews?: LandingReviews;
-  /** Quick-facts columns (opening hours, pickup, location, payment) - the things people ask AI. */
+  /** Quick-facts columns (opening hours, getting here, location, payment) - the things people ask AI. */
   keyInfo?: { heading?: string; columns: LandingInfoColumn[] };
   /** Related blog posts / guides (renders a card grid before related services). */
   relatedPosts?: { heading?: string; posts: LandingPost[] };
@@ -197,7 +197,7 @@ function HeroCTA({
   return (
     <Button asChild variant={variant} size="lg">
       <a
-        href={cta.href}
+        href={withSlash(cta.href)}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {Icon && <Icon aria-hidden />}
@@ -237,7 +237,7 @@ export default function LandingTemplate({
   const speakableWebPage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    url: pagePath.startsWith("http") ? pagePath : SITE.url + pagePath,
+    url: pagePath.startsWith("http") ? pagePath : SITE.url + (pagePath === "/" ? "/" : pagePath.replace(/\/$/, "") + "/"),
     name: seo.title,
     description: seo.description,
     inLanguage: "en-AE",
@@ -276,15 +276,11 @@ export default function LandingTemplate({
       />
 
       {/* whole page sits on one continuous dark brand band */}
-      <div className="bg-primary text-on-primary">
+      <div className="bg-bg-alt text-text">
       {/* 1 - HERO (required) */}
-      <section data-hero-tone="dark" className="relative overflow-hidden bg-primary text-on-primary pt-[96px] pb-2xl md:pb-3xl">
-        {/* faint grid + soft radial accent glow behind the hero */}
+      <section data-hero-tone="light" className="relative overflow-hidden bg-bg-alt text-text pt-[96px] pb-2xl md:pb-3xl">
+        {/* faint grid behind the hero */}
         <div className="absolute inset-0 bg-grid-faint on-dark" aria-hidden />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-24 -left-16 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-3xl"
-        />
 
         <div
           className={cn(
@@ -300,13 +296,13 @@ export default function LandingTemplate({
               <Reveal
                 as="p"
                 delay={0}
-                className="mb-md inline-flex items-center rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-accent-bright"
+                className="mb-md inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-accent"
               >
                 {hero.badge}
               </Reveal>
             )}
 
-            <Reveal as="h1" delay={60} className="text-on-primary">
+            <Reveal as="h1" delay={60} className="text-text">
               {hero.title}
             </Reveal>
 
@@ -314,7 +310,7 @@ export default function LandingTemplate({
               <Reveal
                 as="p"
                 delay={140}
-                className="lt-speakable mt-md max-w-[60ch] text-[18px] leading-relaxed text-on-primary-muted"
+                className="lt-speakable mt-md max-w-[60ch] text-[18px] leading-relaxed text-text-muted"
               >
                 {hero.description}
               </Reveal>
@@ -332,7 +328,7 @@ export default function LandingTemplate({
                   return (
                     <span
                       key={i}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[13px] text-on-primary-muted"
+                      className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1.5 text-[13px] text-text-muted"
                     >
                       {Icon && (
                         <Icon size={15} className="text-white" aria-hidden />
@@ -362,7 +358,7 @@ export default function LandingTemplate({
       {features && (
         <FeatureGrid
           {...features}
-          className={cn("bg-white/[0.02] border-y border-white/10", features.className)}
+          className={cn("bg-bg-alt border-y border-border", features.className)}
         />
       )}
 
@@ -371,27 +367,27 @@ export default function LandingTemplate({
 
       {/* REVIEWS - social proof + aggregate rating */}
       {reviews && reviews.items.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20 bg-white/[0.02] border-y border-white/10">
+        <Reveal as="section" className="py-3xl lg:py-4xl bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6">
             <div className="mb-2xl flex flex-wrap items-end justify-between gap-md">
               <div>
-                <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+                <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
                   {reviews.heading ?? "What our customers say"}
                 </h2>
-                <p className="mt-sm flex items-center gap-2 text-[15px] text-on-primary-muted">
+                <p className="mt-sm flex items-center gap-2 text-[15px] text-text-muted">
                   <span className="flex" aria-hidden>
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} size={16} className="fill-star text-star" />
                     ))}
                   </span>
-                  <span className="font-semibold text-on-primary">{reviews.rating.toFixed(1)}</span>
+                  <span className="font-semibold text-text">{reviews.rating.toFixed(1)}</span>
                   <span>· {reviews.count}+ Google reviews</span>
                 </p>
               </div>
               {reviews.ctaHref && (
                 <Link
                   to={reviews.ctaHref}
-                  className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-accent-bright hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                  className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-accent hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   {reviews.ctaLabel ?? `Read all ${reviews.count}+ reviews`}
                   <ArrowRight size={15} aria-hidden />
@@ -400,17 +396,17 @@ export default function LandingTemplate({
             </div>
             <div className="grid gap-md md:grid-cols-3">
               {reviews.items.map((r, i) => (
-                <figure key={i} className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg">
-                  <div className="flex" aria-label={`${r.rating} out of 5 stars`}>
+                <figure key={i} className="flex flex-col rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
+                  <div className="flex" role="img" aria-label={`${r.rating} out of 5 stars`}>
                     {Array.from({ length: 5 }).map((_, s) => (
                       <Star key={s} size={15} aria-hidden className={s < r.rating ? "fill-star text-star" : "text-white/20"} />
                     ))}
                   </div>
-                  <blockquote className="mt-md flex-1 text-[15px] leading-relaxed text-on-primary-muted">
+                  <blockquote className="mt-md flex-1 text-[15px] leading-relaxed text-text-muted">
                     {r.text}
                   </blockquote>
-                  <figcaption className="mt-md text-[13px] text-on-primary-faint">
-                    <span className="font-semibold text-on-primary">{r.name}</span> · {r.date}
+                  <figcaption className="mt-md text-[13px] text-text-faint">
+                    <span className="font-semibold text-text">{r.name}</span>{r.date ? ` · ${r.date}` : ""}
                   </figcaption>
                 </figure>
               ))}
@@ -424,7 +420,7 @@ export default function LandingTemplate({
         <Reveal
           as="section"
           className={cn(
-            "py-14 lg:py-20 bg-white/[0.02] border-y border-white/10",
+            "py-3xl lg:py-4xl bg-bg-alt border-y border-border",
             methodology.className,
           )}
         >
@@ -432,12 +428,12 @@ export default function LandingTemplate({
             {(methodology.heading || methodology.subheading) && (
               <div className="mb-2xl max-w-[680px]">
                 {methodology.heading && (
-                  <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+                  <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
                     {methodology.heading}
                   </h2>
                 )}
                 {methodology.subheading && (
-                  <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-on-primary-muted">
+                  <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-text-muted">
                     {methodology.subheading}
                   </p>
                 )}
@@ -449,7 +445,7 @@ export default function LandingTemplate({
                   as="li"
                   key={i}
                   delay={(i % 4) * 70}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg"
+                  className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg"
                 >
                   <span
                     aria-hidden
@@ -457,8 +453,8 @@ export default function LandingTemplate({
                   >
                     {i + 1}
                   </span>
-                  <h3 className="mt-md font-semibold text-[16px] text-on-primary">{s.title}</h3>
-                  <p className="mt-1 text-[14px] leading-relaxed text-on-primary-muted">{s.body}</p>
+                  <h3 className="mt-md font-semibold text-[16px] text-text">{s.title}</h3>
+                  <p className="mt-1 text-[14px] leading-relaxed text-text-muted">{s.body}</p>
                 </Reveal>
               ))}
             </ol>
@@ -466,25 +462,25 @@ export default function LandingTemplate({
         </Reveal>
       )}
 
-      {/* KEY INFO - hours, pickup, location, payment (high-intent, AI-citable facts) */}
+      {/* KEY INFO - hours, getting here, location, payment (high-intent, AI-citable facts) */}
       {keyInfo && keyInfo.columns.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20">
+        <Reveal as="section" className="py-3xl lg:py-4xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="mb-2xl text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
-              {keyInfo.heading ?? "Hours, pickup & location"}
+            <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
+              {keyInfo.heading ?? "Hours, getting here & location"}
             </h2>
             <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
               {keyInfo.columns.map((col, i) => {
                 const Icon = col.icon;
                 return (
-                  <div key={i} className="rounded-2xl border border-white/10 bg-white/[0.04] p-lg">
+                  <div key={i} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
                     {Icon && (
-                      <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] text-accent-bright">
+                      <span className="mb-md inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
                         <Icon size={22} aria-hidden />
                       </span>
                     )}
-                    <h3 className="text-[16px] font-bold text-on-primary">{col.title}</h3>
-                    <ul className="mt-sm space-y-1.5 text-[14px] leading-relaxed text-on-primary-muted">
+                    <h3 className="text-[16px] font-bold text-text">{col.title}</h3>
+                    <ul className="mt-sm space-y-1.5 text-[14px] leading-relaxed text-text-muted">
                       {col.lines.map((line, li) => (
                         <li key={li}>{line}</li>
                       ))}
@@ -502,14 +498,14 @@ export default function LandingTemplate({
 
       {/* MODELS WE SERVICE - which devices this service covers (links to model pages) + ItemList schema */}
       {models && models.clusters.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20 bg-white/[0.02] border-y border-white/10">
+        <Reveal as="section" className="py-3xl lg:py-4xl bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6">
             <div className="mb-2xl max-w-[760px]">
-              <h2 className="text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+              <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
                 {models.heading ?? "MacBook models we service"}
               </h2>
               {models.description && (
-                <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-on-primary-muted">
+                <p className="mt-sm text-[16px] md:text-[18px] leading-relaxed text-text-muted">
                   {models.description}
                 </p>
               )}
@@ -517,7 +513,7 @@ export default function LandingTemplate({
             <div className="grid gap-xl sm:grid-cols-2 lg:grid-cols-3">
               {models.clusters.map((cluster) => (
                 <div key={cluster.heading}>
-                  <h3 className="mb-md text-[12px] font-bold uppercase tracking-[0.14em] text-accent-bright">
+                  <h3 className="mb-md mono text-[12px] uppercase tracking-wider text-accent">
                     {cluster.heading}
                   </h3>
                   <ul className="flex flex-wrap gap-2">
@@ -526,7 +522,7 @@ export default function LandingTemplate({
                         <Link
                           to={m.href}
                           title={m.note}
-                          className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[13.5px] text-on-primary-muted transition-colors hover:border-accent-bright/50 hover:bg-white/[0.08] hover:text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                          className="inline-flex items-center rounded-full border border-border/70 bg-bg-card ring-1 ring-black/[0.03] px-3 py-1.5 text-[13.5px] text-text-muted transition-colors hover:border-accent/50 hover:bg-bg-alt hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         >
                           {m.label}
                         </Link>
@@ -542,21 +538,21 @@ export default function LandingTemplate({
 
       {/* 7 - FAQ (dark accordion, injects FAQPage schema) */}
       {faqs && faqs.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20 bg-white/[0.02] border-y border-white/10">
+        <Reveal as="section" className="py-3xl lg:py-4xl bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="mb-2xl text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+            <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
               Frequently asked questions
             </h2>
-            <FAQAccordion items={faqs} injectSchema tone="dark" />
+            <FAQAccordion items={faqs} injectSchema />
           </div>
         </Reveal>
       )}
 
       {/* Related posts - blog/guide cards (topical authority + internal links) */}
       {relatedPosts && relatedPosts.posts.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20">
+        <Reveal as="section" className="py-3xl lg:py-4xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="mb-2xl text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+            <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
               {relatedPosts.heading ?? "From our blog"}
             </h2>
             <div className="grid gap-md md:grid-cols-3">
@@ -564,18 +560,18 @@ export default function LandingTemplate({
                 <Link
                   key={p.href}
                   to={p.href}
-                  className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-colors duration-200 hover:border-accent-bright/40 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                  className="group flex flex-col rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-colors duration-200 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   {p.meta && (
-                    <span className="text-[12px] font-semibold uppercase tracking-wide text-accent-bright">{p.meta}</span>
+                    <span className="mono text-[12px] uppercase tracking-wider text-accent">{p.meta}</span>
                   )}
-                  <h3 className="mt-1 text-[16px] font-bold leading-snug text-on-primary group-hover:text-accent-bright">
+                  <h3 className="mt-1 text-[16px] font-bold leading-snug text-text group-hover:text-accent">
                     {p.title}
                   </h3>
                   {p.excerpt && (
-                    <p className="mt-sm flex-1 text-[13.5px] leading-relaxed text-on-primary-muted">{p.excerpt}</p>
+                    <p className="mt-sm flex-1 text-[13.5px] leading-relaxed text-text-muted">{p.excerpt}</p>
                   )}
-                  <span className="mt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent-bright">
+                  <span className="mt-md inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">
                     Read guide <ArrowRight size={14} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </Link>
@@ -587,9 +583,9 @@ export default function LandingTemplate({
 
       {/* Related services - internal entity links (GEO topic-cluster signal) */}
       {relatedServices && relatedServices.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20">
+        <Reveal as="section" className="py-3xl lg:py-4xl">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="mb-2xl text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+            <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
               Related repairs at MacBook Repair Dubai
             </h2>
             <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
@@ -597,14 +593,14 @@ export default function LandingTemplate({
                 <Link
                   key={r.href}
                   to={r.href}
-                  className="group flex items-center justify-between gap-md rounded-2xl border border-white/10 bg-white/[0.04] p-lg transition-colors duration-200 hover:border-accent-bright/40 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                  className="group flex items-center justify-between gap-md rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg transition-colors duration-200 hover:border-accent/40 hover:bg-bg-alt focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <span className="min-w-0">
-                    <span className="block text-[16px] font-semibold text-on-primary group-hover:text-accent-bright">
+                    <span className="block text-[16px] font-semibold text-text group-hover:text-accent">
                       {r.label}
                     </span>
                     {r.description && (
-                      <span className="mt-1 block text-[13.5px] leading-relaxed text-on-primary-muted">
+                      <span className="mt-1 block text-[13.5px] leading-relaxed text-text-muted">
                         {r.description}
                       </span>
                     )}
@@ -612,7 +608,7 @@ export default function LandingTemplate({
                   <ArrowRight
                     size={18}
                     aria-hidden
-                    className="shrink-0 text-accent-bright transition-transform group-hover:translate-x-0.5"
+                    className="shrink-0 text-accent transition-transform group-hover:translate-x-0.5"
                   />
                 </Link>
               ))}
@@ -623,15 +619,15 @@ export default function LandingTemplate({
 
       {/* Link hub - multi-cluster internal navigation (services / models / areas / guides) */}
       {linkHub && linkHub.clusters.length > 0 && (
-        <Reveal as="section" className="py-14 lg:py-20 bg-white/[0.02] border-y border-white/10">
+        <Reveal as="section" className="py-3xl lg:py-4xl bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6">
-            <h2 className="mb-2xl text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+            <h2 className="mb-2xl text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
               {linkHub.heading ?? "Explore more across MacBook Repair Dubai"}
             </h2>
             <div className="grid gap-xl sm:grid-cols-2 lg:grid-cols-4">
               {linkHub.clusters.map((cluster) => (
                 <nav key={cluster.heading} aria-label={cluster.heading}>
-                  <h3 className="mb-md text-[12px] font-bold uppercase tracking-[0.14em] text-accent-bright">
+                  <h3 className="mb-md mono text-[12px] uppercase tracking-wider text-accent">
                     {cluster.heading}
                   </h3>
                   <ul className="space-y-2">
@@ -639,9 +635,9 @@ export default function LandingTemplate({
                       <li key={l.href}>
                         <Link
                           to={l.href}
-                          className="inline-flex items-center gap-1.5 text-[14.5px] text-on-primary-muted transition-colors hover:text-accent-bright rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright"
+                          className="inline-flex items-center gap-1.5 text-[14.5px] text-text-muted transition-colors hover:text-accent rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         >
-                          <ArrowRight size={13} aria-hidden className="shrink-0 text-on-primary-faint" />
+                          <ArrowRight size={13} aria-hidden className="shrink-0 text-text-faint" />
                           {l.label}
                         </Link>
                       </li>
@@ -661,7 +657,7 @@ export default function LandingTemplate({
         <FinalCTA
           eyebrow="Free diagnosis"
           headline="Book your Apple repair in Dubai today"
-          description="Send your model and a photo of the issue on WhatsApp for a free quote. Free pickup across Dubai mainland, 90-day written warranty."
+          description="Send your model and a photo of the issue on WhatsApp for a free quote, then walk in to our Media City workshop. Written warranty of 15 days to 2 years."
           primary={DEFAULT_PRIMARY}
           secondary={DEFAULT_SECONDARY}
         />

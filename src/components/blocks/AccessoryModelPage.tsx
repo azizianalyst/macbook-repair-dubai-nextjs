@@ -4,7 +4,9 @@
 //
 // Usage: <AccessoryModelPage slug="ipod-touch-7-repair-dubai" />
 import { Link } from "@/lib/router-compat";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
 import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
+import { relatedModels } from "@/lib/model-siblings";
 import accessoryModels from "@/content/ipod-models.json";
 
 type Pricing = {
@@ -41,7 +43,7 @@ const CATEGORY_LABEL: Record<Model["category"], string> = {
 };
 
 const CATEGORY_HUB: Record<Model["category"], string> = {
-  ipod: "/", // no dedicated iPod hub - link home
+  ipod: "/iphone-repair-dubai", // iPod touch 7 = A10/Lightning/iOS - siblings live on the iPhone hub
 };
 
 const REVIEWERS = [
@@ -64,9 +66,7 @@ function pickReviewers(slug: string): string[] {
 }
 
 function pickRelated(slug: string): Model[] {
-  const me = ALL_MODELS.find((m) => m.slug === slug);
-  if (!me) return [];
-  return ALL_MODELS.filter((m) => m.slug !== slug).slice(0, 4);
+  return relatedModels(slug, ALL_MODELS, (m) => m.category);
 }
 
 type ServiceRow = { service: string; price: number | string; href: string; timeline: string };
@@ -75,10 +75,10 @@ function buildServiceRows(m: Model): ServiceRow[] {
   const p = m.pricing;
   const rows: ServiceRow[] = [];
 
-  if (p.battery)    rows.push({ service: "Battery replacement", price: p.battery, href: "/", timeline: "Same-day" });
-  if (p.screen)     rows.push({ service: "Screen / digitiser replacement", price: p.screen, href: "/", timeline: "1-2 days" });
-  if (p.homeButton) rows.push({ service: "Home button repair", price: p.homeButton, href: "/", timeline: "Same-day" });
-  if (p.port)       rows.push({ service: "Lightning port repair", price: p.port, href: "/", timeline: "Same-day" });
+  if (p.battery)    rows.push({ service: "Battery replacement", price: "Price on request", href: "/", timeline: "Same-day" });
+  if (p.screen)     rows.push({ service: "Screen / digitiser replacement", price: "Price on request", href: "/", timeline: "1-2 days" });
+  if (p.homeButton) rows.push({ service: "Home button repair", price: "Price on request", href: "/", timeline: "Same-day" });
+  if (p.port)       rows.push({ service: "Lightning port repair", price: "Price on request", href: "/", timeline: "Same-day" });
 
   rows.push({
     service: "Free diagnostic",
@@ -102,7 +102,7 @@ function startingPriceFor(m: Model): number {
 function verdictFor(m: Model): { headline: string; body: string } {
   return {
     headline: "Yes - for sentimental, kids, or music-only use",
-    body: `Discontinued in 2022, stuck on iOS 15, no app updates. But for kids' first device, a music-only player, or a beloved old gadget you want kept alive - battery (AED ${m.pricing.battery ?? 250}) and screen (AED ${m.pricing.screen ?? 300}) repairs absolutely make sense.`,
+    body: `Discontinued in 2022, stuck on iOS 15, no app updates. But for kids' first device, a music-only player, or a beloved old gadget you want kept alive - battery and screen repairs absolutely make sense. Message us on WhatsApp for today's exact price on your model.`,
   };
 }
 
@@ -114,7 +114,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
         <h1 className="text-[28px]">Model not found</h1>
         <p className="mt-md">
           We don&apos;t have a page for <code>{slug}</code> yet.{" "}
-          <Link to="/" className="text-accent-bright font-semibold hover:underline">Back to home →</Link>
+          <Link to="/" className="text-accent font-semibold hover:underline">Back to home →</Link>
         </p>
       </div>
     );
@@ -128,7 +128,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
   const faqs: { q: string; a: string }[] = [
     {
       q: `How much does ${model.name} repair cost in Dubai?`,
-      a: `Most ${model.name} repairs start at AED ${startingPrice}. Battery AED ${model.pricing.battery}, screen AED ${model.pricing.screen}, home button AED ${model.pricing.homeButton}. 90-day written warranty on every repair.`,
+      a: `We repair the battery, screen and home button on the ${model.name} - message us on WhatsApp with your model and we'll send today's exact price in about 4 minutes. Written warranty of 15 days to 2 years, depending on the repair.`,
     },
     {
       q: `Will iOS 15 keep my iPod Touch 7 useful?`,
@@ -144,18 +144,18 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
     },
     {
       q: `Where can I get my ${model.name} repaired in Dubai?`,
-      a: `Bring it to our workshop in Dubai Media City, or use our free pickup service across Dubai mainland. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. 90-day written warranty on every job.`,
+      a: `Walk in to our workshop in Concord Tower, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site, or send it by a same-day courier you book. WhatsApp the model and a photo of the issue and we'll quote you within 4 minutes. Written warranty of 15 days to 2 years, depending on the repair.`,
     },
   ];
 
   return (
     <SubServicePageTemplate
-      seoTitle={`${model.name} Repair Dubai - From AED ${startingPrice}`}
-      seoDescription={`${model.name} repair Dubai. Battery, screen, home button, port. From AED ${startingPrice}. Free pickup, free diagnostic, 90-day warranty.`}
+      seoTitle={`${model.name} Repair Dubai - Free Diagnostic, 15-Day to 2-Year Warranty`}
+      seoDescription={`${model.name} repair Dubai - battery, screen, home button and port. Message us on WhatsApp for today's price. Walk-in workshop, free diagnostic, warranty of 15 days to 2 years.`}
       path={`/${model.slug}`}
       eyebrow={`${CATEGORY_LABEL[model.category]} · ${model.releaseYear}${model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}`}
-      h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, 90-Day Warranty`}
-      subtitle={`From AED ${startingPrice}. Free diagnostic. We'll tell you honestly when repair makes sense - and when it doesn't.`}
+      h1={`${model.name} Repair Dubai - Honest Diagnostic, Fixed Prices, 15-Day to 2-Year Warranty`}
+      subtitle={`Free diagnostic. Message us on WhatsApp for today's price. We'll tell you honestly when repair makes sense - and when it doesn't.`}
       startingPrice={startingPrice}
       timeline="Same-day to 5 days depending on the job"
       whatsappPrefill={`Hi, I have a ${model.name} and I need help with:`}
@@ -164,7 +164,7 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
         { name: `${CATEGORY_LABEL[model.category]} Repair`,    path: CATEGORY_HUB[model.category] },
         { name: model.name,                                   path: `/${model.slug}` },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: `${CATEGORY_LABEL[model.category]} board-level repair, battery service & sealed-device reassembly` }}
+      technician={{ name: "Shafiq", years: 15, specialisation: `${CATEGORY_LABEL[model.category]} board-level repair, battery service & sealed-device reassembly` }}
       serviceName={`${model.name} Repair`}
       intro={
         <>
@@ -175,57 +175,57 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
               : model.discontinued
                 ? `Apple discontinued it in ${model.discontinued} but it's serviceable.`
                 : `It's no longer sold by Apple but parts and expertise are still available.`}
-            {" "}From AED {startingPrice} for the most common service. Free pickup, 90-day written warranty.
+            {" "}Message us on WhatsApp for today's price on the most common service. Walk in at Media City, written warranty of 15 days to 2 years.
           </p>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">About the {model.name}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md mt-lg">About the {model.name}</h2>
           <ul className="space-y-1 text-[15px] mb-lg">
             <li>• <strong>Released:</strong> {model.releaseYear}{model.currentInLineup ? " · current Apple lineup" : model.discontinued ? ` · discontinued ${model.discontinued}` : ""}</li>
             <li>• <strong>Chip:</strong> {model.chip}</li>
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Headline features</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Headline features</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.headlineFeatures.map((f, i) => (
               <li key={i}>• {f}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Common problems we see on the {model.shortName}</h2>
+          <h2 className="text-[28px] md:text-[32px] mb-md">Common problems we see on the {model.shortName}</h2>
           <ul className="space-y-2 text-[15px] mb-lg">
             {model.commonIssues.map((issue, i) => (
               <li key={i}>• {issue}</li>
             ))}
           </ul>
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Services available for the {model.shortName}</h2>
-          <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.04] mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Services available for the {model.shortName}</h2>
+          <ScrollHintTable className="border border-border rounded-md bg-bg-card mb-lg" fadeClass="from-bg-card">
             <table className="w-full text-[14px] min-w-[560px]">
-              <thead className="bg-white/[0.04]">
+              <thead className="bg-bg-card">
                 <tr className="text-left">
                   <th className="px-md py-sm font-semibold">Service</th>
-                  <th className="px-md py-sm font-semibold">Price (AED)</th>
+                  <th className="px-md py-sm font-semibold">Price</th>
                   <th className="px-md py-sm font-semibold">Timeline</th>
                   <th className="px-md py-sm font-semibold">Book</th>
                 </tr>
               </thead>
               <tbody>
                 {serviceRows.map((row, i) => (
-                  <tr key={i} className={i % 2 === 1 ? "bg-white/[0.02]" : ""}>
+                  <tr key={i} className={i % 2 === 1 ? "bg-bg-alt" : ""}>
                     <td className="px-md py-sm">{row.service}</td>
                     <td className="px-md py-sm">{row.price}</td>
                     <td className="px-md py-sm">{row.timeline}</td>
                     <td className="px-md py-sm">
-                      <Link to={row.href} className="text-accent-bright font-semibold hover:underline">Book →</Link>
+                      <Link to={row.href} className="text-accent font-semibold hover:underline">Book →</Link>
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollHintTable>
 
           {model.appleServiceProgram && (
-            <div className="bg-white/[0.04] border-l-4 border-primary rounded-md p-lg mb-lg">
+            <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
               <h3 className="text-[18px] font-bold mb-sm">Apple Service Program - check eligibility first</h3>
               <p className="text-[15px]">
                 {model.appleServiceProgram} <strong>If yours qualifies, Apple does the repair for free.</strong> We&apos;ll check eligibility for you free of charge - if you qualify, we send you straight to Apple. If you don&apos;t, we do the repair.
@@ -233,24 +233,24 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
             </div>
           )}
 
-          <h2 className="text-[24px] md:text-[28px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
-          <div className="bg-white/[0.04] border-l-4 border-primary rounded-md p-lg mb-lg">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Is the {model.shortName} still worth repairing in 2026?</h2>
+          <div className="bg-bg-card border-l-4 border-primary rounded-md p-lg mb-lg">
             <p className="text-[16px] font-semibold mb-sm">{verdict.headline}</p>
             <p className="text-[15px]">{verdict.body}</p>
           </div>
 
           {related.length > 0 && (
             <>
-              <h2 className="text-[24px] md:text-[28px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
+              <h2 className="text-[28px] md:text-[32px] mb-md">Other {CATEGORY_LABEL[model.category]} models we repair</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-sm mb-lg">
                 {related.map((r) => (
                   <Link
                     key={r.slug}
                     to={`/${r.slug}`}
-                    className="border border-white/10 rounded-md p-sm bg-white/[0.04] hover:border-primary text-[13px] transition-colors"
+                    className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors"
                   >
                     <div className="font-semibold">{r.name}</div>
-                    <div className="text-on-primary-muted text-[12px] mt-[2px]">{r.releaseYear} · {r.chip}</div>
+                    <div className="text-text-muted text-[12px] mt-[2px]">{r.releaseYear} · {r.chip}</div>
                   </Link>
                 ))}
               </div>
@@ -270,12 +270,14 @@ export default function AccessoryModelPage({ slug }: { slug: string }) {
       ]}
       steps={[
         { title: "WhatsApp the model and issue", body: `Send "${model.name}" plus a photo of the problem. Quote in 4 minutes.` },
-        { title: "Free pickup or visit our Media City workshop", body: "Free pickup across Dubai mainland. Or drop in 9am-10pm." },
+        { title: "Walk in to our Media City workshop", body: "Open Mon-Sat 9am-7pm, Friday break 12-2pm. Can't come in? Send it by a same-day courier you book." },
         { title: "Free diagnostic, fixed price",  body: "We diagnose for free and confirm the price before any work starts. We'll also tell you when replacement is the smarter call." },
-        { title: "Repair + 90-day warranty",      body: "Same-day to 5 days for most repairs. You walk out with a written 90-day warranty." },
+        { title: "Repair + written warranty",      body: "Same-day to 5 days for most repairs. You walk out with a written warranty of 15 days to 2 years, depending on the repair." },
       ]}
-      warrantyDays={90}
+      warrantyDays={730}
+      warrantyHeadline
       warrantyBullets={[
+        "Batteries: 3 months; screens: 90 days; other parts: 15 days to 2 years",
         "Covers the replaced part and the labour",
         "Same fault returns? We re-repair free",
         "Issued in writing on your invoice",

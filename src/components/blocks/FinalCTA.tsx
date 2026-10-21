@@ -2,7 +2,7 @@
 import { Link } from "@/lib/router-compat";
 import { Reveal } from "@/components/blocks/Reveal";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 export type FinalCTAProps = {
   eyebrow?: string;
@@ -29,7 +29,7 @@ function CTALink({
   return (
     <Button asChild size="lg" variant={variant}>
       {isExternal(href) ? (
-        <a href={href} target="_blank" rel="noopener noreferrer">
+        <a href={withSlash(href)} target="_blank" rel="noopener noreferrer">
           {label}
         </a>
       ) : (
@@ -40,7 +40,7 @@ function CTALink({
 }
 
 /**
- * Gradient closing CTA panel. Dark brand band (bg-primary) with an accent
+ * Gradient closing CTA panel. Dark brand band (bg-bg-alt) with an accent
  * gradient overlay, rounded-3xl, centered, two buttons. SSR-safe.
  */
 export default function FinalCTA({
@@ -52,7 +52,7 @@ export default function FinalCTA({
   className,
 }: FinalCTAProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent to-accent-2 px-6 py-2xl text-center shadow-lg md:px-2xl md:py-3xl">
           <div
@@ -61,7 +61,7 @@ export default function FinalCTA({
           />
           <div className="relative mx-auto flex max-w-[640px] flex-col items-center">
             {eyebrow && (
-              <span className="mb-sm text-[13px] font-semibold uppercase tracking-wide text-white/80">
+              <span className="mono mb-sm text-[12px] uppercase tracking-wider text-white/80">
                 {eyebrow}
               </span>
             )}

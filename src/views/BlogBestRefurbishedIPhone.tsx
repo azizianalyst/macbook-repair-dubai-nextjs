@@ -9,10 +9,23 @@ export default function BlogBestRefurbishedIPhone() {
       seoTitle="Best Refurbished iPhone in Dubai 2026: Honest Picks"
       seoDescription="Best refurbished iPhone for Dubai 2026: iPhone 11 budget, 13/14 sweet spot, 15 Pro premium. Where to buy, what to check and the iCloud-lock warnings to know."
       path="/blog/best-refurbished-iphone-dubai"
+      wide
+      toc={[
+        { id: "three-picks", label: "Three picks at three prices" },
+        { id: "budget-11-12", label: "Budget: iPhone 11 / 12" },
+        { id: "sweet-spot-13-14", label: "Sweet spot: iPhone 13 / 14" },
+        { id: "premium-15-pro", label: "Premium: iPhone 15 Pro" },
+        { id: "what-refurbished-means", label: "What refurbished means" },
+        { id: "where-to-buy", label: "Where to buy in Dubai" },
+        { id: "what-to-check", label: "What to check before buying" },
+        { id: "battery-health", label: "Battery health expectations" },
+        { id: "warranty", label: "Warranty expectations" },
+        { id: "icloud-lock", label: "iCloud lock scam" },
+      ]}
       category="Buying guide · iPhone"
       h1="Best Refurbished iPhone Dubai 2026"
       hook="iPhone 13/14 are the sweet spot. iPhone 11 is the budget king. Here's why."
-      quickAnswer="Best budget refurbished iPhone Dubai 2026: iPhone 11 64GB at AED 950-1,100, still strong on iOS 26. Best value: iPhone 13 128GB at AED 1,800-2,000 with a new battery. Best premium: iPhone 15 Pro 256GB at AED 3,200-3,600. Always check the IMEI for iCloud lock and battery health above 85% before buying."
+      quickAnswer="Best budget refurbished iPhone Dubai 2026: iPhone 11 64GB, still strong on iOS 26. Best value: iPhone 13 128GB with a new battery. Best premium: iPhone 15 Pro 256GB. Always check the IMEI for iCloud lock and battery health above 85% before buying, and message us on WhatsApp for today's exact prices."
       author={{ name: "Usman", role: "iPhone repair specialist" }}
       datePublished="2026-04-25"
       dateModified="2026-04-25"
@@ -20,61 +33,61 @@ export default function BlogBestRefurbishedIPhone() {
       featuredImageAlt="Best refurbished iPhone Dubai 2026 buying guide"
       body={
         <>
-          <h2>Three refurbished picks at three prices</h2>
+          <h2 id="three-picks">Best Refurbished iPhone Dubai. Three refurbished picks at three prices</h2>
           <BlogPriceTable
             caption="Best refurbished iPhone Dubai - April 2026"
-            headers={["Tier", "Model", "Price (AED)", "Best for"]}
+            headers={["Tier", "Model", "Price", "Best for"]}
             rows={[
-              { model: "Budget", ours: "iPhone 11 / 12 64GB", apple: "AED 950 - 1,400", note: "Second phone, parents, kids" },
-              { model: "Sweet spot", ours: "iPhone 13 / 14 128GB", apple: "AED 1,800 - 2,400", note: "Daily driver for most users" },
-              { model: "Premium refurb", ours: "iPhone 15 Pro 256GB", apple: "AED 3,200 - 3,600", note: "Power users on a budget" },
+              { model: "Budget", ours: "iPhone 11 / 12 64GB", apple: "Price on request", note: "Second phone, parents, kids" },
+              { model: "Sweet spot", ours: "iPhone 13 / 14 128GB", apple: "Price on request", note: "Daily driver for most users" },
+              { model: "Premium refurb", ours: "iPhone 15 Pro 256GB", apple: "Price on request", note: "Power users on a budget" },
             ]}
           />
 
-          <h2>Budget - iPhone 11 / 12 (still capable in 2026)</h2>
+          <h2 id="budget-11-12">Budget - iPhone 11 / 12 (still capable in 2026)</h2>
           <p>
             iPhone 11 (Sept 2019) and iPhone 12 (Oct 2020) both still get iOS 26 updates in 2026. They
             handle WhatsApp, Instagram, banking apps, Zoom, Apple Pay, navigation - every daily task -
             without complaint.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iPhone 11 64GB:</strong> AED 950-1,100. A13 chip, dual cameras, no MagSafe, 6.1″ LCD.</li>
-            <li><strong>iPhone 11 128GB:</strong> AED 1,100-1,300. Better storage value.</li>
-            <li><strong>iPhone 12 64GB:</strong> AED 1,200-1,400. A14 chip, MagSafe, OLED, 5G.</li>
-            <li><strong>iPhone 12 mini:</strong> AED 1,000-1,200. Same chip, smaller body - niche but loved by small-hand users.</li>
+            <li><strong>iPhone 11 64GB:</strong> A13 chip, dual cameras, no MagSafe, 6.1″ LCD. Message us for today's price.</li>
+            <li><strong>iPhone 11 128GB:</strong> Better storage value.</li>
+            <li><strong>iPhone 12 64GB:</strong> A14 chip, MagSafe, OLED, 5G.</li>
+            <li><strong>iPhone 12 mini:</strong> Same chip, smaller body - niche but loved by small-hand users.</li>
             <li><strong>Battery:</strong> Insist on a unit with battery health above 85% or a fresh OEM-equivalent battery installed.</li>
           </ul>
 
-          <h2>Sweet spot - iPhone 13 / 14 (the value champions)</h2>
+          <h2 id="sweet-spot-13-14">Sweet spot - iPhone 13 / 14 (the value champions)</h2>
           <p>
-            If you're spending AED 2,000 on a refurb, the iPhone 13 and iPhone 14 give you 95% of a new
-            iPhone 16 experience for 50% of the price.
+            If you're spending mid-range money on a refurb, the iPhone 13 and iPhone 14 give you 95% of a
+            new iPhone 16 experience for a fraction of the price.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iPhone 13 128GB:</strong> AED 1,800-2,000. A15 chip, dual 12MP cameras, 6.1″ OLED, MagSafe, IP68.</li>
-            <li><strong>iPhone 13 mini 128GB:</strong> AED 1,600-1,800. Small but mighty - discontinued, so stock dwindling.</li>
-            <li><strong>iPhone 14 128GB:</strong> AED 2,200-2,400. Same A15 as 13, slightly better cameras, Crash Detection, Emergency SOS via satellite.</li>
-            <li><strong>iPhone 14 Plus:</strong> AED 2,500-2,800. Big screen + huge battery (28-hour video).</li>
+            <li><strong>iPhone 13 128GB:</strong> A15 chip, dual 12MP cameras, 6.1″ OLED, MagSafe, IP68.</li>
+            <li><strong>iPhone 13 mini 128GB:</strong> Small but mighty - discontinued, so stock dwindling.</li>
+            <li><strong>iPhone 14 128GB:</strong> Same A15 as 13, slightly better cameras, Crash Detection, Emergency SOS via satellite.</li>
+            <li><strong>iPhone 14 Plus:</strong> Big screen + huge battery (28-hour video).</li>
             <li><strong>iOS support:</strong> Both will get iOS 27 (2026), iOS 28 (2027), likely iOS 29 (2028). Easily 4-5 years more useful life.</li>
             <li><strong>Apple Intelligence?</strong> No - Apple Intelligence requires A17 Pro or later. Not on 13 or 14.</li>
           </ul>
 
-          <h2>Premium refurb - iPhone 15 Pro</h2>
+          <h2 id="premium-15-pro">Premium refurb - iPhone 15 Pro</h2>
           <p>
-            The iPhone 15 Pro at AED 3,200-3,600 (256GB) gets you the first iPhone with USB-C, titanium
-            chassis, A17 Pro chip, and crucially Apple Intelligence support. Compared to a new iPhone 17
-            (AED 3,799), you save AED 200-600 and lose only the latest cameras and a slight battery
-            improvement.
+            The iPhone 15 Pro (256GB) gets you the first iPhone with USB-C, titanium chassis, A17 Pro chip,
+            and crucially Apple Intelligence support. Compared to a new iPhone 17 you save a meaningful
+            amount and lose only the latest cameras and a slight battery improvement. Message us for the
+            current refurb price.
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>iPhone 15 Pro 128GB:</strong> AED 2,900-3,200. Skippable - bump to 256GB for AED 300 more.</li>
-            <li><strong>iPhone 15 Pro 256GB:</strong> AED 3,200-3,600. The buy.</li>
-            <li><strong>iPhone 15 Pro Max 256GB:</strong> AED 3,800-4,200. 5× telephoto, larger battery, bigger screen.</li>
+            <li><strong>iPhone 15 Pro 128GB:</strong> Skippable - the small upgrade to 256GB is usually worth it.</li>
+            <li><strong>iPhone 15 Pro 256GB:</strong> The buy.</li>
+            <li><strong>iPhone 15 Pro Max 256GB:</strong> 5× telephoto, larger battery, bigger screen.</li>
             <li><strong>Apple Intelligence:</strong> Yes - full support for Genmoji, Image Playground, Writing Tools.</li>
             <li><strong>Common issue:</strong> Some 15 Pro units overheat under sustained heavy load - Apple fixed in iOS 17.0.3. Verify the unit isn't an early-batch problem unit.</li>
           </ul>
 
-          <h2>What "refurbished" actually means</h2>
+          <h2 id="what-refurbished-means">What "refurbished" actually means</h2>
           <p>
             The word "refurbished" is unregulated in UAE. It can mean three very different things:
           </p>
@@ -84,20 +97,20 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Box refurbished (eBay / Dubizzle):</strong> Cleaned, repackaged, possibly with an aftermarket screen and unknown battery. No warranty. Avoid.</li>
           </ul>
 
-          <h2>Where to buy in Dubai</h2>
+          <h2 id="where-to-buy">Where to buy in Dubai</h2>
           <BlogPriceTable
             caption="Refurbished iPhone - where to buy in Dubai"
             headers={["Source", "Pros", "Cons", "Risk"]}
             rows={[
-              { model: "Apple UAE refurb store", ours: "1-year warranty, new battery, original packaging", apple: "Limited stock, AED 200-400 more than market", note: "Lowest" },
+              { model: "Apple UAE refurb store", ours: "1-year warranty, new battery, original packaging", apple: "Limited stock, priced above the open market", note: "Lowest" },
               { model: "Carrefour / Sharaf DG", ours: "Trusted retailer, easy returns", apple: "Selection limited, prices similar to new", note: "Low" },
-              { model: "Us (workshop refurb)", ours: "Tested, battery replaced, 6-month warranty, free pickup", apple: "Stock varies", note: "Low" },
+              { model: "Us (workshop refurb)", ours: "Tested, battery replaced, 6-month warranty, walk-in workshop", apple: "Stock varies", note: "Low" },
               { model: "Dubizzle / private", ours: "Cheapest", apple: "No warranty, iCloud-lock risk, battery unknown, stolen-device risk", note: "High" },
               { model: "WhatsApp resellers", ours: "Sometimes good prices", apple: "Most are box-refurbs, no warranty", note: "Very high" },
             ]}
           />
 
-          <h2>What to check before buying refurb</h2>
+          <h2 id="what-to-check">What to check before buying refurb</h2>
           <p>Run through this checklist before you hand over money. Takes 5 minutes:</p>
           <ol className="list-decimal list-inside space-y-xs">
             <li><strong>iCloud lock check:</strong> Settings → General → About → check "Activation Lock" line. Or boot the phone fresh - if it asks for an Apple ID, it's locked. Walk away.</li>
@@ -112,26 +125,26 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Frame inspection:</strong> Hold under bright light at angle - check for bend, chips, separation between frame and screen.</li>
           </ol>
 
-          <h2>Battery health expectations</h2>
+          <h2 id="battery-health">Battery health expectations</h2>
           <p>
             Apple considers a battery "service" candidate at 80% maximum capacity. Refurb buying rules:
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>95%+:</strong> Excellent. Likely a barely-used trade-in.</li>
             <li><strong>85-94%:</strong> Normal for a 2-3 year old phone. Acceptable.</li>
-            <li><strong>80-84%:</strong> Negotiate AED 200 off OR insist on battery replacement.</li>
+            <li><strong>80-84%:</strong> Negotiate a discount OR insist on battery replacement.</li>
             <li><strong>Below 80%:</strong> iOS shows "Service" warning. Insist on new battery or walk away.</li>
             <li><strong>"100%":</strong> Either brand new, freshly replaced, OR an aftermarket battery showing fake reading. Verify with our diagnostic if unsure.</li>
           </ul>
           <p>
             Need a battery replaced after purchase?{" "}
-            <Link to="/iphone-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
-              From AED 250 with 12-month warranty
+            <Link to="/iphone-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
+              iPhone battery replacement with a 3-month warranty and 80% capacity guarantee
             </Link>
             .
           </p>
 
-          <h2>Warranty expectations</h2>
+          <h2 id="warranty">Warranty expectations</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Apple refurb:</strong> 1 year, full Apple warranty.</li>
             <li><strong>Us:</strong> 6 months covering battery, screen, charging port, speaker, camera.</li>
@@ -139,7 +152,7 @@ export default function BlogBestRefurbishedIPhone() {
             <li><strong>Dubizzle / WhatsApp:</strong> "DOA only" or none - if anything fails after delivery, you eat the cost.</li>
           </ul>
 
-          <h2>iCloud lock - biggest scam to watch for</h2>
+          <h2 id="icloud-lock">iCloud lock - biggest scam to watch for</h2>
           <p>
             Activation Lock (iCloud lock) ties an iPhone to an Apple ID. The phone will not factory-reset
             or activate without that Apple ID. <strong>Apple cannot remove it</strong>, neither can we.
@@ -153,10 +166,10 @@ export default function BlogBestRefurbishedIPhone() {
 
           <p>
             Inspecting a used iPhone before you commit?{" "}
-            <Link to="/iphone-repair-dubai" className="text-accent-bright font-semibold hover:underline">
-              We do AED 100 full diagnostics
+            <Link to="/iphone-repair-dubai" className="text-accent font-semibold hover:underline">
+              We do full iPhone diagnostics
             </Link>
-            {" "}- refunded against any service. Worth it on a AED 2,500 purchase.
+            {" "}- the fee is refunded against any service, and it's well worth it before a big purchase. Message us on WhatsApp for the diagnostic price.
           </p>
         </>
       }
@@ -179,7 +192,7 @@ export default function BlogBestRefurbishedIPhone() {
         },
         {
           q: "Is the iPhone 11 too old to buy in 2026?",
-          a: "No - A13 chip handles iOS 26 fluidly, dual cameras still take great photos, and at AED 950 it's the cheapest entry to the iPhone ecosystem. Just plan to replace the battery within a year if it's not already fresh.",
+          a: "No - A13 chip handles iOS 26 fluidly, dual cameras still take great photos, and it's the cheapest entry to the iPhone ecosystem. Just plan to replace the battery within a year if it's not already fresh.",
         },
         {
           q: "Why are refurbished iPhone Pro models so much pricier than non-Pro?",
@@ -187,7 +200,7 @@ export default function BlogBestRefurbishedIPhone() {
         },
       ]}
       relatedLinks={[
-        { label: "iPhone battery replacement", href: "/iphone-battery-replacement-dubai", description: "Refresh any older iPhone - AED 250+." },
+        { label: "iPhone battery replacement", href: "/iphone-battery-replacement-dubai", description: "Refresh any older iPhone - message us for the price." },
         { label: "iPhone repair hub", href: "/iphone-repair-dubai", description: "Diagnostic, screen, charging, water damage." },
         { label: "iPhone 17 vs iPhone Air", href: "/blog/iphone-17-vs-iphone-air-which-buy", description: "If you're considering new instead." },
       ]}

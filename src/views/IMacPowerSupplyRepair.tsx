@@ -5,7 +5,7 @@ export default function IMacPowerSupplyRepair() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Power Supply Repair Dubai - No Power Fix | 055 741 3706"
-      seoDescription="iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. AED 400 labor + part. 1-2 days. Free home visit."
+      seoDescription="iMac PSU repair Dubai. Common 27-inch 2015-2020 no-power fault. PSU swap is standard. 1-2 days. Free diagnosis at our Media City workshop - message us for a quote."
       path="/imac-power-supply-repair-dubai"
       eyebrow="iMac power supply"
       h1="iMac Power Supply Repair Dubai - The Common 'No Power' Fix"
@@ -15,17 +15,17 @@ export default function IMacPowerSupplyRepair() {
       whatsappPrefill="Hi, my iMac won't turn on at all - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Power Supply Repair", path: "/imac-power-supply-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac board and power restoration" }}
-      serviceName="iMac Power Supply Repair"
+      serviceName="iMac Power Supply Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>If a 27" iMac from 2015-2020 has gone completely dead - no fan spin, no chime, no light, nothing when you press power - the cause is almost always the PSU.</strong> Apple used a particular generation of internal power supply across these models that has a documented failure rate, and we see at least three or four every month.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The fix is straightforward but does require display removal. The PSU sits behind the logic board on the right side of the iMac. We test the PSU with a known-good replacement first to confirm the diagnosis (logic board faults can present the same way), then swap in a properly-tested original-spec replacement. The iMac chimes back to life and the rest of the machine - display, board, drive - is untouched and unaffected.
           </p>
         </>
@@ -43,21 +43,21 @@ export default function IMacPowerSupplyRepair() {
         { title: "Source spec-correct part",   body: "We use original Apple PSUs reclaimed from donor boards or new aftermarket equivalents that meet the exact voltage and pin spec. Not generic PC supplies." },
         { title: "Display off, PSU swap",      body: "Standard iMac teardown - adhesive cut, display lifted, PSU module unscrewed and replaced. Total bench time about 90 minutes." },
         { title: "Boot and burn-in",           body: "iMac boots, runs through a 2-hour burn-in test (CPU + GPU load) to confirm the new PSU holds voltage under demand." },
-        { title: "Reseal and verify",          body: "Fresh adhesive, display refit, overnight cure, final test before pickup." },
+        { title: "Reseal and verify",          body: "Fresh adhesive, display refit, overnight cure, final test before you collect it." },
       ]}
-      warrantyDays={180}
+      warrantyDays={730}
       warrantyBullets={[
         "6-month warranty on the PSU and the install.",
         "Free swap if the replacement PSU fails inside warranty.",
-        "Free home pickup - iMacs are heavy, we collect and return.",
+        "Parking on site at Concord Tower, so a heavy iMac goes from car to bench in one trip.",
       ]}
       faqs={[
         { q: "How do I know it's the PSU and not something else?", a: "You don't, and you shouldn't guess. Logic board faults and CMOS battery issues can look identical. Our free diagnostic uses a known-good PSU as a test - if it brings the iMac back, you need a PSU. If it doesn't, you don't, and we tell you so." },
         { q: "Is this an Apple-original part?", a: "We use either pulled-original Apple PSUs from donor boards (preferred) or aftermarket replacements that meet the exact electrical spec. We tell you which one is going in your machine before we start." },
-        { q: "Why is this AED 400 labor - isn't it just a swap?", a: "The labor includes display removal, adhesive cutting, careful reassembly with fresh adhesive and overnight cure, plus the diagnostic and burn-in. The actual PSU swap is fast - getting in and out of the iMac safely is the work." },
+        { q: "Isn't a PSU swap just a quick job?", a: "The labor includes display removal, adhesive cutting, careful reassembly with fresh adhesive and overnight cure, plus the diagnostic and burn-in. The actual PSU swap is fast - getting in and out of the iMac safely is the work. Message us on WhatsApp for today's exact price on your model." },
         { q: "Can the PSU be repaired instead of replaced?", a: "Sometimes - for the curious or for a 2009/2011 iMac where parts are scarce, we can replace failed capacitors on the PSU board (board-level service). On 2015+ machines a swap is faster, more reliable and similar cost." },
         { q: "Will my data be safe?", a: "Yes - the PSU sits separately from the storage. We don't touch the SSD or Fusion Drive. Your data is exactly where you left it when the iMac comes back to life." },
-        { q: "Can you collect from my home or office?", a: "Yes, free across Dubai mainland. iMacs are awkward to box. We bring proper transport foam." },
+        { q: "Do I need to book before bringing the iMac in?", a: "No - walk in to Concord Tower, Dubai Media City. There is parking on site, which matters with a 27-inch. If you want a quote first, WhatsApp the model and serial number before you set off." },
       ]}
       reviewNames={["Ali Hassan", "Binod Shrestha", "Shah nawaz"]}
       related={[

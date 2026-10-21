@@ -1,91 +1,166 @@
 "use client";
-import IPhonePageTemplate from "@/components/blocks/IPhonePageTemplate";
+// /iphone-back-glass-repair-dubai. Rebuilt 2026-09-26 on IPhoneMoneyPage
+// (docs/seo-master-plan-2026-09-26.md Phase 2.4, Phase 3 build 3).
+// Targets: iphone back glass repair dubai · iphone x back glass replacement (#7 via a blog) ·
+// iphone xs back glass replacement (#6 via a blog) · iphone 8 back glass replacement ·
+// iphone xs max back glass · iphone back replacement. The By model section carries one H3 per model
+// group, iPhone 6 to 18 Pro Max, each with a WhatsApp prefill (plan 2.4); no new model routes.
+// Facts: glass backs from the iPhone 8 / X (the 6, 6s and 7 are aluminium); Apple's back glass
+// estimate on recent models and the iPhone 18 Pro's aluminium unibody + Ceramic Shield back come
+// from docs/apple-lineup-2026-09-26.md §4a-4b. Apple figures only in the "(Apple list)" form.
+// Warranty: back glass is hardware work (site.ts: 15 days to 2 years).
+import IPhoneMoneyPage, { A, ByModelSection, PageSection, WhatsAppButton } from "@/components/blocks/IPhoneMoneyPage";
+import { topicForPath } from "@/lib/page-images";
+import { NAP } from "@/content/site";
+
+const PATH = "/iphone-back-glass-repair-dubai";
+const SERVICE = "iPhone back glass replacement";
+const HERO = topicForPath(PATH);
 
 export default function IPhoneBackGlassRepair() {
   return (
-    <IPhonePageTemplate
-      seoTitle="iPhone Back Glass Repair Dubai - Laser Removal | From AED 350 | All Models"
-      seoDescription="iPhone back glass repair Dubai from AED 350. Laser removal saves the phone - Apple swaps whole device. MagSafe + wireless coil preserved. WhatsApp 055 741 3706."
-      path="/iphone-back-glass-repair-dubai"
-      eyebrow="iPhone Back Glass Repair"
-      h1="iPhone Back Glass Repair Dubai"
-      subtitle="Cracked back glass on iPhone 8 onwards. Laser removal - we save the phone. Apple's policy is to swap the whole device. MagSafe and wireless charging coil preserved."
-      startingPrice={350}
-      timeline="Same day · 1 day"
-      whatsappPrefill="Hi, iPhone back glass repair quote please. Model: "
-      technician={{ name: "Shafiq Ahmed", years: 21, specialisation: "Laser back-glass removal" }}
-      serviceName="iPhone Back Glass Repair"
-      pricingRows={[
-        { model: "iPhone 8 / 8 Plus",                price: 350, timeline: "Same day" },
-        { model: "iPhone X / XR / XS",               price: 400, timeline: "Same day" },
-        { model: "iPhone 11 / 11 Pro",               price: 450, timeline: "Same day" },
-        { model: "iPhone 12 / 12 Pro / 13 / 13 Pro", price: 550, timeline: "Same day · 1 day" },
-        { model: "iPhone 14 / 14 Pro / 15 / 15 Pro", price: 650, timeline: "1 day" },
-        { model: "iPhone 16 / 16 Pro / 16e",         price: 750, timeline: "1 day" },
-        { model: "iPhone 17 / Air / Pro / 17e",      price: 850, timeline: "1 day" },
+    <IPhoneMoneyPage
+      path={PATH}
+      crumbs={[
+        { name: "Home", path: "/" },
+        { name: "iPhone Repair", path: "/iphone-repair-dubai" },
+        { name: "iPhone Back Glass Repair", path: PATH },
       ]}
-      pricingCaption="Pro Max sizes add AED 100. Includes MagSafe magnet ring and wireless charging coil preservation."
-      intro={
-        <>
-          <p className="text-[17px] text-on-primary leading-relaxed">
-            iPhone back glass repair in Dubai starts at AED 350 - and the workshop's approach is fundamentally different from Apple. Apple's official policy on a cracked back glass is to swap the entire device for a service unit, costing the customer AED 1,400 to AED 2,800 depending on model. The workshop instead removes the broken glass with a 532nm green laser at 30W, leaving the chassis, MagSafe magnet ring, and wireless charging coil intact, then bonds a fresh glass panel with industrial 3M structural adhesive. The phone keeps its original logic board, original Face ID, original battery, and original IMEI.
-          </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed mt-md">
-            The laser process matters because the back glass on iPhone 8 onward is glued to the chassis with a heat-resistant epoxy that won't peel, sand, or chemical-strip without damaging the wireless coil underneath. The 532nm wavelength heats the epoxy without burning the chassis, the glass shatters into removable shards under controlled pressure, and the residue is wiped off with isopropyl. The new glass arrives pre-cut to model spec with the camera cutout, flash cutout, and antenna lines already laser-etched. Bonding takes 90 minutes of cure time at room temperature.
-          </p>
-        </>
-      }
-      problems={[
-        { title: "Hairline crack with no broken pieces", body: "Cosmetic - wireless charging and MagSafe still work. Replace if you plan to keep the phone 12+ months. AED 350 to AED 850 same/next day." },
-        { title: "Shattered with pieces missing", body: "Wireless charging compromised because the gap above the coil disrupts inductive coupling. Replace soon - moisture entry through the gap will hit the logic board within weeks." },
-        { title: "Apple Store quoted AED 1,400 to swap the device", body: "Apple's official price for iPhone 11 back glass is AED 1,449. iPhone 14 Pro is AED 2,099. iPhone 16 Pro Max is AED 2,749. The workshop saves the original device at AED 450 to AED 950." },
-        { title: "MagSafe weak after a previous back-glass repair", body: "Cheap aftermarket back glass uses thinner magnet rings or omits the array entirely. The workshop fits glass with the full Apple-spec 18-magnet MagSafe array. AED 450 to AED 850." },
-        { title: "Wireless charging stopped after a drop", body: "Could be back glass, could be the wireless coil itself. Free diagnosis confirms - 70% of these are back-glass cracks blocking the coil; the rest need a coil swap (AED 250 add-on)." },
-        { title: "Camera glass cracked alongside back glass", body: "Two-in-one repair. Back glass and camera lens cover replaced same day. AED 350 to AED 850 for back glass plus AED 100 to AED 200 for the camera lens." },
-        { title: "Water entry through cracked back glass", body: "Once the seal is broken, IP68 rating is gone. Internal corrosion sets in within days. Back glass replacement + ultrasonic clean (AED 250 on top) restores function and seal." },
-        { title: "Back glass split but phone still works", body: "Lucky - wireless coil is still intact. Replace within a week to prevent moisture damage and to restore IP rating (the new bond seals back to ~IP67 equivalent)." },
-        { title: "iPhone 15 back glass differs from iPhone 14", body: "iPhone 15 introduced the colour-infused glass (titanium chassis on Pro models). The workshop stocks colour-matched replacements for every iPhone 15, 16, and 17 finish." },
-        { title: "Repaired elsewhere, MagSafe broken", body: "Common - low-end shops use back glass without the MagSafe magnet array. The workshop refits with full-spec glass. Trade-in pricing (AED 100 off) when fixing a previous bad repair." },
+      hero={{
+        eyebrow: "iPhone back glass repair · Dubai Media City",
+        title: "iPhone Back Glass Replacement in Dubai: iPhone 8 to iPhone 18 Pro Max",
+        subtitle:
+          "Cracked or shattered rear glass on any glass-back iPhone, from the iPhone 8 and X to the iPhone 18 Pro. Your own phone, board and data stay yours, and the written quote comes first.",
+        image: HERO?.src ?? "/images/topics/iphone-back-glass-repair-dubai.jpg",
+        imageAlt: HERO?.alt ?? "iPhone back glass repair Dubai",
+      }}
+      quickAnswer={{
+        question: "Can you replace a cracked iPhone back glass in Dubai?",
+        answer:
+          "Yes. We replace cracked back glass on every iPhone with a glass back, from the iPhone 8 and iPhone X to the iPhone 18 Pro Max, at our workshop in Dubai Media City. Your phone keeps its own logic board, battery and data. Diagnosis is free, and the written quote comes on WhatsApp before any work.",
+      }}
+      reviewer={{ name: "Hamza", role: "iPhone & iPad technician" }}
+      takeaways={[
+        "Every iPhone from the iPhone 8 and X has a glass back; the iPhone 6, 6s and 7 are aluminium.",
+        "On the iPhone 8 to 13 and the 14 Pro models, the glass is bonded to the frame and removed by laser.",
+        "The iPhone 14, 14 Plus and the iPhone 15 and 16 families have a back glass that comes off as its own panel.",
+        "Back glass on recent models is AED 615 (Apple list), excluding VAT.",
+        "We test wireless charging, and MagSafe from the iPhone 12, before handover.",
+        "Back glass is hardware work, with a written warranty of 15 days to 2 years.",
       ]}
-      steps={[
-        { title: "WhatsApp model + photo of damage", body: "Photo showing the crack pattern. Quote back in 4 minutes." },
-        { title: "Free pickup or walk in", body: "Pickup anywhere on Dubai mainland. Diagnosis on the spot." },
-        { title: "Laser back-glass removal", body: "Phone clamped, 532nm laser run across the glass at controlled speed. Glass shatters into removable shards. Residue wiped with isopropyl. Wireless coil and MagSafe array inspected for damage." },
-        { title: "New back glass bonded with 3M adhesive", body: "Replacement glass aligned to camera cutout. 3M VHB structural adhesive applied. Phone clamped at 5kg pressure for 90 minutes at room temp." },
-        { title: "Wireless charging + MagSafe test", body: "Charged on a Qi pad - must reach 7.5W (15W on MagSafe-enabled iPhones). MagSafe accessory snap test. Camera autofocus checked through new glass." },
-        { title: "Free delivery + 90-day warranty", body: "Same day on iPhone 8 to iPhone 11. 1 day on iPhone 12 to 17. Warranty covers the bond and the wireless coil function." },
-      ]}
-      warrantyDays={90}
-      warrantyBullets={[
-        "Covered: bond failure, glass defects, wireless charging or MagSafe failure caused by the repair.",
-        "Not covered: new physical damage, water damage post-repair, back glass shattered by a fresh drop.",
-        "IP68 water resistance is partially restored (~IP67 equivalent) - Apple does not certify post-repair phones to IP68.",
-      ]}
-      comparisonRows={[
-        ["iPhone 11 back glass",        "AED 450",                                 "AED 1,449 (whole-unit swap)"],
-        ["iPhone 14 Pro back glass",    "AED 700",                                 "AED 2,099 (whole-unit swap)"],
-        ["iPhone 16 Pro Max back glass","AED 850",                                 "AED 2,749 (whole-unit swap)"],
-        ["Method",                      "532nm laser removal, original phone kept","Whole-device service swap"],
-        ["MagSafe preserved",           "Yes - full 18-magnet array",              "Yes - new device"],
-        ["Wireless coil preserved",     "Yes - original coil retained",            "Yes - new device"],
-        ["Original IMEI / battery / FaceID retained", "Yes",                        "No - service unit"],
-        ["Repair window",               "Same/next day in Dubai",                  "5 to 10 business days, mail-in"],
-        ["Warranty",                    "90 days written",                         "90 days on service unit"],
-      ]}
+      faqHeading="iPhone back glass repair: common questions"
       faqs={[
-        { q: "How much does iPhone back glass repair cost in Dubai?", a: "From AED 350 for iPhone 8. AED 400 for X, XR, XS. AED 450 for 11. AED 550 for 12 and 13. AED 650 for 14 and 15. AED 750 for 16. AED 850 for the iPhone 17 line. Pro Max sizes add AED 100. Apple's whole-device swap is AED 1,400 to AED 2,800 depending on model - the workshop saves AED 1,000+ on most models." },
-        { q: "Why doesn't Apple repair just the back glass?", a: "Apple's design uses a heat-cured epoxy that's nearly impossible to remove without damaging the wireless charging coil and MagSafe magnet ring underneath. Their official process is whole-device replacement. The workshop uses a 532nm green laser to bypass this - heat-vaporising the epoxy at the bond line without touching the components beneath." },
-        { q: "Will MagSafe still work after a back glass repair?", a: "Yes - provided the workshop fits a back glass with the full 18-magnet Apple-spec ring (every iPhone 12 onward). Cheap aftermarket glass omits the magnets. The workshop quotes only full-spec parts. MagSafe accessory snap is tested before handover." },
-        { q: "Will wireless charging still work?", a: "Yes - the wireless charging coil sits on the chassis, not the glass. The laser removes glass without touching the coil. Charging is tested on a Qi pad before the phone leaves the bench (must reach 7.5W standard or 15W MagSafe)." },
-        { q: "Can a hairline crack wait?", a: "Cosmetically yes, functionally no. Once the glass is cracked, IP68 water resistance is broken. Moisture and dust enter through the crack within days. Even if MagSafe and wireless charging still work, the logic board is now exposed to humidity. Repair within 2 weeks is recommended." },
-        { q: "How long does the repair take?", a: "Same day on iPhone 8 to iPhone 11 - laser removal takes 20 minutes, bonding 90 minutes, total bench time 2 to 3 hours. iPhone 12 onward typically finishes next day because the bond cure is the slowest step. Free pickup and delivery." },
-        { q: "Will the IP68 rating still be valid?", a: "Apple does not certify post-repair phones to IP68. The workshop's bond restores approximately IP67-equivalent water resistance - handles splashes, rain, brief water contact. The phone should not be submerged or used for swimming." },
-        { q: "Will the colour match exactly?", a: "Yes for every iPhone 15, 16, and 17 colour. The workshop stocks Pacific Blue, Deep Purple, Titanium Natural, Titanium Black, Titanium White, Desert Titanium, and the iPhone 17 line in matching shades. Colour confirmed on WhatsApp before booking." },
-        { q: "What if the camera lens is also cracked?", a: "Two-in-one repair, both done same day. Back glass replacement plus camera lens cover swap (AED 100 to AED 200 extra depending on model). Camera autofocus and image quality verified after." },
-        { q: "Can you fix iPad back panel cracks too?", a: "Yes - iPad back panel repair from AED 450, but the process differs (no wireless coil to preserve, but Apple Pencil charging coil on iPad Pro models). WhatsApp the iPad model for a quote." },
+        { q: "How much does iPhone back glass replacement cost in Dubai?", a: "It depends on the model and the part. For reference, back glass on recent models such as the iPhone 16 to 18 Pro Max is AED 615 (Apple list), excluding VAT. WhatsApp your model and a photo for our written quote." },
+        { q: "Can you fix iPhone X or XS back glass without replacing the whole phone?", a: "Yes. On the iPhone X, XS and XS Max we replace only the glass: the old glass is removed from the frame by laser and new glass is bonded in. Your phone keeps its own logic board, battery, Face ID and data." },
+        { q: "Is it safe to keep using an iPhone with cracked back glass?", a: "For a short time, but it's not ideal. The crack lets moisture and dust inside, loose glass can cut, and wireless charging can become unreliable as the damage spreads. Cover sharp edges with clear tape and book the repair soon." },
+        { q: "Will wireless charging and MagSafe work after the repair?", a: "They should. The charging and MagSafe parts stay in the phone, and we test wireless charging, and MagSafe from the iPhone 12, before handover. If the drop already damaged a coil, the free diagnosis shows it first." },
+        { q: "Will my iPhone still be water resistant?", a: "We can't guarantee it after opening a phone, and Apple's warranty never covers liquid damage anyway. We fit new adhesive and seals where the model uses them, but treat the phone with care around water afterwards." },
       ]}
-      reviewNames={["Sergej Schlegel", "Saeed Alam", "Wellington Academy"]}
-      relatedSlugs={["/iphone-screen-repair-dubai", "/iphone-water-damage-repair-dubai", "/iphone-camera-repair-dubai"]}
-    />
+      leadHeading="Get your iPhone back glass quote"
+      cta={{
+        headline: "Send your model and a photo of the back",
+        description: "Free diagnosis, a written quote before work, and your own phone back with new glass.",
+        prefill: "Hi, iPhone back glass replacement quote please. Model: ",
+      }}
+      related={[
+        { label: "iPhone screen repair", to: "/iphone-screen-repair-dubai" },
+        { label: "iPhone back glass repair cost", to: "/blog/iphone-back-glass-repair-cost-dubai" },
+        { label: "iPhone camera repair", to: "/iphone-camera-repair-dubai" },
+        { label: "iPhone repair Dubai", to: "/iphone-repair-dubai" },
+        { label: "iPhone water damage repair", to: "/iphone-water-damage-repair-dubai" },
+        { label: "iPhone screen repair cost", to: "/iphone-screen-repair-cost-dubai" },
+      ]}
+      sources={[
+        { label: "Apple UAE: iPhone repair estimates", href: "https://support.apple.com/en-ae/iphone/repair/screen-replacement", note: "Includes back glass. Excluding VAT, read 26 Sep 2026." },
+        { label: "Apple UAE: iPhone 18 Pro specs", href: "https://www.apple.com/ae/iphone-18-pro/specs/", note: "Aluminium unibody and Ceramic Shield back." },
+      ]}
+      reviewNames={["Wellington Academy", "Tim Quick", "B Parker"]}
+    >
+      <PageSection id="why" eyebrow="Why fix it" title="Why a cracked iPhone back glass is worth fixing">
+        <p>
+          Back glass is more than looks. It covers the wireless charging coil and, from the iPhone 12, the MagSafe
+          magnets. Once it cracks, water and dust resistance is compromised, and sharp edges can cut a hand or snag a
+          pocket.
+        </p>
+        <p>
+          A cracked camera lens cover is a separate part: see <A to="/iphone-camera-repair-dubai">iPhone camera repair</A>.
+          Screen broken too? The <A to="/iphone-screen-repair-dubai">iPhone screen repair</A> page covers that side, and
+          we quote both together.
+        </p>
+      </PageSection>
+
+      <PageSection id="how" eyebrow="How we do it" title="How iPhone back glass replacement works">
+        <ul>
+          <li>
+            <strong>Bonded glass</strong> (iPhone 8 to 13, 14 Pro and 14 Pro Max): the glass is glued to the frame. We
+            remove it with a laser machine that breaks down the adhesive, clean the frame and bond new glass. The phone
+            keeps its own board, battery, Face ID and data.
+          </li>
+          <li>
+            <strong>Removable back panel</strong> (iPhone 14, 14 Plus, and the iPhone 15 and 16 families): Apple
+            redesigned the inside so the back glass comes off as its own part, which makes the job cleaner.
+          </li>
+          <li>
+            <strong>iPhone 17 Pro and 18 Pro:</strong> an aluminium unibody. On the 18 Pro the back is a Ceramic Shield
+            panel around the MagSafe area, colour-matched to the frame.
+          </li>
+        </ul>
+        <p>
+          After fitting, we test wireless charging, MagSafe where fitted, the cameras and the flash.
+        </p>
+      </PageSection>
+
+      <PageSection id="cost" eyebrow="Cost" title="iPhone back glass replacement cost: Apple's price and ours">
+        <p>
+          Back glass on the iPhone 16, 16e, 17, 17e, Air, 17 Pro and 18 Pro models is AED 615 (Apple list), excluding VAT.
+        </p>
+        <p>
+          With the screen broken too, the pair on an iPhone 18 Pro is AED 1,619 (Apple list).
+        </p>
+        <p>
+          For older models, and for our price on any iPhone, WhatsApp the model and a photo of the back. Our{" "}
+          <A to="/blog/iphone-back-glass-repair-cost-dubai">back glass cost guide</A> explains what moves the price.
+        </p>
+        <div>
+          <WhatsAppButton text="Hi, iPhone back glass replacement quote please. Model: " label="WhatsApp your back glass quote" />
+        </div>
+      </PageSection>
+
+      <ByModelSection
+        id="by-model"
+        title="iPhone back glass replacement by model"
+        service={SERVICE}
+        intro={<p>Tap WhatsApp on your model for a quote.</p>}
+        groups={[
+          { name: "iPhone 6, 6s and 7", heading: "iPhone 6, 6s and 7: aluminium back", body: <>No back glass to replace: these have an aluminium back. For a bent or dented housing, WhatsApp photos and we tell you what&apos;s possible.</> },
+          { name: "iPhone 8 and 8 Plus", heading: "iPhone 8 and 8 Plus back glass replacement", body: <>Glass back added for wireless charging. Bonded to the frame, so it is removed by laser.</> },
+          { name: "iPhone X", heading: "iPhone X back glass replacement", body: <>Bonded glass over the charging coil. Your phone keeps its own board, battery and Face ID.</> },
+          { name: "iPhone XS and XS Max", heading: "iPhone XS and XS Max back glass replacement", body: <>Same bonded design as the X; the XS Max glass is larger, so tell us which you have.</> },
+          { name: "iPhone XR and iPhone 11 family", heading: "iPhone XR and iPhone 11 back glass replacement", body: <>Bonded glass. We confirm the colour and finish for your model before you book.</> },
+          { name: "iPhone SE (2nd and 3rd gen)", body: <>iPhone 8-style bonded glass back. Colour confirmed on WhatsApp first.</> },
+          { name: "iPhone 12 and 13 families", body: <>Bonded glass over the charging and MagSafe parts. We check MagSafe accessories snap on and charge.</> },
+          { name: "iPhone 14, 14 Plus, 14 Pro and 14 Pro Max", body: <>The 14 and 14 Plus were the first with a removable back panel; the 14 Pro models stay bonded.</> },
+          { name: "iPhone 15, 16 and 16e", body: <>The iPhone 15 and 16 families use a removable back panel. Back glass on the 16, 16e and 16 Pro Max is AED 615 (Apple list).</> },
+          { name: "iPhone 17, 17e and iPhone Air", modelPage: "/iphone-air-repair-dubai", body: <>Back glass is AED 615 (Apple list) on each. Apple&apos;s warranty doesn&apos;t cover a crack; AppleCare+ does, for a fee.</> },
+          { name: "iPhone 17 Pro and 17 Pro Max", modelPage: "/iphone-17-pro-repair-dubai", body: <>Aluminium unibody; back glass is AED 615 (Apple list). We confirm part and colour availability first.</> },
+          { name: "iPhone 18 Pro and 18 Pro Max", modelPage: "/iphone-18-pro-repair-dubai", body: <>Ceramic Shield back, colour-matched to the aluminium frame. Back glass is AED 615 (Apple list); check AppleCare+ first.</> },
+        ]}
+      />
+
+      <PageSection id="warranty" eyebrow="Warranty and visiting" title="Warranty, visiting and what to do before you come in">
+        <p>
+          <strong>Warranty:</strong> back glass is hardware work, with a written warranty of up to 2 years on the part
+          and our fit. A new crack from a drop is accidental damage and isn&apos;t covered. See the{" "}
+          <A to="/warranty">warranty terms</A>.
+        </p>
+        <p>
+          <strong>Before you come in:</strong> back up the phone, and put clear tape over sharp cracks.
+        </p>
+        <p>
+          <strong>Getting it to us:</strong> walk in at {NAP.street}, {NAP.area}, no appointment needed.
+          Coming from Abu Dhabi or Sharjah? Send it by courier: book any same-day courier app, hand it to the driver, and WhatsApp us the tracking link.
+        </p>
+      </PageSection>
+    </IPhoneMoneyPage>
   );
 }

@@ -16,7 +16,7 @@ export default function GuideCleanMacBookScreen() {
     <BlogPostTemplate
       seoTitle="How to Clean a MacBook Screen Safely"
       seoDescription="Clean a MacBook screen safely without harming the anti-reflective coating. The exact materials, what never to use, nano-texture care, and stubborn spots."
-      path="/how-to-clean-a-macbook-screen"
+      path="/blog/how-to-clean-a-macbook-screen"
       category="How-to · MacBook care"
       h1="How to Clean a MacBook Screen Safely"
       hook="Fingerprints and dust are easy to wipe away - but the wrong cleaner strips the anti-reflective coating for good. Here is the safe method we use at the bench."
@@ -60,10 +60,9 @@ export default function GuideCleanMacBookScreen() {
             The other golden rule: <strong>never spray liquid directly onto the display</strong>.
             It runs down into the bezel and can reach the panel electronics, turning a cleaning job
             into a{" "}
-            <Link to="/macbook-water-damage-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-water-damage-repair-dubai" className="text-accent font-semibold hover:underline">
               water damage repair
-            </Link>{" "}
-            (from AED 700). Always apply moisture to the cloth, never the glass.
+            </Link>. Always apply moisture to the cloth, never the glass.
           </p>
 
           <h2>What you actually need</h2>
@@ -145,19 +144,19 @@ export default function GuideCleanMacBookScreen() {
           </p>
           <p>
             If the cloudiness bothers you or is spreading, our{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair in Dubai
             </Link>{" "}
-            replaces the panel from AED 600, with a free diagnosis first so you know exactly what
+            replaces the panel, with a free diagnosis first so you know exactly what
             you are dealing with. Not sure whether it is coating wear or something else? A{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full diagnostic
             </Link>{" "}
             is free, and you can{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
-              book a free pickup
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
+              visit the workshop
             </Link>{" "}
-            anywhere on the Dubai mainland.
+            in Dubai Media City without an appointment.
           </p>
 
           <h2>Keeping it clean longer</h2>
@@ -196,7 +195,7 @@ export default function GuideCleanMacBookScreen() {
         },
         {
           q: "Can the worn anti-reflective coating be repaired?",
-          a: "It cannot be re-coated reliably. Once the coating has worn or delaminated, the only way to get a factory-fresh surface back is to replace the display assembly. We replace MacBook screens from AED 600 with a free diagnosis first.",
+          a: "It cannot be re-coated reliably. Once the coating has worn or delaminated, the only way to get a factory-fresh surface back is to replace the display assembly. We replace MacBook screens with a free diagnosis first - message us on WhatsApp for the exact price on your model.",
         },
         {
           q: "How often should I clean my MacBook screen?",
@@ -208,7 +207,7 @@ export default function GuideCleanMacBookScreen() {
         },
       ]}
       relatedLinks={[
-        { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "Worn coating or cloudy patches? We replace the display from AED 600." },
+        { label: "MacBook screen repair Dubai", href: "/macbook-screen-repair-dubai", description: "Worn coating or cloudy patches? We replace the display - message us for a quote." },
         { label: "MacBook water damage repair", href: "/macbook-water-damage-repair-dubai", description: "Sprayed liquid into the bezel? We can recover it." },
         { label: "Free MacBook diagnostic", href: "/macbook-full-diagnostic-dubai", description: "Not sure if it's dirt or coating wear? Free diagnosis." },
       ]}

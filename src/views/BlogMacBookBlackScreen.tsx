@@ -18,6 +18,13 @@ export default function BlogMacBookBlackScreen() {
       seoTitle="MacBook Black Screen? Fixes Before You Pay (2026)"
       seoDescription="MacBook black screen but the fan runs? Work through 8 fixes in order - power-cycle, SMC, NVRAM, external monitor test - then know which faults need a real repair."
       path="/blog/macbook-black-screen-fix"
+      wide
+      toc={[
+        { id: "which-black-screen", label: "Which black screen" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost", label: "What it costs" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Black Screen? Fixes for 2026"
       hook="A black screen with the fan still spinning is rarely a dead Mac. Nine times out of ten it's the backlight, the display flex cable, or a setting stuck at zero - and several of those you can fix yourself before paying anyone."
@@ -35,7 +42,7 @@ export default function BlogMacBookBlackScreen() {
       })]}
       body={
         <>
-          <h2>First, work out which black screen you have</h2>
+          <h2 id="which-black-screen">MacBook Black Screen. First, work out which black screen you have</h2>
           <p>
             There are two completely different faults that both look like "my MacBook won't show
             anything", and the fix path splits right at the start. Get this wrong and you'll waste
@@ -47,7 +54,7 @@ export default function BlogMacBookBlackScreen() {
             fan, no chime, no Caps Lock light, no faint glow from the screen. The Mac is dead to the
             world. That's a power-delivery problem - charger, charging port, battery, or a board
             fault - and it's a separate diagnostic. We've written that one up in full in our{" "}
-            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent font-semibold hover:underline">
               MacBook not turning on guide
             </Link>, so start there if your Mac is truly silent.
           </p>
@@ -59,7 +66,7 @@ export default function BlogMacBookBlackScreen() {
             flex cable that carries video up through the hinge.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Run these top to bottom and stop the moment the screen comes back. Most black-screen
             jobs that walk into our Media City workshop are solved somewhere in this list before we
@@ -116,7 +123,7 @@ export default function BlogMacBookBlackScreen() {
             and points at the GPU or the logic board, which is where the bench work starts.
           </p>
 
-          <h2>When it's hardware - the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware - the common causes</h2>
           <p>
             If you've worked through the list and the screen is still dark, it's one of four things.
             Here's what we actually find on the bench, roughly in order of how often we see it.
@@ -128,7 +135,7 @@ export default function BlogMacBookBlackScreen() {
             a "stage light" effect along the bottom of the screen first, then a fully black or
             backlight-dead panel once it snaps. We fix dozens of these. The full story, including how
             to spot it early, is in our{" "}
-            <Link to="/blog/macbook-flexgate-explained" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-flexgate-explained" className="text-accent font-semibold hover:underline">
               Flexgate explainer
             </Link>.
           </p>
@@ -145,7 +152,7 @@ export default function BlogMacBookBlackScreen() {
             If even an external monitor is black, the graphics processor may have failed - common on
             some older 15″ and 16″ Pro models that ran their discrete GPU hot. This is board-level
             work, sometimes a reball or a GPU replacement. Our{" "}
-            <Link to="/macbook-gpu-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-gpu-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook GPU repair service
             </Link>{" "}
             covers exactly this.
@@ -156,22 +163,23 @@ export default function BlogMacBookBlackScreen() {
             least common of the four and needs a proper diagnostic to pin down before any quote.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost">What does it cost to fix in Dubai?</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
-            is free - we'll tell you which of the four it is before you commit to anything. Prices
-            below are VAT-inclusive and depend on the model.
+            is free - we'll tell you which of the four it is before you commit to anything. What it
+            costs depends on the model, and every quote we give is VAT-inclusive.
           </p>
           <p>
-            A display or flex-cable replacement runs AED 600 to 1,200. A backlight-circuit repair is
-            AED 350 to 800 since we work at component level rather than replacing the whole panel.
-            Logic-board work, including GPU and video-output faults, starts from AED 800. If you'd
-            rather we just look first, book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            A display or flex-cable replacement is one of the most common black-screen fixes, and a
+            backlight-circuit repair is often cheaper still since we work at component level rather
+            than replacing the whole panel. Logic-board work, including GPU and video-output faults,
+            takes more bench time. Message us on WhatsApp with your model for today's exact price. If
+            you'd rather we just look first, book a{" "}
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             and we'll give you a fixed quote, or see the{" "}
-            <Link to="/macbook-screen-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-screen-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook screen repair page
             </Link>{" "}
             for panel pricing by model.
@@ -187,7 +195,7 @@ export default function BlogMacBookBlackScreen() {
       faqs={[
         {
           q: "How much does it cost to fix a MacBook black screen in Dubai?",
-          a: "It depends on which of four faults it is, and the diagnostic to find out is free. A display or flex-cable replacement is AED 600 to 1,200. A backlight-circuit repair is AED 350 to 800. Logic-board and GPU work starts from AED 800. All prices are VAT-inclusive. WhatsApp the serial first for a tighter estimate.",
+          a: "It depends on which of four faults it is, and the diagnostic to find out is free. A display or flex-cable replacement is a common fix, a backlight-circuit repair is often cheaper since we work at component level, and logic-board and GPU work takes more bench time. WhatsApp us the serial number for today's exact, VAT-inclusive price on your model.",
         },
         {
           q: "What does it mean if an external monitor works but my screen is black?",
@@ -211,7 +219,7 @@ export default function BlogMacBookBlackScreen() {
         },
         {
           q: "Do you really do a free diagnostic for a black screen?",
-          a: "Yes, the diagnostic is free with no obligation. Bring the MacBook to Concord Tower in Dubai Media City and we'll tell you whether it's the panel, the backlight, the GPU or the board, and quote a fixed price before you commit. No fix, no charge. Free pickup is available across Dubai mainland.",
+          a: "Yes, the diagnostic is free with no obligation. Bring the MacBook to Concord Tower in Dubai Media City and we'll tell you whether it's the panel, the backlight, the GPU or the board, and quote a fixed price before you commit. No fix, no charge. There's parking on site, and no appointment is needed.",
         },
       ]}
       relatedLinks={[

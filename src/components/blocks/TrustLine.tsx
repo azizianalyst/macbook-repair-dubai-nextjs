@@ -12,9 +12,9 @@ interface TrustLineProps {
 }
 
 export function TrustLine({ variant = "default", tone = "dark" }: TrustLineProps) {
-  const muted = tone === "light" ? "text-on-primary-muted" : "text-text-muted";
-  const strong = tone === "light" ? "text-on-primary" : "text-text";
-  const sep = tone === "light" ? "text-on-primary-faint" : "text-text-faint";
+  const muted = tone === "light" ? "text-text-muted" : "text-text-muted";
+  const strong = tone === "light" ? "text-text" : "text-text";
+  const sep = tone === "light" ? "text-text-faint" : "text-text-faint";
 
   return (
     <div

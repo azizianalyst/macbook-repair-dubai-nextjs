@@ -16,8 +16,16 @@ export default function BlogMacBookLoudFan() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Fan Always Loud? Causes & Fixes (2026)"
-      seoDescription="MacBook fan loud and always on? The real causes in Dubai heat and the fixes in order, from runaway apps to a clogged heatsink. Clean and repaste from AED 250."
+      seoDescription="MacBook fan loud and always on? The real causes in Dubai heat and the fixes in order, from runaway apps to a clogged heatsink. Same-day clean and repaste."
       path="/blog/macbook-fan-loud-always-on"
+      wide
+      toc={[
+        { id: "is-it-the-fan", label: "Is it actually the fan?" },
+        { id: "why-fans-run-loud", label: "Why fans run loud" },
+        { id: "the-fixes", label: "The fixes, in order" },
+        { id: "cost-and-time", label: "Cost and time" },
+        { id: "cost-of-ignoring", label: "Why ignoring it costs more" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Fan Always Loud? Why It Happens and How to Fix It"
       hook="A fan that spins hard during a 4K export is doing its job. A fan that roars on the home screen with nothing open is telling you something. In Dubai, that something is usually dust."
@@ -26,7 +34,7 @@ export default function BlogMacBookLoudFan() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={8}
-      featuredImageAlt="MacBook Pro fan and heatsink clogged with dust on the repair bench in Dubai"
+      featuredImageAlt="MacBook Fan Loud Always On. MacBook Pro fan and heatsink clogged with dust on the repair bench in Dubai"
       extraSchemas={[howTo({
         name: "Fix a loud, always-on MacBook fan in 7 steps",
         description: "Seven fixes for a constantly loud MacBook fan, in priority order, from software checks to a professional internal clean and repaste.",
@@ -35,10 +43,10 @@ export default function BlogMacBookLoudFan() {
       })]}
       body={
         <>
-          <h2>First, is it actually the fan?</h2>
+          <h2 id="is-it-the-fan">MacBook Fan Loud Always On. First, is it actually the fan?</h2>
           <p>
             Quick thing to settle before anything else. If you have a MacBook Air on Apple
-            Silicon — the M1, M2, M3 or M4 Air — it has no fan at all. Apple cools those
+            Silicon, any Air from M1 through M5, it has no fan at all. Apple cools those
             entirely through an aluminium heat spreader, so a "loud fan" on an Air means either
             a buzzing speaker, a failing SSD, or coil whine, not a fan. Everything below applies
             to the MacBook Pro and to the older Intel Airs and Pros, which all have one or two
@@ -50,15 +58,15 @@ export default function BlogMacBookLoudFan() {
             the machine is idle and cool to the touch. That's worth chasing.
           </p>
 
-          <h2>Why MacBook fans run loud — the real causes</h2>
+          <h2 id="why-fans-run-loud">Why MacBook fans run loud, the real causes</h2>
           <p>
             There are seven common reasons, and they split cleanly into software and hardware.
             Software first, because it's free to rule out.
           </p>
           <h3>Software causes</h3>
           <p>
-            A <strong>runaway process</strong> is the most frequent. One app stuck in a loop —
-            a browser tab with a bad ad script, a sync client, a crashed background helper —
+            A <strong>runaway process</strong> is the most frequent. One app stuck in a loop -
+            a browser tab with a bad ad script, a sync client, a crashed background helper -
             pins a CPU core at 100% and the fan responds to the heat. An <strong>SMC glitch</strong>
             on Intel machines can leave the fan stuck high after a bad sleep cycle. And an
             out-of-date macOS sometimes carries a genuine fan-curve bug that a later update fixes.
@@ -69,29 +77,30 @@ export default function BlogMacBookLoudFan() {
             <strong> dust-clogged heatsink</strong>. The fan pulls room air across a stack of
             thin metal fins, and in this city that air carries fine construction dust and sand.
             Over two or three years the fins pack solid, like felt. Air can't get through, heat
-            can't leave, and the fan spins flat out trying to compensate. <strong>Dried thermal
-            paste</strong> between the chip and the heatsink does the same thing from the inside —
+            can't leave, and the fan spins flat out trying to compensate.</p>
+        <p><strong>Dried thermal
+            paste</strong> between the chip and the heatsink does the same thing from the inside -
             the paste hardens and stops transferring heat, so the fan never catches up.
             <strong> Blocked vents</strong> from using the machine on a bed or cushion choke the
-            intake. High <strong>ambient heat</strong> — a 45°C Dubai summer, a hot car, a room
-            with the AC off — removes the headroom the fan needs. And finally a
+            intake. High <strong>ambient heat</strong>: a 45°C Dubai summer, a hot car, a room
+            with the AC off, removes the headroom the fan needs. And finally a
             <strong> failing fan bearing</strong>, where the noise is a mechanical grind or rattle
             rather than rushing air; that one means the fan itself is on its way out.
           </p>
           <p>
             If your machine is running properly hot as well as loud, our{" "}
-            <Link to="/macbook-overheating-fix-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-overheating-fix-dubai" className="text-accent font-semibold hover:underline">
               MacBook overheating fix page
             </Link>{" "}
             walks through the heat side in more detail.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="the-fixes">The fixes, in order</h2>
           <p>
             Work down this list. Most people stop at step one or two. The rest are quick.
           </p>
 
-          <h3>Step 1 — Quit the runaway process</h3>
+          <h3>Step 1. Quit the runaway process</h3>
           <p>
             Open Activity Monitor (Spotlight, type its name) and click the <strong>CPU</strong>
             tab. Click the <strong>% CPU</strong> column so the heaviest process sits at the top.
@@ -99,43 +108,43 @@ export default function BlogMacBookLoudFan() {
             in the toolbar to quit it. Listen for the fan to ease off over the next minute or two.
           </p>
 
-          <h3>Step 2 — Look for kernel_task</h3>
+          <h3>Step 2. Look for kernel_task</h3>
           <p>
             While you're in there, watch for a process named <strong>kernel_task</strong> using a
             big chunk of CPU. That's not a bug. It's macOS deliberately hogging the processor to
             slow it down and pull the temperature back, usually because something is already too
             hot. Don't try to kill it. It's a symptom that points straight at the hardware causes
-            above — most often the clogged heatsink.
+            above, most often the clogged heatsink.
           </p>
 
-          <h3>Step 3 — Update macOS</h3>
+          <h3>Step 3. Update macOS</h3>
           <p>
             Apple Menu → System Settings → General → Software Update. Fan-curve and
             power-management fixes ship here, and a stuck pending update can be the whole problem.
           </p>
 
-          <h3>Step 4 — Reset the SMC (Intel only)</h3>
+          <h3>Step 4. Reset the SMC (Intel only)</h3>
           <p>
             On Intel MacBooks the System Management Controller runs the fans, and it can get stuck.
             Shut down, then hold Control + Option + Shift (left side) and the power button together
-            for 10 seconds, release, and power back on. Apple Silicon has no SMC to reset — a plain
+            for 10 seconds, release, and power back on. Apple Silicon has no SMC to reset, a plain
             restart does the same thing.
           </p>
 
-          <h3>Step 5 — Get it off the soft surface</h3>
+          <h3>Step 5. Get it off the soft surface</h3>
           <p>
             The intakes are along the rear hinge and the underside. A bed or a cushion seals them
             shut. Put the machine on a desk or a stand and the fan often drops within seconds.
           </p>
 
-          <h3>Step 6 — Keep the ambient cool</h3>
+          <h3>Step 6. Keep the ambient cool</h3>
           <p>
             Apple rates these laptops for 10 to 35°C ambient. A Dubai afternoon blows past that.
             Run the machine in the air conditioning, keep it out of window sun, and never leave it
             in a parked car. Less room heat means the fan has somewhere to dump the chip's heat.
           </p>
 
-          <h3>Step 7 — Professional clean and repaste</h3>
+          <h3>Step 7. Professional clean and repaste</h3>
           <p>
             If the fan is still loud after the first six steps, the inside needs opening. We take
             the bottom case off, clear the dust out of the fan and the heatsink fins, replace the
@@ -144,31 +153,31 @@ export default function BlogMacBookLoudFan() {
             people leave far too long.
           </p>
 
-          <h2>What it costs and how long it takes</h2>
+          <h2 id="cost-and-time">What it costs and how long it takes</h2>
           <p>
-            A full internal clean and repaste runs <strong>AED 250 to 450</strong> depending on
-            the model, VAT included. If the fan itself is grinding or rattling — a worn bearing —
-            a fan replacement is <strong>AED 350 to 600</strong>. Most are done the same day at our
+            A full internal clean and repaste depends on the model, VAT included, and if the fan
+            itself is grinding or rattling a worn bearing means a fan replacement instead. Message
+            us on WhatsApp with your model for today's exact price. Most are done the same day at our
             Concord Tower workshop in Dubai Media City, and it's no-fix-no-charge, so a free
             diagnostic costs you nothing if we can't help. We've been doing this since 2004, and a
             clogged MacBook Pro heatsink is one of the most common jobs that comes through the door.
           </p>
           <p>
             For the full breakdown of the cleaning service, see our{" "}
-            <Link to="/mac-fan-cleaning-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/mac-fan-cleaning-dubai" className="text-accent font-semibold hover:underline">
               Mac fan cleaning page
             </Link>.
           </p>
 
-          <h2>Why ignoring it costs more later</h2>
+          <h2 id="cost-of-ignoring">Why ignoring it costs more later</h2>
           <p>
             A loud fan on its own won't kill the machine. The heat behind it might. When the
-            heatsink can't shed heat, the chip throttles — macOS clamps the speed down to protect
+            heatsink can't shed heat, the chip throttles, macOS clamps the speed down to protect
             itself, so you lose the performance you paid for. Worse, the logic board sits in that
             heat for hours every day. Years of that thermal stress is hard on the solder joints and
             the surrounding components, and a board repair costs far more than a clean ever would.
             In Dubai we tell people to have the inside cleaned every 18 to 24 months. Catch it early
-            and it's a same-day AED 250 job, not a board fault down the line.
+            and it's a same-day clean, not a board fault down the line.
           </p>
           <p>
             Hearing your fan right now? Bring the MacBook to Dubai Media City for a free diagnostic,
@@ -191,11 +200,11 @@ export default function BlogMacBookLoudFan() {
         },
         {
           q: "Why can't I find a fan setting on my MacBook Air?",
-          a: "Apple Silicon MacBook Airs have no fan. The M1, M2, M3 and M4 Airs cool through a metal heat spreader instead. If yours sounds like a fan, it's more likely a buzzing speaker, coil whine, or the SSD. Bring it in and we'll pin down which it is in a few minutes.",
+          a: "Apple Silicon MacBook Airs have no fan. The M1 through M5 Airs cool through a metal heat spreader instead. If yours sounds like a fan, it's more likely a buzzing speaker, coil whine, or the SSD. Bring it in and we'll pin down which it is in a few minutes.",
         },
         {
           q: "How much does it cost to clean and repaste a MacBook in Dubai?",
-          a: "A full internal clean and fresh thermal paste is AED 250 to 450 depending on the model, VAT included. If the fan is grinding and needs replacing, that's AED 350 to 600. Most are finished the same day, and it's no-fix-no-charge if we can't improve it.",
+          a: "It depends on your model and whether the fan itself needs replacing, and every job includes VAT. Message us on WhatsApp with your model for today's exact price. Most are finished the same day, and it's no-fix-no-charge if we can't improve it.",
         },
         {
           q: "How often should I get my MacBook cleaned in Dubai?",
@@ -207,7 +216,7 @@ export default function BlogMacBookLoudFan() {
         },
       ]}
       relatedLinks={[
-        { label: "Mac fan cleaning Dubai", href: "/mac-fan-cleaning-dubai", description: "Internal clean and repaste, from AED 250." },
+        { label: "Mac fan cleaning Dubai", href: "/mac-fan-cleaning-dubai", description: "Internal clean and repaste, same day." },
         { label: "MacBook overheating fix Dubai", href: "/macbook-overheating-fix-dubai", description: "When the machine runs hot as well as loud." },
         { label: "Protect your MacBook in Dubai summer heat", href: "/blog/protect-macbook-dubai-summer-heat", description: "Keeping a MacBook cool through a 45°C summer." },
       ]}

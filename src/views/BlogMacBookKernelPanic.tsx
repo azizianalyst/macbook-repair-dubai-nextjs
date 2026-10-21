@@ -17,6 +17,13 @@ export default function BlogMacBookKernelPanic() {
       seoTitle="MacBook Keeps Restarting? Kernel Panic Fixes (2026)"
       seoDescription="MacBook kernel panic or random restarts? Six fixes in order - read the panic log, unplug peripherals, Safe Mode, Apple Diagnostics - then know when it's RAM, the SSD or heat."
       path="/blog/macbook-kernel-panic-restarts-fix"
+      wide
+      toc={[
+        { id: "software-or-hardware", label: "Software or hardware panic" },
+        { id: "fixes-in-order", label: "The fixes, in order" },
+        { id: "hardware-causes", label: "When it's hardware" },
+        { id: "repair-cost", label: "What it costs" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Keeps Restarting? Kernel Panic Fixes"
       hook="A MacBook that throws the 'restarted because of a problem' message is shouting software about nine times in ten - a bad driver, a dodgy dock, or a full disk. The panic log usually names the culprit, and the few hardware causes have a clean test each."
@@ -25,7 +32,7 @@ export default function BlogMacBookKernelPanic() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={9}
-      featuredImageAlt="MacBook kernel panic diagnostic in Dubai - technician reading the panic log and running Apple Diagnostics at the Media City workshop"
+      featuredImageAlt="MacBook Kernel Panic Restarts Fix. MacBook kernel panic diagnostic in Dubai - technician reading the panic log and running Apple Diagnostics at the Media City workshop"
       extraSchemas={[howTo({
         name: "Fix a MacBook that keeps restarting or kernel panicking in six steps",
         description: "Six diagnostic steps for a MacBook throwing kernel panics or random restarts, in priority order, before booking hardware service.",
@@ -34,7 +41,7 @@ export default function BlogMacBookKernelPanic() {
       })]}
       body={
         <>
-          <h2>Software panic or hardware panic?</h2>
+          <h2 id="software-or-hardware">MacBook Kernel Panic Restarts Fix. Software panic or hardware panic?</h2>
           <p>
             A kernel panic is just macOS hitting something it can't recover from and restarting to
             stay safe. The cause is software the overwhelming majority of the time, which is why the
@@ -42,7 +49,7 @@ export default function BlogMacBookKernelPanic() {
             that reach our Dubai Media City bench are a bad driver, a failing external drive, or a disk
             that's run out of room. The hardware ones are real but fewer, and each has a test. If it
             does turn out to be the board or the storage, our{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic
             </Link>{" "}
             pins it down before any quote.
@@ -58,7 +65,7 @@ export default function BlogMacBookKernelPanic() {
             don't care which app you're in.
           </p>
 
-          <h2>The fixes, in order</h2>
+          <h2 id="fixes-in-order">The fixes, in order</h2>
           <p>
             Work down the list and watch for the pattern to break. Most random-restart jobs are solved
             before the diagnostic stage.
@@ -103,7 +110,7 @@ export default function BlogMacBookKernelPanic() {
             happens at random, that's when hardware moves up the list.
           </p>
 
-          <h2>When it's hardware: the common causes</h2>
+          <h2 id="hardware-causes">When it's hardware: the common causes</h2>
           <p>
             If the panics survive a bare boot, Safe Mode and an update, it's usually one of four
             things. Here's what we actually find on the bench, roughly in order across Dubai.
@@ -113,16 +120,16 @@ export default function BlogMacBookKernelPanic() {
             A Mac that panics under load or when it's hot is often throttling against a heatsink packed
             with dust, and Dubai flats collect a lot of it. The fix is a strip, clean and fresh thermal
             paste, not a new part. We walk through the symptoms in our{" "}
-            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-fan-loud-always-on" className="text-accent font-semibold hover:underline">
               loud-fan guide
-            </Link>, and a clean and repaste is AED 280.
+            </Link>, and a clean and repaste is one of our most affordable fixes - WhatsApp us for the exact price.
           </p>
           <h3>A failing SSD</h3>
           <p>
             A drive on its way out throws panics as macOS fails to read or write. First Aid usually
             flags it. This is the one to act on quickly, because a failing SSD risks your files. Back
             up now and see our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery page
             </Link>{" "}
             if the drive is already struggling.
@@ -140,17 +147,17 @@ export default function BlogMacBookKernelPanic() {
             using the Mac until it's replaced.
           </p>
 
-          <h2>What it costs to fix in Dubai</h2>
+          <h2 id="repair-cost">What does it cost to fix in Dubai?</h2>
           <p>
             We don't charge to look. Bring it to Concord Tower in Dubai Media City and the diagnostic
             is free, so you'll know whether it's heat, the SSD, the RAM or the board before you commit.
-            The prices below are VAT-inclusive and depend on the model.
+            Every quote is VAT-inclusive and depends on the model.
           </p>
           <p>
-            A strip, clean and repaste to cure thermal panics is AED 280. An SSD replacement runs AED
-            400 to 1,200 by capacity, and battery replacement is from AED 450. Memory and logic-board
-            work starts from AED 800. If the drive is failing, deal with a{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            A strip, clean and repaste to cure thermal panics, an SSD replacement, a battery
+            replacement, or memory and logic-board work - message us on WhatsApp with your model for
+            today's exact price. If the drive is failing, deal with a{" "}
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               data recovery
             </Link>{" "}
             backup first, before anything else.
@@ -169,7 +176,7 @@ export default function BlogMacBookKernelPanic() {
         },
         {
           q: "How much does it cost to fix a MacBook that keeps panicking in Dubai?",
-          a: "It depends on the cause, and the diagnostic to find out is free. A clean and repaste for thermal panics is AED 280. An SSD replacement is AED 400 to 1,200 by capacity. Battery replacement is from AED 450, and board or RAM work starts from AED 800. All prices are VAT-inclusive. Most software causes cost nothing once we point you at them.",
+          a: "It depends on the cause, and the diagnostic to find out is free. A clean and repaste for thermal panics, an SSD replacement, a battery replacement, or board and RAM work all vary by model - message us on WhatsApp with your model for today's exact price. Every quote is VAT-inclusive, and most software causes cost nothing once we point you at them.",
         },
         {
           q: "Will reinstalling macOS stop the kernel panics?",
@@ -177,7 +184,7 @@ export default function BlogMacBookKernelPanic() {
         },
         {
           q: "Can a swollen battery cause restarts?",
-          a: "It can. A battery swelling under the top case puts pressure on the board and can trigger instability and random shutdowns, alongside the keyboard and trackpad symptoms it usually causes. A swollen battery is a safety risk too. Stop using the Mac and have the battery replaced, from AED 450, rather than waiting for it to get worse.",
+          a: "It can. A battery swelling under the top case puts pressure on the board and can trigger instability and random shutdowns, alongside the keyboard and trackpad symptoms it usually causes. A swollen battery is a safety risk too. Stop using the Mac and have the battery replaced - message us on WhatsApp for the exact price on your model - rather than waiting for it to get worse.",
         },
         {
           q: "Is a kernel panic a sign my MacBook is dying?",
@@ -193,6 +200,7 @@ export default function BlogMacBookKernelPanic() {
         },
       ]}
       relatedLinks={[
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
         { label: "Full MacBook diagnostic", href: "/macbook-full-diagnostic-dubai", description: "Free bench diagnostic and a fixed quote." },
         { label: "MacBook data recovery", href: "/macbook-data-recovery-dubai", description: "If a failing SSD is behind the panics." },
         { label: "MacBook running slow guide", href: "/blog/macbook-running-slow-10-fixes", description: "When it's sluggish rather than restarting." },

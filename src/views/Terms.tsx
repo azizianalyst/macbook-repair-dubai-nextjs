@@ -3,6 +3,7 @@ import { LegalLayout, LegalSection } from "@/components/layout/LegalLayout";
 import { useSeo } from "@/hooks/use-seo";
 import { organization, webPage } from "@/lib/schema";
 import { NAP } from "@/content/site";
+import { SCREEN_WARRANTY_LINE } from "@/content/part-grades";
 
 const LAST_UPDATED = "April 2026";
 const ISO_DATE = "2026-04-01";
@@ -38,7 +39,7 @@ export default function Terms() {
           <li>iPhone screen, battery, board, and water-damage repair</li>
           <li>iPad screen, battery, and charging port repair</li>
           <li>Data recovery from working and non-booting drives</li>
-          <li>Free pickup and delivery across Dubai Mainland</li>
+          <li>Walk-in service at the Dubai Media City workshop, devices sent in by a courier the customer books, and paid onsite visits subject to technician availability, quoted in advance on WhatsApp</li>
         </ul>
       </LegalSection>
 
@@ -46,7 +47,7 @@ export default function Terms() {
         <ul>
           <li>The initial diagnosis is free for every device, every customer, no exceptions.</li>
           <li>A written quote is sent to your WhatsApp number before any work begins.</li>
-          <li>If a board or part cannot be repaired, you owe AED 0 - no diagnostic fee, no inspection charge, no labour fee.</li>
+          <li>If a board or part cannot be repaired, you owe nothing - no diagnostic fee, no inspection charge, no labour fee.</li>
           <li>You may collect the unrepaired device at any time during business hours.</li>
           <li>Two exceptions where a fee may apply: (a) data recovery attempts on physically damaged drives where labour is quoted in writing in advance; (b) liquid damage cases where the cleaning step has already been authorised in writing.</li>
         </ul>
@@ -56,7 +57,7 @@ export default function Terms() {
         <ul>
           <li><strong>Genuine Apple parts</strong> are fitted whenever the part is currently sold by Apple wholesale or available through verified channels.</li>
           <li><strong>Quality-grade aftermarket parts</strong> (OEM or premium third-party) are clearly labelled on the WhatsApp quote and on the printed invoice.</li>
-          <li>Aftermarket parts carry the same 90-day warranty as genuine parts.</li>
+          <li>Warranty depends on the part and its grade, as listed on the <a href="/warranty/">warranty page</a>. MacBook screens: {SCREEN_WARRANTY_LINE}. The grade is named on your quote and invoice.</li>
           <li>Some Touch ID, Face ID, and True Tone features are tied to the original Apple part by Apple's calibration servers and may not work after replacement. The technician will state this in writing before the repair.</li>
           <li>Old parts removed during the repair are returned to you on request, except where Apple recycling regulations require recovery (lithium-ion batteries).</li>
         </ul>
@@ -64,7 +65,7 @@ export default function Terms() {
 
       <LegalSection id="warranty" title="4. Warranty">
         <p>
-          A 90-day written warranty applies to every paid repair. The full terms - what is and is not covered, how to claim, and the warranty period for each repair type - are listed on the dedicated <a href="/warranty">Warranty Policy</a> page.
+          A written warranty of 15 days to 2 years applies to every paid repair. The full terms - what is and is not covered, how to claim, and the warranty period for each repair type - are listed on the dedicated <a href="/warranty/">Warranty Policy</a> page.
         </p>
       </LegalSection>
 
@@ -90,7 +91,7 @@ export default function Terms() {
 
       <LegalSection id="abandonment" title="7. Device abandonment policy">
         <ul>
-          <li>Devices not collected within 60 days of the "ready for pickup" WhatsApp message are considered abandoned.</li>
+          <li>Devices not collected within 60 days of the "ready to collect" WhatsApp message are considered abandoned.</li>
           <li>Three reminder messages are sent: at day 14, day 30, and day 50.</li>
           <li>After day 60, the device may be sold to recover unpaid repair costs and storage fees, in line with UAE Civil Transactions Law Article 415.</li>
           <li>Any sale proceeds in excess of the unpaid balance are held for 12 months for the customer to claim, then donated to a registered Dubai charity.</li>

@@ -4,28 +4,28 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadSoftwareReset() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Software Reset Dubai - iPadOS Fix | AED 250 Same-Day"
-      seoDescription="iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserved where possible. AED 250, same day."
+      seoTitle="iPad Software Reset Dubai - iPadOS Fix | Same-Day"
+      seoDescription="iPad stuck on Apple logo, frozen update, recovery loop. DFU restore, iPadOS reinstall, data preserved where possible. Same day - message us on WhatsApp."
       path="/ipad-software-reset-dubai"
       eyebrow="iPad software repair"
       h1="iPad Software Reset Dubai - iPadOS Fix"
-      subtitle="Stuck on the Apple logo, frozen during an update, or trapped in recovery mode. DFU restore done properly - with data preserved where possible. AED 250, same day."
+      subtitle="Stuck on the Apple logo, frozen during an update, or trapped in recovery mode. DFU restore done properly - with data preserved where possible. Same day - message us on WhatsApp for today's price."
       startingPrice={250}
       timeline="Same day"
       whatsappPrefill="Hi, my iPad needs a software reset - model and symptom:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPad Repair",     path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",     path: "/ipad-repair-dubai" },
         { name: "Software Reset",  path: "/ipad-software-reset-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPadOS recovery and DFU restore" }}
-      serviceName="iPad Software Reset"
+      serviceName="iPad Software Reset Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>Most "dead" iPads aren't dead - they're stuck in software</strong>: a failed iPadOS 18 update, a corrupted system partition after a forced shutdown, or a recovery-mode loop after low battery during an update. AED 250 covers the full DFU recovery process, including data preservation attempt before any erase. Same day on every iPad from iPad 5 through M4 Pro.
+            <strong>Most "dead" iPads aren't dead - they're stuck in software</strong>: a failed iPadOS 18 update, a corrupted system partition after a forced shutdown, or a recovery-mode loop after low battery during an update. Our flat service covers the full DFU recovery process, including a data preservation attempt before any erase - message us on WhatsApp for today's exact price on your model. Same day on every iPad from iPad 5 through M4 Pro.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We start with the gentlest method (force restart, then standard recovery) and only escalate to DFU + erase if needed. About 60% of iPads we see this way come back with the original data intact. The rest need a clean iPadOS reinstall - your iCloud backup gets restored automatically afterwards.
           </p>
         </>
@@ -44,13 +44,13 @@ export default function IPadSoftwareReset() {
         { title: "Triage and gentle recovery", body: "Force restart first (button combo), then standard recovery mode. About a third of iPads recover here without data loss." },
         { title: "DFU mode + firmware extract",body: "If standard recovery fails, we enter DFU and attempt to extract user data partition before any erase." },
         { title: "Reinstall iPadOS",           body: "Latest stable iPadOS installed via Apple's signed firmware. We never use modified IPSWs - security and update path stay intact." },
-        { title: "Data restore",               body: "If your iCloud backup is recent, we restore from it. If not, we hand back a clean iPad with iPadOS ready to set up. 90-day warranty on the software work." },
+        { title: "Data restore",               body: "If your iCloud backup is recent, we restore from it. If not, we hand back a clean iPad with iPadOS ready to set up. 15-day warranty on the software work." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
         "Covers the software install and configuration.",
         "Excludes hardware faults uncovered during diagnostic (separate quote).",
-        "Free re-restore within 90 days if iPadOS becomes unstable.",
+        "Free re-restore within 15 days if iPadOS becomes unstable.",
       ]}
       faqs={[
         { q: "Will I lose my data?", a: "We try to preserve it. About 60% of cases we recover the data partition before reinstalling. The remaining 40% need an erase, but if you have an iCloud backup we restore it automatically - you'd lose only changes since the last backup." },

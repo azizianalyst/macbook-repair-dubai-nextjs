@@ -5,7 +5,7 @@ export default function MacOsReinstallDesktop() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro macOS Reinstall Dubai | 055 741 3706"
-      seoDescription="macOS reinstall on Mac Mini, Studio, Pro. Internet Recovery, Apple Configurator for revival, latest macOS compatibility. AED 300. Same day."
+      seoDescription="macOS reinstall on Mac Mini, Studio, Pro. Internet Recovery, Apple Configurator for revival, latest macOS compatibility. Same day."
       path="/mac-os-reinstall-dubai"
       eyebrow="macOS reinstall"
       h1="Mac Mini, Studio & Pro macOS Reinstall Dubai"
@@ -19,13 +19,13 @@ export default function MacOsReinstallDesktop() {
         { name: "macOS Reinstall", path: "/mac-os-reinstall-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS installs and Apple Configurator revival" }}
-      serviceName="Mac Mini, Studio and Pro macOS Reinstall"
+      serviceName="Mac Mini, Studio and Pro macOS Reinstall Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Sometimes the right fix isn't a part - it's a fresh OS.</strong> A Mac that boots slowly, throws random kernel panics, can't complete a software update or has been through three or four major macOS upgrades over the years often just needs a clean install. We back up first, install clean, restore your data and apps after.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             For most Macs, Internet Recovery is the route - boot with Cmd-R or Option-Cmd-R, install macOS, done. For M-series Mac Studio and Mac Pro that are properly stuck (no boot at all, recoveryOS won't load), we use Apple Configurator 2 from a second Mac connected over USB-C - it does a DFU-mode revival or restore that brings the firmware back to ship-state. We have the second Mac, the right cables and the experience to make this work the first time.
           </p>
         </>
@@ -44,7 +44,7 @@ export default function MacOsReinstallDesktop() {
         { title: "Clean install",              body: "Erase the volume in Disk Utility (APFS), install macOS, set up baseline preferences." },
         { title: "Restore data + apps",        body: "Migration Assistant brings back documents, photos, mail, settings and most apps from your backup. We help with the things Migration Assistant misses." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day support window - if the install has issues, we re-do it free.",
         "We confirm the OS boots cleanly and apps run before you collect.",
@@ -63,6 +63,8 @@ export default function MacOsReinstallDesktop() {
         { label: "Mac Performance Tune",  href: "/mac-performance-tune-dubai",  description: "If macOS is slow but you don't want a full reinstall." },
         { label: "Mac SSD Upgrade",       href: "/mac-ssd-upgrade-dubai",       description: "Pair with SSD upgrade where the model allows it." },
         { label: "Mac Full Diagnostic",   href: "/mac-full-diagnostic-dubai",   description: "Free check before deciding on a reinstall." },
+        { label: "MacBook macOS Reinstall", href: "/macos-reinstall-dubai",     description: "Same clean-install service for a MacBook." },
+        { label: "iMac macOS Reinstall",  href: "/imac-os-reinstall-dubai",     description: "Reinstalling on an iMac? We do those too." },
       ]}
       blogLink={{ label: "Apple Configurator revival - how we bring stuck M-series Macs back to life", href: "/blog/mac-mini-running-slow-fix" }}
     />

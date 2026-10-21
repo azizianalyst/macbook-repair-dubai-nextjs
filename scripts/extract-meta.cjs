@@ -4,25 +4,35 @@
 const fs = require("fs");
 const path = require("path");
 
-const OLD_APP = "/Users/azizi/Desktop/websites/macbook-rpeiar-dubai-cd4eafff/src/App.tsx";
+const APP = path.join(__dirname, "..", "src", "app");
 const VIEWS = path.join(__dirname, "..", "src", "views");
 const OUT = path.join(__dirname, "..", "src", "lib", "route-meta.generated.ts");
 
-const app = fs.readFileSync(OLD_APP, "utf8");
-const compToMod = {};
-for (const m of app.matchAll(/const\s+(\w+)\s*=\s*lazyPage\(\(\)\s*=>\s*import\("\.\/pages\/([^"]+)"\)\)/g)) compToMod[m[1]] = m[2];
-for (const m of app.matchAll(/import\s+(\w+)\s+from\s+"\.\/pages\/([^"]+)"/g)) compToMod[m[1]] = m[2];
-
+// Walk src/app for page.tsx files; route = dir path, view = its "@/views/X" import.
 const routes = [];
-for (const m of app.matchAll(/<Route\s+path="([^"]+)"\s+element=\{<(\w+)\s*\/>\}/g)) {
-  if (m[1] === "*") continue;
-  routes.push({ pathName: m[1], comp: m[2], mod: compToMod[m[2]] });
-}
+(function walk(dir, base) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) walk(path.join(dir, e.name), base + "/" + e.name);
+    else if (e.name === "page.tsx") {
+      const pathName = base || "/";
+      if (pathName.includes("[")) continue; // dynamic routes get meta from dynamic-meta.ts
+      const src = fs.readFileSync(path.join(dir, e.name), "utf8");
+      const m = src.match(/(?:import\s+\w+|export\s*\{\s*default\s*\})\s+from\s+"@\/views\/([^"]+)"/);
+      if (m) routes.push({ pathName, mod: m[1] });
+    }
+  }
+})(APP, "");
 
 // A quoted string literal with proper escape handling, for ", ' or `.
 const STR = '("(?:\\\\.|[^"\\\\])*"|\'(?:\\\\.|[^\'\\\\])*\'|`(?:\\\\.|[^`\\\\])*`)';
+// The review labels are the one interpolation copy is allowed (t-review-count-from-data): resolve
+// them from business.generated.ts (written from data/seo.json by gen-business, which runs first).
+const BIZ = (() => { try { return require("fs").readFileSync(require("path").join(__dirname, "..", "src", "content", "business.generated.ts"), "utf8"); } catch { return ""; } })();
+const num = (name) => Number((BIZ.match(new RegExp("export const " + name + " = ([0-9.]+)")) || [])[1] || 0);
+const LABELS = { "${REVIEW_COUNT_LABEL}": `${num("REVIEW_COUNT")}+`, "${RATING_LABEL}": num("REVIEW_AVERAGE").toFixed(1) };
 const unquote = (raw) => {
-  const body = raw.slice(1, -1);
+  let body = raw.slice(1, -1);
+  for (const [k, v] of Object.entries(LABELS)) body = body.split(k).join(v);
   if (body.includes("${")) return null; // interpolated template -> not a static literal
   return body.replace(/\\(["'`\\])/g, "$1").replace(/\\n/g, " ").trim();
 };

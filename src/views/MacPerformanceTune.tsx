@@ -5,7 +5,7 @@ export default function MacPerformanceTune() {
   return (
     <SubServicePageTemplate
       seoTitle="Mac Mini, Studio & Pro Performance Tune Dubai | 055 741 3706"
-      seoDescription="Mac performance tune Dubai. macOS cleanup, startup audit, storage cleanup, log analysis. Find what's actually slowing it down. AED 350. 1 day."
+      seoDescription="Mac performance tune Dubai. macOS cleanup, startup audit, storage cleanup, log analysis. Find what's actually slowing it down. 1 day."
       path="/mac-performance-tune-dubai"
       eyebrow="Mac performance tune"
       h1="Mac Mini, Studio & Pro Performance Tune Dubai"
@@ -19,13 +19,13 @@ export default function MacPerformanceTune() {
         { name: "Performance Tune",    path: "/mac-performance-tune-dubai" },
       ]}
       technician={{ name: "Sayed", years: 12, specialisation: "macOS performance and log analysis" }}
-      serviceName="Mac Mini, Studio and Pro Performance Tune"
+      serviceName="Mac Mini, Studio and Pro Performance Tune Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>'My Mac is slow' is a symptom, not a diagnosis.</strong> The actual cause is almost always one of: a runaway background process eating CPU 24/7, dozens of unwanted login items and launch agents, a swapped-out hard drive that's nearly full, a thermal throttle from dusty fans, or an old macOS that's lost compatibility with current apps. We find the specific cause for your Mac through Console log analysis and Activity Monitor profiling - then fix it.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             We don't run 'cleaner' apps. macOS doesn't need them and they often make things worse. Instead we audit launch agents and daemons, identify the few that are actually problematic, remove them, clean caches by hand, free up storage, check for thermal throttling, and audit installed apps for known troublemakers (old kernel extensions, abandoned 32-bit apps still trying to launch). Then we measure before-and-after with the same benchmarks so you can see the difference, not just feel it.
           </p>
         </>
@@ -44,7 +44,7 @@ export default function MacPerformanceTune() {
         { title: "Targeted cleanup",             body: "Launch agents and daemons audited and pruned. Caches cleared. Old kernel extensions removed. Storage cleaned. App-specific fixes (Safari profiles, Mail rebuild)." },
         { title: "Re-measure + compare",         body: "Same benchmarks re-run. We hand you a one-page before/after summary. Usually 2-5× speed improvement on the operations that were slow." },
       ]}
-      warrantyDays={30}
+      warrantyDays={15}
       warrantyBullets={[
         "30-day support - if a specific slowdown returns, we re-investigate free.",
         "Honest 'this needs a hardware upgrade, not a tune' verdict if applicable.",
@@ -60,7 +60,7 @@ export default function MacPerformanceTune() {
       ]}
       reviewNames={["Marianne Chehade El Dfouni", "Shah nawaz", "Ali Hassan"]}
       related={[
-        { label: "Mac macOS Reinstall",   href: "/mac-os-reinstall-dubai",      description: "When a tune isn't enough - clean install." },
+        { label: "Mac mini/Studio/Pro macOS Reinstall", href: "/mac-os-reinstall-dubai",      description: "When a tune isn't enough - clean install." },
         { label: "Mac Fan Cleaning",      href: "/mac-fan-cleaning-dubai",      description: "If thermal throttling is the actual cause." },
         { label: "Mac Full Diagnostic",   href: "/mac-full-diagnostic-dubai",   description: "Free check first - confirm whether tune or hardware." },
       ]}

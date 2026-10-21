@@ -1,7 +1,7 @@
 "use client";
 import { ExternalLink, MapPin, ParkingCircle } from "lucide-react";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 // Verified Google Business Profile embed (pins the actual "MacBook Repair Dubai" listing).
 const MAPS_EMBED =
@@ -10,50 +10,51 @@ const GBP_URL = "https://maps.app.goo.gl/X5easM2GnxoZnqhU7";
 const DIRECTIONS =
   "https://www.google.com/maps/dir/?api=1&destination=Concord+Tower+Dubai+Media+City";
 
-export function LocationBlock({ tone = "light" }: { tone?: "light" | "dark" }) {
+export function LocationBlock({ tone = "light", compact = false }: { tone?: "light" | "dark"; compact?: boolean }) {
   const dark = tone === "dark";
+  const mapH = compact ? 220 : 320;
   return (
     <section className="grid gap-lg md:grid-cols-2 items-stretch">
-      <div className={cn("rounded-md overflow-hidden border", dark ? "border-white/10" : "border-border bg-bg-card")}>
+      <div className={cn("rounded-xl overflow-hidden border", dark ? "border-border" : "border-border bg-bg-card")}>
         <iframe
           src={MAPS_EMBED}
           title={`Map to ${NAP.name}`}
           width="100%"
-          height="320"
+          height={mapH}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="block w-full h-[320px] border-0"
+          className={cn("block w-full border-0", compact ? "h-[220px]" : "h-[320px]")}
         />
       </div>
 
-      <div className="flex flex-col gap-md">
-        <h3 className={cn("m-0", dark && "text-on-primary")}>Find us in Media City</h3>
-        <p className={cn("flex items-start gap-sm text-[15px]", dark ? "text-on-primary-muted" : "text-text")}>
-          <MapPin size={18} className={cn("mt-1 shrink-0", dark ? "text-accent-bright" : "text-accent")} aria-hidden />
+      <div className="flex flex-col gap-4">
+        <h3 className={cn("text-[18px] font-semibold m-0", dark ? "text-text" : "text-text")}>Find us in Media City</h3>
+        <p className={cn("flex items-start gap-sm text-[15px]", dark ? "text-text-muted" : "text-text")}>
+          <MapPin size={18} className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-accent")} aria-hidden />
           <span>
             {NAP.street}<br />
             {NAP.area}<br />
             {NAP.city}, UAE
           </span>
         </p>
-        <p className={cn("flex items-start gap-sm text-[14px]", dark ? "text-on-primary-faint" : "text-text-muted")}>
-          <ParkingCircle size={18} className={cn("mt-1 shrink-0", dark ? "text-accent-bright" : "text-accent")} aria-hidden />
-          Paid parking on-site and nearby. Across from Media City Metro.
+        <p className={cn("flex items-start gap-sm text-[14px]", dark ? "text-text-faint" : "text-text-muted")}>
+          <ParkingCircle size={18} className={cn("mt-1 shrink-0", dark ? "text-accent" : "text-accent")} aria-hidden />
+          Paid parking on-site and nearby. A 3-minute walk from the Palm Jumeirah tram stop.
         </p>
         <div className="flex flex-wrap gap-lg">
           <a
-            href={DIRECTIONS}
+            href={withSlash(DIRECTIONS)}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn("inline-flex items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent-bright" : "text-primary")}
+            className={cn("inline-flex min-h-[44px] items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent" : "text-primary")}
           >
             Get directions <ExternalLink size={14} aria-hidden />
           </a>
           <a
-            href={GBP_URL}
+            href={withSlash(GBP_URL)}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn("inline-flex items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent-bright" : "text-primary")}
+            className={cn("inline-flex min-h-[44px] items-center gap-2 text-[14px] font-semibold hover:underline w-fit", dark ? "text-accent" : "text-primary")}
           >
             View on Google <ExternalLink size={14} aria-hidden />
           </a>

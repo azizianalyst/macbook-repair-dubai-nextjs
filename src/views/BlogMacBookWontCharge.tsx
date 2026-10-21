@@ -19,6 +19,14 @@ export default function BlogMacBookWontCharge() {
       seoTitle="MacBook Won't Charge? 8 Fixes Before You Pay"
       seoDescription="MacBook won't charge in Dubai? Work through 8 fixes in order: charger, port, cooling, SMC reset, battery health. Plus when it's the charge IC or a swollen cell."
       path="/blog/macbook-wont-charge-fixes"
+      wide
+      toc={[
+        { id: "read-the-symptom", label: "First, read the symptom" },
+        { id: "eight-fixes", label: "The 8 fixes, in order" },
+        { id: "charger-port-or-battery", label: "Charger, port, or battery?" },
+        { id: "chargers-in-dubai", label: "A word on chargers in Dubai" },
+        { id: "what-next", label: "What to do next" },
+      ]}
       category="Problem solving · MacBook"
       h1="MacBook Won't Charge? 8 Fixes to Try First"
       hook="Most MacBooks that won't charge aren't broken at all. Nine times out of ten it's the cable, the brick, or lint in the port. Work through these eight checks before you pay anyone."
@@ -27,7 +35,7 @@ export default function BlogMacBookWontCharge() {
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={9}
-      featuredImageAlt="MacBook not charging diagnostic on the bench in Dubai Media City - USB-C charging port inspection"
+      featuredImageAlt="MacBook Won't Charge. MacBook not charging diagnostic on the bench in Dubai Media City - USB-C charging port inspection"
       extraSchemas={[howTo({
         name: "Fix a MacBook that won't charge in 8 steps",
         description: "Eight checks in priority order for a MacBook that won't charge, from the charger and port to the battery, before booking a repair.",
@@ -40,35 +48,35 @@ export default function BlogMacBookWontCharge() {
             A MacBook that won't charge sends most people straight to a search for a new logic board.
             It's almost never that. In our Concord Tower workshop the most common "dead" MacBook turns
             out to have a frayed cable or a port packed with pocket lint. Before you spend a dirham,
-            walk these eight checks in order — they're the same ones we run on the bench before we
+            walk these eight checks in order, they're the same ones we run on the bench before we
             ever pick up a screwdriver. If you reach step eight and it's still flat, our{" "}
-            <Link to="/macbook-charging-port-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-charging-port-repair-dubai" className="text-accent font-semibold hover:underline">
               charging port repair
             </Link>{" "}
             page covers what happens next.
           </p>
 
-          <h2>First, read the symptom</h2>
+          <h2 id="read-the-symptom">MacBook Won't Charge. First, read the symptom</h2>
           <p>
             What the Mac tells you narrows the cause fast. There are three common states and they
             mean different things.
           </p>
           <ul className="list-disc list-inside space-y-xs">
             <li>
-              <strong>Not Charging</strong> — the cable is connected and the Mac sees power, but the
+              <strong>Not Charging</strong>: the cable is connected and the Mac sees power, but the
               battery isn't taking it. Often heat, a degraded cell, or optimised charging holding off.
             </li>
             <li>
-              <strong>Plugged in, not charging</strong> (or no charging icon at all) — usually the
+              <strong>Plugged in, not charging</strong> (or no charging icon at all), usually the
               charger, cable, or port. The Mac isn't getting clean power through.
             </li>
             <li>
-              <strong>Charging slowly</strong> — an underpowered brick, a worn cable, or a USB-C port
+              <strong>Charging slowly</strong>: an underpowered brick, a worn cable, or a USB-C port
               that's lost a few of its power pins. A 30W brick on a 16″ Pro will charge slowly by design.
             </li>
           </ul>
 
-          <h2>The 8 fixes, in order</h2>
+          <h2 id="eight-fixes">The 8 fixes, in order</h2>
 
           <h3>1. Swap the charger and the cable</h3>
           <p>
@@ -84,14 +92,14 @@ export default function BlogMacBookWontCharge() {
             Switch the Mac off and shine a torch into the USB-C or MagSafe port. Dubai pockets and
             bags carry a lot of fine dust, and it compacts into the recess until the connector can't
             seat. Clean it gently with a wooden toothpick or a short blast of dry compressed air.
-            Never poke metal in there — you can bridge the contacts and do real damage.
+            Never poke metal in there, you can bridge the contacts and do real damage.
           </p>
 
           <h3>3. Try the other port</h3>
           <p>
             On many MacBook Pro models the left and right USB-C ports run through separate controllers.
             If the left pair is dead, plug into the right. When one side charges and the other doesn't,
-            that's not the charger — that's a board-level fault on the dead side, and it's worth a
+            that's not the charger, that's a board-level fault on the dead side, and it's worth a
             proper diagnostic.
           </p>
 
@@ -115,7 +123,7 @@ export default function BlogMacBookWontCharge() {
             On Intel MacBooks the System Management Controller governs charging, and it can glitch.
             With the Mac shut down, hold Control, the left Option, and the right Shift for seven
             seconds, then keep holding and add the power button for another seven. Release everything,
-            wait, and power on. Apple Silicon Macs (M1 onward) have no SMC — a normal restart does the
+            wait, and power on. Apple Silicon Macs (M1 onward) have no SMC, a normal restart does the
             same job.
           </p>
 
@@ -124,7 +132,7 @@ export default function BlogMacBookWontCharge() {
             Open System Settings → Battery → Battery Health, or hold Option and click the battery icon
             in the menu bar. If it reads <strong>Service Recommended</strong> or <strong>Service Battery</strong>,
             the cell has worn down and may refuse a full charge or cut out under load. Our{" "}
-            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-battery-health-check-guide" className="text-accent font-semibold hover:underline">
               battery health check guide
             </Link>{" "}
             walks through what each reading actually means.
@@ -134,15 +142,15 @@ export default function BlogMacBookWontCharge() {
           <p>
             Press on the trackpad. Does it click evenly, or does it feel raised and stiff? A lid that
             won't sit flat or a bottom case that bulges means the battery has swollen. Stop using and
-            charging the Mac straight away — a swollen lithium cell is a genuine fire and pressure
+            charging the Mac straight away, a swollen lithium cell is a genuine fire and pressure
             hazard. Book a{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement
             </Link>{" "}
             and bring it in flat; don't try to keep topping it up.
           </p>
 
-          <h2>So is it the charger, the port, or the battery?</h2>
+          <h2 id="charger-port-or-battery">So is it the charger, the port, or the battery?</h2>
           <p>
             By this point you usually know. Here's how the three break down.
           </p>
@@ -155,34 +163,35 @@ export default function BlogMacBookWontCharge() {
             <strong>The charging port.</strong> If no charger works, the port looks bent or scorched,
             or one side charges and the other doesn't, it's a port or charge-IC fault. The USB-C/MagSafe
             connector and its FPC flex cable wear out or crack; on logic-board models the charging IC
-            and surrounding components can fail. A port or FPC repair runs <strong>AED 300–600</strong>,
-            and a board-level charge IC job <strong>AED 350–800</strong> depending on the model and what
-            else got hit.
+            and surrounding components can fail. Whether it's a port or FPC repair or a board-level
+            charge IC job, the price depends on your exact model and what else got hit, so message us
+            on WhatsApp for today's quote.
           </p>
           <p>
             <strong>The battery.</strong> If Battery Health says Service Recommended, the Mac dies the
             moment you unplug it, or the trackpad is lifting, it's the cell. A MacBook battery
-            replacement runs <strong>AED 450–950</strong> by model, with the larger Pros at the top end.
+            replacement is priced by model, with the larger Pros at the top end, so message us on
+            WhatsApp for the exact price on yours.
           </p>
           <p>
             The honest answer is that you often can't tell the charge IC from the battery from the
-            port without putting a meter on it. That's what our free diagnostic is for — we measure the
+            port without putting a meter on it. That's what our free diagnostic is for, we measure the
             charging line at the connector and the board in about fifteen minutes and tell you exactly
             which of the three it is before you commit to anything.
           </p>
 
-          <h2>A word on chargers in Dubai</h2>
+          <h2 id="chargers-in-dubai">A word on chargers in Dubai</h2>
           <p>
             The market here is full of cheap USB-C bricks. Most are fine for a phone and risky for a
             MacBook. A genuine Apple charger is the safe default. If you go third-party, pick a known
-            brand with proper USB-C Power Delivery and the right wattage — 30W for an Air, 67W or 96W
+            brand with proper USB-C Power Delivery and the right wattage, 30W for an Air, 67W or 96W
             for the Pros. The trouble with the dirham-store bricks is they cut corners on the power
             negotiation, so the Mac either charges slowly or refuses the handshake altogether. A bad
             charger can also stress the charging IC over time, which turns a cheap mistake into an
             expensive one.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-next">What should I do next?</h2>
           <p>
             If you've worked through all eight and the Mac still won't charge, bring it to our Dubai
             Media City workshop for a free diagnostic. We've been fixing Apple hardware at Concord Tower
@@ -207,7 +216,7 @@ export default function BlogMacBookWontCharge() {
         },
         {
           q: "How much does it cost to fix a MacBook charging port in Dubai?",
-          a: "A charging port or FPC flex repair runs AED 300 to 600. A board-level charge IC fault, where the chip that manages charging has failed, runs AED 350 to 800 depending on the model and any collateral damage. The free diagnostic tells you which one it is before you decide, and all prices are VAT-inclusive.",
+          a: "It depends on whether it's a charging port or FPC flex repair or a board-level charge IC fault, where the chip that manages charging has failed, plus your exact model and any collateral damage. The free diagnostic tells you which one it is before you decide, then message us on WhatsApp for the exact quote, all VAT-inclusive.",
         },
         {
           q: "Are third-party chargers safe for a MacBook?",

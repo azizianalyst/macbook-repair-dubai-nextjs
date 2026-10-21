@@ -1,15 +1,16 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 import { useMemo, useState } from "react";
 import { ExternalLink, MessageSquareQuote } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { ReviewCard } from "@/components/blocks/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { REVIEWS, type ReviewLanguage, type ReviewService } from "@/content/reviews";
 import { useSeo } from "@/hooks/use-seo";
-import { reviewSchema, aggregateRating, localBusiness, organization } from "@/lib/schema";
-import { NAP, REVIEW_COUNT, REVIEW_AVERAGE } from "@/content/site";
+import { REVIEW_COUNT, REVIEW_AVERAGE, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 const SERVICE_FILTERS: ReadonlyArray<"All" | ReviewService> = [
   "All", "MacBook", "iMac", "iPhone", "iPad", "Water Damage", "Battery", "Screen",
@@ -47,41 +48,39 @@ export default function Reviews() {
 
   const visibleReviews = filtered.slice(0, visible);
 
-  const reviewSchemas = useMemo(
-    () =>
-      // Only emit Review nodes for reviews that have real text - never fabricate a reviewBody.
-      REVIEWS.slice(0, 50)
-        .filter((r) => r.text && r.text.trim().length > 0)
-        .map((r) => reviewSchema({ author: r.name, rating: r.rating, body: r.text })),
-    [],
-  );
 
+  // JSON-LD is rendered SERVER-SIDE below (JSX <script>) so the AggregateRating star
+  // rating + Review nodes reach the static HTML Google indexes. Previously these went
+  // through useSeo's client-only useEffect and never appeared in the prerendered page.
   useSeo(
     {
       title: `${REVIEW_COUNT}+ Google Reviews · ${REVIEW_AVERAGE} Stars - MacBook Repair Dubai`,
-      description: `${REVIEW_COUNT}+ verified Google reviews, ${REVIEW_AVERAGE}★ average. Real customers, real Apple repairs - MacBook, iMac, iPhone, iPad. Concord Tower, Dubai Media City.`,
+      description: `${REVIEW_COUNT_LABEL} verified Google reviews, ${RATING_LABEL}★ average. Real customers, real Apple repairs - MacBook, iMac, iPhone, iPad. Concord Tower, Dubai Media City.`,
       path: "/reviews",
     },
-    [
-      localBusiness(),
-      organization(),
-      aggregateRating({ value: REVIEW_AVERAGE, count: REVIEW_COUNT }),
-      ...reviewSchemas,
-    ],
+    [],
   );
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+      {/* Business + organization JSON-LD comes from <PageSchema> in app/reviews/page.tsx.
+          NO AggregateRating and NO Review nodes. Self-collected reviews of your own
+          business, marked up on your own site, are the review-snippet spam category
+          Google excludes - it does not show stars for them and it can issue a manual
+          action. The ratings stay as visible on-page text and live for real on the
+          Google Business Profile, which is where they earn stars. (audit 2026-09-23) */}
       <Hero
         variant="service"
         tone="dark"
         eyebrow="Customer feedback"
         title="Real Reviews from Real Customers"
         subtitle="Every review below is a verified Google review. Nothing edited, nothing rewritten."
+        image="/images/real/team/macbook-bench-repairs-dubai.jpg"
+        imageAlt="Customer MacBooks on test at the MacBook Repair Dubai bench in Concord Tower, Dubai Media City"
       >
-        <p className="mt-sm text-[13px] text-on-primary-muted mono">
-          21+ years in Dubai · {WRITTEN_REVIEW_COUNT} written reviews on this page
+        <p className="mt-sm text-[13px] text-text-muted mono">
+          In Dubai since 2004 · {WRITTEN_REVIEW_COUNT} written reviews on this page
         </p>
       </Hero>
 
@@ -94,19 +93,21 @@ export default function Reviews() {
         <h2 className="text-[28px] md:text-[36px] font-heading font-extrabold mb-md">
           MacBook Repair Dubai - {REVIEW_COUNT}+ Google Reviews
         </h2>
-        <div className="flex flex-col gap-sm text-[16px] text-on-primary-muted leading-relaxed max-w-[72ch]">
+        <div className="flex flex-col gap-sm text-[16px] text-text-muted leading-relaxed max-w-[72ch]">
           <p>
-            Every review below is a real, unedited Google review posted directly to our{" "}
-            <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent-bright hover:underline">
+            Every review below was posted by a real customer to our{" "}
+            <a href="https://maps.app.goo.gl/eg8RhTxBg8nFLnWN9" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2">
               Google Business Profile
             </a>
-            . Nothing has been rewritten, curated, or removed. {REVIEW_COUNT}+ verified reviews,{" "}
-            {REVIEW_AVERAGE} average rating - from MacBook screen and battery repairs to water damage
+            . We never rewrite a review&apos;s wording, but this page shows a selection rather
+            than all of them, and longer reviews are shortened with an ellipsis - open any of
+            them on Google to read the full text. {REVIEW_COUNT}+ Google reviews,{" "}
+            {RATING_LABEL} average rating - from MacBook screen and battery repairs to water damage
             recovery, iMac upgrades, iPhone screen replacements, and iPad repairs, all at{" "}
             our Concord Tower workshop in Dubai Media City.
           </p>
           <p>
-            We've been repairing Apple devices in Dubai since 2004 (21+ years). Every review below
+            We've been repairing Apple devices in Dubai since 2004. Every review below
             represents a real device repaired by a real technician - Shafiq, Usman, Ali, or the wider team.
             Filter by device, language, or rating to find reviews most relevant to your repair.
           </p>
@@ -115,7 +116,7 @@ export default function Reviews() {
 
       <section aria-labelledby="filters" className="mx-auto max-w-content px-5 md:px-6 mt-md">
         <h2 id="filters" className="sr-only">Filter reviews</h2>
-        <div className="border border-white/10 bg-white/[0.04] rounded-md p-md flex flex-col gap-md">
+        <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex flex-col gap-md">
           <FilterRow label="Service">
             {SERVICE_FILTERS.map((s) => (
               <Chip
@@ -144,14 +145,14 @@ export default function Reviews() {
             ))}
           </FilterRow>
         </div>
-        <p className="mt-sm text-[13px] text-on-primary-muted mono">
+        <p className="mt-sm text-[13px] text-text-muted mono">
           Showing {visibleReviews.length} of {filtered.length} matching reviews · sorted newest first
         </p>
       </section>
 
       <section aria-label="Customer reviews" className="mx-auto max-w-content px-5 md:px-6 mt-lg">
         {filtered.length === 0 ? (
-          <p className="text-on-primary-muted py-xl text-center">
+          <p className="text-text-muted py-xl text-center">
             No reviews match these filters. Try resetting one.
           </p>
         ) : (
@@ -180,25 +181,34 @@ export default function Reviews() {
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="border border-white/10 bg-white/[0.04] rounded-md p-xl text-center flex flex-col items-center gap-md">
-          <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
-          <p className="text-[16px] text-on-primary-muted max-w-[60ch]">
-            Repaired with us in the past 21 years? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
-          </p>
-          <Button asChild variant="primary">
-            <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
-              Write a Google review <ExternalLink size={16} aria-hidden />
-            </a>
-          </Button>
+        <div className="grid gap-lg md:grid-cols-2 items-center border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-xl p-xl">
+          <div>
+            <h2 className="text-[28px] md:text-[32px]">Leave your own review</h2>
+            <p className="text-[16px] text-text-muted mt-md max-w-[52ch]">
+              Repaired with us since 2004? A 30-second Google review helps the next customer in Dubai find an honest repair shop.
+            </p>
+            <Button asChild variant="primary" className="mt-lg">
+              <a href={withSlash(GOOGLE_REVIEW_URL)} target="_blank" rel="noopener noreferrer">
+                Write a Google review <ExternalLink size={16} aria-hidden />
+              </a>
+            </Button>
+          </div>
+          <div className="flex flex-col gap-2 text-[14px] text-text-muted">
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">{REVIEW_COUNT_LABEL}</span><span>verified Google reviews, nothing edited, nothing incentivised</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">{RATING_LABEL}★</span><span>average rating across all service types</span></div>
+            <div className="flex items-start gap-2"><span className="text-accent font-bold">100%</span><span>of reviews get a personal reply from Shafiq within 24 hours</span></div>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl pb-3xl">
-        <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
-          <MessageSquareQuote size={28} className="text-accent-bright" aria-hidden />
-          Why every review gets a reply
-        </h2>
-        <div className="prose-tight max-w-[70ch] text-on-primary-muted text-[16px] leading-relaxed flex flex-col gap-md">
+        <div className="grid gap-2xl md:grid-cols-2 items-start">
+          <div>
+            <h2 className="text-[28px] md:text-[32px] mb-md flex items-center gap-sm">
+              <MessageSquareQuote size={28} className="text-accent" aria-hidden />
+              Why every review gets a reply
+            </h2>
+        <div className="prose-tight text-text-muted text-[16px] leading-relaxed flex flex-col gap-md">
           <p>
             Shafiq reads every Google review the day it lands. The reply comes from a real person at the Concord Tower office - not a marketing agency, not an automated bot.
           </p>
@@ -206,25 +216,28 @@ export default function Reviews() {
             Two reasons. First, customers spent 30 seconds writing about their MacBook - that earns 30 seconds back. Second, a public reply commits the business in writing: when 5,000+ people read a 5-star review with a thoughtful response, the standard for the next repair is set in public.
           </p>
           <p>
-            Below are 3 unedited examples from the past 6 months. Every word is verbatim.
+            Below are 3 examples from the past 6 months, quoted verbatim.
           </p>
         </div>
 
-        <div className="mt-lg grid gap-md md:grid-cols-3">
-          {RESPONSE_EXAMPLES.map((r, i) => (
-            <ReviewCard
-              key={`example-${i}`}
-              name={r.name}
-              date={r.date}
-              rating={r.rating}
-              text={r.text}
-              ownerResponse={r.ownerResponse}
-              tone="dark"
-            />
-          ))}
+          </div>
+          <div className="flex flex-col gap-md">
+            {RESPONSE_EXAMPLES.map((r, i) => (
+              <ReviewCard
+                key={`example-${i}`}
+                name={r.name}
+                date={r.date}
+                rating={r.rating}
+                text={r.text}
+                ownerResponse={r.ownerResponse}
+                tone="dark"
+              />
+            ))}
+          </div>
         </div>
       </section>
       </div>
+      <RelatedArticles path="/reviews" />
     </PageShell>
   );
 }
@@ -232,7 +245,7 @@ export default function Reviews() {
 function FilterRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-wrap items-center gap-sm">
-      <span className="text-[12px] uppercase tracking-wider text-on-primary-faint mono w-[72px] shrink-0">
+      <span className="text-[12px] uppercase tracking-wider text-text-faint mono w-[72px] shrink-0">
         {label}
       </span>
       <div className="flex flex-wrap gap-1">{children}</div>
@@ -251,8 +264,8 @@ function Chip({
       className={[
         "px-3 py-1.5 text-[13px] rounded-md border transition-colors",
         active
-          ? "bg-accent-bright text-accent-bright border-accent-bright font-semibold"
-          : "bg-white/[0.04] text-on-primary-muted border-white/10 hover:border-accent-bright hover:text-accent-bright",
+          ? "bg-accent text-white border-accent font-semibold"
+          : "bg-bg-card text-text-muted border-border hover:border-accent hover:text-accent",
       ].join(" ")}
     >
       {children}

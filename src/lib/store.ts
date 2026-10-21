@@ -8,6 +8,12 @@ import type { Lead } from "@/lib/lead-schema";
 // LEADS_DB to a persistent path so records survive redeploys. Writes are
 // serialized via an in-process queue to avoid read-modify-write races.
 
+// KNOWN BUILD WARNING ("whole project was traced unintentionally"): Next's file tracer follows
+// this runtime-configurable path (LEADS_DB) and over-traces. The documented
+// /*turbopackIgnore: true*/ comment does NOT suppress it on Next 16.2 (tested on the join and
+// on every fs call site, clean .next). Harmless on THIS deploy model: the archive excludes
+// .next and Hostinger builds server-side, so no shipped artifact grows. Revisit if the deploy
+// ever moves to `output: "standalone"`.
 const FILE = process.env.LEADS_DB || path.join(process.cwd(), "data", "leads.json");
 
 export const LEAD_STATUSES = ["New", "Contacted", "Quoted", "Won", "Lost"] as const;
@@ -50,20 +56,24 @@ function withLock<T>(fn: () => Promise<T>): Promise<T> {
 
 const nextId = (rows: { id: number }[]) => rows.reduce((m, r) => Math.max(m, r.id), 0) + 1;
 
-export async function insertLead(r: Lead & { submittedAt: string; emailed?: boolean }): Promise<boolean> {
+// Returns the new row's id, or null on failure. It used to return a bare boolean,
+// which meant the lead endpoint could not tell the caller WHICH row it stored -
+// so no canary could ever prove a submission was persisted. (audit 2026-09-23)
+export async function insertLead(r: Lead & { submittedAt: string; emailed?: boolean }): Promise<number | null> {
   try {
     return await withLock(async () => {
       const db = await load();
+      const id = nextId(db.leads);
       db.leads.push({
-        id: nextId(db.leads), created_at: r.submittedAt, updated_at: r.submittedAt, status: "New",
+        id, created_at: r.submittedAt, updated_at: r.submittedAt, status: "New",
         device_type: r.deviceType, model: r.model || null, issue: r.issue, details: r.details || null,
         name: r.name, phone: r.phone, email: r.email || null, preferred_contact: r.preferredContact,
         area: r.area || null, source_path: r.sourcePath || null, emailed: r.emailed ? 1 : 0, notes: [],
       });
       await save(db);
-      return true;
+      return id;
     });
-  } catch (err) { console.error("[lead] store insert failed:", err); return false; }
+  } catch (err) { console.error("[lead] store insert failed:", err); return null; }
 }
 
 export type LeadRow = Omit<StoredLead, "notes"> & { note_count: number };

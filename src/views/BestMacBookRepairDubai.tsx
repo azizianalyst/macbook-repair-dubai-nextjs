@@ -1,0 +1,240 @@
+"use client";
+import { withSlash } from "@/lib/utils";
+import { Star, CheckCircle2, Phone, MessageCircle, MapPin, Clock, Shield, Wrench, Award } from "lucide-react";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
+import { PageShell } from "@/components/layout/PageShell";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
+import { USPStrip } from "@/components/blocks/USPStrip";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { VsAppleStore } from "@/components/blocks/VsAppleStore";
+import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { useSeo } from "@/hooks/use-seo";
+import { REVIEWS } from "@/content/reviews";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
+
+const CRITERIA = [
+  { icon: Wrench,       title: "Component-level board repair",   body: "Most shops replace the whole logic board. The best MacBook repair shop in Dubai does component-level micro-soldering, fixing the specific chip or capacitor that failed. Same outcome, far cheaper than a full board swap. Message us on WhatsApp for today's exact price on your model." },
+  { icon: Clock,        title: "Same-day for common repairs",     body: "Screen, battery, keyboard, trackpad, and charging port should be done the day you arrive. Any shop quoting 3–5 days for a battery replacement is either understaffed or outsourcing the work." },
+  { icon: Shield,       title: "Written warranty on every repair", body: "The best shops back every repair with a written warranty, not a verbal promise. Look for a period stated in writing for each repair type, and a capacity guarantee on batteries. Avoid any shop that quotes 'warranty depends on parts availability'." },
+  { icon: Award,        title: "Transparent pricing before work starts", body: "A fixed written quote before any work begins separates professional shops from price-bait operations. You should never receive a higher bill than the quote, full stop." },
+  { icon: CheckCircle2, title: "Experience with Apple Silicon",   body: "M1 through M5 MacBooks use a unified memory architecture that changes how board faults present. A technician who only worked on Intel Macs will misdiagnose Apple Silicon faults regularly. Ask: 'Have you fixed an M3 or M4 logic board?'" },
+  { icon: MapPin,       title: "Free diagnosis, no fix no fee",   body: "The best repair shops in Dubai diagnose for free and charge only if the repair succeeds. Any shop charging a 'diagnostic fee' before they've even looked at the Mac is a red flag." },
+];
+
+const COMPARISONS = [
+  { shop: "MacBook Repair Dubai (us)",    location: "Concord Tower, Media City", board: "Yes, component level", warranty: "15 days to 2 years", sameDay: "Yes", walkIn: "Yes, no appointment", price: "Price on request" },
+  { shop: "Apple Store / AASP",           location: "Dubai Mall / online",       board: "Module swap only",      warranty: "90 days",          sameDay: "No (3–5 days)", walkIn: "Appointment advised", price: "Price on request" },
+  { shop: "Generic phone repair shops",   location: "Various (Karama etc.)",     board: "Some, inconsistent",  warranty: "Verbal / 1 month",  sameDay: "Sometimes",     walkIn: "Varies", price: "Varies, no fixed quote" },
+];
+
+const WHY_US = [
+  "Repairing MacBooks in Dubai since 2004. Intel 2008 through M5 2025",
+  "Component-level logic board repair (not module swap), far cheaper than a full swap",
+  "Same-day screen, battery, keyboard, and trackpad",
+  "Walk in without an appointment, 3 minutes from the Palm Jumeirah tram",
+  "Written warranty of 15 days to 2 years on every repair",
+  "Free diagnosis, no fix, no charge",
+  `${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} verified Google reviews`,
+  "Office #45, Concord Tower, Dubai Media City, no hidden location",
+];
+
+const FAQS = [
+  { q: "What makes the best MacBook repair shop in Dubai?",
+    a: "The best MacBook repair shop in Dubai does component-level logic board repair (not just module swaps), provides a written fixed quote before starting, offers same-day service for screen and battery, backs every repair with a written warranty that states the period for that repair, and diagnoses for free. Price alone is not the best indicator, a suspiciously cheap screen quote is likely using grey-market panels that fail within 3 months. Message us on WhatsApp for a fixed quote on your model." },
+  { q: "Is MacBook Repair Dubai the best shop in Dubai?",
+    a: `We have ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified Google reviews, MacBook repair in Dubai since 2004, from Dubai Media City, same-day service on the most common repairs, component-level board repair capability, and written warranties of 15 days to 2 years. We let the track record speak, read the reviews and compare.` },
+  { q: "How do I choose between MacBook repair shops in Dubai?",
+    a: "Ask four questions: (1) Do you diagnose free of charge? (2) Do you give a written fixed quote before starting? (3) Do you repair MacBook logic boards at component level or replace the whole board? (4) What is the written warranty? A good shop answers yes, yes, component level, and gives you the period in writing for your specific repair." },
+  { q: "Is it better to go to Apple Store or an independent MacBook repair shop in Dubai?",
+    a: "Apple Store (or AASP) is hard to beat for repairs covered under AppleCare+. For out-of-warranty work, independent specialists cost far less. Apple Store replaces whole modules; independent specialists repair the component that failed, which is cheaper and produces the same outcome on most faults. Message us on WhatsApp for your model's exact price." },
+  { q: "How much does the best MacBook repair shop charge in Dubai?",
+    a: "Screen, battery, keyboard and logic-board repairs are all priced per model. Diagnosis is free, and you get a fixed written quote before any work starts, always lower than an Apple Store module swap. Generic shops may quote less but often use grey-market parts without warranty. Message us on WhatsApp for today's exact price on your MacBook." },
+  { q: "Where is the best MacBook repair shop in Dubai located?",
+    a: "Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City. A 3-minute walk from the Palm Jumeirah tram stop, with parking on site. Open Mon-Thu and Sat 9 am–7 pm, Friday 9 am–12 pm and 2 pm–7 pm, closed Sunday. Can't come in? Book any same-day courier app to send it over and WhatsApp us the tracking link on 055 741 3706." },
+];
+
+const FEATURED_REVIEW_INDEXES = [0, 2, 5, 10, 17, 24];
+
+export default function BestMacBookRepairDubai() {
+  const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
+
+  useSeo({
+    title: "Best MacBook Repair Dubai: 6 Checks Before You Book",
+    description:
+      `Choosing a MacBook repair shop in Dubai? Check board-level skill, a written warranty and a fixed quote first. Rated ${RATING_LABEL} on Google. WhatsApp us for a quote.`,
+    path: "/best-macbook-repair-dubai",
+  });
+
+  // Scaffolded with image={undefined} and an alt already written for an image
+  // that was never wired up (audit 2026-09-23). Uses the route's own topic
+  // image, so src and alt can never drift apart.
+  const heroImg = imageForRoute("/best-macbook-repair-dubai");
+
+  return (
+    <PageShell>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+        <Hero
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
+          variant="device"
+          tone="dark"
+          eyebrow="Buyer’s guide · Dubai · Since 2004"
+          title="Finding the best MacBook repair shop in Dubai"
+          subtitle={`${RATING_LABEL} stars · ${REVIEW_COUNT_LABEL} reviews · Component-level board repair · Same-day screen & battery · Written warranty of 15 days to 2 years.`}
+        >
+          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
+            <span>·</span>
+            <span>In Dubai since 2004</span>
+            <span>·</span>
+            <span>Free diagnosis</span>
+          </p>
+        </Hero>
+
+        <USPStrip tone="dark" />
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "Best MacBook Repair Dubai", path: "/best-macbook-repair-dubai" }]} />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <QuickAnswer
+            tone="dark"
+            question="What is the best MacBook repair shop in Dubai?"
+            answer={`The best MacBook repair shop in Dubai is at Concord Tower, Office #45, Dubai Media City, ${RATING_LABEL} stars from ${REVIEW_COUNT_LABEL} verified reviews, in Dubai since 2004, component-level logic board repair, same-day screen and battery service, written warranty of 15 days to 2 years, free diagnosis. Message us on WhatsApp 055 741 3706 for today's exact price on your model.`}
+          />
+        </section>
+
+        {/* What to look for */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">6 things the best MacBook repair shop must have</h2>
+          <p className="text-[16px] text-text-muted max-w-[70ch] mb-lg">Use this checklist before choosing any repair shop in Dubai, including us.</p>
+          <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3">
+            {CRITERIA.map(({ icon: Icon, title, body }) => (
+              <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
+                <Icon size={24} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[17px] font-bold mb-sm">{title}</h3>
+                <p className="text-[14px] text-text-muted leading-relaxed">{body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Comparison table */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">MacBook repair shop comparison. Dubai 2026</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[14px] border-collapse">
+                <thead>
+                  <tr className="border-b border-border text-left text-text-muted">
+                    <th className="py-sm pr-lg font-semibold">Shop</th>
+                    <th className="py-sm pr-lg font-semibold">Board repair</th>
+                    <th className="py-sm pr-lg font-semibold">Warranty</th>
+                    <th className="py-sm pr-lg font-semibold">Same-day</th>
+                    <th className="py-sm pr-lg font-semibold">Walk-in</th>
+                    <th className="py-sm font-semibold">Starting price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARISONS.map((row, i) => (
+                    <tr key={row.shop} className={`border-b border-border ${i === 0 ? "bg-accent/5" : ""}`}>
+                      <td className="py-sm pr-lg font-medium">{row.shop}{i === 0 && <span className="ml-sm text-accent text-[12px] font-bold">← YOU ARE HERE</span>}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.board}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.warranty}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.sameDay}</td>
+                      <td className="py-sm pr-lg text-text-muted">{row.walkIn}</td>
+                      <td className="py-sm text-text-muted">{row.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Why us checklist */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Why customers call us the best MacBook repair shop in Dubai</h2>
+          <ul className="grid gap-sm md:grid-cols-2">
+            {WHY_US.map((item) => (
+              <li key={item} className="flex items-start gap-sm text-[15px]">
+                <CheckCircle2 size={18} className="text-accent shrink-0 mt-[2px]" aria-hidden />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <VsAppleStore tone="dark" />
+
+        {/* CTA */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+            <div className="flex-1">
+              <h2 className="text-[22px] font-bold mb-sm">Get a quote from a {RATING_LABEL}-rated MacBook repair shop</h2>
+              <p className="text-[15px] text-text-muted">Free diagnosis · Fixed written quote · Same-day for screen & battery · Warranty 15 days to 2 years.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-sm shrink-0">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+                <MessageCircle size={18} aria-hidden /> WhatsApp
+              </a>
+              <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
+                <Phone size={18} aria-hidden /> {NAP.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">{REVIEW_COUNT_LABEL} reviews, see what customers say</h2>
+            <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">Best MacBook repair shop Dubai. FAQ</h2>
+          <FAQAccordion items={FAQS} injectSchema />
+        </section>
+
+        {/* Related */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[22px] font-bold mb-md">More MacBook repair options</h2>
+          <div className="flex flex-wrap gap-sm">
+            {[
+              { label: "MacBook Repair Dubai", href: "/" },
+              { label: "Same-Day MacBook Repair", href: "/same-day-macbook-repair-dubai" },
+              { label: "MacBook Screen Repair Dubai", href: "/macbook-screen-repair-dubai" },
+              { label: "MacBook Battery Replacement Dubai", href: "/macbook-battery-replacement-dubai" },
+              { label: "Best iPhone Repair Dubai", href: "/best-iphone-repair-dubai" },
+              { label: "Best Apple Repair Dubai", href: "/best-apple-repair-dubai" },
+            ].map(({ label, href }) => (
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">{label}</a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Visit us. Concord Tower, Dubai Media City</h2>
+          <LocationBlock tone="dark" />
+        </section>
+      </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath="/best-macbook-repair-dubai" defaultDeviceType="MacBook" />
+      </section>
+
+      <RelatedArticles path="/best-macbook-repair-dubai" />
+    </PageShell>
+  );
+}

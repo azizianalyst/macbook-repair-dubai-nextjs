@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "macbook-repair-dubai-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "macbook-repair-dubai-prod",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "start",
+        "--",
+        "-p",
+        "3006"
+      ],
+      "port": 3006
+    },
+    {
+      "name": "mbr-video-studio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../macbook-repair-dubai.ae-video",
+        "run",
+        "dev",
+        "--",
+        "--no-open",
+        "--port=3120"
+      ],
+      "port": 3120
+    }
+  ]
+}

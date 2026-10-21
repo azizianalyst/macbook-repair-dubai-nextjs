@@ -1,168 +1,118 @@
 "use client";
-import { Search, ShieldCheck, Banknote, Clock, Check, X, Truck, Sparkles, AlertTriangle } from "lucide-react";
-import { Link } from "@/lib/router-compat";
+import { withSlash } from "@/lib/utils";
+import { Search, ShieldCheck, Banknote, Clock, Check, X, MapPin, Sparkles, AlertTriangle } from "lucide-react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { WhatsAppCTA } from "@/components/blocks/WhatsAppCTA";
-import { useSeo } from "@/hooks/use-seo";
-import { faqPage, service as serviceSchema } from "@/lib/schema";
+import { ScrollHintTable } from "@/components/blocks/ScrollHintTable";
+import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { NAP } from "@/content/site";
+import { Link } from "@/lib/router-compat";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
+import { PRICE_ROWS_BY_GROUP, type PriceRow } from "@/content/prices.generated";
+import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+import { REPAIR_PRICES, aed } from "@/content/repair-prices";
 
-// ---------- price tables (AED, verbatim from PROJECT_BRIEF § 10) ----------
+// ---------- price tables ----------
+// Rows come from the admin price store via the build-time generator (scripts/gen-prices.cjs →
+// src/content/prices.generated.ts). The same data feeds the /pricing JSON-LD Offers
+// (pricing-services.ts), so the visible prices and the structured data can never drift.
+// Edit prices in /admin/prices, then rebuild to apply.
 
-type Row = { service: string; price: number; timeline: string; warranty: string };
-
-const MACBOOK: Row[] = [
-  { service: "Screen replacement (Air & Pro 13/14/15/16)", price: 780,  timeline: "Same day · 1-2 days", warranty: "90 days" },
-  { service: "Battery replacement",                         price: 590,  timeline: "Same day · 2 hours", warranty: "90 days" },
-  { service: "Keyboard replacement (full deck)",            price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Trackpad replacement",                        price: 460,  timeline: "Same day",           warranty: "90 days" },
-  { service: "USB-C / Thunderbolt port repair",             price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Touch Bar replacement (2016-2019)",           price: 780,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Logic board repair (component-level)",        price: 1040, timeline: "2-5 days",           warranty: "90 days" },
-  { service: "Water / liquid damage recovery",              price: 910,  timeline: "3-5 days",           warranty: "90 days on repaired components" },
-  { service: "Data recovery from dead MacBook",             price: 520,  timeline: "1-7 days",           warranty: "Data integrity guaranteed" },
-  { service: "SSD upgrade (256 GB → 1 TB / 2 TB)",          price: 910,  timeline: "Same day",           warranty: "90 days + part warranty" },
-  { service: "RAM upgrade (Intel models only)",             price: 520,  timeline: "Same day",           warranty: "90 days + part warranty" },
-  { service: "Overheating / thermal repaste & clean",       price: 460,  timeline: "Same day · 2 hours", warranty: "90 days" },
-  { service: "Hinge repair",                                price: 390,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "Speaker replacement",                         price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-  { service: "FaceTime camera replacement",                 price: 460,  timeline: "1-2 days",           warranty: "90 days" },
-];
-
-const IMAC: Row[] = [
-  { service: "iMac 21.5\" / 24\" / 27\" screen replacement", price: 1040, timeline: "2-4 days", warranty: "90 days" },
-  { service: "Logic board repair",                            price: 1300, timeline: "3-5 days", warranty: "90 days" },
-  { service: "SSD upgrade (Fusion → SSD)",                    price: 910,  timeline: "1-2 days", warranty: "90 days + part warranty" },
-  { service: "Power supply replacement",                      price: 780,  timeline: "1-2 days", warranty: "90 days" },
-  { service: "Fan / overheating repair",                      price: 520,  timeline: "Same day", warranty: "90 days" },
-  { service: "macOS install / clean reinstall",               price: 390,  timeline: "Same day · 3 hours", warranty: "30 days" },
-];
-
-const MAC_DESKTOP: Row[] = [
-  { service: "Mac mini logic board repair",       price: 1040, timeline: "2-4 days", warranty: "90 days" },
-  { service: "Mac mini SSD upgrade",              price: 910,  timeline: "Same day", warranty: "90 days + part warranty" },
-  { service: "Mac Studio diagnostics & repair",   price: 1040, timeline: "2-5 days", warranty: "90 days" },
-  { service: "Mac Pro power supply replacement",  price: 1560, timeline: "3-5 days", warranty: "90 days" },
-  { service: "Mac Pro GPU module repair",         price: 1950, timeline: "3-5 days", warranty: "90 days" },
-];
-
-const IPHONE: Row[] = [
-  { service: "iPhone screen replacement (8 → 14)",        price: 460,  timeline: "40 minutes", warranty: "90 days" },
-  { service: "iPhone screen replacement (15 / 15 Pro)",   price: 1040, timeline: "Same day",   warranty: "90 days" },
-  { service: "iPhone battery replacement",                price: 330,  timeline: "30 minutes", warranty: "90 days" },
-  { service: "iPhone back glass replacement",             price: 520,  timeline: "1 day",      warranty: "90 days" },
-  { service: "iPhone charging port repair",               price: 390,  timeline: "Same day",   warranty: "90 days" },
-  { service: "iPhone water damage recovery",              price: 650,  timeline: "2-3 days",   warranty: "90 days on repaired components" },
-];
-
-const IPAD: Row[] = [
-  { service: "iPad screen / digitiser (mini / Air / 9-10)", price: 460,  timeline: "1 day",  warranty: "90 days" },
-  { service: "iPad Pro 11\" screen + LCD",                   price: 1170, timeline: "1-2 days", warranty: "90 days" },
-  { service: "iPad Pro 12.9\" screen + LCD",                 price: 1560, timeline: "1-2 days", warranty: "90 days" },
-  { service: "iPad battery replacement",                     price: 520,  timeline: "1 day",  warranty: "90 days" },
-  { service: "iPad charging port repair",                    price: 460,  timeline: "Same day", warranty: "90 days" },
-];
+type Row = PriceRow;
+const INVOICE_PRICED = /screen|battery|trackpad|logic board|liquid|water/i;
 
 const ALL_TABLES: { id: string; title: string; subtitle: string; rows: Row[] }[] = [
-  { id: "macbook", title: "MacBook pricing", subtitle: "Air, Pro 13\", 14\", 15\", 16\" - Intel through M5.", rows: MACBOOK },
-  { id: "imac",    title: "iMac pricing", subtitle: "21.5\", 24\", 27\" - including Retina 5K.", rows: IMAC },
-  { id: "mac-desktop", title: "Mac mini, Studio & Pro pricing", subtitle: "All desktop Macs from 2014 onward.", rows: MAC_DESKTOP },
-  { id: "iphone",  title: "iPhone pricing", subtitle: "iPhone 8 through iPhone 16 Pro Max.", rows: IPHONE },
-  { id: "ipad",    title: "iPad pricing", subtitle: "iPad mini, Air, standard, and Pro 11\"/12.9\".", rows: IPAD },
+  // Screen, battery, trackpad, logic board and liquid damage have real invoice prices in the table
+  // above (D17), so they are not repeated here as "Price on WhatsApp" rows.
+  { id: "macbook", title: "Other MacBook repairs", subtitle: "Keyboard, ports, data, upgrades and more - Intel through M5. Screen, battery, trackpad, logic board and liquid damage prices are in the table above.", rows: (PRICE_ROWS_BY_GROUP.macbook ?? []).filter((r) => !INVOICE_PRICED.test(r.service)) },
+  { id: "imac",    title: "iMac pricing", subtitle: "21.5\", 24\", 27\" - including Retina 5K.", rows: PRICE_ROWS_BY_GROUP.imac ?? [] },
+  { id: "mac-desktop", title: "Mac mini, Studio & Pro pricing", subtitle: "All desktop Macs from 2014 onward.", rows: PRICE_ROWS_BY_GROUP["mac-desktop"] ?? [] },
+  { id: "iphone",  title: "iPhone pricing", subtitle: "iPhone 8 through iPhone 16 Pro Max.", rows: PRICE_ROWS_BY_GROUP.iphone ?? [] },
+  { id: "ipad",    title: "iPad pricing", subtitle: "iPad mini, Air, standard, and Pro 11\"/12.9\".", rows: PRICE_ROWS_BY_GROUP.ipad ?? [] },
 ];
 
 const HOW_PRICING_WORKS = [
   { icon: Search,      title: "Free diagnosis",     body: "Walk in or send a WhatsApp. The technician opens the device and finds the actual fault - no charge, even if you walk away." },
   { icon: Banknote,    title: "Quote before repair", body: "Final price in writing on WhatsApp before any screwdriver moves. Approve, decline, or take the device back - your call." },
-  { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe AED 0. The diagnosis report is yours to keep." },
-  { icon: Clock,       title: "90-day warranty",    body: "Every repair carries a written 90-day warranty on parts and workmanship. Same fault back inside 90 days, redone free." },
+  { icon: ShieldCheck, title: "No fix, no charge",  body: "If a board can't be saved or a part isn't available, you owe nothing. The diagnosis report is yours to keep." },
+  { icon: Clock,       title: "15-day to 2-year warranty",    body: "Written warranty of 15 days to 2 years - 2 years on most hardware, 90 days on screens, 3 months on batteries, 15 days on keyboard, software, board, liquid-damage and data work. Same fault back inside the period, redone free." },
 ];
 
+// "Us" cells for screen and battery come from the invoice prices (D17), never typed:
+// the lowest and highest typical price across models.
+const span = (prefix: string) => {
+  const rows = REPAIR_PRICES.rows.filter((r) => r.id.startsWith(prefix));
+  return `AED ${aed(Math.min(...rows.map((r) => r.median)))} to AED ${aed(Math.max(...rows.map((r) => r.median)))}`;
+};
+
 const COMPARISON = [
-  { row: "Diagnosis fee",          us: "AED 0 (free)",            apple: "AED 200-350" },
-  { row: "Turnaround time",        us: "Same day to 5 days",      apple: "5-14 days (sent to Ireland for some repairs)" },
-  { row: "Free pickup & delivery", us: "Yes - across Dubai",      apple: "No - drop-off only" },
-  { row: "Warranty",               us: "90 days written",         apple: "90 days" },
-  { row: "MacBook screen repair",  us: "From AED 780",            apple: "AED 1,400-2,200" },
-  { row: "MacBook battery",        us: "From AED 590",            apple: "AED 750-950" },
+  { row: "Diagnosis fee",          us: "Free",                     apple: "Inspection by appointment" },
+  { row: "Turnaround time",        us: "Same day to 5 days",      apple: "Often several days, depending on parts" },
+  { row: "Walk in, no appointment", us: "Yes - Dubai Media City",  apple: "Appointment advised" },
+  { row: "Warranty",               us: "15 days to 2 years (by repair)",         apple: "90 days on repairs" },
+  { row: "MacBook screen repair",  us: `${span("screen-")} incl. VAT, depending on model (see table above)`, apple: "No published price - quoted after inspection" },
+  { row: "MacBook battery",        us: `${span("battery-")} incl. VAT, 2012-2020 Intel models; newer models quoted`, apple: "AED 589-959 + VAT, current models (Apple list)" },
   { row: "Component-level repair", us: "Yes - board repair down to chip level", apple: "No - full board swap only" },
   { row: "Out-of-warranty Macs",   us: "Yes - including Intel models back to 2012", apple: "Limited - vintage models refused" },
 ];
 
 const PRICING_FAQS = [
-  { q: "Why is your MacBook screen repair from AED 780 when the Apple Store quotes AED 1,800?",
+  { q: "Why is your MacBook screen repair so much less than the Apple Store?",
     a: "Two reasons. First, component-level repair: when only the LCD panel is damaged, the team replaces the panel alone instead of swapping the entire display assembly. Second, no Apple Store overhead - Concord Tower rent is a fraction of a Mall of the Emirates retail unit." },
   { q: "Are the prices listed final?",
-    a: "The prices are starting prices for the most common fault on the most common model. After the free diagnosis, you receive a final price on WhatsApp. 80% of repairs land within 10% of the listed price." },
+    a: "They are typical prices: for each model, the middle figure of what customers paid on our VAT invoices over twelve months. Your final price comes in writing on WhatsApp after the free diagnosis, and nothing starts until you approve it." },
   { q: "Do prices include VAT?",
-    a: "Yes. Every price on this page is the all-in amount you pay. AED 780 means AED 780 - no 5% added at checkout." },
+    a: "Yes. Every quote we give is the all-in amount you pay - no 5% added at checkout." },
+  { q: "What does the quoted price include?",
+    a: "Everything, in one figure: the part, the fitting, 5% VAT and card fees, plus any paid onsite visit or return courier you book with us. We do not add separate lines at collection. The invoice shows the VAT, so you can see what part of the price it is." },
+  { q: "Is there a discount for paying cash?",
+    a: "Yes. Pay in cash at collection and you get 2.5% off the quoted price, because we avoid the bank's card charge. Card, Apple Pay and Samsung Pay pay the quoted price as it stands." },
   { q: "What payment methods do you accept?",
     a: "Cash (AED), Visa, Mastercard, Apple Pay, Samsung Pay, and bank transfer to Emirates NBD. Payment on collection only - never before the repair is approved." },
   { q: "Do you offer a discount for multiple devices?",
     a: "For 3 or more devices in one drop-off (common with corporate clients in Media City and JLT), the labour component drops 15%. WhatsApp Shafiq with the model list for a fixed quote." },
-  { q: "Is the AED 910 water damage price guaranteed to fix the MacBook?",
-    a: "No. Liquid damage recovery is 80-90% successful, not 100%. The AED 910 covers ultrasonic cleaning, corrosion treatment, and component replacement up to 4 chips. If the board is unrecoverable, you pay AED 0 and receive the data recovery quote separately." },
+  { q: "Is the water-damage starting price guaranteed to fix the MacBook?",
+    a: "No. Liquid damage recovery is 80-90% successful, not 100%. The starting price covers the ultrasonic clean; heavier corrosion treatment and component replacement (up to 4 chips) is quoted after the free diagnosis. If the board is unrecoverable, you pay nothing and receive the data recovery quote separately." },
   { q: "Why is the iPhone 15 screen so much more than the iPhone 14?",
-    a: "Apple changed the display assembly on iPhone 15 - the panel now ships paired with the True Tone IC. Aftermarket panels lose True Tone. Genuine OEM panels for iPhone 15 cost the workshop AED 720 wholesale, which sets the AED 1,040 customer price." },
+    a: "Apple changed the display assembly on iPhone 15 - the panel now ships paired with the True Tone IC. Aftermarket panels lose True Tone. Genuine OEM panels for the iPhone 15 cost the workshop several times what an aftermarket panel does, which is what sets the customer price." },
   { q: "Do the prices change for older Intel MacBooks?",
-    a: "Most repairs cost the same. Two exceptions: full display assemblies on 2016-2019 Touch Bar Pros run AED 1,820 (instead of AED 780 for panel-only) because the entire lid swaps as one unit. RAM upgrades are AED 520 - Apple Silicon RAM is soldered and can't be upgraded." },
+    a: "Most repairs cost the same. Two exceptions: full display assemblies on 2016-2019 Touch Bar Pros cost far more than a panel-only repair, because the entire lid swaps as one unit. RAM upgrades are quoted separately - Apple Silicon RAM is soldered and can't be upgraded." },
   { q: "What's the cheapest way to fix a slow, old MacBook?",
-    a: "SSD upgrade plus a fresh macOS install - AED 910 + AED 390 = AED 1,300 total. A 2015 MacBook Air with a 256 GB SSD swap and a clean install runs noticeably faster than a 2018 model with a failing 128 GB drive." },
+    a: "SSD upgrade labour plus a fresh macOS install, quoted together (plus the drive). A 2015 MacBook Air with a 256 GB SSD swap and a clean install runs noticeably faster than a 2018 model with a failing 128 GB drive." },
   { q: "Is data recovery extra on top of the repair price?",
-    a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board: AED 520 minimum, up to AED 2,600 for chip-off forensic recovery on T2/M-series boards." },
-  { q: "Do you charge for pickup and delivery?",
-    a: "Free across Dubai Mainland - Marina, JLT, Downtown, Business Bay, Palm, JBR, and the rest. Sharjah and Abu Dhabi pickup runs AED 100 each way. Pickup window: Monday to Saturday, 9 am to 5 pm." },
+    a: "Recovery from a working drive in a working MacBook: included free. Recovery from a dead drive or water-damaged board is quoted after assessment. On T2 and Apple silicon Macs the storage is encrypted to the Mac's own chip, so recovery means repairing the original board until it runs; that board-level work sits at the top of the range." },
+  { q: "Can I send my device instead of coming in?",
+    a: "Yes. Book any same-day courier app yourself, hand the device to the driver and WhatsApp us the tracking link - it reaches us within the day. Once it's fixed, collect it from the workshop, or we book a courier to bring it back. A paid onsite visit is also possible, subject to technician availability, with the charge quoted on WhatsApp first." },
   { q: "What happens if the same fault returns inside the warranty?",
-    a: "Bring the device back, no questions asked. The original technician - usually Shafiq for MacBook board work or Usman for iPhone screens - re-opens the unit and redoes the repair free of charge. Average warranty claim turnaround: 24 hours." },
+    a: "Bring the device back for a free inspection. If the same fault has returned, the original technician - usually Usman for MacBook board work or Hamza for iPhone screens - re-opens the unit and redoes the repair free of charge." },
 ];
 
 export default function Pricing() {
-  // Build one Service schema entry per priced row (capped at 30 to stay under
-  // the JSON-LD payload limits Googlebot accepts cleanly).
-  const services = [
-    serviceSchema({ name: "MacBook Screen Repair Dubai",        price: 780, timeline: "Same day", warranty: "P90D", url: "/macbook-screen-repair-dubai" }),
-    serviceSchema({ name: "MacBook Battery Replacement Dubai",  price: 590, timeline: "2 hours",  warranty: "P90D", url: "/macbook-battery-replacement-dubai" }),
-    serviceSchema({ name: "MacBook Keyboard Replacement Dubai", price: 460, timeline: "1-2 days", warranty: "P90D", url: "/macbook-keyboard-repair-dubai" }),
-    serviceSchema({ name: "MacBook Trackpad Repair Dubai",      price: 460, timeline: "Same day", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook USB-C Port Repair Dubai",    price: 460, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook Touch Bar Replacement",      price: 780, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook Logic Board Repair Dubai",   price: 1040, timeline: "2-5 days", warranty: "P90D", url: "/macbook-logic-board-repair-dubai" }),
-    serviceSchema({ name: "MacBook Water Damage Repair Dubai",  price: 910, timeline: "3-5 days", warranty: "P90D", url: "/macbook-water-damage-repair-dubai" }),
-    serviceSchema({ name: "MacBook Data Recovery Dubai",        price: 520, timeline: "1-7 days", warranty: "P90D", url: "/mac-data-recovery-dubai" }),
-    serviceSchema({ name: "MacBook SSD Upgrade Dubai",          price: 910, timeline: "Same day", warranty: "P90D" }),
-    serviceSchema({ name: "MacBook Hinge Repair Dubai",         price: 390, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "iMac Screen Repair Dubai",           price: 1040, timeline: "2-4 days", warranty: "P90D", url: "/imac-screen-repair-dubai" }),
-    serviceSchema({ name: "iMac Logic Board Repair Dubai",      price: 1300, timeline: "3-5 days", warranty: "P90D" }),
-    serviceSchema({ name: "iMac SSD Upgrade Dubai",             price: 910, timeline: "1-2 days", warranty: "P90D" }),
-    serviceSchema({ name: "Mac mini Repair Dubai",              price: 1040, timeline: "2-4 days", warranty: "P90D" }),
-    serviceSchema({ name: "macOS Install / Reinstall Dubai",    price: 390, timeline: "3 hours",  warranty: "P30D" }),
-    serviceSchema({ name: "iPhone Screen Repair Dubai",         price: 460, timeline: "40 minutes", warranty: "P90D", url: "/iphone-screen-repair-dubai" }),
-    serviceSchema({ name: "iPhone Battery Replacement Dubai",   price: 330, timeline: "30 minutes", warranty: "P90D" }),
-    serviceSchema({ name: "iPad Screen Repair Dubai",           price: 460, timeline: "1 day",     warranty: "P90D", url: "/ipad-screen-repair-dubai" }),
-  ];
-
-  useSeo(
-    {
-      title: "MacBook Repair Prices Dubai - Full Price List from AED 330",
-      description:
-        "Transparent pricing for all Apple repairs in Dubai. MacBook screen from AED 780, battery from AED 590, water damage from AED 910. Free diagnosis. Call 055 741 3706.",
-      path: "/pricing",
-    },
-    [...services, faqPage(PRICING_FAQS)],
-  );
+  // JSON-LD is server-rendered so it reaches crawlable HTML: the priced Service/Offer graph
+  // (from PRICING_SERVICES) + LocalBusiness come from <PageSchema path="/pricing"> (see
+  // src/lib/page-schema.ts), and FAQPage from <FAQAccordion injectSchema> below. This used to
+  // be injected client-side via useSeo and never reached the prerendered HTML. The price
+  // tables (MACBOOK/IMAC/…) and PRICING_SERVICES must stay in lockstep. Title/description:
+  // App Router Metadata API.
+  // Hub rendered no imagery at all (audit 2026-09-23).
+  const heroImg = imageForRoute("/pricing");
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
         variant="service"
         tone="dark"
-        eyebrow="Full price list"
-        title="Transparent Pricing - No Hidden Fees"
-        subtitle="Every price below is what you pay. Free diagnosis first, quote before repair, warranty included."
+        eyebrow="Repair pricing"
+        title="Clear Pricing, Quoted Before We Start"
+        subtitle="Diagnosis is free, and your exact price is confirmed in writing on WhatsApp before any work begins. No deposit, no surprise charges - decline the quote and take the device back at no cost."
+        image={heroImg?.src}
+        imageAlt={heroImg?.alt}
       />
 
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
@@ -174,29 +124,43 @@ export default function Pricing() {
         <h2 id="how-pricing" className="text-[28px] md:text-[32px] mb-md">How our pricing works</h2>
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-4">
           {HOW_PRICING_WORKS.map(({ icon: Icon, title, body }) => (
-            <article key={title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex flex-col gap-sm">
-              <Icon size={28} className="text-accent-bright" aria-hidden />
+            <article key={title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex flex-col gap-sm">
+              <Icon size={28} className="text-accent" aria-hidden />
               <h3 className="text-[18px] font-bold">{title}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed">{body}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed">{body}</p>
             </article>
           ))}
         </div>
-        <p className="text-[15px] text-on-primary-muted mt-lg max-w-[72ch]">
-          Prefer an instant estimate for your exact model? Try our{" "}
-          <Link to="/macbook-repair-cost-calculator-dubai" className="text-accent-bright font-semibold hover:underline">MacBook repair cost calculator</Link>{" "}
-          - pick your device and repair to see a starting price in seconds.
+        <p className="text-[15px] text-text-muted mt-lg max-w-[72ch]">
+          Want a figure for your exact model? Send us the model and the fault on{" "}
+          <a
+            href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent("Hi, quote please - my model and fault: ")}`)}
+            target="_blank" rel="noopener noreferrer"
+            className="text-accent font-semibold hover:underline"
+          >WhatsApp</a>{" "}
+          - a technician replies with a written quote, usually the same day.
         </p>
       </section>
 
       {/* Quick-jump nav */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-2xl">
         <nav aria-label="Jump to pricing section" className="flex flex-wrap gap-2 text-[13px] mono">
-          <span className="text-on-primary-faint">Jump to:</span>
+          <span className="text-text-faint">Jump to:</span>
           {ALL_TABLES.map((t) => (
-            <a key={t.id} href={`#${t.id}`} className="text-accent-bright hover:underline">{t.title.replace(" pricing", "")}</a>
+            <a key={t.id} href={`#${t.id}`} className="text-accent underline underline-offset-2">{t.title.replace(" pricing", "")}</a>
           ))}
         </nav>
+        {/* The two cost explainers were reachable only through the nav menu (cluster-audit). */}
+        <p className="text-[15px] text-text-muted mt-md">
+          What changes the price, explained:{" "}
+          <Link to="/mac-repair-cost-dubai" className="text-accent underline underline-offset-2">Mac repair costs</Link>
+          {" · "}
+          <Link to="/imac-repair-cost-dubai" className="text-accent underline underline-offset-2">iMac repair costs</Link>
+        </p>
       </section>
+
+      {/* Invoice-based price ranges (D17) */}
+      <RepairPriceTable path="/pricing" title="What do MacBook repairs cost at our workshop?" />
 
       {/* Pricing tables */}
       {ALL_TABLES.map((t) => (
@@ -205,15 +169,15 @@ export default function Pricing() {
 
       {/* What's included */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl grid gap-xl md:grid-cols-2">
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-xl">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
           <h2 className="text-[24px] mb-md flex items-center gap-sm">
             <Check size={24} className="text-whatsapp" aria-hidden /> What's included in every repair
           </h2>
-          <ul className="space-y-sm text-[15px] text-on-primary leading-relaxed">
+          <ul className="space-y-sm text-[15px] text-text leading-relaxed">
             {[
               "Genuine Apple parts when available, premium-grade aftermarket otherwise",
-              "90-day written warranty on parts and workmanship",
-              "Free pickup and delivery across Dubai Mainland",
+              "Written warranty of 15 days to 2 years on parts and workmanship, depending on the repair",
+              "Walk-in service at Concord Tower, Dubai Media City - no appointment needed",
               "Full diagnostic test and post-repair quality check",
               "Free internal cleaning, dust removal, and thermal repaste on MacBook repairs",
               "Original packaging or protective box for safe transport",
@@ -227,16 +191,16 @@ export default function Pricing() {
           </ul>
         </article>
 
-        <article className="border border-white/10 bg-white/[0.04] rounded-md p-xl">
+        <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
           <h2 className="text-[24px] mb-md flex items-center gap-sm">
             <X size={24} className="text-error" aria-hidden /> What's NOT included (honest list)
           </h2>
-          <ul className="space-y-sm text-[15px] text-on-primary leading-relaxed">
+          <ul className="space-y-sm text-[15px] text-text leading-relaxed">
             {[
               "Replacement parts for discontinued models (some pre-2012 Macs no longer have OEM stock)",
               "T2 and M-series Secure Enclave bypass - encrypted data on dead boards may be unrecoverable",
               "100% liquid damage success rate - actual recovery rate is 80-90% depending on exposure time",
-              "Warranty on accidental damage during normal use after pickup",
+              "Warranty on accidental damage during normal use after collection",
               "Replacement of cosmetic dents, scratches, or chassis damage (cosmetic-only repair quoted separately)",
               "Refunds on parts already installed if you change your mind after approval",
             ].map((item) => (
@@ -246,71 +210,85 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
-          <p className="mt-md text-[13px] text-on-primary-muted italic flex items-start gap-2">
-            <AlertTriangle size={14} className="shrink-0 mt-0.5 text-accent-bright" aria-hidden />
+          <p className="mt-md text-[13px] text-text-muted italic flex items-start gap-2">
+            <AlertTriangle size={14} className="shrink-0 mt-0.5 text-accent" aria-hidden />
             Honesty matters more than a pitch. Better to know the limits up front than discover them on day 5.
           </p>
         </article>
       </section>
+
+      {/* Broken-glass warranty notice (highlighted) */}
+      <div className="mx-auto max-w-content px-5 md:px-6 mt-2xl">
+        <GlassWarrantyNotice device="screen" />
+      </div>
 
       {/* Comparison table */}
       <section aria-labelledby="vs-apple" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 id="vs-apple" className="text-[28px] md:text-[32px] mb-sm">
           MacBook Repair Dubai vs Apple Store
         </h2>
-        <p className="text-[16px] text-on-primary-muted mb-md max-w-[70ch]">
+        <p className="text-[16px] text-text-muted mb-md max-w-[70ch]">
           Apple Store prices below are sourced from a same-day quote run on a 2021 MacBook Pro 14" M1 Pro at the Mall of the Emirates Apple Store, December 2025.
         </p>
-        <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+        {/* Mobile: stack each row so the Apple Store column is never hidden off-screen. */}
+        <ul className="md:hidden flex flex-col gap-sm">
+          {COMPARISON.map((c) => (
+            <li key={c.row} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
+              <p className="font-semibold text-text mb-xs">{c.row}</p>
+              <p className="text-[14px]"><span className="font-semibold text-accent">Us:</span> <span className="mono text-accent">{c.us}</span></p>
+              <p className="text-[14px] text-text-muted"><span className="font-semibold">Apple Store:</span> <span className="mono">{c.apple}</span></p>
+            </li>
+          ))}
+        </ul>
+        <ScrollHintTable className="hidden md:block border border-border rounded-md bg-bg-alt" fadeClass="from-bg-alt">
           <table className="w-full text-[14px] min-w-[640px]">
             <caption className="sr-only">Pricing and service comparison: MacBook Repair Dubai vs Apple Store Dubai</caption>
-            <thead className="bg-white/[0.04]">
+            <thead className="bg-bg-card">
               <tr className="text-left">
                 <th scope="col" className="px-md py-sm font-semibold">Item</th>
-                <th scope="col" className="px-md py-sm font-semibold text-accent-bright">MacBook Repair Dubai</th>
-                <th scope="col" className="px-md py-sm font-semibold text-on-primary-muted">Apple Store Dubai</th>
+                <th scope="col" className="px-md py-sm font-semibold text-accent">MacBook Repair Dubai</th>
+                <th scope="col" className="px-md py-sm font-semibold text-text-muted">Apple Store Dubai</th>
               </tr>
             </thead>
             <tbody>
               {COMPARISON.map((c, i) => (
-                <tr key={c.row} className={i % 2 ? "bg-white/[0.02]" : ""}>
+                <tr key={c.row} className={i % 2 ? "bg-bg-alt" : ""}>
                   <td className="px-md py-sm font-semibold">{c.row}</td>
-                  <td className="px-md py-sm mono text-accent-bright">{c.us}</td>
-                  <td className="px-md py-sm mono text-on-primary-muted">{c.apple}</td>
+                  <td className="px-md py-sm mono text-accent">{c.us}</td>
+                  <td className="px-md py-sm mono text-text-muted">{c.apple}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
+        </ScrollHintTable>
       </section>
 
       {/* FAQ */}
       <section aria-labelledby="pricing-faq" className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 id="pricing-faq" className="text-[28px] md:text-[32px] mb-md">Pricing FAQ</h2>
-        <FAQAccordion items={PRICING_FAQS} injectSchema tone="dark" />
+        <FAQAccordion items={PRICING_FAQS} injectSchema />
       </section>
 
       {/* Final CTA */}
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl pb-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <div className="relative flex flex-col items-start gap-md">
-          <h2 className="text-on-primary text-[28px] md:text-[32px] max-w-[28ch]">
-            Send the model number - get a price in minutes
+      <section className="mt-3xl" style={{ background: "#2C3137" }}>
+        <div className="mx-auto max-w-content px-5 md:px-6 py-[56px] flex flex-col items-start gap-md">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-accent-bright font-semibold">Get your price</p>
+          <h2 className="text-white text-[28px] md:text-[34px] font-bold max-w-[28ch] leading-tight">
+            Send the model number, get a price in minutes
           </h2>
-          <p className="text-on-primary-muted text-[16px] max-w-[60ch]">
+          <p className="text-on-primary-muted text-[16px] max-w-[60ch] leading-relaxed">
             Shafiq replies on WhatsApp typically within 4 minutes during business hours
-            (9 am - 10 pm, Monday to Saturday). Or call {NAP.phoneDisplay}.
+            (9 am to 7 pm, Monday to Saturday). Or call {NAP.phoneDisplay}.
           </p>
           <WhatsAppCTA
             message="Hi Shafiq, I'd like a price quote for an Apple repair. Model: "
             label="Send model on WhatsApp"
             size="lg"
           />
-          </div>
         </div>
       </section>
       </div>
+      <RelatedArticles path="/pricing" />
     </PageShell>
   );
 }
@@ -322,14 +300,36 @@ function PriceSection({
   return (
     <section id={id} aria-labelledby={`${id}-h`} className="mx-auto max-w-content px-5 md:px-6 mt-2xl scroll-mt-24">
       <h2 id={`${id}-h`} className="text-[24px] md:text-[28px]">{title}</h2>
-      <p className="text-[15px] text-on-primary-muted mb-md">{subtitle}</p>
-      <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+      <p className="text-[15px] text-text-muted mb-md">{subtitle}</p>
+      {/* Mobile: stacked cards so the price is always visible (never clipped off-screen). */}
+      <ul className="md:hidden flex flex-col gap-sm">
+        {rows.map((r) => (
+          <li key={r.service} className="rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-md">
+            <p className="font-semibold text-text">{r.service}</p>
+            <div className="mt-xs flex items-baseline justify-between gap-md">
+              <PriceCTA compact message={`Hi Shafiq, quote please for: ${r.service}`} />
+              <a
+                href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center gap-1 text-whatsapp font-semibold hover:underline whitespace-nowrap text-[14px]"
+              >
+                Get price
+              </a>
+            </div>
+            <p className="mt-xs text-[13px] text-text-muted">
+              <span className="mono">{r.timeline}</span> · {r.warranty} warranty
+            </p>
+          </li>
+        ))}
+      </ul>
+      <ScrollHintTable className="hidden md:block border border-border rounded-md bg-bg-alt" fadeClass="from-bg-alt">
         <table className="w-full text-[14px] min-w-[720px]">
-          <caption className="sr-only">{title} - starting prices, timelines, and warranty terms.</caption>
-          <thead className="bg-white/[0.04]">
+          <caption className="sr-only">{title} - timelines, warranty terms, and how to get a price.</caption>
+          <thead className="bg-bg-card">
             <tr className="text-left">
               <th scope="col" className="px-md py-sm font-semibold">Service</th>
-              <th scope="col" className="px-md py-sm font-semibold">Starting price</th>
+              <th scope="col" className="px-md py-sm font-semibold">Price</th>
               <th scope="col" className="px-md py-sm font-semibold">Timeline</th>
               <th scope="col" className="px-md py-sm font-semibold">Warranty</th>
               <th scope="col" className="px-md py-sm font-semibold text-right">Quote</th>
@@ -337,14 +337,16 @@ function PriceSection({
           </thead>
           <tbody>
             {rows.map((r, i) => (
-              <tr key={r.service} className={i % 2 ? "bg-white/[0.02]" : ""}>
+              <tr key={r.service} className={i % 2 ? "bg-bg-alt" : ""}>
                 <td className="px-md py-sm">{r.service}</td>
-                <td className="px-md py-sm mono font-semibold text-accent-bright whitespace-nowrap">AED {r.price}</td>
-                <td className="px-md py-sm mono text-on-primary-muted whitespace-nowrap">{r.timeline}</td>
-                <td className="px-md py-sm text-on-primary-muted">{r.warranty}</td>
+                <td className="px-md py-sm whitespace-nowrap">
+                  <PriceCTA compact message={`Hi Shafiq, quote please for: ${r.service}`} />
+                </td>
+                <td className="px-md py-sm mono text-text-muted whitespace-nowrap">{r.timeline}</td>
+                <td className="px-md py-sm text-text-muted">{r.warranty}</td>
                 <td className="px-md py-sm text-right">
                   <a
-                    href={`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`}
+                    href={withSlash(`${NAP.whatsappUrl}?text=${encodeURIComponent(`Hi Shafiq, quote please for: ${r.service}`)}`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-whatsapp font-semibold hover:underline whitespace-nowrap"
@@ -356,11 +358,11 @@ function PriceSection({
             ))}
           </tbody>
         </table>
-      </div>
-      <p className="mt-sm text-[12px] text-on-primary-faint mono flex items-center gap-2">
-        <Sparkles size={12} aria-hidden /> Free pickup & delivery across Dubai
-        <span className="text-on-primary-faint">·</span>
-        <Truck size={12} aria-hidden /> Same-day return on most repairs
+      </ScrollHintTable>
+      <p className="mt-sm text-[12px] text-text-faint mono flex items-center gap-2">
+        <MapPin size={12} aria-hidden /> Walk in at Dubai Media City, no appointment
+        <span className="text-text-faint">·</span>
+        <Sparkles size={12} aria-hidden /> Same-day turnaround on most repairs
       </p>
     </section>
   );

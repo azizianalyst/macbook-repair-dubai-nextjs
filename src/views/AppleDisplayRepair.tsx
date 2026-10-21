@@ -1,21 +1,34 @@
 "use client";
+import { withSlash } from "@/lib/utils";
 // Apple Display Repair Dubai - faithful rebuild of the live WordPress /apple-display-repair-dubai page
 // (user: "all old data which I give you", 2026-06-01; pulled from live site). NEW dedicated page -
 // the URL was previously 301'd to /apple-repair-dubai; that redirect has been removed.
 import { Star, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
 import { Hero } from "@/components/blocks/Hero";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { topicForPath } from "@/lib/page-images";
 import { USPStrip } from "@/components/blocks/USPStrip";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { FAQAccordion } from "@/components/blocks/FAQAccordion";
 import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { useSeo } from "@/hooks/use-seo";
 import { localBusiness, organization } from "@/lib/schema";
-import { NAP } from "@/content/site";
+import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 
 const SIBLINGS = [
+  // Studio Display and Studio Display XDR were orphaned (no inbound internal link
+  // anywhere on the site, found by scripts/orphan-check.cjs). This hub is their
+  // natural parent, so they belong here first.
+  { label: "Studio Display", href: "/studio-display-repair-dubai" },
+  { label: "Studio Display XDR", href: "/studio-display-xdr-repair-dubai" },
   { label: "Mac Repair", href: "/mac-repair-dubai" },
   { label: "iMac", href: "/imac-repair-dubai" },
   { label: "MacBook Pro", href: "/macbook-pro-repair-dubai" },
@@ -43,7 +56,7 @@ const PROCESS = [
   { title: "Repair Plan", body: "We provide a complete repair plan that includes an estimate of how much it will cost." },
   { title: "Fixing", body: "Our skilled techs carefully fix your Apple display by following the plan and using high-quality spare parts where required." },
   { title: "Quality Check", body: "Once the repair is complete, we conduct a thorough quality check to ensure your device functions properly and meets our high standards." },
-  { title: "Cleaning and Packing", body: "We clean your Apple device and package it in a protective box so you can pick it up or have it delivered." },
+  { title: "Cleaning and Packing", body: "We clean your Apple device and package it in a protective box, ready to collect from the workshop or to hand to a courier you book." },
 ];
 
 const SIGNS = [
@@ -61,17 +74,15 @@ const MODELS = [
   { title: "Pro Display XDR", body: "The 32-inch Pro Display XDR is a high-end 6K Retina monitor for professional use, with Extreme Dynamic Range (XDR) and a wide colour gamut. For a broken screen, brightness issues, or connection problems, our team knows its specific needs and built-in features." },
 ];
 
-const WHY = ["On-site repair", "Original screens", "Happy customers", "Quality assurance", "Transparent pricing", "Post-repair support", "Warranty on all repairs", "Same-day repair service", "Quick and honest screen repair", "The lowest prices on all screens", "Repair techs with years of experience", "Free same-day pick-up and delivery"];
+const WHY = ["Paid on-site visits, subject to technician availability", "Genuine or quality-tested screens", "Happy customers", "Quality assurance", "Transparent pricing", "Post-repair support", "Warranty on all repairs", "Same-day repair service", "Quick and honest screen repair", "Repair techs with years of experience", "Walk-in workshop in Dubai Media City"];
 
-const TESTIMONIALS = [
-  { name: "Salman Ahmed, Graphic Designer", body: "I was heartbroken when I broke the screen on my Apple system by accident, but a reliable repair service saved the day. Their techs were nice, knew what they were doing, and worked quickly. They used a genuine Apple part, and now my system looks and works like new. I strongly advise their services!" },
-  { name: "Mohammed Khalid, Student", body: "I looked online and found a reputable repair service. They quickly figured out what was wrong and replaced the broken LCD panel. The fix took very little time and cost a very fair amount. I'm very pleased with their service." },
-  { name: "Fatima Hassan, Businesswoman", body: "I depend on my MacBook for daily tasks, so I freaked out when the screen went black. A coworker told me about this reliable repair service. Their technicians were skilled and explained the repair fully. They fixed the screen in record time and I was back to work right away. I'll tell all my friends and coworkers." },
-];
+// The three named "testimonials" that lived here (Salman Ahmed, Mohammed Khalid, Fatima
+// Hassan) did not exist in the verified Google review library, so they were removed in the
+// content-truth audit of 2026-09-25. Real reviews are rendered below via pickReviews().
 
 const FAQS = [
   { q: "How long does it take to fix the screen on an Apple device?", a: "How long it takes varies on how bad the damage is, but most screen repairs can be done in 24 to 48 hours." },
-  { q: "Do you use genuine Apple parts to repair?", a: "Yes, we only use original Apple parts to ensure the best quality and fit with your system." },
+  { q: "Do you use genuine Apple parts to repair?", a: "We use genuine Apple parts where available and quality-tested parts otherwise, and we tell you which before any work starts, to ensure the best quality and fit with your system." },
   { q: "Can you fix a display that has been ruined by water?", a: "We can fix Apple displays that have been damaged by water, but the success of the fix depends on how bad the damage is. We suggest you bring your device in for a technical check." },
   { q: "Are there any guarantees when you fix an Apple Display?", a: "Yes, we provide a limited warranty when we fix your Apple display. The length of the warranty may differ for each repair job." },
 ];
@@ -80,7 +91,7 @@ function CallButtons() {
   return (
     <div className="flex flex-wrap gap-sm">
       <Button asChild variant="whatsapp" size="lg">
-        <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
+        <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a>
       </Button>
       <Button asChild variant="secondary" size="lg">
         <a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a>
@@ -90,6 +101,7 @@ function CallButtons() {
 }
 
 export default function AppleDisplayRepair() {
+  const reviews = pickReviews([], { devices: reviewDevicesForPath("/apple-display-repair-dubai"), min: 3, seed: "/apple-display-repair-dubai" });
   useSeo(
     {
       title: "Apple Display Repair Dubai - Studio Display & iMac Screen Fix",
@@ -102,22 +114,30 @@ export default function AppleDisplayRepair() {
 
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <Hero
+        image={topicForPath("/apple-display-repair-dubai")?.src}
+        imageAlt={topicForPath("/apple-display-repair-dubai")?.alt}
         tone="dark"
         variant="device"
         eyebrow="Apple Display specialist"
         title="Apple Display Repair Dubai"
         subtitle="Device failure always seems to happen at the most unplanned moment. Our expert repair service is here with top Apple Display repair in Dubai. Throughout the process, your device's functionality and preferences remain the same."
       >
-        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-on-primary-muted">
-          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Genuine Apple parts</span>
+        <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+          <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> Genuine parts where available</span>
           <span>·</span>
           <span>Studio Display &amp; Pro Display XDR</span>
           <span>·</span>
-          <span>Same-day pick-up &amp; delivery</span>
+          <span>Walk in at Dubai Media City</span>
         </p>
       </Hero>
+
+      <QuickAnswer
+        tone="dark"
+        question="Can you repair an Apple Studio Display in Dubai?"
+        answer="Yes. We repair Apple Studio Display, Studio Display XDR and older Apple panels at our Concord Tower workshop in Dubai Media City - cracked panels, backlight failure, no power, Thunderbolt and speaker faults. Diagnosis is free, there is no fee if we cannot fix it, and you can walk in (3 minutes on foot from the Palm Jumeirah tram stop) or send the display with a same-day courier you book."
+      />
 
       <USPStrip tone="dark" />
 
@@ -129,43 +149,34 @@ export default function AppleDisplayRepair() {
         ]} />
       </section>
 
-      <section className="mx-auto max-w-content px-5 md:px-6 mt-lg">
-        <p className="flex flex-wrap items-center gap-2 text-[14px] text-on-primary-muted">
-          <span className="font-semibold text-on-primary">We also repair:</span>
-          {SIBLINGS.map((s) => (
-            <Link key={s.href} to={s.href} className="px-3 py-1 border border-white/10 bg-white/[0.04] rounded-md text-accent-bright hover:bg-white/[0.08] transition-colors">{s.label}</Link>
-          ))}
-        </p>
-      </section>
-
       {/* Services */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Range of Apple Display Repair Services</h2>
         <div className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
-            <article key={s.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+            <article key={s.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
               <h3 className="text-[17px] font-bold mb-sm">{s.title}</h3>
-              <p className="text-[15px] text-on-primary-muted leading-relaxed">{s.body}</p>
+              <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
             </article>
           ))}
         </div>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mt-lg">
+        <p className="text-[16px] text-text-muted max-w-[75ch] mt-lg">
           We only use authentic Apple parts to maintain your device's performance and image quality. Visit our repair shop today and we'll quickly restore your display's appearance and functionality.
         </p>
         <div className="mt-lg"><CallButtons /></div>
       </section>
 
       {/* Process */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-lg">Our Apple Display Repair Process</h2>
           <ol className="space-y-md max-w-[80ch]">
             {PROCESS.map((step, i) => (
               <li key={step.title} className="flex gap-md">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-bright/15 text-accent-bright font-bold flex items-center justify-center">{i + 1}</span>
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-bold flex items-center justify-center">{i + 1}</span>
                 <div>
                   <h3 className="text-[17px] font-bold mb-1">{step.title}</h3>
-                  <p className="text-[15px] text-on-primary-muted leading-relaxed">{step.body}</p>
+                  <p className="text-[15px] text-text-muted leading-relaxed">{step.body}</p>
                 </div>
               </li>
             ))}
@@ -177,19 +188,19 @@ export default function AppleDisplayRepair() {
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Signs Your Apple Display Needs Repair / Replacement</h2>
         <ul className="grid gap-sm sm:grid-cols-2 max-w-[95ch]">
-          {SIGNS.map((s) => <li key={s} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {s}</li>)}
+          {SIGNS.map((s) => <li key={s} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {s}</li>)}
         </ul>
       </section>
 
       {/* Models */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
           <h2 className="text-[28px] md:text-[32px] mb-md">Apple Display Models</h2>
           <div className="grid gap-md md:grid-cols-2">
             {MODELS.map((m) => (
-              <article key={m.title} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <article key={m.title} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <h3 className="text-[18px] font-bold mb-sm">{m.title}</h3>
-                <p className="text-[15px] text-on-primary-muted leading-relaxed">{m.body}</p>
+                <p className="text-[15px] text-text-muted leading-relaxed">{m.body}</p>
               </article>
             ))}
           </div>
@@ -199,38 +210,48 @@ export default function AppleDisplayRepair() {
       {/* Why choose */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-sm">Why Choose Us?</h2>
-        <p className="text-[16px] text-on-primary-muted max-w-[75ch] mb-md">Despite Apple's advanced technology, accidents and improper usage still happen. MacBook Repair Dubai is the best place to get your Apple display fixed. Here's why:</p>
+        <p className="text-[16px] text-text-muted max-w-[75ch] mb-md">Despite Apple's advanced technology, accidents and improper usage still happen. MacBook Repair Dubai is the best place to get your Apple display fixed. Here's why:</p>
         <ul className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 max-w-[95ch]">
-          {WHY.map((w) => <li key={w} className="flex gap-sm text-[15px] text-on-primary-muted"><CheckCircle2 size={18} className="text-accent-bright flex-shrink-0 mt-1" aria-hidden /> {w}</li>)}
+          {WHY.map((w) => <li key={w} className="flex gap-sm text-[15px] text-text-muted"><CheckCircle2 size={18} className="text-accent flex-shrink-0 mt-1" aria-hidden /> {w}</li>)}
         </ul>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-white/[0.02] border-y border-white/10 mt-3xl py-3xl">
+      {/* Real Google reviews - verbatim from the verified library, never edited */}
+      <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
         <div className="mx-auto max-w-content px-5 md:px-6">
-          <h2 className="text-[28px] md:text-[32px] mb-md">Testimonials</h2>
-          <div className="grid gap-md md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
-                <div className="flex gap-1 mb-sm" aria-label="5 star rating">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={16} className="fill-star text-star" aria-hidden />)}
-                </div>
-                <blockquote className="text-[15px] text-on-primary-muted leading-relaxed">{t.body}</blockquote>
-                <figcaption className="mt-sm font-semibold text-on-primary">- {t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <h2 className="text-[28px] md:text-[32px] mb-md">What customers say</h2>
+          <p className="text-[15px] text-text-muted mb-md">Verbatim from Google. Nothing edited, nothing incentivised. <Link to="/reviews" className="text-accent underline underline-offset-2">Read all {REVIEW_COUNT_LABEL} →</Link></p>
+          <ReviewGrid reviews={reviews} tone="dark" />
         </div>
+      </section>
+
+      {/* Related Apple repairs - SIBLINGS was declared but never rendered, which is why
+          /studio-display-repair-dubai and /studio-display-xdr-repair-dubai were orphaned. */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+        <h2 className="text-[28px] md:text-[32px] mb-md">Related Apple repairs</h2>
+        <ul className="grid gap-sm md:grid-cols-3">
+          {SIBLINGS.map((sib) => (
+            <li key={sib.href}>
+              <Link
+                to={sib.href}
+                className="block border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md hover:border-accent/40 transition text-[15px]"
+              >
+                {sib.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* FAQ */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
         <h2 className="text-[28px] md:text-[32px] mb-md">Frequently Asked Questions</h2>
-        <FAQAccordion tone="dark" items={FAQS} injectSchema />
-        <div className="mt-lg border border-white/10 bg-white/[0.04] rounded-md p-lg max-w-[60ch]">
+        <FAQAccordion items={FAQS} injectSchema />
+        <div className="mt-lg border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg max-w-[60ch]">
           <h3 className="text-[18px] font-bold mb-sm">Business Hours</h3>
-          <p className="text-[15px] text-on-primary-muted">Monday - Saturday: 9:00 AM - 10:00 PM</p>
-          <p className="text-[15px] text-on-primary-muted">Sunday: our technicians are resting, but onsite service is available.</p>
+          <p className="text-[15px] text-text-muted">Monday - Thursday and Saturday: 9:00 AM - 7:00 PM</p>
+          <p className="text-[15px] text-text-muted">Friday: 9:00 AM - 12:00 PM and 2:00 PM - 7:00 PM</p>
+          <p className="text-[15px] text-text-muted">Sunday: closed. Paid onsite visits are quoted on WhatsApp and subject to technician availability.</p>
         </div>
       </section>
 
@@ -242,16 +263,22 @@ export default function AppleDisplayRepair() {
 
       {/* CTA */}
       <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
-        <div className="relative overflow-hidden border border-white/10 bg-white/[0.04] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
-          <div aria-hidden className="pointer-events-none absolute -top-16 -right-10 h-[20rem] w-[20rem] rounded-full bg-accent/15 blur-3xl" />
-          <h2 className="relative text-on-primary text-[28px] md:text-[32px] max-w-[34ch]">Trust MacBook Repair Dubai for your Apple display</h2>
-          <p className="relative text-on-primary-muted text-[16px] max-w-[70ch]">
+        <div className="relative overflow-hidden border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl md:p-2xl flex flex-col items-start gap-md">
+          <h2 className="relative text-text text-[28px] md:text-[32px] max-w-[34ch]">Trust MacBook Repair Dubai for your Apple display</h2>
+          <p className="relative text-text-muted text-[16px] max-w-[70ch]">
             Genuine Apple parts, expert technicians, and fast turnaround. WhatsApp or call us to restore your Studio Display, Pro Display XDR, or Mac screen.
           </p>
           <div className="relative"><CallButtons /></div>
         </div>
       </section>
       </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath="/apple-display-repair-dubai" defaultDeviceType="MacBook" />
+      </section>
+
+      <RelatedArticles path="/apple-display-repair-dubai" />
     </PageShell>
   );
 }

@@ -9,6 +9,19 @@ export default function BlogGenuinePartsVsAlternatives() {
       seoTitle="Genuine Apple Parts vs Alternatives: Honest Guide 2026"
       seoDescription="What 'genuine Apple part' really means, the OEM/equivalent/aftermarket tier system, when each tier is fine, and what we use at MacBook Repair Dubai."
       path="/blog/genuine-parts-vs-quality-alternative-explained"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "what-genuine-means", label: "What 'genuine' actually means" },
+        { id: "three-tiers", label: "OEM vs equivalent vs aftermarket" },
+        { id: "when-genuine-matters", label: "When genuine matters most" },
+        { id: "when-alternatives-fine", label: "When alternatives are fine" },
+        { id: "self-service-repair", label: "Apple Self Service Repair" },
+        { id: "how-we-source", label: "How we source parts" },
+        { id: "pricing-difference", label: "Pricing difference" },
+        { id: "performance-difference", label: "Performance difference" },
+        { id: "warranty-difference", label: "Warranty difference" },
+      ]}
       category="Trust · Parts policy"
       h1="Genuine Apple Parts vs Alternatives - Honest Guide"
       hook="Not all 'OEM' parts are equal. Here's what we use and why."
@@ -17,10 +30,10 @@ export default function BlogGenuinePartsVsAlternatives() {
       datePublished="2026-04-28"
       dateModified="2026-04-28"
       readingMinutes={10}
-      featuredImageAlt="Genuine Apple parts vs OEM-equivalent vs aftermarket - honest comparison"
+      featuredImageAlt="Genuine Parts Vs Quality Alternative. Genuine Apple parts vs OEM-equivalent vs aftermarket - honest comparison"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">Genuine Parts Vs Quality Alternative. Quick answer</h2>
           <p>
             "Genuine Apple part" has a strict definition - only Apple-Authorised Service Providers
             (AASP) like Maxus or ITQAN can buy them. Every other shop in Dubai uses parts that fall
@@ -28,7 +41,7 @@ export default function BlogGenuinePartsVsAlternatives() {
             for everything. Here's how to read a quote.
           </p>
 
-          <h2>What 'genuine Apple part' actually means</h2>
+          <h2 id="what-genuine-means">What 'genuine Apple part' actually means</h2>
           <p>
             Apple controls its parts supply chain tightly. A truly genuine part is:
           </p>
@@ -44,24 +57,24 @@ export default function BlogGenuinePartsVsAlternatives() {
             parts from Apple.
           </p>
 
-          <h2>OEM vs OEM-equivalent vs aftermarket - 3 tiers</h2>
+          <h2 id="three-tiers">OEM vs OEM-equivalent vs aftermarket - 3 tiers</h2>
           <BlogPriceTable
             caption="Parts tier comparison"
-            headers={["Tier", "Source / quality", "Price index", "Notes"]}
+            headers={["Tier", "Source / quality", "Relative cost", "Notes"]}
             rows={[
-              { model: "Tier 1 - Genuine Apple (AASP)", apple: "Apple GSX - 100% exact match", ours: "200%", note: "AASP-only access" },
-              { model: "Tier 2 - OEM-equivalent", apple: "Same factory, retail channel - 95-99%", ours: "60-80%", note: "Our default tier" },
-              { model: "Tier 3 - Aftermarket", apple: "Third-party Chinese - 70-85%", ours: "30-50%", note: "Lower spec, shorter warranty" },
-              { model: "Tier 3b - Refurbished pulls", apple: "Salvaged donor devices - variable", ours: "40-60%", note: "For older models only" },
+              { model: "Tier 1 - Genuine Apple (AASP)", apple: "Apple GSX - 100% exact match", ours: "Highest", note: "AASP-only access" },
+              { model: "Tier 2 - OEM-equivalent", apple: "Same factory, retail channel - 95-99%", ours: "Mid", note: "Our default tier" },
+              { model: "Tier 3 - Aftermarket", apple: "Third-party Chinese - 70-85%", ours: "Lowest", note: "Lower spec, shorter warranty" },
+              { model: "Tier 3b - Refurbished pulls", apple: "Salvaged donor devices - variable", ours: "Low-mid", note: "For older models only" },
             ]}
           />
           <p>
-            Tier 2 is the sweet spot for almost all repairs - you save 20-40% over Apple pricing with
-            no perceivable quality drop. Tier 3 makes sense on aged devices where the customer is
-            optimising for cost.
+            Tier 2 is the sweet spot for almost all repairs - noticeably better value than genuine Apple
+            pricing with no perceivable quality drop. Tier 3 makes sense on aged devices where the
+            customer is optimising for cost. Message us on WhatsApp for the exact tier price on your model.
           </p>
 
-          <h2>When genuine parts matter most</h2>
+          <h2 id="when-genuine-matters">When genuine parts matter most</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Face ID assembly</strong> - the dot projector and IR camera are paired to the logic board at factory. Aftermarket Face ID modules typically don't work or trigger "Unable to activate Face ID".</li>
             <li><strong>Touch ID</strong> (iPhone SE, older iPhones, MacBook Pro) - same pairing issue.</li>
@@ -70,7 +83,7 @@ export default function BlogGenuinePartsVsAlternatives() {
             <li><strong>Biometric Watch sensors (ECG, blood oxygen, hypertension)</strong> - calibration tied to original sensor.</li>
           </ul>
 
-          <h2>When alternatives are fine</h2>
+          <h2 id="when-alternatives-fine">When alternatives are fine</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>iPhone batteries</strong> - Tier 2 cells from Sunwoda or Amperex (same suppliers Apple uses) are excellent.</li>
             <li><strong>Speakers, microphones, vibration motors</strong> - minimal calibration, very low fault rate at Tier 2.</li>
@@ -79,7 +92,7 @@ export default function BlogGenuinePartsVsAlternatives() {
             <li><strong>MacBook keyboards (post-2019 magic)</strong> - Tier 2 keys + membranes are reliable.</li>
           </ul>
 
-          <h2>Apple's Self Service Repair Program (US only)</h2>
+          <h2 id="self-service-repair">Apple's Self Service Repair Program (US only)</h2>
           <p>
             In 2022 Apple launched Self Service Repair, letting individuals buy genuine parts directly
             for a few iPhone and MacBook models. As of April 2026 it's still <strong>US-only</strong>{" "}
@@ -88,7 +101,7 @@ export default function BlogGenuinePartsVsAlternatives() {
             to Apple itself.
           </p>
 
-          <h2>How we source parts in Dubai</h2>
+          <h2 id="how-we-source">How we source parts in Dubai</h2>
           <p>
             We've built relationships with Tier 2 OEM-equivalent suppliers since 2008 - primarily out
             of Shenzhen and Hong Kong, audited factories, batch-tested on arrival. We stock the most
@@ -97,15 +110,16 @@ export default function BlogGenuinePartsVsAlternatives() {
             parts arrive in 1-3 days via DHL.
           </p>
 
-          <h2>Pricing difference</h2>
+          <h2 id="pricing-difference">Pricing difference</h2>
           <p>
-            Sample: iPhone 15 Pro screen replacement at Apple AASP - AED 1,799. Our Tier 2 with True
-            Tone preserved - AED 1,099. Tier 3 aftermarket - AED 750 (we offer it, but recommend
-            Tier 2 for the extra AED 350). For full pricing transparency, see our{" "}
-            <Link to="/pricing" className="text-accent-bright font-semibold hover:underline">pricing page</Link>.
+            Take an iPhone 15 Pro screen replacement: a genuine Apple AASP repair costs the most, our
+            Tier 2 with True Tone preserved is meaningfully cheaper for near-identical quality, and Tier 3
+            aftermarket is cheaper still (we offer it, but usually recommend Tier 2 for the small
+            difference). For today's exact price on your model and tier, message us on WhatsApp or see our{" "}
+            <Link to="/pricing" className="text-accent font-semibold hover:underline">pricing page</Link>.
           </p>
 
-          <h2>Performance difference</h2>
+          <h2 id="performance-difference">Performance difference</h2>
           <p>
             On a 100-screen sample of Tier 2 vs Tier 3 panels we tracked over 2024-2025:
           </p>
@@ -116,13 +130,13 @@ export default function BlogGenuinePartsVsAlternatives() {
             <li><strong>True Tone preservation</strong>: Tier 2 yes (with our programmer), Tier 3 lost.</li>
           </ul>
 
-          <h2>Warranty difference</h2>
+          <h2 id="warranty-difference">Warranty difference</h2>
           <p>
-            We warranty Tier 2 parts the same as we would warranty genuine - full{" "}
-            <Link to="/blog/macbook-repair-warranty-explained" className="text-accent-bright font-semibold hover:underline">
-              90 days workmanship
+            We warranty Tier 2 parts on the same terms as genuine -{" "}
+            <Link to="/blog/macbook-repair-warranty-explained" className="text-accent font-semibold hover:underline">
+              up to 2 years on most hardware
             </Link>
-            , 6 months on batteries. Tier 3 parts get a 30-day warranty (because failure rates are
+            , 90 days on screens and 3 months on batteries. Tier 3 screens get 15 days (because failure rates are
             higher and we're transparent about that). You always know which tier you're getting before
             you authorise.
           </p>
@@ -133,7 +147,7 @@ export default function BlogGenuinePartsVsAlternatives() {
         { q: "Will my warranty be voided by a non-genuine part?", a: "If the device was under Apple warranty or AppleCare+, yes - any third-party repair voids it. If you're already out of warranty, there's nothing left to void. Our independent warranty applies regardless of part tier." },
         { q: "Are 'pulled' (used) genuine parts a good option?", a: "Sometimes - for older models where new parts are scarce. We use pulled OEM screens for iPhone 7/8/X repairs occasionally, with shorter warranty (30 days) and lower price. We always disclose when a part is pulled." },
         { q: "Why don't you become an Apple-Authorised Service Provider?", a: "AASP terms restrict pricing (we'd have to charge Apple's rates), restrict the models we can service, and require us to stop independent work on older / out-of-warranty devices. Our customers value the price-quality tradeoff and the freedom to repair anything Apple ever made." },
-        { q: "What about parts marked 'OEM' on AliExpress for AED 200?", a: "Those are almost always Tier 3 aftermarket relabelled. Real Tier 2 OEM-equivalent parts wholesale at AED 400-600 even at quantity. If a price seems too good, it's the wrong tier." },
+        { q: "What about very cheap parts marked 'OEM' on AliExpress?", a: "Those are almost always Tier 3 aftermarket relabelled. Genuine Tier 2 OEM-equivalent parts cost considerably more to source, even at quantity. If a price seems too good to be true, it's the wrong tier. Message us on WhatsApp for an honest, tier-labelled quote." },
         { q: "Can you install a part I bring in?", a: "We can but with limits - we cannot warranty the part itself (no provenance), only the labour. Many such parts arrive faulty. We strongly recommend buying through us for matched warranty cover." },
       ]}
       relatedLinks={[

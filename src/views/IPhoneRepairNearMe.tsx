@@ -1,0 +1,252 @@
+"use client";
+import { withSlash } from "@/lib/utils";
+import { MapPin, Clock, Star, Phone, MessageCircle, Zap, Shield, Truck } from "lucide-react";
+import { QuickAnswer } from "@/components/blocks/QuickAnswer";
+import { LeadForm } from "@/components/blocks/LeadForm";
+import { PRESETS } from "@/data/form-presets";
+import { PageShell } from "@/components/layout/PageShell";
+import { RelatedArticles } from "@/components/blocks/RelatedArticles";
+import { Hero } from "@/components/blocks/Hero";
+import { imageForRoute } from "@/lib/page-images";
+import { USPStrip } from "@/components/blocks/USPStrip";
+import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
+import { ReviewGrid } from "@/components/blocks/ReviewGrid";
+import { FAQAccordion } from "@/components/blocks/FAQAccordion";
+import { LocationBlock } from "@/components/blocks/LocationBlock";
+import { useSeo } from "@/hooks/use-seo";
+import { REVIEWS } from "@/content/reviews";
+import { NAP, REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
+
+const REPAIRS = [
+  { label: "Screen replacement",     price: "Price on request",  time: "40 min",   models: "iPhone 6 through 17 Pro Max" },
+  { label: "Battery replacement",    price: "Price on request",  time: "30 min",   models: "All models, 3-month warranty" },
+  { label: "Back glass repair",      price: "Price on request",  time: "Same day", models: "iPhone 8 through 16 Pro Max" },
+  { label: "Charging port repair",   price: "Price on request",  time: "1 hr",     models: "Lightning & USB-C" },
+  { label: "Camera repair",          price: "Price on request",  time: "Same day", models: "Front & rear, all modules" },
+  { label: "Water damage repair",    price: "Price on request",  time: "1–2 days", models: "Ultrasonic clean + board check" },
+  { label: "Face ID repair",         price: "Price on request",  time: "Same day", models: "iPhone X through 17 Pro Max" },
+  { label: "Logic board repair",     price: "Price on request",  time: "2–5 days", models: "Component-level micro-soldering" },
+];
+
+const AREAS = [
+  { area: "Dubai Media City / JLT / JBR",     time: "Walk in, or send by same-day courier" },
+  { area: "Downtown Dubai / Business Bay",      time: "Walk in, or send by same-day courier" },
+  { area: "Jumeirah / Al Quoz / Umm Suqeim",  time: "Walk in, or send by same-day courier" },
+  { area: "Deira / Bur Dubai / Karama",        time: "Walk in, or send by same-day courier" },
+  { area: "Dubai Hills / Mirdif / Al Barsha",  time: "Walk in, or send by same-day courier" },
+  { area: "Sharjah / Abu Dhabi",               time: "Send by a courier you book" },
+];
+
+const FAQS = [
+  { q: "Where is the nearest iPhone repair shop to me in Dubai?",
+    a: "The closest iPhone repair specialist to most of Dubai is at Concord Tower, Office #45, 10th Floor, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. If you can't travel, book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. We do not collect devices ourselves." },
+  { q: "How quickly can you fix my iPhone near me in Dubai?",
+    a: "Screen replacement takes 40 minutes, battery 30 minutes. Both can be done the same day you contact us. Drop in to Concord Tower and screen and battery repairs are usually ready the same day; you can wait while we work." },
+  { q: "Do you offer iPhone repair pickup near me in Dubai?",
+    a: "No, we don't collect devices. Walk in to Concord Tower, Dubai Media City, without an appointment, or send the iPhone yourself: book any same-day courier app, hand it to the driver, and WhatsApp 055 741 3706 the tracking link. When it is ready, collect it from the workshop, or we book a courier to bring it back." },
+  { q: "How much does iPhone screen repair cost near me in Dubai?",
+    a: "iPhone screen repair pricing depends on your model, from older iPhones up to the iPhone 17 Pro Max OLED. WhatsApp 055 741 3706 with your model number for a fixed quote in under 4 minutes. No hidden fees." },
+  { q: "Is there an iPhone repair shop open now near me in Dubai?",
+    a: "We're open Monday to Saturday, 9 am to 7 pm at Concord Tower, Dubai Media City. WhatsApp is answered from 8 am. On Sundays the workshop is closed but WhatsApp replies are sent and Monday appointments can be booked. Call 055 741 3706 for immediate assistance." },
+  { q: "Can you repair my iPhone near me on the same day?",
+    a: "Yes for screen, battery, charging port, back glass, and camera. Drop off by 4 pm at Concord Tower and the repair is done the same day. Logic board and water damage take 1–3 days depending on severity." },
+  { q: "Do you offer a warranty on iPhone repair near me in Dubai?",
+    a: "Every repair carries a written warranty of 15 days to 2 years. Battery replacement comes with a 3-month warranty plus an 80% capacity guarantee. The warranty card has the device serial number, the repair description, and the parts used." },
+];
+
+const FEATURED_REVIEW_INDEXES = [1, 5, 10, 16, 21, 27];
+
+export default function IPhoneRepairNearMe() {
+  const reviews = FEATURED_REVIEW_INDEXES.map((i) => REVIEWS[i % REVIEWS.length]).filter(Boolean);
+
+  useSeo({
+    title: "iPhone Repair Near Me Dubai | Same-Day, Walk In",
+    description:
+      "iPhone repair near you in Dubai. Same-day screen and battery, walk in at Concord Tower, Media City, no appointment. WhatsApp 055 741 3706 for a price.",
+    path: "/iphone-repair-near-me-dubai",
+  });
+
+  // Scaffolded with image={undefined} and an alt already written for an image
+  // that was never wired up (audit 2026-09-23). Uses the route's own topic
+  // image, so src and alt can never drift apart.
+  const heroImg = imageForRoute("/iphone-repair-near-me-dubai");
+
+  return (
+    <PageShell>
+      <div className="bg-bg-alt text-text -mb-[4rem]">
+        <Hero
+          image={heroImg?.src}
+          imageAlt={heroImg?.alt}
+          variant="device"
+          tone="dark"
+          eyebrow="iPhone repair near you · Dubai Media City · Since 2004"
+          title="iPhone Repair Near Me. Dubai"
+          subtitle="Same-day screen and battery repair. Walk in, no appointment needed. Message us on WhatsApp for today's price at Concord Tower, Media City."
+        >
+          <p className="mt-md flex flex-wrap items-center gap-md text-[14px] text-text-muted">
+            <span className="flex items-center gap-1"><Star size={16} className="fill-star text-star" aria-hidden /> {RATING_LABEL} · {REVIEW_COUNT_LABEL} reviews</span>
+            <span>·</span>
+            <span className="flex items-center gap-1"><MapPin size={14} aria-hidden /> Concord Tower, Dubai Media City</span>
+            <span>·</span>
+            <span>Walk in at Media City</span>
+          </p>
+        </Hero>
+
+        <USPStrip tone="dark" />
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <BreadcrumbTrail
+            tone="dark"
+            trail={[
+              { name: "Home", path: "/" },
+              { name: "iPhone Repair Dubai", path: "/iphone-repair-dubai" },
+              { name: "iPhone Repair Near Me", path: "/iphone-repair-near-me-dubai" },
+            ]}
+          />
+        </section>
+
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-xl">
+          <QuickAnswer
+            tone="dark"
+            question="Where can I get my iPhone repaired near me in Dubai?"
+            answer="The nearest iPhone repair specialist in Dubai is at Concord Tower, Office #45, 10th Floor, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Same-day screen and battery service, message us on WhatsApp for today's price. Can't travel? Send it by a same-day courier you book and WhatsApp 055 741 3706 the tracking link."
+          />
+        </section>
+
+        {/* How to get it fixed */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">Two ways to get your iPhone repaired near you</h2>
+            <div className="grid gap-md md:grid-cols-2">
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
+                <MapPin size={28} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[20px] font-bold mb-sm">Drop in to the workshop</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed mb-md">
+                  Walk in to Office #45, 10th Floor, Concord Tower, Al Sufouh, Dubai Media City, a 3-minute walk from the Palm Jumeirah tram stop. Open Mon-Thu and Sat 9 am–7 pm, Fri 9 am–12 pm and 2 pm–7 pm. Screen done in 40 minutes, wait while we fix it.
+                </p>
+                <a href="https://maps.google.com/?q=Concord+Tower+Dubai+Media+City" className="text-accent text-[14px] font-semibold hover:underline">Get directions →</a>
+              </article>
+              <article className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl">
+                <Truck size={28} className="text-accent mb-sm" aria-hidden />
+                <h3 className="text-[20px] font-bold mb-sm">Send it by courier</h3>
+                <p className="text-[15px] text-text-muted leading-relaxed mb-md">
+                  Can't come in? Book any same-day courier app, hand the iPhone to the driver, and WhatsApp 055 741 3706 the tracking link. It reaches the bench within the day, with no waiting for us. Collect it when it is ready, or we book a courier to bring it back.
+                </p>
+                <a href={withSlash(NAP.whatsappUrl)} className="text-accent text-[14px] font-semibold hover:underline">WhatsApp the tracking link →</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Repairs + prices */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">iPhone repairs near you, prices & times</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-[14px] border-collapse">
+              <thead>
+                <tr className="border-b border-border text-left text-text-muted">
+                  <th className="py-sm pr-lg font-semibold">Repair</th>
+                  <th className="py-sm pr-lg font-semibold">Price</th>
+                  <th className="py-sm pr-lg font-semibold">Time</th>
+                  <th className="py-sm font-semibold">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {REPAIRS.map((row) => (
+                  <tr key={row.label} className="border-b border-border">
+                    <td className="py-sm pr-lg font-medium">{row.label}</td>
+                    <td className="py-sm pr-lg text-accent font-semibold">{row.price}</td>
+                    <td className="py-sm pr-lg text-text-muted whitespace-nowrap">
+                      <span className="inline-flex items-center gap-1"><Clock size={12} aria-hidden /> {row.time}</span>
+                    </td>
+                    <td className="py-sm text-text-muted">{row.models}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Areas */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-sm">iPhone repair near you, from every Dubai area</h2>
+          <div className="grid gap-sm sm:grid-cols-2 lg:grid-cols-3 mt-lg">
+            {AREAS.map(({ area, time }) => (
+              <div key={area} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-md flex items-start gap-sm">
+                <MapPin size={16} className="text-accent shrink-0 mt-[2px]" aria-hidden />
+                <div>
+                  <p className="text-[14px] font-semibold">{area}</p>
+                  <p className="text-[13px] text-text-muted">{time}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <div className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-xl flex flex-col md:flex-row md:items-center gap-lg">
+            <div className="flex-1">
+              <h2 className="text-[22px] font-bold mb-sm">Get your iPhone fixed today</h2>
+              <p className="text-[15px] text-text-muted">Free diagnosis. Fixed quote. Walk in or send by courier. Same-day return.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-sm shrink-0">
+              <a href={withSlash(NAP.whatsappUrl)} className="inline-flex items-center gap-sm bg-accent text-white font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-accent/90">
+                <MessageCircle size={18} aria-hidden /> WhatsApp Now
+              </a>
+              <a href={`tel:${NAP.phoneE164}`} className="inline-flex items-center gap-sm border border-border bg-bg font-semibold px-lg py-sm rounded-md text-[15px] hover:bg-bg-card">
+                <Phone size={18} aria-hidden /> {NAP.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section className="bg-bg-alt border-y border-border mt-3xl py-3xl">
+          <div className="mx-auto max-w-content px-5 md:px-6">
+            <h2 className="text-[28px] md:text-[32px] mb-md">What customers near you say</h2>
+            <ReviewGrid reviews={reviews} tone="dark" />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-md">iPhone repair near me. FAQ</h2>
+          <FAQAccordion items={FAQS} injectSchema />
+        </section>
+
+        {/* Related */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[22px] font-bold mb-md">Other repairs near you in Dubai</h2>
+          <div className="flex flex-wrap gap-sm">
+            {[
+              { label: "MacBook Repair Near Me Dubai", href: "/mac-repair-near-me-dubai" },
+              { label: "Apple Repair Near Me Dubai", href: "/apple-repair-near-me-dubai" },
+              { label: "iPhone Repair Dubai", href: "/iphone-repair-dubai" },
+              { label: "iPad Repair Dubai", href: "/ipad-repair-dubai" },
+              { label: "MacBook Repair Dubai", href: "/" },
+              { label: "Same-Day MacBook Repair Dubai", href: "/same-day-macbook-repair-dubai" },
+            ].map(({ label, href }) => (
+              <a key={href} href={withSlash(href)} className="border border-border rounded-md px-md py-xs text-[14px] hover:bg-bg-card transition-colors">
+                {label}
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Location */}
+        <section className="mx-auto max-w-content px-5 md:px-6 mt-3xl">
+          <h2 className="text-[28px] md:text-[32px] mb-lg">Find us. Concord Tower, Dubai Media City</h2>
+          <LocationBlock tone="dark" />
+        </section>
+      </div>
+      {/* Lead form (template-audit 2026-09-24: page shipped with none) */}
+      <section className="mx-auto max-w-content px-5 md:px-6 mt-[80px]" aria-labelledby="page-lead">
+        <h2 id="page-lead" className="text-[26px] md:text-[32px] font-bold mb-md">Get a free quote</h2>
+        <LeadForm preset={PRESETS.repair} sourcePath="/iphone-repair-near-me-dubai" defaultDeviceType="iPhone" />
+      </section>
+
+      <RelatedArticles path="/iphone-repair-near-me-dubai" />
+    </PageShell>
+  );
+}

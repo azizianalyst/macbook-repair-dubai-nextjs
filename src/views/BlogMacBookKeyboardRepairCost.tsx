@@ -7,35 +7,46 @@ export default function BlogMacBookKeyboardRepairCost() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Keyboard Repair Cost by Model: Dubai 2026"
-      seoDescription="Butterfly top-case AED 700, Magic Keyboard single key AED 150. Full MacBook keyboard repair pricing by year and model, plus liquid spills and DIY risks."
+      seoDescription="Butterfly top-case vs Magic Keyboard single-key repair, by year and model. Liquid-spill first aid, DIY risks and WhatsApp us for today's exact price."
       path="/blog/macbook-keyboard-repair-cost-by-model"
+      wide
+      toc={[
+        { id: "keyboard-price-list", label: "Keyboard price list" },
+        { id: "butterfly-problem", label: "Butterfly keyboard problem" },
+        { id: "service-program", label: "Apple Service Program (ended)" },
+        { id: "magic-vs-butterfly", label: "Magic vs Butterfly" },
+        { id: "single-key-replacement", label: "Single key replacement" },
+        { id: "spilled-liquid", label: "Spilled liquid action" },
+        { id: "what-to-do-next", label: "What to do next" },
+      ]}
       category="Cost guide · MacBook"
       h1="MacBook Keyboard Repair Cost - Every Model 2026"
-      hook="Butterfly keyboard (2015-2019)? Top-case swap, AED 700. Magic Keyboard (2019+)? Single key replacement, AED 150. The model year decides everything."
-      quickAnswer="MacBook keyboard repair in Dubai costs AED 150 (single Magic Keyboard key replacement, 2019+) up to AED 950 (full top-case for 16″ M5 Pro). Butterfly-keyboard MacBooks (2015-2019) require full top-case replacement at AED 700-800 because individual keys can't be repaired."
+      hook="Butterfly keyboard (2015-2019)? It needs a full top-case swap. Magic Keyboard (2019+)? Often just a single-key replacement. The model year decides everything - WhatsApp us for your exact price."
+      quickAnswer="MacBook keyboard repair in Dubai ranges from a single Magic Keyboard key replacement (2019+) up to a full top-case for the 16″ M5 Pro. Butterfly-keyboard MacBooks (2015-2019) require a full top-case replacement because individual keys can't be repaired. Message us on WhatsApp with your model for today's exact price."
       author={{ name: "Usman", role: "Senior MacBook keyboard specialist" }}
       datePublished="2026-04-25"
-      dateModified="2026-04-25"
+      dateModified="2026-10-11"
       readingMinutes={10}
-      featuredImageAlt="MacBook keyboard repair Dubai - Magic Keyboard scissor mechanism replacement"
+      featuredImageAlt="MacBook Keyboard Repair Cost. MacBook keyboard repair Dubai - Magic Keyboard scissor mechanism replacement"
       body={
         <>
-          <h2>The full MacBook keyboard price list - April 2026</h2>
+          <h2 id="keyboard-price-list">MacBook Keyboard Repair Cost. The full MacBook keyboard price list - April 2026</h2>
           <BlogPriceTable
-            caption="MacBook keyboard repair pricing - April 2026"
+            caption="MacBook keyboard repair - by model, April 2026"
+            headers={["Model", "Repair type", "Notes"]}
             rows={[
-              { model: "MacBook 12″ Retina (2015-2017) - Butterfly v1/v2", ours: "AED 700", apple: "AED 1,299", note: "Top-case swap only" },
-              { model: "MacBook Pro 13/15 (2016-2019) - Butterfly v2/v3", ours: "AED 750", apple: "AED 1,399", note: "Top-case swap; check Service Program first" },
-              { model: "MacBook Air 13″ (2018-2019) - Butterfly v3", ours: "AED 700", apple: "AED 1,299", note: "Top-case swap; check Service Program" },
-              { model: "MacBook Pro 13/16 (2019-2020) - Magic", ours: "AED 800", apple: "AED 1,499", note: "Single key possible AED 150" },
-              { model: "MacBook Air M1/M2/M3/M4/M5 - Magic", ours: "AED 750", apple: "AED 1,349", note: "Single key AED 150" },
-              { model: "MacBook Pro 14″ M1 Pro-M5 Max - Magic", ours: "AED 850", apple: "AED 1,599", note: "Single key AED 150" },
-              { model: "MacBook Pro 16″ M1 Pro-M5 Max - Magic", ours: "AED 950", apple: "AED 1,799", note: "Single key AED 150" },
-              { model: "Single key replacement (any Magic-keyboard MacBook)", ours: "AED 150", apple: "Not offered", note: "When mechanism intact" },
+              { model: "MacBook 12″ Retina (2015-2017) - Butterfly v1/v2", ours: "Price on request", note: "Top-case swap only" },
+              { model: "MacBook Pro 13/15 (2016-2019) - Butterfly v2/v3", ours: "Price on request", note: "Top-case swap (Apple program ended)" },
+              { model: "MacBook Air 13″ (2018-2019) - Butterfly v3", ours: "Price on request", note: "Top-case swap (Apple program ended)" },
+              { model: "MacBook Pro 13/16 (2019-2020) - Magic", ours: "Price on request", note: "Single key often possible" },
+              { model: "MacBook Air M1/M2/M3/M4/M5 - Magic", ours: "Price on request", note: "Single key often possible" },
+              { model: "MacBook Pro 14″ M1 Pro-M5 Max - Magic", ours: "Price on request", note: "Single key often possible" },
+              { model: "MacBook Pro 16″ M1 Pro-M5 Max - Magic", ours: "Price on request", note: "Single key often possible" },
+              { model: "Single key replacement (any Magic-keyboard MacBook)", ours: "Price on request", note: "When mechanism intact" },
             ]}
           />
 
-          <h2>Butterfly keyboard problem explained</h2>
+          <h2 id="butterfly-problem">Butterfly keyboard problem explained</h2>
           <p>
             Apple's "butterfly" mechanism shipped from 2015 (12″ MacBook) through 2019 (last 13″
             MacBook Pro). It used a scissor-style hinge with a single butterfly-shaped piece for a
@@ -56,21 +67,19 @@ export default function BlogMacBookKeyboardRepairCost() {
             includes the battery and trackpad). We do the same.
           </p>
 
-          <h2>Apple's Keyboard Service Program (still active for some models)</h2>
+          <h2 id="service-program">Apple's Keyboard Service Program has ended</h2>
           <p>
-            Apple ran the "Keyboard Service Program for MacBook, MacBook Air, and MacBook Pro" from
-            2018 to 2022. It covered free repair of butterfly-keyboard models for 4 years from the
-            original purchase date. As of April 2026 the program is officially closed for all
-            models.
+            Apple ran the "Keyboard Service Program for MacBook, MacBook Air, and MacBook Pro",
+            which covered free repair of butterfly-keyboard models for 4 years from the original
+            purchase date. It has ended for every model: Apple's support page for the program now
+            says so.
           </p>
           <p>
-            <strong>However:</strong> Apple Stores in UAE will still occasionally honour out-of-program
-            repairs as a goodwill gesture, especially if the MacBook has documented butterfly
-            symptoms. Worth a 5-minute Genius Bar visit before paying us. Our success rate for
-            customers asking Apple is about 1 in 4 - not great, but the question is free.
+            So a sticking butterfly key is a paid repair at Apple or here. Apple fits a new top case
+            after inspection; we do the same swap after a free bench diagnosis, quoted before we open it.
           </p>
 
-          <h2>Magic Keyboard (2019+) vs Butterfly - repair difference</h2>
+          <h2 id="magic-vs-butterfly">Magic Keyboard (2019+) vs Butterfly - repair difference</h2>
           <p>
             The Magic Keyboard returned to a true scissor mechanism with 1mm of travel (vs 0.5mm
             on butterfly). The keycap, scissor mechanism, and membrane are <strong>three separate
@@ -78,13 +87,13 @@ export default function BlogMacBookKeyboardRepairCost() {
             without touching the rest of the keyboard.
           </p>
           <p>
-            For our customers this means a single sticky or unresponsive key on a 2020+ MacBook
-            costs AED 150 (we have keycap and scissor stock for every Magic Keyboard MacBook). Only
-            if multiple keys fail or the membrane below is damaged does it become a full top-case
-            job.
+            For our customers this means a single sticky or unresponsive key on a 2020+ MacBook is
+            usually an affordable single-key job (we have keycap and scissor stock for every Magic
+            Keyboard MacBook). Only if multiple keys fail or the membrane below is damaged does it
+            become a full top-case job. Message us on WhatsApp for the exact price on your model.
           </p>
 
-          <h2>Single key replacement - when possible</h2>
+          <h2 id="single-key-replacement">Single key replacement - when possible</h2>
           <p>Single key replacement works when:</p>
           <ul className="list-disc list-inside space-y-xs">
             <li>The MacBook is a 2019 or newer Magic Keyboard model</li>
@@ -93,11 +102,12 @@ export default function BlogMacBookKeyboardRepairCost() {
             <li>The backlight LED beneath is still working</li>
           </ul>
           <p>
-            We diagnose at the bench in 5 minutes. If single-key works, AED 150 same-day. If the
-            membrane is torn or the LED is dead, it becomes a top-case job (AED 750-950).
+            We diagnose at the bench in 5 minutes. If single-key works, it is a fast same-day fix.
+            If the membrane is torn or the LED is dead, it becomes a top-case job. Message us on
+            WhatsApp for today's exact price on your model.
           </p>
 
-          <h2>Spilled liquid on keyboard - emergency action</h2>
+          <h2 id="spilled-liquid">Spilled liquid on keyboard - emergency action</h2>
           <p>This sequence buys you the best chance of a single-key fix instead of a top-case swap:</p>
           <ol className="list-decimal list-inside space-y-xs">
             <li>Power off in 10 seconds. Hold the power button.</li>
@@ -112,9 +122,9 @@ export default function BlogMacBookKeyboardRepairCost() {
             corrodes the underlying membrane within 48 hours.
           </p>
 
-          <h2>What to do next</h2>
+          <h2 id="what-to-do-next">What should I do next?</h2>
           <p>
-            <Link to="/macbook-keyboard-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-keyboard-repair-dubai" className="text-accent font-semibold hover:underline">
               MacBook keyboard repair service page
             </Link>{" "}
             - or WhatsApp 055 741 3706 with your model year and a photo of the affected key. Quote
@@ -125,11 +135,11 @@ export default function BlogMacBookKeyboardRepairCost() {
       faqs={[
         {
           q: "Can you replace just one key on a MacBook keyboard?",
-          a: "Yes - for any 2019 or later Magic Keyboard MacBook (Pro, Air, or 12″ MacBook). AED 150 same-day if the membrane underneath is intact. For butterfly keyboards (2015-2019), no - Apple's design bonds the layers and individual keys cannot be replaced.",
+          a: "Yes - for any 2019 or later Magic Keyboard MacBook (Pro, Air, or 12″ MacBook). It's usually a fast same-day fix if the membrane underneath is intact - message us on WhatsApp for the exact price. For butterfly keyboards (2015-2019), no - Apple's design bonds the layers and individual keys cannot be replaced.",
         },
         {
           q: "Is the Apple Keyboard Service Program still active in 2026?",
-          a: "Officially closed in 2022. In practice, Apple Stores in UAE occasionally still honour out-of-program butterfly keyboard repairs as a goodwill gesture - worth asking before paying us. Success rate is about 1 in 4 of customers we send to ask first.",
+          a: "No. Apple's support page for the program says it has ended, so a butterfly keyboard fault is now an out-of-warranty repair. Apple quotes a top-case replacement after inspection; we diagnose it free and quote the same top-case swap - message us on WhatsApp for the exact price.",
         },
         {
           q: "Why do I have to replace the whole top-case for a keyboard issue?",

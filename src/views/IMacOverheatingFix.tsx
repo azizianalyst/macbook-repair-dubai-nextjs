@@ -5,7 +5,7 @@ export default function IMacOverheatingFix() {
   return (
     <SubServicePageTemplate
       seoTitle="iMac Overheating Fix Dubai - Fan Clean, Thermal Paste | 055 741 3706"
-      seoDescription="iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. AED 350. 1 day. Free home visit."
+      seoDescription="iMac overheating fix Dubai. Fan cleaning (Dubai dust!), thermal paste refresh, GPU cooling, fan replacement. 1 day at our Media City workshop. WhatsApp for a price."
       path="/imac-overheating-fix-dubai"
       eyebrow="iMac overheating"
       h1="iMac Overheating Fix Dubai - Fan Clean & Thermal Refresh"
@@ -15,17 +15,17 @@ export default function IMacOverheatingFix() {
       whatsappPrefill="Hi, my iMac is overheating / loud fans - model and year:"
       breadcrumb={[
         { name: "Home",                path: "/" },
-        { name: "iMac Repair",         path: "/imac-screen-repair-dubai" },
+        { name: "iMac Repair",         path: "/imac-repair-dubai" },
         { name: "Overheating Fix",     path: "/imac-overheating-fix-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iMac thermal restoration" }}
-      serviceName="iMac Overheating Fix"
+      serviceName="iMac Overheating Fix Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>Dubai's combination of fine dust and 12 months of air-conditioning is brutal on iMac cooling.</strong> A 2017 or 2019 iMac that's been sitting on a desk for five years almost always has a thick mat of dust across the heatsink fins behind the display - exactly where the fan is trying to push air through. The result: the fan spins flat-out, the casing gets hot to touch and the CPU throttles down to half its rated speed.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             The fix isn't expensive but it does require display removal, which is the same delicate process we do for SSD upgrades. Once open, we vacuum the dust, replace the dried-out thermal paste between CPU/GPU and heatsink, swap any compressed thermal pads, and inspect the fan bearing. The iMac comes back quiet, cool and running at full speed - usually 20-30% faster in benchmarks because throttling is gone.
           </p>
         </>
@@ -45,19 +45,19 @@ export default function IMacOverheatingFix() {
         { title: "Thermal paste + pads",       body: "Old paste removed with isopropyl, fresh Arctic MX-6 or Honeywell PTM7950 applied. Thermal pads replaced where compressed." },
         { title: "Reseal and verify",          body: "Display refit with fresh adhesive, cure overnight, then a 30-minute load test to confirm temps are 15-25°C lower than before." },
       ]}
-      warrantyDays={90}
+      warrantyDays={15}
       warrantyBullets={[
-        "90-day warranty on the thermal work and adhesive seal.",
-        "Free re-clean if the same dust issue returns inside 6 months (it shouldn't).",
-        "Free home visit option for the pickup and drop-off - iMacs are heavy.",
+        "15-day warranty on the thermal work and adhesive seal.",
+        "Free re-clean if the same dust issue returns inside those 15 days (it shouldn't).",
+        "Parking on site at Concord Tower, so a heavy iMac goes from car to bench in one trip.",
       ]}
       faqs={[
         { q: "Why is dust such a big deal in Dubai?", a: "Fine sand combined with constant AC means dust circulates indoors year-round. iMacs sit on desks and pull air through the bottom intake. Five years of this builds a felt-like mat across the heatsink that no amount of compressed air can clear without opening the machine." },
         { q: "Can I just blow it out with compressed air?", a: "It rarely works on iMacs. The fins are deep behind the logic board and the dust mat is usually too compacted. You'll move surface dust around but the choke point stays choked. Has to be opened to clean properly." },
         { q: "Will my iMac actually be faster afterwards?", a: "Almost always - usually 20-40% faster in sustained workloads because the CPU stops throttling. Final Cut renders, Lightroom exports and Logic mixes all benefit visibly." },
         { q: "Is there any risk to opening the iMac?", a: "On older iMacs the display adhesive is the only delicate part - we've done hundreds and we use the proper Apple-spec strips on reassembly. Risk to the logic board itself is very low." },
-        { q: "What about a 24-inch M-series iMac?", a: "Fans almost never need this on M1/M2/M3/M4 because the chip runs cool by design. If yours is loud, it's usually software (a runaway process) - we'll diagnose for free first." },
-        { q: "Can you do this at my home?", a: "Pickup and drop-off yes - the actual paste work needs our bench and a dust-free area for display reassembly, so the unit comes to the workshop for a day." },
+        { q: "What about a 24-inch M-series iMac?", a: "Fans almost never need this on M1/M3/M4 because the chip runs cool by design. If yours is loud, it's usually software (a runaway process) - we'll diagnose for free first." },
+        { q: "Can you do this at my home?", a: "No - the paste work needs our bench and a dust-free area for display reassembly, so the iMac comes to our Media City workshop for a day. There is parking on site at Concord Tower, which helps with a 27-inch." },
       ]}
       reviewNames={["Shah nawaz", "Binod Shrestha", "Ali Hassan"]}
       related={[

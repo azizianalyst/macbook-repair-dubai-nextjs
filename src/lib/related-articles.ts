@@ -18,6 +18,13 @@ const TOPIC_KEYS: Record<string, string[]> = {
   performance: ["running-slow", "slow", "performance"],
   sell: ["sell", "resale", "worth", "trade", "refurbished"],
   unlock: ["icloud", "unlock", "network-unlock", "locked"],
+  // chip generations — match /macbook-pro-m5-repair-dubai etc.
+  m5: ["-m5-", "/m5"],
+  m4: ["-m4-", "/m4"],
+  m3: ["-m3-", "/m3"],
+  m2: ["-m2-", "/m2"],
+  m1: ["-m1-", "/m1"],
+  intel: ["-intel-", "/intel"],
 };
 
 /** Primary device family for a page, from its path slug. */
@@ -61,5 +68,15 @@ export function relatedArticles(opts: {
     .sort((a, b) => b.score - a.score || (a.e.date < b.e.date ? 1 : -1))
     .slice(0, limit)
     .map((x) => x.e);
+
+  // Backfill with "general" trust/logistics posts (relevant on any page) so a page with thin
+  // on-family blog coverage still fills its "From our blog" block rather than hiding it.
+  if (scored.length < limit) {
+    const have = new Set(scored.map((e) => e.slug));
+    const general = BLOG_INDEX
+      .filter((e) => e.slug !== excludeSlug && !have.has(e.slug) && e.families.includes("general"))
+      .sort((a, b) => (a.date < b.date ? 1 : -1));
+    return [...scored, ...general].slice(0, limit);
+  }
   return scored;
 }

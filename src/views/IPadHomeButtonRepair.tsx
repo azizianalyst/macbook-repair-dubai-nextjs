@@ -4,29 +4,29 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPadHomeButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPad Home Button Repair Dubai - AED 250 | iPad 9th Gen and Earlier"
-      seoDescription="iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. AED 250, 1 day, 90-day warranty."
+      seoTitle="iPad Home Button Repair Dubai | iPad 9th Gen and Earlier"
+      seoDescription="iPad home button repair Dubai. iPad 9th gen and earlier. Touch ID limits explained honestly. 1 day, warranty of 15 days to 2 years - WhatsApp us for your price."
       path="/ipad-home-button-repair-dubai"
       eyebrow="iPad home button"
       h1="iPad Home Button Repair Dubai"
-      subtitle="Stuck or dead home button on iPad 9th gen or earlier. Honest about Touch ID - only Apple can re-pair the sensor. AED 250, 1 day."
+      subtitle="Stuck or dead home button on iPad 9th gen or earlier. Honest about Touch ID - only Apple can re-pair the sensor. 1 day - message us on WhatsApp for your price."
       startingPrice={250}
       timeline="1 day"
       whatsappPrefill="Hi, my iPad home button isn't working - model:"
       breadcrumb={[
         { name: "Home",         path: "/" },
-        { name: "iPad Repair",  path: "/ipad-screen-repair-dubai" },
+        { name: "iPad Repair",  path: "/ipad-repair-dubai" },
         { name: "Home Button",  path: "/ipad-home-button-repair-dubai" },
       ]}
       technician={{ name: "Mohammed", years: 14, specialisation: "iPad mechanical and Touch ID repair" }}
-      serviceName="iPad Home Button Repair"
+      serviceName="iPad Home Button Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The same Touch ID truth from our iPhone page applies here</strong>: if we replace the home button on an iPad with Touch ID, the Touch ID function will not work on the new button. Apple pairs each fingerprint sensor to the logic board at manufacture; only Apple can re-pair, and they only do it via whole-device replacement. Anyone in Dubai claiming "Touch ID restored" is selling you false hope.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
-            What we deliver: AED 250 to restore the click and home function so you can press, double-press for app switcher, and triple-press for Accessibility. We set up AssistiveTouch on-screen for free during the same visit. Applies to iPad 9th gen, iPad Air 1/2/3, iPad mini 4/5, and iPad Pro 1st/2nd gen 9.7\"/10.5\"/12.9\".
+          <p className="text-[16px] text-text-muted leading-relaxed">
+            What we deliver: we restore the click and home function so you can press, double-press for app switcher, and triple-press for Accessibility - message us on WhatsApp for today's exact price on your model. We set up AssistiveTouch on-screen for free during the same visit. Applies to iPad 9th gen, iPad Air 1/2/3, iPad mini 4/5, and iPad Pro 1st/2nd gen 9.7\"/10.5\"/12.9\".
           </p>
         </>
       }
@@ -43,13 +43,13 @@ export default function IPadHomeButtonRepair() {
         { title: "Diagnose mechanical vs flex",  body: "We test the original button under iPadOS diagnostics. Sometimes a software glitch mimics a hardware fault - ruled out free." },
         { title: "Open and replace",              body: "Screen lifted carefully (we don't tear the home-button flex - that's the rookie mistake on iPad 7/8/9)." },
         { title: "Calibrate + reseal",            body: "New button installed, click action calibrated. AssistiveTouch configured at no extra charge." },
-        { title: "Function test",                 body: "Press, double-press, triple-press all verified. 90-day warranty card with the iPad." },
+        { title: "Function test",                 body: "Press, double-press, triple-press all verified. Warranty 15 days to 2 years card with the iPad." },
       ]}
-      warrantyDays={90}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new home button mechanism and flex.",
         "Does not cover Touch ID (impossible without Apple).",
-        "Free re-fit if click softens within 90 days.",
+        "Free re-fit if click softens within 12 months.",
       ]}
       faqs={[
         { q: "Which iPads still have a home button?", a: "iPad 9th gen and earlier (the standard iPad sold from 2010 to 2021). All current iPad mini, Air and Pro models use Touch ID in the power button or Face ID - see our iPad Power Button page for those." },

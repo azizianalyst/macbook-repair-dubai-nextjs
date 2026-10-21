@@ -1,5 +1,6 @@
 // canonical iPhone models list. used by every iPhone hub page for pricing tables.
-// dates approximate launch year; "current line" reflects April 2026.
+// dates approximate launch year; lineup checked against apple.com/ae on 2026-09-26
+// (iPhone Duo is announced for 23 Oct 2026; add it once its specs are confirmed at launch).
 
 export type IPhoneModel = {
   family: string;            // group label
@@ -28,6 +29,8 @@ export const IPHONE_MODELS: IPhoneModel[] = [
   { family: "17",      name: "iPhone 17 Pro",           released: 2025, connector: "USB-C",     faceId: true  },
   { family: "17",      name: "iPhone 17 Pro Max",       released: 2025, connector: "USB-C",     faceId: true  },
   { family: "17",      name: "iPhone 17e",              released: 2026, connector: "USB-C",     faceId: true  },
+  { family: "18",      name: "iPhone 18 Pro",           released: 2026, connector: "USB-C",     faceId: true  },
+  { family: "18",      name: "iPhone 18 Pro Max",       released: 2026, connector: "USB-C",     faceId: true  },
 ];
 
 export const IPHONE_REVIEW_NAMES = [
@@ -40,11 +43,11 @@ export const IPHONE_REVIEW_NAMES = [
 
 // related iPhone hubs for cross-linking. each page picks 3 that are NOT itself.
 export const IPHONE_HUBS = [
-  { slug: "/iphone-screen-repair-dubai",         label: "iPhone Screen Repair",         desc: "OLED & LCD from AED 460. Same-day on most models." },
-  { slug: "/iphone-battery-replacement-dubai",   label: "iPhone Battery Replacement",   desc: "From AED 330. Genuine cells, BMS pairing." },
-  { slug: "/iphone-charging-port-repair-dubai",  label: "iPhone Charging Port Repair",  desc: "Lightning & USB-C. From AED 330, same day." },
+  { slug: "/iphone-screen-repair-dubai",         label: "iPhone Screen Repair",         desc: "OLED & LCD. Same-day on most models. Message us for pricing." },
+  { slug: "/iphone-battery-replacement-dubai",   label: "iPhone Battery Replacement",   desc: "Genuine cells, BMS pairing. Message us for pricing." },
+  { slug: "/iphone-charging-port-repair-dubai",  label: "iPhone Charging Port Repair",  desc: "Lightning & USB-C, same day. Message us for pricing." },
   { slug: "/iphone-back-glass-repair-dubai",     label: "iPhone Back Glass Repair",     desc: "Laser removal. MagSafe + wireless coil saved." },
-  { slug: "/iphone-camera-repair-dubai",         label: "iPhone Camera Repair",         desc: "Rear, ultra-wide, telephoto, LiDAR. From AED 460." },
+  { slug: "/iphone-camera-repair-dubai",         label: "iPhone Camera Repair",         desc: "Rear, ultra-wide, telephoto, LiDAR. Message us for pricing." },
   { slug: "/iphone-water-damage-repair-dubai",   label: "iPhone Water Damage Repair",   desc: "Ultrasonic cleaning. 24-hour window matters." },
   { slug: "/iphone-data-recovery-dubai",         label: "iPhone Data Recovery",         desc: "iCloud first, chip-off when needed." },
   { slug: "/iphone-network-unlock-dubai",        label: "iPhone Network Unlock",        desc: "Carrier unlock, IMEI-based. No jailbreak." },

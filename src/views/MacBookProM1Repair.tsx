@@ -1,0 +1,29 @@
+"use client";
+import MacBookProGenerationPage from "@/components/blocks/MacBookProGenerationPage";
+
+export default function MacBookProM1Repair() {
+  return (
+    <MacBookProGenerationPage
+      path="/macbook-pro-m1-repair-dubai"
+      chip="M1"
+      years="2020 – 2021"
+      seoTitle="MacBook Pro M1 Repair Dubai - 13&quot;, 14&quot; &amp; 16&quot; All M1 Models"
+      seoDescription="MacBook Pro M1 repair Dubai. All variants: 13&quot; M1 (A2338), 14&quot; M1 Pro (A2442), 16&quot; M1 Pro/Max (A2485). First Apple Silicon. Free diagnosis, quote before repair. Call 055 741 3706."
+      eyebrow="MacBook Pro M1 specialist"
+      h1="MacBook Pro M1 Repair Dubai"
+      heroDescription="The original Apple Silicon MacBook Pro. Whether you have the 13&quot; M1, 14&quot; M1 Pro, or 16&quot; M1 Pro/Max, our technicians have been servicing first-gen Apple Silicon since day one."
+      heroMeta={["All M1 variants", "13&quot; · 14&quot; · 16&quot;", "First Apple Silicon experts"]}
+      models={[
+        { label: `16" M1 Max`, href: "/macbook-pro-16-m1-pro-2021-repair-dubai", aNum: "A2485" },
+        { label: `14" M1 Pro`, href: "/macbook-pro-14-m1-pro-2021-repair-dubai", aNum: "A2442" },
+        { label: `13" M1`, href: "/macbook-pro-13-m1-2020-repair-dubai", aNum: "A2338" },
+      ]}
+      faqs={[
+        { q: "Which M1 MacBook Pro models do you repair?", a: "We repair all M1 variants: 13&quot; M1 (A2338), 14&quot; M1 Pro (A2442), 16&quot; M1 Pro (A2485), and 16&quot; M1 Max (A2485)." },
+        { q: "How much does MacBook Pro M1 screen repair cost in Dubai?", a: "It scales with panel size - 13&quot; lowest, then 14&quot;, with the 16&quot; costing the most. Send the model on WhatsApp for a written quote." },
+        { q: "Do you offer a warranty on M1 MacBook Pro repairs?", a: "Yes, in writing. Screens carry 90 days and batteries 3 months with an 80% capacity guarantee. Other hardware such as trackpads, ports and SSDs carries 15 days to 2 years; keyboard, logic board and liquid-damage work carries 15 days." },
+        { q: "Can you repair MacBook Pro M1 Touch Bar issues?", a: "Yes. We repair and replace Touch Bar assemblies on the 13&quot; M1 MacBook Pro, including unresponsive Touch Bar and Touch ID failures." },
+      ]}
+    />
+  );
+}

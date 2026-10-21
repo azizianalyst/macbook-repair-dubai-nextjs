@@ -8,15 +8,25 @@ export default function BlogMacBookMaintenanceChecklist() {
       seoTitle="MacBook Maintenance Checklist Dubai - Keep Your Mac Fast"
       seoDescription="A practical MacBook maintenance checklist for Dubai: monthly, quarterly and yearly tasks for storage, battery, dust, backups and software updates."
       path="/blog/macbook-maintenance-checklist-dubai"
+      wide
+      toc={[
+        { id: "monthly-checklist", label: "Monthly checklist" },
+        { id: "quarterly-checklist", label: "Quarterly checklist" },
+        { id: "yearly-dust-clean", label: "Yearly dust clean" },
+        { id: "back-up-first", label: "Back up before anything fails" },
+        { id: "safe-mode-first", label: "Safe Mode first" },
+        { id: "diy-vs-bring-in", label: "DIY vs bring in" },
+        { id: "for-businesses", label: "For businesses" },
+      ]}
       category="Care guide · MacBook"
       h1="MacBook Maintenance Checklist: Keep Your Mac Fast in Dubai"
       hook="Most MacBooks that come in for being slow or loud don't need a repair - they need a clean and ten minutes of housekeeping. Here is the routine we give every customer, split into monthly, quarterly and yearly jobs."
-      quickAnswer="Run a monthly storage and update check, a quarterly battery-health and backup review, and a yearly internal dust clean (AED 280 in Dubai). The dust matters here - fine sand loads MacBook fans faster than cooler climates, so a yearly clean prevents most thermal faults."
+      quickAnswer="Run a monthly storage and update check, a quarterly battery-health and backup review, and a yearly internal dust clean in Dubai (message us on WhatsApp for the price). The dust matters here - fine sand loads MacBook fans faster than cooler climates, so a yearly clean prevents most thermal faults."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-06-03"
       dateModified="2026-06-03"
       readingMinutes={7}
-      featuredImageAlt="MacBook maintenance in Dubai - technician checking battery health and clearing dust from fans on a workbench"
+      featuredImageAlt="MacBook Maintenance Checklist Dubai. MacBook maintenance in Dubai - technician checking battery health and clearing dust from fans on a workbench"
       body={
         <>
           <p>
@@ -26,13 +36,13 @@ export default function BlogMacBookMaintenanceChecklist() {
             the pattern barely changes - people wait until the fan screams or the thing shuts down on
             its own, when a simple routine would have caught it months earlier. If you want the short
             version: do the monthly checks below, and book a{" "}
-            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent font-semibold hover:underline">
               full internal clean and maintenance service
             </Link>{" "}
             once a year. That's 90% of it.
           </p>
 
-          <h2>The monthly checklist (10 minutes)</h2>
+          <h2 id="monthly-checklist">MacBook Maintenance Checklist Dubai. The monthly checklist (10 minutes)</h2>
           <p>
             These four take less time than your coffee. Do them on the first of the month and you'll
             never get the "your disk is almost full" panic mid-deadline.
@@ -58,7 +68,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             </li>
           </ul>
 
-          <h2>The quarterly checklist (every 3 months)</h2>
+          <h2 id="quarterly-checklist">The quarterly checklist (every 3 months)</h2>
           <p>
             Worth knowing: this is where you catch the slow problems before they become repairs.
           </p>
@@ -85,7 +95,7 @@ export default function BlogMacBookMaintenanceChecklist() {
             </li>
           </ul>
 
-          <h2>The yearly job: dust, thermals and a proper clean</h2>
+          <h2 id="yearly-dust-clean">The yearly job: dust, thermals and a proper clean</h2>
           <p>
             Here's the catch with Dubai - dust is not optional maintenance, it's the main one. Fine
             sand and humidity push debris into the heatsink and fan blades far faster than in cooler
@@ -97,17 +107,18 @@ export default function BlogMacBookMaintenanceChecklist() {
             You can blow out the vents with a can of compressed air from the outside, and that helps a
             little. But the dust that matters sits on the heatsink fins inside the chassis, and on a
             modern glued-shut MacBook you can't reach it without opening the machine properly. A full
-            internal clean at our bench is AED 280, VAT-inclusive, same day. We open it up, clear the
+            internal clean at our bench is VAT-inclusive and same day - message us on WhatsApp for today's price.</p>
+        <p>We open it up, clear the
             fans and heatsink, clean the ports, check for early corrosion, and run a thermal check
             before it goes back. Once a year is right for most people in Dubai. If you work near a
             building site or notice fans roaring at idle, every six to nine months. See the{" "}
-            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-cleaning-maintenance-dubai" className="text-accent font-semibold hover:underline">
               MacBook cleaning and maintenance page
             </Link>{" "}
             for what's included.
           </p>
 
-          <h2>Back up before anything else fails</h2>
+          <h2 id="back-up-first">Back up before anything else fails</h2>
           <p>
             A maintenance routine that skips backups is half a routine. SSDs in Apple Silicon Macs are
             soldered to the board - if the board dies, the storage usually dies with it, and recovery
@@ -119,13 +130,13 @@ export default function BlogMacBookMaintenanceChecklist() {
             For anything you can't lose - business files, photos, a thesis - run a second copy off-site
             too, either iCloud or a cloud sync. If you'd rather have it set up and verified properly,
             our{" "}
-            <Link to="/macbook-backup-service-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-backup-service-dubai" className="text-accent font-semibold hover:underline">
               MacBook backup service
             </Link>{" "}
             handles the drive, the schedule and a restore test so you know it actually works.
           </p>
 
-          <h2>When something is already wrong: Safe Mode first</h2>
+          <h2 id="safe-mode-first">When something is already wrong: Safe Mode first</h2>
           <p>
             If your MacBook is misbehaving - random freezes, an app that won't quit, graphics glitches
             after an update - Safe Mode is the free first diagnostic before anyone touches hardware. It
@@ -136,34 +147,34 @@ export default function BlogMacBookMaintenanceChecklist() {
             On Apple Silicon, shut down, hold the power button until "Loading startup options" appears,
             pick your disk, then hold Shift and click "Continue in Safe Mode". On Intel, restart and
             hold Shift. If you're stuck or Safe Mode won't load, our{" "}
-            <Link to="/macbook-safe-mode-repair-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-safe-mode-repair-dubai" className="text-accent font-semibold hover:underline">
               Safe Mode diagnostic and repair service
             </Link>{" "}
             sorts out which faults are software and which need the bench. Diagnosis is free.
           </p>
 
-          <h2>What to do yourself, and what to bring in</h2>
+          <h2 id="diy-vs-bring-in">What to do yourself, and what to bring in</h2>
           <p>
             Do the storage, updates, restarts, battery checks and backups yourself - none of that
             needs a technician. Compressed air on the external vents is fine too. The line to draw is
             opening the chassis. From 2013 onward Apple glues most components in, the fans sit under
             shielding and ribbon cables, and a slipped screwdriver near the board is an expensive
             mistake. Internal cleaning, battery swaps and thermal-paste work belong on a bench. A
-            MacBook battery, for the record, is AED 450 for an Air and up to AED 600 for a 14-inch or
-            16-inch Pro - see the{" "}
-            <Link to="/macbook-battery-replacement-dubai" className="text-accent-bright font-semibold hover:underline">
+            MacBook battery, for the record, is a bench job whether it's an Air or a 14-inch or
+            16-inch Pro - message us on WhatsApp for the exact price on your model, or see the{" "}
+            <Link to="/macbook-battery-replacement-dubai" className="text-accent font-semibold hover:underline">
               battery replacement page
             </Link>{" "}
             for the full list.
           </p>
 
-          <h2>For businesses: hand the whole routine over</h2>
+          <h2 id="for-businesses">For businesses: hand the whole routine over</h2>
           <p>
             If you run a team of Macs, doing this per-machine doesn't scale. Our{" "}
-            <Link to="/annual-maintenance-contract-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/annual-maintenance-contract-dubai" className="text-accent font-semibold hover:underline">
               annual maintenance contract
             </Link>{" "}
-            covers scheduled cleans, battery-health reviews and priority pickup across Dubai mainland,
+            covers scheduled cleans, battery-health reviews and priority bench slots at our Media City workshop,
             so the whole fleet stays cool and fast without anyone in the office tracking it. WhatsApp
             055 741 3706 and we'll quote in a few minutes.
           </p>
@@ -172,7 +183,7 @@ export default function BlogMacBookMaintenanceChecklist() {
       faqs={[
         {
           q: "How often should I clean my MacBook in Dubai?",
-          a: "Once a year for most people. Dubai's fine sand and humidity load the fans faster than cooler climates, so if you work outdoors, near a building site, or hear the fans roaring at idle, every six to nine months is better. A full internal clean is AED 280 at our Media City workshop and takes a day.",
+          a: "Once a year for most people. Dubai's fine sand and humidity load the fans faster than cooler climates, so if you work outdoors, near a building site, or hear the fans roaring at idle, every six to nine months is better. A full internal clean at our Media City workshop takes a day - message us on WhatsApp for the price.",
         },
         {
           q: "How do I check my MacBook battery health?",
@@ -192,12 +203,12 @@ export default function BlogMacBookMaintenanceChecklist() {
         },
         {
           q: "Can I open and clean the MacBook myself?",
-          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean is AED 280 with a 90-day warranty.",
+          a: "Compressed air on the external vents is safe to do yourself. Opening the chassis is not worth the risk on any MacBook from 2013 onward - components are glued, fans sit under ribbon cables, and a slip near the board is costly. Internal cleaning, battery swaps and thermal paste belong on a bench. Our internal clean comes with a warranty of 15 days to 2 years - message us on WhatsApp for the price.",
         },
       ]}
       relatedLinks={[
-        { label: "MacBook cleaning & maintenance", href: "/macbook-cleaning-maintenance-dubai", description: "Full internal clean, thermal check, AED 280 same day." },
-        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "From AED 450, tier-1 cells, 6-month warranty." },
+        { label: "MacBook cleaning & maintenance", href: "/macbook-cleaning-maintenance-dubai", description: "Full internal clean, thermal check, same day." },
+        { label: "MacBook battery replacement", href: "/macbook-battery-replacement-dubai", description: "Tier-1 cells, 3-month warranty. Price on request." },
         { label: "MacBook backup service", href: "/macbook-backup-service-dubai", description: "Time Machine set up and verified with a restore test." },
       ]}
     />

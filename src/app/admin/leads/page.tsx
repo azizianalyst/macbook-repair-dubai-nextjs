@@ -8,9 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function LeadsAdminPage() {
-  return (
-    <main className="min-h-screen bg-bg px-5 py-2xl md:px-6">
-      <LeadsAdmin />
-    </main>
-  );
+  return <LeadsAdmin />;
 }

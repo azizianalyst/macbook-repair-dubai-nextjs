@@ -2,6 +2,7 @@
 import { Link } from "@/lib/router-compat";
 import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
 import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { REVIEW_COUNT_LABEL, RATING_LABEL } from "@/content/site";
 
 export default function BlogIPhoneRepairNearMeDubai() {
   return (
@@ -9,10 +10,18 @@ export default function BlogIPhoneRepairNearMeDubai() {
       seoTitle="iPhone Repair Near Me Dubai 2026 - Trust Checklist"
       seoDescription="10 questions to ask before handing your iPhone to any Dubai repair shop, plus red flags to refuse. We tick every box, open since 2004 in Media City."
       path="/blog/iphone-repair-near-me-dubai"
+      wide
+      toc={[
+        { id: "quick-answer", label: "Quick answer" },
+        { id: "checklist", label: "The 10-question checklist" },
+        { id: "red-flags", label: "Red flags to refuse" },
+        { id: "why-we-tick", label: "Why we tick all 10" },
+        { id: "map-directions", label: "Map and directions" },
+      ]}
       category="Honest guide · iPhone"
       h1="iPhone Repair Near Me Dubai - How to Choose Wisely"
       hook="10 questions to ask before handing your iPhone to anyone."
-      quickAnswer="Before any Dubai shop touches your iPhone, verify: physical address, years in business, Google reviews, written warranty, genuine parts policy, same-day repair, free diagnosis, pickup option, transparent pricing, and Apple specialisation. Refuse cash-only, no-receipt, no-warranty shops. We have operated from Concord Tower Media City since 2004 and tick all ten."
+      quickAnswer="Before any Dubai shop touches your iPhone, verify: physical address, years in business, Google reviews, written warranty, genuine parts policy, same-day repair, free diagnosis, courier option, transparent pricing, and Apple specialisation. Refuse cash-only, no-receipt, no-warranty shops. We have operated from Concord Tower Media City since 2004 and tick all ten."
       author={{ name: "Ali", role: "Workshop manager" }}
       datePublished="2026-04-27"
       dateModified="2026-04-27"
@@ -20,14 +29,14 @@ export default function BlogIPhoneRepairNearMeDubai() {
       featuredImageAlt="iPhone repair near me Dubai - 10-question trust checklist"
       body={
         <>
-          <h2>Quick answer</h2>
+          <h2 id="quick-answer">iPhone Repair Near Me Dubai. Quick answer</h2>
           <p>
             Dubai has 200+ phone repair shops. Maybe 20 of them deserve your iPhone. Use the 10
             questions below to filter quickly, refuse anything that triggers a red flag, and look for
             shops that proactively answer these questions before you even ask.
           </p>
 
-          <h2>The 10-question checklist</h2>
+          <h2 id="checklist">The 10-question checklist</h2>
 
           <h3>1. Physical address (or pop-up?)</h3>
           <p>
@@ -56,9 +65,9 @@ export default function BlogIPhoneRepairNearMeDubai() {
 
           <h3>4. Warranty offered</h3>
           <p>
-            <strong>Written</strong> warranty, on the receipt, with terms. "We give 90 days warranty"
-            verbally doesn't count. Industry minimum: 30 days on screens, 90 days on batteries, 6
-            months on logic boards. If a shop offers no warranty or "as-is sold", walk out.
+            <strong>Written</strong> warranty, on the receipt, with terms. "We give 12 months warranty"
+            verbally doesn't count. Periods differ by repair type (screens, batteries and board work
+            rarely carry the same term), so ask for yours in writing. If a shop offers no warranty or "as-is sold", walk out.
           </p>
 
           <h3>5. Genuine parts policy</h3>
@@ -68,7 +77,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             tradeoff. A shop that claims "all our parts are genuine Apple" without being an Apple
             Authorised Service Provider is lying - Apple does not sell parts to non-AASP shops.
             Read our{" "}
-            <Link to="/blog/iphone-screen-replaced-but-issues-after" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/iphone-screen-replaced-but-issues-after" className="text-accent font-semibold hover:underline">
               screen quality tier guide
             </Link>{" "}
             for the truth.
@@ -86,18 +95,17 @@ export default function BlogIPhoneRepairNearMeDubai() {
           <h3>7. Free diagnosis?</h3>
           <p>
             A reputable shop diagnoses for free, gives a written quote, and only charges if you
-            authorise the repair. "Diagnosis fee AED 200, applied to repair if you proceed" is also
-            acceptable. Refuse "we charge AED 500 to look at it, non-refundable" - that's a captive
+            authorise the repair. A small diagnosis fee that is credited back if you proceed is also
+            acceptable. Refuse a high, non-refundable "just to look at it" fee - that's a captive
             pricing tactic.
           </p>
 
-          <h3>8. Pickup/delivery service?</h3>
+          <h3>8. Can you send it by courier?</h3>
           <p>
-            Door-to-door pickup is a nice-to-have, especially for Marina / Downtown / JLT residents
-            saving the Media City drive. The shop should send a uniformed courier with company ID, a
-            signed receipt at handover, and a delivery confirmation when the repair is done. Cost:
-            AED 30-80 typically. Free over a threshold (we offer free pickup over AED 800 repair
-            value).
+            Not everyone can drive to Media City in the middle of a work day. Ask whether the shop
+            takes devices sent by a courier you book, and whether it confirms the serial number when
+            the phone arrives. We don't collect or deliver ourselves. Book any same-day courier app to
+            Concord Tower, hand the iPhone to the driver, and WhatsApp us the tracking link.
           </p>
 
           <h3>9. Pricing transparent?</h3>
@@ -105,7 +113,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             Public price list on website / WhatsApp / printed in shop. Same price for everyone, not
             "let me check" then a number that depends on how rich you look. We publish all prices
             on{" "}
-            <Link to="/pricing" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/pricing" className="text-accent font-semibold hover:underline">
               our pricing page
             </Link>{" "}
             and quote from the same list every time.
@@ -118,7 +126,7 @@ export default function BlogIPhoneRepairNearMeDubai() {
             specialist for Apple devices. (We've been Apple-only since founding in 2004.)
           </p>
 
-          <h2>Red flags - refuse the shop if you see any of these</h2>
+          <h2 id="red-flags">Red flags - refuse the shop if you see any of these</h2>
           <ul className="list-disc list-inside space-y-xs">
             <li><strong>Cash only, no card</strong>: tax-evasion sign, no paper trail for warranty disputes.</li>
             <li><strong>No receipt</strong>: even worse - you can't prove the iPhone went in.</li>
@@ -131,25 +139,25 @@ export default function BlogIPhoneRepairNearMeDubai() {
             <li><strong>Hard-sells you upgrades</strong> ("your battery is bad too - let me change it") without showing you the diagnostic.</li>
           </ul>
 
-          <h2>Why we tick all 10</h2>
+          <h2 id="why-we-tick">Why we tick all 10</h2>
           <BlogPriceTable
             caption="Our shop vs the 10-question checklist"
             headers={["Checklist item", "Our answer"]}
             rows={[
-              { model: "1. Physical address", ours: "Office #45, 10th Floor, Concord Tower, Dubai Media City - open Mon-Sat 9am-10pm" },
-              { model: "2. Years in business", ours: "Since 10 October 2004 - 21 years, same name, same family ownership" },
-              { model: "3. Google reviews", ours: "1,400+ reviews, 4.8 average, fresh weekly" },
-              { model: "4. Warranty", ours: "Written: 30 days screens, 90 days batteries, 6 months logic boards" },
+              { model: "1. Physical address", ours: "Office #45, 10th Floor, Concord Tower, Dubai Media City - open Mon-Sat 9am-7pm" },
+              { model: "2. Years in business", ours: "Since 10 October 2004, same name, same family ownership" },
+              { model: "3. Google reviews", ours: `${REVIEW_COUNT_LABEL} reviews, ${RATING_LABEL} average, replied to personally` },
+              { model: "4. Warranty", ours: "Written: 3 months screens and batteries, 15 days board-level (extendable to 6 months), 15 days to 2 years on most other hardware" },
               { model: "5. Genuine parts policy", ours: "We disclose OEM vs equivalent vs aftermarket per quote, you choose tier" },
               { model: "6. Same-day repair", ours: "Screen, battery, back glass: 30-90 min. Logic board: 1-3 days" },
               { model: "7. Free diagnosis", ours: "Free, with written quote, no obligation" },
-              { model: "8. Pickup/delivery", ours: "AED 50 within Dubai, free over AED 800 repair value" },
-              { model: "9. Transparent pricing", ours: "All prices published at /pricing - same price every customer" },
+              { model: "8. Courier option", ours: "Walk in, or send it by a same-day courier you book" },
+              { model: "9. Transparent pricing", ours: "Same price every customer - message us on WhatsApp for today's exact quote" },
               { model: "10. Apple specialisation", ours: "Apple-only since founding - MacBook, iPhone, iPad, Watch, iMac, Mac Pro, Mac Mini" },
             ]}
           />
 
-          <h2>Map and directions to our workshop</h2>
+          <h2 id="map-directions">Map and directions to our workshop</h2>
           <p>
             <strong>MacBook Repair Dubai</strong><br />
             Office #45, 10th Floor, Concord Tower<br />
@@ -160,26 +168,26 @@ export default function BlogIPhoneRepairNearMeDubai() {
             <strong>How to find us:</strong>
           </p>
           <ul className="list-disc list-inside space-y-xs">
-            <li><strong>Metro</strong>: Nakheel Harbour & Tower → 10-minute taxi (~AED 15).</li>
-            <li><strong>Tram</strong>: Dubai Media City Tram Stop → 5-minute walk.</li>
-            <li><strong>Car</strong>: free visitor parking at Concord Tower (P3 level).</li>
+            <li><strong>Metro</strong>: Al Fardan Exchange (Red Line, formerly Al Khail) → about a 15-minute walk.</li>
+            <li><strong>Tram</strong>: Palm Jumeirah stop → about a 3-minute walk. From the Red Line, change to the tram at Sobha Realty or DMCC.</li>
+            <li><strong>Car</strong>: parking on site at Concord Tower.</li>
             <li><strong>From Marina</strong>: 8 minutes via Sheikh Zayed Road → Al Sufouh exit.</li>
             <li><strong>From Downtown</strong>: 22 minutes via SZR.</li>
-            <li><strong>From Sharjah / Deira</strong>: 35-50 minutes - book pickup instead.</li>
+            <li><strong>From Sharjah / Deira</strong>: 35-50 minutes - or send it by a same-day courier you book.</li>
           </ul>
           <p>
             WhatsApp +971 55 741 3706 to confirm we have your part in stock before driving over, or
-            book a free pickup.
+            send the phone by courier.
           </p>
         </>
       }
       faqs={[
-        { q: "Why not use Apple Service Center directly?", a: "Apple-Authorised Service Providers (Maxus, ITQAN, etc.) charge Apple's standard pricing, which is 2-3x our rates. They use only OEM Apple parts and offer the official Apple warranty. We use OEM and OEM-equivalent (your choice) at workshop pricing with our own warranty. Best path depends on your budget and AppleCare+ status." },
+        { q: "Why not use Apple Service Center directly?", a: "Apple-Authorised Service Providers (Maxus, ITQAN, etc.) charge Apple's standard pricing, which is typically well above workshop rates. They use only OEM Apple parts and offer the official Apple warranty. We use OEM and OEM-equivalent (your choice) at workshop pricing with our own warranty. Best path depends on your budget and AppleCare+ status - message us on WhatsApp for your exact quote." },
         { q: "Should I be worried about handing over my iPhone if it has personal data?", a: "Reputable shops never need your passcode for screen, battery, or back-glass repair. We test using touch-only routines that don't require unlocking. For repairs that legitimately need passcode access (some logic-board work), insist on a sign-out + factory reset receipt before and after." },
         { q: "How do I check Google reviews quickly for fakeness?", a: "(1) Sort by 'Newest' - fakes cluster in one month. (2) Click reviewer profiles - fakes review 5+ businesses on the same day. (3) Look for specific details (technician names, repair specifics) in legitimate reviews. (4) Cross-check against Trustpilot or Khaleej Times if available." },
         { q: "What if a shop refuses to give me a receipt?", a: "Walk away. UAE consumer law (Federal Law No. 24 of 2006) requires receipts on all retail / service transactions. No receipt = no warranty enforcement = no Dubai Police support if anything goes wrong." },
         { q: "Are mall kiosk repair shops legitimate?", a: "Some are (the established Apple-Authorised ones at Dubai Mall and MoE). Most are pop-up resellers with no workshop on-site - they ship your iPhone to a back-room shop. Quality varies wildly. Visit the actual workshop, not the kiosk." },
-        { q: "What's the cheapest legit iPhone screen repair in Dubai?", a: "Aftermarket-tier screen on iPhone 12 / 13 around AED 250-350. Anything cheaper than that is either a scam or a sub-quality screen that'll fail in 2-3 months. Don't chase the bottom price - the false economy isn't worth it." },
+        { q: "What's the cheapest legit iPhone screen repair in Dubai?", a: "It varies by model and screen tier - message us on WhatsApp for today's exact price on your iPhone. Beware quotes far below the market: they usually mean a sub-quality screen that fails in 2-3 months. Don't chase the bottom price - the false economy isn't worth it." },
       ]}
       relatedLinks={[
         { label: "iPhone repair Dubai", href: "/iphone-repair-dubai", description: "Service hub with pricing for every model." },

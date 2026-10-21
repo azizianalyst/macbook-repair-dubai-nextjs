@@ -4,29 +4,29 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhoneNfcRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone NFC Repair Dubai - Apple Pay Fixes | AED 350"
-      seoDescription="iPhone NFC and Apple Pay repair Dubai. Top-of-phone antenna replacement, contactless restored. AED 350, 1-2 days. Call 055 741 3706."
+      seoTitle="iPhone NFC Repair Dubai - Apple Pay Fixes | Free Diagnosis"
+      seoDescription="iPhone NFC and Apple Pay repair Dubai. Top-of-phone antenna replacement, contactless restored. 1-2 days, free diagnosis. Call 055 741 3706 for a quote."
       path="/iphone-nfc-repair-dubai"
       eyebrow="iPhone NFC repair"
       h1="iPhone NFC Repair Dubai - Apple Pay Fixes"
-      subtitle="Apple Pay won't read at the terminal, contactless transit cards fail, or NFC tags don't trigger Shortcuts. Top-of-phone antenna repair. AED 350, 1-2 days."
+      subtitle="Apple Pay won't read at the terminal, contactless transit cards fail, or NFC tags don't trigger Shortcuts. Top-of-phone antenna repair in 1-2 days — message us on WhatsApp for today's exact price on your model."
       startingPrice={350}
       timeline="1-2 days"
       whatsappPrefill="Hi, my iPhone NFC / Apple Pay isn't working - model:"
       breadcrumb={[
         { name: "Home",            path: "/" },
-        { name: "iPhone Repair",   path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",   path: "/iphone-repair-dubai" },
         { name: "NFC Repair",      path: "/iphone-nfc-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone RF and antenna repair" }}
-      serviceName="iPhone NFC Repair"
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone RF and antenna repair" }}
+      serviceName="iPhone NFC Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
             <strong>The NFC antenna in every iPhone since the 6 sits at the very top of the back</strong>, just under the rear glass. When it fails, Apple Pay won't read at terminals, Nol cards in transit won't tap, and any NFC-triggered Shortcuts go silent. On iPhone X and later the antenna shares space with the rear camera assembly, so we work carefully around the camera flex.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
-            Common cause in Dubai: a drop on the top edge cracks the antenna trace; the back glass replacement at a cheap shop reused damaged adhesive; or water damage corroded the NFC controller. AED 350 covers antenna replacement and, if needed, NFC controller reflow on the logic board.
+          <p className="text-[16px] text-text-muted leading-relaxed">
+            Common cause in Dubai: a drop on the top edge cracks the antenna trace; the back glass replacement at a cheap shop reused damaged adhesive; or water damage corroded the NFC controller. Our repair covers antenna replacement and, if needed, NFC controller reflow on the logic board — message us on WhatsApp for today's exact price on your model.
           </p>
         </>
       }
@@ -44,13 +44,13 @@ export default function IPhoneNfcRepair() {
         { title: "Apple Pay terminal test", body: "Free - we test against our bench POS. Confirms whether it's the antenna, controller, or your card." },
         { title: "Open from the screen side", body: "We don't crack the back glass - instead we lift the screen and access the antenna from inside (less risk to the camera bump)." },
         { title: "Replace antenna or reflow controller", body: "If the antenna is broken, we install OEM-grade replacement. If the NFC controller IC has failed, we reflow at controlled temperature." },
-        { title: "Test against multiple terminals", body: "Bench POS, contactless transit reader, and an NFC tag. 90-day warranty card with the phone." },
+        { title: "Test against multiple terminals", body: "Bench POS, contactless transit reader, and an NFC tag. Warranty 15 days to 2 years card with the phone." },
       ]}
-      warrantyDays={90}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new antenna and controller rework.",
         "Excludes carrier or bank-side Apple Pay issues.",
-        "Free re-test within 90 days if NFC stops responding.",
+        "Free re-test within 12 months if NFC stops responding.",
       ]}
       faqs={[
         { q: "How do I know it's NFC and not the bank?", a: "If Apple Pay works inside apps (e.g. paying for Apple Music) but not at physical terminals, NFC hardware is the issue. If both fail, your card may be locked or your Apple Pay setup needs refresh." },

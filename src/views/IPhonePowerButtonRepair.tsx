@@ -4,28 +4,28 @@ import SubServicePageTemplate from "@/components/blocks/SubServicePageTemplate";
 export default function IPhonePowerButtonRepair() {
   return (
     <SubServicePageTemplate
-      seoTitle="iPhone Power Button Repair Dubai - AED 280 | 1 Day"
-      seoDescription="iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. AED 280, 1 day. Call 055 741 3706."
+      seoTitle="iPhone Power Button Repair Dubai - Price on Request | 1 Day"
+      seoDescription="iPhone side/power button repair Dubai. Stuck, mushy or non-clicking. Apple Pay double-click restored. 1 day. WhatsApp us for today's price on your model."
       path="/iphone-power-button-repair-dubai"
       eyebrow="iPhone power button repair"
       h1="iPhone Power Button Repair Dubai"
-      subtitle='Side button stuck, mushy or completely dead - also kills Apple Pay double-click confirmation. We replace the side-button flex and restore the click. AED 280, 1 day.'
+      subtitle='Side button stuck, mushy or completely dead - also kills Apple Pay double-click confirmation. We replace the side-button flex and restore the click in 1 day. Message us on WhatsApp for your exact price.'
       startingPrice={280}
       timeline="1 day"
       whatsappPrefill="Hi, my iPhone power/side button isn't clicking - model:"
       breadcrumb={[
         { name: "Home",              path: "/" },
-        { name: "iPhone Repair",     path: "/iphone-screen-repair-dubai" },
+        { name: "iPhone Repair",     path: "/iphone-repair-dubai" },
         { name: "Power Button",      path: "/iphone-power-button-repair-dubai" },
       ]}
-      technician={{ name: "Shafeez", years: 12, specialisation: "iPhone mechanical and flex repair" }}
-      serviceName="iPhone Power Button Repair"
+      technician={{ name: "Shafiq", years: 15, specialisation: "iPhone mechanical and flex repair" }}
+      serviceName="iPhone Power Button Repair Dubai"
       intro={
         <>
           <p className="text-[18px] leading-relaxed mb-md">
-            <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex, AED 280, with a 90-day warranty.
+            <strong>The side button on a modern iPhone does a lot</strong>: lock screen, double-press for Apple Pay, side+volume for screenshots, side+volume hold for emergency SOS, and on iPhone 16+ the new Action and Camera Controls live near it on a shared flex. When the click goes mushy or dies, all of these go with it. We replace the flex with a warranty of 15 days to 2 years - message us on WhatsApp for today's exact price on your model.
           </p>
-          <p className="text-[16px] text-on-primary-muted leading-relaxed">
+          <p className="text-[16px] text-text-muted leading-relaxed">
             Most failures are mechanical - the dome inside the button collapses after years of use, or impact damage from a drop has bent the metal frame around the button. We straighten the frame where possible (no extra charge) and replace the flex with the click mechanism in one visit.
           </p>
         </>
@@ -44,13 +44,13 @@ export default function IPhonePowerButtonRepair() {
         { title: "Click test + frame check", body: "We feel the click and inspect the frame around the button for impact damage. Free." },
         { title: "Open and replace flex",    body: "Pentalobe screws out, screen lifted with care, side-button flex assembly removed and replaced." },
         { title: "Frame straightening",      body: "If the chassis around the button is bent, we gently restore it before installing the new flex - no extra charge." },
-        { title: "Function tests",           body: "Lock, Apple Pay double-click, screenshot, SOS hold all verified. 90-day warranty card with the phone." },
+        { title: "Function tests",           body: "Lock, Apple Pay double-click, screenshot, SOS hold all verified. Warranty 15 days to 2 years card with the phone." },
       ]}
-      warrantyDays={90}
+      warrantyDays={730}
       warrantyBullets={[
         "Covers the new side-button flex and click mechanism.",
         "Excludes further impact damage.",
-        "Free re-fit if click softens within 90 days.",
+        "Free re-fit if click softens within 12 months.",
       ]}
       faqs={[
         { q: "Will Apple Pay work again after this?", a: "Yes. Apple Pay double-click is purely a side-button function - restoring the click restores Apple Pay. Face ID and the Wallet app are not affected by the repair." },
@@ -62,8 +62,8 @@ export default function IPhonePowerButtonRepair() {
       reviewNames={["Tim Quick", "B Parker", "Wellington Academy"]}
       related={[
         { label: "iPhone Volume Button Repair", href: "/iphone-volume-button-repair-dubai", description: "Often shares the same flex strategy." },
-        { label: "iPhone Vibration Motor Repair", href: "/iphone-vibration-motor-repair-dubai", description: "Taptic Engine repairs from AED 350." },
-        { label: "iPhone Battery Replacement",   href: "/iphone-battery-replacement-dubai",   description: "OEM-cell batteries from AED 220." },
+        { label: "iPhone Vibration Motor Repair", href: "/iphone-vibration-motor-repair-dubai", description: "Taptic Engine repairs - message us for a price." },
+        { label: "iPhone Battery Replacement",   href: "/iphone-battery-replacement-dubai",   description: "OEM-cell batteries - message us for a price." },
       ]}
       blogLink={{ label: "Side, Action, Camera Control: every button on your modern iPhone", href: "/blog" }}
     />

@@ -27,10 +27,10 @@ export default function CaseStudyGrid({
   className,
 }: CaseStudyGridProps) {
   return (
-    <Reveal as="section" className={cn("py-14 lg:py-20", className)}>
+    <Reveal as="section" className={cn("py-3xl lg:py-4xl", className)}>
       <div className="mx-auto max-w-content px-5 md:px-6">
         {heading && (
-          <h2 className="mb-2xl max-w-[680px] text-[26px] md:text-[34px] font-bold tracking-tight text-on-primary">
+          <h2 className="mb-2xl max-w-[680px] text-[28px] md:text-[32px] font-semibold tracking-tight text-text">
             {heading}
           </h2>
         )}
@@ -39,27 +39,27 @@ export default function CaseStudyGrid({
           {cases.map((c, i) => (
             <figure
               key={i}
-              className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-lg"
+              className="flex flex-col rounded-md border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg"
             >
-              <span className="inline-flex w-fit rounded-full bg-white/[0.06] px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-bright">
+              <span className="inline-flex w-fit rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent">
                 {c.tag}
               </span>
 
-              <div className="mt-md text-[40px] font-bold leading-none tracking-tight text-on-primary">
+              <div className="mt-md text-[40px] font-bold leading-none tracking-tight text-text">
                 {c.metric}
               </div>
               {c.metricLabel && (
-                <div className="mt-1 text-[13px] text-on-primary-muted">
+                <div className="mt-1 text-[13px] text-text-muted">
                   {c.metricLabel}
                 </div>
               )}
 
-              <blockquote className="mt-md text-[15px] leading-relaxed text-on-primary-muted">
+              <blockquote className="mt-md text-[15px] leading-relaxed text-text-muted">
                 {c.quote}
               </blockquote>
 
               {c.author && (
-                <figcaption className="mt-md text-[13px] font-semibold text-on-primary">
+                <figcaption className="mt-md text-[13px] font-semibold text-text">
                   {c.author}
                 </figcaption>
               )}

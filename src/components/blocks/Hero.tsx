@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { TrustLine } from "@/components/blocks/TrustLine";
 import { Reveal } from "@/components/blocks/Reveal";
 import { NAP } from "@/content/site";
-import { cn } from "@/lib/utils";
+import { cn, withSlash } from "@/lib/utils";
 
 type Variant = "home" | "service" | "blog" | "device";
 
@@ -37,7 +37,6 @@ function variantPaths(image: string) {
   const base = m[1];
   return {
     avif: `${base}-mobile.avif 360w, ${base}-tablet.avif 800w, ${base}-desktop.avif 1600w`,
-    webp: `${base}-mobile.webp 360w, ${base}-tablet.webp 800w, ${base}-desktop.webp 1600w`,
     fallback: image,
   };
 }
@@ -56,42 +55,34 @@ export function Hero({
     console.warn(`[Hero] imageAlt is required when image is set. Image: ${image}`);
   }
   const paths = image ? variantPaths(image) : null;
-  // `tone` overrides the variant-derived band tone when provided; otherwise
-  // behavior is unchanged (home/device dark, service/blog light).
-  const onDark = tone ? tone === "dark" : variant === "home" || variant === "device";
-  // When `tone` forces a band that differs from the variant's native band,
-  // apply the band background here (and suppress the variant's own band below).
-  const toneBand = tone === "dark" ? "bg-primary text-on-primary" : tone === "light" ? "bg-bg-alt" : "";
+  // The hero image is the LCP candidate. Its <head> preload is emitted server-side by
+  // <PageSchema> (see src/lib/page-schema.ts heroPreload) — react-dom preload() and even a
+  // JSX <link> called from this "use client" component do NOT reach the prerendered HTML in
+  // Next 16, so the browser discovered the hero late (multi-second LCP load-delay). The
+  // <picture> below still owns format negotiation (AVIF → WebP → JPG).
+  // Site is light-only: every hero renders on a light band with dark text,
+  // regardless of variant or any `tone` prop a caller still passes.
+  const onDark = false;
+  const toneBand = tone ? "bg-bg-alt" : "";
   return (
     <section
       data-hero-tone={onDark ? "dark" : "light"}
       className={cn(
         "relative pt-[96px] pb-2xl md:pb-3xl overflow-hidden",
-        !tone && variant === "home" && "bg-primary text-on-primary",
+        !tone && variant === "home" && "bg-bg-alt",
         !tone && variant === "service" && "bg-bg-alt",
-        !tone && variant === "device" && "bg-primary text-on-primary",
+        !tone && variant === "device" && "bg-bg-alt",
         !tone && variant === "blog" && "bg-bg",
         toneBand,
       )}
     >
-      {onDark && (
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-24 -left-16 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-3xl"
-        />
-      )}
       <div className={cn(
         "relative mx-auto max-w-content px-5 md:px-6 grid gap-xl items-center",
         hasSide ? "md:grid-cols-12" : "md:grid-cols-1",
       )}>
         <div className={cn(hasSide ? "md:col-span-7" : "max-w-[820px]")}>
           {eyebrow && (
-            <Reveal as="p" delay={0} className={cn(
-              tone === "dark"
-                ? "inline-flex items-center mono text-[12px] uppercase tracking-wider mb-md rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-accent-bright"
-                : "mono text-[12px] uppercase tracking-wider mb-md",
-              tone !== "dark" && (onDark ? "text-accent" : "text-text-muted"),
-            )}>
+            <Reveal as="p" delay={0} className="mono text-[12px] uppercase tracking-wider mb-md text-accent">
               {eyebrow}
             </Reveal>
           )}
@@ -114,15 +105,16 @@ export function Hero({
 
           {meta && <div className="mt-md">{meta}</div>}
 
-          {(startingPrice || timeline) && (
+          {/* !! so a startingPrice of 0 renders nothing, not a literal "0" */}
+          {(!!startingPrice || !!timeline) && (
             <div className="mt-lg flex flex-wrap gap-md items-center">
-              {startingPrice && (
+              {!!startingPrice && (
                 <div>
                   <span className={cn(
                     "block text-[12px] uppercase tracking-wider",
                     onDark ? "text-on-primary-faint" : "text-text-faint",
-                  )}>From</span>
-                  <span className="mono text-[28px] font-semibold">AED {startingPrice}</span>
+                  )}>Pricing</span>
+                  <span className="mono text-[18px] font-semibold">Price on request</span>
                 </div>
               )}
               {timeline && (
@@ -137,13 +129,18 @@ export function Hero({
             </div>
           )}
 
+          {/* size="lg" (h-11 = 44px), not the default h-10 = 40px. These are the
+              page's primary conversion buttons and they sit on every page; at the
+              default size they measured 40px on a 375px viewport and failed the
+              44px tap-target rule by 4px. Measured, not eyeballed — at 2x DPR
+              they look comfortably large in a screenshot. */}
           <Reveal delay={240} className="mt-lg flex flex-wrap gap-sm">
-            <Button asChild variant="whatsapp">
-              <a href={NAP.whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="whatsapp" size="lg">
+              <a href={withSlash(NAP.whatsappUrl)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden /> {ctaLabel ?? "Message on WhatsApp"}
               </a>
             </Button>
-            <Button asChild variant={onDark ? "secondary" : "primary"}>
+            <Button asChild variant={onDark ? "secondary" : "primary"} size="lg">
               <a href={`tel:${NAP.phoneE164}`}>
                 <Phone aria-hidden /> {NAP.phoneDisplay}
               </a>
@@ -163,7 +160,6 @@ export function Hero({
           <div className="md:col-span-5">
             <picture>
               {paths && <source type="image/avif" srcSet={paths.avif} sizes={HERO_SIZES} />}
-              {paths && <source type="image/webp" srcSet={paths.webp} sizes={HERO_SIZES} />}
               <img
                 src={image}
                 alt={imageAlt || title}

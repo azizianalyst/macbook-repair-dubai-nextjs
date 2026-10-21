@@ -1,0 +1,182 @@
+"use client";
+import { Link } from "@/lib/router-compat";
+import BlogPostTemplate from "@/components/blocks/BlogPostTemplate";
+import { BlogPriceTable } from "@/components/blocks/BlogPriceTable";
+import { PriceCTA } from "@/components/blocks/PriceCTA";
+
+export default function BlogMacBookProIntelScreenRepair() {
+  return (
+    <BlogPostTemplate
+      seoTitle="MacBook Pro Intel Screen Repair Cost Dubai 2026: All Models Price Guide"
+      seoDescription="MacBook Pro Intel screen repair in Dubai: LCD panels on 2016-2020 models, the Flexgate cable on 2016-2017. Same-day, 90-day warranty. Message us today."
+      path="/blog/macbook-pro-intel-screen-repair-cost-dubai"
+      wide
+      toc={[
+        { id: "intel-display-types", label: "Intel MacBook Pro display types" },
+        { id: "step-1", label: "Step 1. Identify your Intel model" },
+        { id: "step-2", label: "Step 2. Assess screen damage type" },
+        { id: "step-3", label: "Step 3. Flexgate vs panel fault" },
+        { id: "step-4", label: "Step 4. What repair includes" },
+        { id: "dubai-heat", label: "Dubai heat and Intel display damage" },
+        { id: "models", label: "Screen repair prices by model" },
+        { id: "repair-cost", label: "Screen repair cost Dubai 2026" },
+        { id: "when-worth", label: "When screen repair is worth it on Intel" },
+      ]}
+      category="Fix guide · MacBook Pro"
+      h1="MacBook Pro Intel Screen Repair Cost in Dubai 2026: All Models Covered"
+      hook="MacBook Pro Intel screen repair in Dubai varies by model and fault type. Intel models from 2016-2020 use IPS LCD panels, no mini-LED or OLED, making them straightforward and cost-effective to repair. Flexgate backlight cable replacement is the most common repair on 2016-2017 models, and it is far cheaper than a full panel. Physical panel damage needs a full replacement. Parts availability in Dubai is excellent for all Intel models, so message us on WhatsApp for today's exact price on your model."
+      quickAnswer="MacBook Pro Intel screen repair Dubai: Flexgate backlight cable is the cheapest fix, followed by 13-inch, 15-inch and 16-inch LCD panel replacements in that order. Free diagnosis. Same-day service. 90-day warranty on panels. First check: is the issue Flexgate (stage-light at lid angle) or physical damage? Flexgate cable is dramatically cheaper than full panel replacement — message us on WhatsApp for your exact price."
+      author={{ name: "Memona", role: "Senior MacBook battery technician" }}
+      datePublished="2026-06-22"
+      dateModified="2026-10-11"
+      readingMinutes={8}
+      featuredImageAlt="MacBook Pro Intel screen repair cost Dubai, technician replacing LCD panel at Dubai repair workshop"
+      body={
+        <>
+          <h2 id="intel-display-types">MacBook Pro Intel display types by model</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li><strong>All Intel MacBook Pro (2016-2020)</strong>: IPS LCD with True Tone (2018+). Retina resolution. 500-nit brightness. Standard LCD backlighting: no mini-LED, no OLED. This makes panels easier to source and repair in Dubai than newer models</li>
+            <li><strong>13-inch Intel models (2016-2020)</strong>: 13.3-inch 2560x1600 IPS LCD. All years use similar panel technology: parts interchangeability is good between years</li>
+            <li><strong>15-inch Intel models (2016-2019)</strong>: 15.4-inch 2880x1800 IPS LCD. Larger panel, higher resolution, higher replacement cost</li>
+            <li><strong>16-inch Intel 2019</strong>: 16.2-inch 3072x1920 IPS LCD. First MacBook Pro 16-inch: unique panel size, slightly higher parts cost</li>
+          </ul>
+
+          <h2 id="step-1">Step 1: How do I identify my Intel MacBook Pro model for screen repair?</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li>Apple menu, About This Mac</li>
+            <li>MacBook Pro 13-inch: years 2016, 2017, 2018, 2019 (two ports), 2019 (four ports), 2020</li>
+            <li>MacBook Pro 15-inch: years 2016, 2017, 2018, 2019</li>
+            <li>MacBook Pro 16-inch: 2019 (Intel). The M1 Pro 16-inch launched 2021</li>
+            <li>Model determines exact panel part number needed for screen repair</li>
+          </ul>
+
+          <h2 id="step-2">Step 2: What type of screen damage does Intel MacBook Pro have?</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li><strong>Stage-light effect at bottom of screen</strong>: Flexgate backlight cable fault. This is the cheapest screen fix by far. Do not order a full panel. See our Flexgate guide for identification steps</li>
+            <li><strong>Cracked glass</strong>: physical impact. On Intel models, glass and LCD panel are typically integrated: full panel replacement required in most cases</li>
+            <li><strong>Dead horizontal rows of pixels</strong>: LCD column driver damage from impact. Full panel replacement</li>
+            <li><strong>Black screen, faint content visible with torch</strong>: backlight completely failed. Could be Flexgate (late stage) or backlight driver chip. Full diagnosis needed. A Flexgate cable may fix it</li>
+            <li><strong>Pink tint or colour shift</strong>: True Tone calibration corruption (software, free fix) or LCD panel chrominance fault (panel replacement needed)</li>
+          </ul>
+
+          <h2 id="step-3">Step 3: Distinguish Flexgate from panel fault on Intel MacBook Pro</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li>Open the lid very slowly from closed while watching the screen bottom. If a bright band or a blackout appears as the lid passes about 40 degrees: Flexgate. Cable replacement is the fix</li>
+            <li>If the screen shows damage that is constant and not angle-dependent (cracks, dead pixels, colour corruption): panel fault. Full replacement needed</li>
+            <li>If the entire screen is black regardless of lid angle: take a torch and shine at the screen. Faint content = backlight failed (potentially Flexgate late stage). Completely black with no faint content = LCD panel or GPU fault</li>
+            <li>Connect external monitor: if external shows correctly while internal is black, the GPU is fine and the fault is in the internal display path (cable, backlight, or panel)</li>
+          </ul>
+
+          <h2 id="step-4">Step 4: What does MacBook Pro Intel screen repair include in Dubai?</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li>Full panel removal and replacement (or Flexgate cable replacement if appropriate)</li>
+            <li>True Tone calibration verification (2018+ models)</li>
+            <li>Colour accuracy test and backlight uniformity check</li>
+            <li>Display cable inspection: replaced if showing wear at hinge (especially on 2016-2017 models)</li>
+            <li>90-day warranty on replacement panels</li>
+            <li>No data loss: logic board untouched during screen repair</li>
+          </ul>
+
+          <h2 id="dubai-heat">Dubai heat and MacBook Pro Intel display damage</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li>Intel MacBook Pro LCDs stored at temperatures above 50°C (parked Dubai car) can develop "clouding": bright patches near the panel edges where the LCD light diffuser film has separated from the panel layers. This requires panel replacement</li>
+            <li>At 7-10 years old, Intel display cables have experienced more thermal cycling than M1/M2 units. Angle-dependent flickering (display cable micro-fractures, distinct from Flexgate) is now appearing on 2018-2019 Intel models that did not have the original Flexgate design flaw</li>
+            <li>The 2019 16-inch Intel MacBook Pro has a different display cable routing than 2016-2017 models (Flexgate was addressed) but is now old enough for general cable fatigue to appear in Dubai's heat cycling environment</li>
+          </ul>
+
+          <h2 id="models">MacBook Pro Intel screen repair prices by model</h2>
+          <table>
+            <thead>
+              <tr><th>Model</th><th>Repair type</th><th>Dubai cost</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Any Intel 2016-2017 (stage-light symptom)</td>
+                <td>Flexgate backlight cable</td>
+                <td><PriceCTA compact message="Hi, price for MacBook Pro Intel Flexgate backlight cable repair in Dubai?" /></td>
+              </tr>
+              <tr>
+                <td>MacBook Pro 13-inch Intel (any year)</td>
+                <td>Full LCD panel replacement</td>
+                <td><PriceCTA compact message="Hi, price for MacBook Pro 13-inch Intel LCD panel replacement in Dubai?" /></td>
+              </tr>
+              <tr>
+                <td>MacBook Pro 15-inch Intel (any year)</td>
+                <td>Full LCD panel replacement</td>
+                <td><PriceCTA compact message="Hi, price for MacBook Pro 15-inch Intel LCD panel replacement in Dubai?" /></td>
+              </tr>
+              <tr>
+                <td>MacBook Pro 16-inch Intel 2019</td>
+                <td>Full LCD panel replacement</td>
+                <td><PriceCTA compact message="Hi, price for MacBook Pro 16-inch Intel 2019 LCD panel replacement in Dubai?" /></td>
+              </tr>
+              <tr>
+                <td>Any Intel (angle-dependent flicker)</td>
+                <td>Display cable replacement</td>
+                <td><PriceCTA compact message="Hi, price for MacBook Pro Intel display cable replacement in Dubai?" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="repair-cost">MacBook Pro Intel screen repair cost Dubai 2026</h2>
+          <BlogPriceTable
+            caption="MacBook Pro Intel screen repair pricing. June 2026"
+            headers={["Repair", "Our price", "Apple Store", "Notes"]}
+            rows={[
+              { model: "Flexgate backlight cable (2016-2017)", ours: "Price on request", apple: "Full display assembly only", note: "Stage-light effect fixed, 90-day warranty" },
+              { model: "MacBook Pro 13-inch Intel LCD panel", ours: "Price on request", apple: "Full display assembly only", note: "90-day warranty, same-day" },
+              { model: "MacBook Pro 15-inch Intel LCD panel", ours: "Price on request", apple: "Full display assembly only", note: "90-day warranty, same-day" },
+              { model: "MacBook Pro 16-inch Intel 2019 LCD panel", ours: "Price on request", apple: "Full display assembly only", note: "90-day warranty, same-day" },
+              { model: "Display cable (angle-dependent flicker)", ours: "Price on request", apple: "Full display assembly only", note: "General cable fatigue, not Flexgate" },
+              { model: "Screen diagnostic", ours: "Free", apple: "Paid", note: "Flexgate vs panel vs GPU determination" },
+            ]}
+          />
+
+          <h2 id="when-worth">When is screen repair worth it on an Intel MacBook Pro in Dubai?</h2>
+          <ul className="list-disc list-inside space-y-xs">
+            <li><strong>Flexgate cable</strong>: almost always worth it on any Intel model: low cost, extends display life significantly. Message us for the exact price</li>
+            <li><strong>Full panel</strong>: worth it on 2018-2020 Intel MacBook Pro with no other major faults (working keyboard, GPU stable, battery OK). A 2020 Intel MacBook Pro with a cracked screen and no other issues is a reasonable repair candidate</li>
+            <li><strong>Borderline</strong>: 2016-2017 MacBook Pro with butterfly keyboard + cracked screen + degraded battery. When you stack keyboard, screen and battery repairs together, the combined cost can approach the price of a used M1 MacBook Pro, which offers far better performance. Message us on WhatsApp and we will tell you honestly whether it is worth fixing</li>
+          </ul>
+          <p>
+            <Link to="/macbook-pro-screen-repair-dubai" className="text-accent font-semibold hover:underline">
+              MacBook Pro screen repair Dubai
+            </Link>
+          </p>
+        </>
+      }
+      faqs={[
+        {
+          q: "How much does MacBook Pro Intel screen repair cost in Dubai?",
+          a: "It depends on the fault and model. A Flexgate backlight cable (2016-2017 stage-light effect) is the cheapest fix, followed by 13-inch, 15-inch and 16-inch LCD panel replacements. General display cable replacement is also available. Diagnosis is free, all panels carry a 90-day warranty, and same-day service is standard. Message us on WhatsApp for today's exact price on your model.",
+        },
+        {
+          q: "Does MacBook Pro Intel 2016-2017 have a display cable defect?",
+          a: "Yes: Flexgate. The backlight flex cable is too short for the lid hinge travel arc. Open the lid slowly from closed: if a bright stage-light band appears at the bottom of the screen at approximately 40 degrees, this is Flexgate. Cable replacement is the fix, and it is the most cost-effective repair on 2016-2017 Intel MacBook Pros. Message us for the exact price.",
+        },
+        {
+          q: "How do I know if Intel MacBook Pro screen issue is Flexgate or panel damage?",
+          a: "Flexgate is angle-dependent: bright columns appear at the bottom when the lid is at a specific angle and disappear when fully open. Physical panel damage (cracks, dead pixels, permanent lines) is constant and not related to lid angle. If you're unsure, bring to our Dubai workshop for free diagnosis. We can identify Flexgate immediately with the lid-angle test.",
+        },
+        {
+          q: "Can MacBook Pro Intel screen be repaired without losing data?",
+          a: "Yes. Screen replacement does not touch the logic board or SSD. All data, macOS settings, and applications remain intact. True Tone calibration (2018+ Intel models) is stored on the logic board and transfers to the new panel automatically.",
+        },
+        {
+          q: "Does Dubai heat damage MacBook Pro Intel screens?",
+          a: "Yes. LCD panels stored above 50°C (parked Dubai cars reach 80°C) develop permanent light diffuser film separation, appearing as bright clouding near the panel edges. At 7-10 years old, Intel display cables also show heat-accelerated fatigue: angle-dependent flickering now appearing on 2018-2019 Intel models as general cable aging, distinct from Flexgate.",
+        },
+        {
+          q: "Is it worth repairing MacBook Pro Intel screen in Dubai in 2026?",
+          a: "For a Flexgate cable: almost always yes. For full panel replacement: it depends on machine condition. A 2019-2020 Intel MacBook Pro with only a cracked screen is a good candidate. A 2016-2017 with butterfly keyboard, AMD GPU concerns and a degraded battery is borderline, because combined repair cost may approach a used M1 MacBook Pro. Message us on WhatsApp for the exact price and honest advice.",
+        },
+      ]}
+      relatedLinks={[
+        { label: "MacBook Pro screen repair Dubai", href: "/macbook-pro-screen-repair-dubai", description: "Screen repair for all MacBook Pro models in Dubai." },
+        { label: "MacBook Pro Intel Flexgate Dubai", href: "/blog/macbook-pro-intel-flexgate-dubai", description: "Flexgate stage-light backlight cable fault guide and repair." },
+        { label: "MacBook Pro Intel common problems", href: "/blog/macbook-pro-intel-common-problems-dubai", description: "Full Intel MacBook Pro guide: GPU, Flexgate, keyboard, T2." },
+        { label: "MacBook Pro repair Dubai", href: "/macbook-pro-repair-dubai", description: "Intel and Apple Silicon MacBook Pro service in Dubai." },
+      ]}
+    />
+  );
+}

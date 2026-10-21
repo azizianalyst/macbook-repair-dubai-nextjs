@@ -15,16 +15,16 @@ export default function GuideResetMacBook() {
 
   return (
     <BlogPostTemplate
-      seoTitle="How to Reset a MacBook: Restart, SMC, NVRAM & Factory"
-      seoDescription="Reset a MacBook the right way: soft restart, SMC and NVRAM on Intel Macs, plus a full factory reset with Erase All Content and Settings or Recovery mode."
-      path="/how-to-reset-a-macbook"
+      seoTitle="How to Reset a MacBook: Factory Reset, SMC and NVRAM"
+      seoDescription="How to reset a MacBook: factory reset with Erase All Content and Settings, plus restart, SMC and NVRAM steps. If a reset fails, WhatsApp our workshop."
+      path="/blog/how-to-reset-a-macbook"
       category="How-to · macOS"
       h1="How to Reset a MacBook (Restart, SMC, NVRAM & Factory Reset)"
       hook="'Reset' can mean five different things on a Mac - from a 10-second restart to a full factory wipe. Here's exactly which one you need, and how Apple Silicon and Intel differ."
-      quickAnswer="To reset a MacBook, restart from the Apple menu for minor glitches; on Intel Macs you can also reset the SMC and NVRAM. For a clean wipe, back up with Time Machine, then on macOS Ventura or later use System Settings → General → Transfer or Reset → Erase All Content and Settings. Older Macs use Recovery."
+      quickAnswer="To factory reset a MacBook with Apple silicon or a T2 chip on macOS Ventura or later, back it up, then open System Settings, General, Transfer or Reset, and choose Erase All Content and Settings. Older Intel Macs are erased from macOS Recovery instead. For a glitch, a restart is usually enough."
       author={{ name: "Usman", role: "Senior MacBook technician" }}
       datePublished="2026-05-30"
-      dateModified="2026-05-30"
+      dateModified="2026-10-10"
       readingMinutes={9}
       featuredImageAlt="Resetting a MacBook in Dubai using Erase All Content and Settings in System Settings"
       extraSchemas={[howTo({
@@ -51,7 +51,7 @@ export default function GuideResetMacBook() {
           <p>
             Important: this guide is about resetting the <em>Mac</em>. If you've forgotten your login
             password and just need back in, you don't need any of this - see{" "}
-            <Link to="/how-to-recover-macbook-password" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/how-to-recover-macbook-password" className="text-accent font-semibold hover:underline">
               how to recover a MacBook password
             </Link>{" "}instead.
           </p>
@@ -68,7 +68,7 @@ export default function GuideResetMacBook() {
           </ul>
           <p>
             If the Mac won't power on at all, restarting isn't the issue - work through our{" "}
-            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/blog/macbook-not-turning-on-fix-guide" className="text-accent font-semibold hover:underline">
               MacBook not turning on fix guide
             </Link>{" "}first.
           </p>
@@ -139,7 +139,7 @@ export default function GuideResetMacBook() {
           <p>
             If Recovery won't load, the disk won't erase, or the reinstall fails partway, that points
             to a software or drive fault rather than user error. Our{" "}
-            <Link to="/mac-os-reinstall-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macos-reinstall-dubai" className="text-accent font-semibold hover:underline">
               macOS reinstall service in Dubai
             </Link>{" "}gets it back to a clean, working state with the correct macOS version for your model.
           </p>
@@ -157,7 +157,7 @@ export default function GuideResetMacBook() {
           <p>
             If you've already erased the Mac without a backup, stop using it immediately - continued
             writes overwrite the old data. Our{" "}
-            <Link to="/macbook-data-recovery-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-data-recovery-dubai" className="text-accent font-semibold hover:underline">
               MacBook data recovery service
             </Link>{" "}can often retrieve files from a freshly erased drive, but only if nothing new has been written over them.
           </p>
@@ -177,14 +177,14 @@ export default function GuideResetMacBook() {
           <p>
             If a reset doesn't fix the underlying problem - the Mac still freezes, won't boot, or
             misbehaves after a clean reinstall - the cause is usually hardware, not software. Book a{" "}
-            <Link to="/macbook-full-diagnostic-dubai" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/macbook-full-diagnostic-dubai" className="text-accent font-semibold hover:underline">
               full MacBook diagnostic in Dubai
             </Link>{" "}or just{" "}
-            <Link to="/contact" className="text-accent-bright font-semibold hover:underline">
+            <Link to="/contact" className="text-accent font-semibold hover:underline">
               contact us
-            </Link>. We've repaired Apple devices since 2004, offer free pickup and free diagnosis, and
-            back every job with a 90-day warranty. For broader repairs, see our main{" "}
-            <Link to="/" className="text-accent-bright font-semibold hover:underline">
+            </Link>. We've repaired Apple devices since 2004, offer walk-in service and free diagnosis, and
+            back every job with a warranty of 15 days to 2 years. For broader repairs, see our main{" "}
+            <Link to="/" className="text-accent font-semibold hover:underline">
               MacBook repair Dubai
             </Link>{" "}page.
           </p>
@@ -225,9 +225,10 @@ export default function GuideResetMacBook() {
         },
       ]}
       relatedLinks={[
-        { label: "macOS reinstall Dubai", href: "/mac-os-reinstall-dubai", description: "Clean macOS install when Recovery or reinstall fails." },
+        { label: "403 Forbidden when reinstalling macOS", href: "/the-server-gave-an-error-during-download-403-forbidden", description: "Recovery or a download stops with a 403? The fixes, fastest first." },
+        { label: "macOS reinstall Dubai", href: "/macos-reinstall-dubai", description: "Clean macOS install when Recovery or reinstall fails." },
         { label: "MacBook data recovery Dubai", href: "/macbook-data-recovery-dubai", description: "Recover files erased during a factory reset without backup." },
-        { label: "How to recover a MacBook password", href: "/how-to-recover-macbook-password", description: "Forgot your login? Reset the password, not the Mac." },
+        { label: "How to recover a MacBook password", href: "/blog/how-to-recover-macbook-password", description: "Forgot your login? Reset the password, not the Mac." },
       ]}
     />
   );

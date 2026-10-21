@@ -7,15 +7,7 @@ import { TechnicianBadge } from "@/components/blocks/TechnicianBadge";
 import { ReviewGrid } from "@/components/blocks/ReviewGrid";
 import { PageMeta } from "@/components/blocks/PageMeta";
 import { REVIEWS } from "@/content/reviews";
-import { useSeo } from "@/hooks/use-seo";
-import { localBusiness, organization, person } from "@/lib/schema";
-
-const TEAM = [
-  { name: "Shafiq",  years: 15, specialisation: "Lead technician · screens, batteries, water damage" },
-  { name: "Usman",   years: 11, specialisation: "Board-level repair · M-series logic boards" },
-  { name: "Ali",     years: 14, specialisation: "Data recovery · iMac and Mac mini" },
-  { name: "Hamza",   years: 7,  specialisation: "iPhone, iPad" },
-];
+import { TEAM, NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 
 const MILESTONES = [
   { year: "2004", text: "Opened in Dubai under the Azizi Technologies name. First Apple-only repair shop in the area." },
@@ -23,37 +15,27 @@ const MILESTONES = [
   { year: "2015", text: "Added iMac and Mac mini coverage. Started doing logic-board level diagnostics in-house." },
   { year: "2020", text: "M1 MacBook Air launched - Shafiq spent 6 months mastering the new SoC architecture." },
   { year: "2024", text: "Component-level board work for T2-encrypted units. 40,000+ devices repaired to date." },
-  { year: "2026", text: "M5 MacBook Pro and iPhone 17 line fully supported. 215+ five-star Google reviews." },
+  { year: "2026", text: `M5 MacBook Pro and iPhone 17 line fully supported. ${REVIEW_COUNT_LABEL} five-star Google reviews.` },
 ];
 
 const COMPARE = [
-  { row: "Free diagnosis",            us: true,  apple: false, note: "Apple charges AED 200 to look at it" },
+  { row: "Free diagnosis",            us: true,  apple: false, note: "Apple charges just to look at it" },
   { row: "No fix, no charge",         us: true,  apple: false },
   { row: "Same-day service",          us: true,  apple: false, note: "Apple Store: 5-10 working days" },
   { row: "Component-level board work", us: true,  apple: false, note: "Apple swaps the whole board - much pricier" },
-  { row: "Free pickup across Dubai",  us: true,  apple: false },
+  { row: "Walk in, no appointment",   us: true,  apple: false },
   { row: "Genuine OEM parts",         us: true,  apple: true },
-  { row: "Written warranty",          us: "90 days",  apple: "90 days" },
+  { row: "Written warranty",          us: "15 days to 2 years, by repair",  apple: "12 months" },
 ];
 
 export default function About() {
-  useSeo(
-    {
-      title: "About MacBook Repair Dubai - 21 Years, Same Address",
-      description:
-        "MacBook Repair Dubai opened October 2004 in Dubai Media City. 40,000+ Apple repairs, 215+ five-star reviews. Component-level work, free diagnosis, 90-day warranty.",
-      path: "/about",
-    },
-    [
-      organization(),
-      localBusiness(),
-      ...TEAM.map((t) => person({ name: t.name, jobTitle: t.specialisation, yearsExperience: t.years })),
-    ],
-  );
-
+  // JSON-LD (Organization + LocalBusiness + technician Person nodes) is server-rendered
+  // via <PageSchema path="/about"> in src/app/about/page.tsx, so it ships in the static
+  // HTML that crawlers/AI engines read. (It used to be injected client-side via useSeo,
+  // which never reached the prerendered HTML.) Title/description: App Router Metadata API.
   return (
     <PageShell>
-      <div className="bg-primary text-on-primary -mb-[4rem]">
+      <div className="bg-bg-alt text-text -mb-[4rem]">
       <div className="pt-[96px] mx-auto max-w-content px-5 md:px-6">
         <BreadcrumbTrail tone="dark" trail={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
       </div>
@@ -64,6 +46,8 @@ export default function About() {
         eyebrow="About us"
         title="MacBook Repair Dubai - built by technicians, not marketers"
         subtitle="Started October 2004 in Dubai. Same address since 2010. Same techs since most of you bought your first MacBook."
+        image="/images/real/team/team-workshop-dubai.jpg"
+        imageAlt="Our technicians working on customer Macs at the MacBook Repair Dubai workshop in Concord Tower, Dubai Media City"
       />
 
       {/* story - varied paragraph rhythm */}
@@ -75,7 +59,7 @@ export default function About() {
           </p>
 
           <p>
-            Twenty-one years. Same office. Same phone number. Same lead technicians.
+            {NAP.yearsInBusiness} years of repairing Apple hardware in Dubai, from one workshop.
           </p>
 
           <p>
@@ -97,18 +81,18 @@ export default function About() {
       </section>
 
       {/* team */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">The bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">The bench</p>
           <h2 className="m-0 mb-xl">Who you'll actually meet</h2>
           <div className="grid gap-lg sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((t) => (
-              <div key={t.name} className="border border-white/10 bg-white/[0.04] rounded-md p-lg">
+              <div key={t.name} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg">
                 <TechnicianBadge {...t} tone="dark" />
               </div>
             ))}
           </div>
-          <p className="text-[14px] text-on-primary-muted mt-lg max-w-[60ch]">
+          <p className="text-[14px] text-text-muted mt-lg max-w-[60ch]">
             Ali joined in 2011 - he's been here longer than most of our customers' MacBooks.
           </p>
         </div>
@@ -116,11 +100,11 @@ export default function About() {
 
       {/* compare */}
       <section className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-        <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">Honest comparison</p>
+        <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">Honest comparison</p>
         <h2 className="m-0 mb-xl">What makes us different from the Apple Store</h2>
-        <div className="overflow-x-auto border border-white/10 rounded-md bg-white/[0.03]">
+        <div className="overflow-x-auto border border-border rounded-md bg-bg-alt">
           <table className="w-full text-[15px] min-w-[600px]">
-            <thead className="bg-white/[0.04]">
+            <thead className="bg-bg-card">
               <tr className="text-left">
                 <th scope="col" className="px-md py-md font-semibold">Feature</th>
                 <th scope="col" className="px-md py-md font-semibold">MacBook Repair Dubai</th>
@@ -129,19 +113,19 @@ export default function About() {
             </thead>
             <tbody>
               {COMPARE.map((c) => (
-                <tr key={c.row} className="border-t border-white/10">
+                <tr key={c.row} className="border-t border-border">
                   <td className="px-md py-md">
                     {c.row}
-                    {c.note && <span className="block text-[12px] text-on-primary-faint mt-1">{c.note}</span>}
+                    {c.note && <span className="block text-[12px] text-text-faint mt-1">{c.note}</span>}
                   </td>
                   <td className="px-md py-md">
                     {typeof c.us === "boolean"
-                      ? (c.us ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-on-primary-faint" aria-label="No" />)
+                      ? (c.us ? <Check size={18} className="text-accent" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
                       : <span className="mono">{c.us}</span>}
                   </td>
                   <td className="px-md py-md">
                     {typeof c.apple === "boolean"
-                      ? (c.apple ? <Check size={18} className="text-success" aria-label="Yes" /> : <X size={18} className="text-on-primary-faint" aria-label="No" />)
+                      ? (c.apple ? <Check size={18} className="text-accent" aria-label="Yes" /> : <X size={18} className="text-text-faint" aria-label="No" />)
                       : <span className="mono">{c.apple}</span>}
                   </td>
                 </tr>
@@ -152,15 +136,15 @@ export default function About() {
       </section>
 
       {/* milestones */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
-          <p className="mono text-[12px] uppercase tracking-wider text-on-primary-faint mb-2">21 years on the bench</p>
+          <p className="mono text-[12px] uppercase tracking-wider text-accent mb-2">On the bench since 2004</p>
           <h2 className="m-0 mb-xl">Milestones</h2>
           <ol className="grid gap-md md:grid-cols-2">
             {MILESTONES.map((m) => (
-              <li key={m.year} className="border border-white/10 bg-white/[0.04] rounded-md p-lg flex gap-md">
-                <span className="mono text-[20px] font-bold text-accent-bright shrink-0 w-16">{m.year}</span>
-                <p className="text-[15px] text-on-primary leading-relaxed m-0">{m.text}</p>
+              <li key={m.year} className="border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md p-lg flex gap-md">
+                <span className="mono text-[20px] font-bold text-accent shrink-0 w-16">{m.year}</span>
+                <p className="text-[15px] text-text leading-relaxed m-0">{m.text}</p>
               </li>
             ))}
           </ol>
@@ -168,7 +152,7 @@ export default function About() {
       </section>
 
       {/* reviews */}
-      <section className="bg-white/[0.02] border-y border-white/10">
+      <section className="bg-bg-alt border-y border-border">
         <div className="mx-auto max-w-content px-5 md:px-6 py-3xl">
           <h2 className="m-0 mb-xl">What customers say</h2>
           <ReviewGrid reviews={REVIEWS.slice(0, 6)} tone="dark" />
