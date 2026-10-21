@@ -142,6 +142,10 @@ export default function MacBookNeoScreenRepair() {
           a: "No. Scaling problems on external displays are a known owner complaint on the Neo, and they involve the external monitor, not the built-in screen. Check display settings and try another cable first. If the built-in display itself shows lines or dead areas, that is a hardware fault.",
         },
         {
+          q: "My MacBook Neo screen has a brighter patch near the top edge on a black background. Is that a fault?",
+          a: "On a black screen at full brightness, a small lighter area near an edge is usually backlight bleed from the LCD's edge lighting, and a little is normal on this panel type. A patch that is yellow or white, clearly defined, visible at normal brightness or growing over time is a panel or backlight-diffuser fault. Apple Support's answer to one owner was to book service. The Neo is under warranty for a year, so a panel fault with no damage goes to Apple free; we check it for you first.",
+        },
+        {
           q: "How much does Apple charge for a MacBook Neo screen out of warranty?",
           a: "Apple does not publish one. On its UAE support site, the only out-of-warranty MacBook Neo price Apple lists is battery service; for screens it says the machine needs inspection. We quote on WhatsApp after a photo and a free diagnosis.",
         },
