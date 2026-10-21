@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { PageShell } from "@/components/layout/PageShell";
-import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/QuickAnswer";
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
@@ -28,20 +27,9 @@ import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
-type PricingRow = { model: string; price: number; timeline: string };
 
 // Pro-only rows — mirror the generic screen page
 // so the two pages never quote different numbers for the same panel.
-const PRICING: PricingRow[] = [
-  { model: 'MacBook Pro 13" Retina (2012-2015)',          price: 600,  timeline: "Same day"        },
-  { model: 'MacBook Pro 13" Touch Bar (2016-2020, Intel)', price: 600,  timeline: "Same day"        },
-  { model: 'MacBook Pro 15" Retina (2012-2015)',          price: 910,  timeline: "1 day"           },
-  { model: 'MacBook Pro 15" Touch Bar (2016-2019, Intel)', price: 1000, timeline: "1 day"           },
-  { model: 'MacBook Pro 14" Liquid Retina XDR (M1-M4)',   price: 1000, timeline: "Same day · 1 day" },
-  { model: 'MacBook Pro 16" Liquid Retina XDR (M1-M4)',   price: 1200, timeline: "1-2 days"        },
-  { model: 'MacBook Pro 14"/16" M5 (Liquid Retina XDR, 2025-2026)', price: 1300, timeline: "1-3 days" },
-];
-
 const COMMON_PROBLEMS = [
   { title: "Flexgate — stage-light effect or no backlight",
     body: 'MacBook Pro 13" and 15" 2016-2017 (A1706, A1707, A1708). The display flex cable wears through after ~10,000 lid cycles: uneven "stage-light" backlight at the bottom first, then full backlight death. Cable swap on 2016-2017, full panel on 2018+. The revised cable is 2 mm longer to stop the wear returning.' },
@@ -225,7 +213,7 @@ export default function MacBookProScreenRepair() {
 
         {/* Answer-first capsule (AEO/BLUF) */}
         <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
-          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook Pro screen repair", startingPrice: 600, timeline: "same-day on most models" })} />
+          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook Pro screen repair", pricePath: "/macbook-pro-screen-repair-dubai", startingPrice: 600, timeline: "same-day on most models" })} />
           <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg shadow-lg backdrop-blur-md">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
@@ -282,14 +270,13 @@ export default function MacBookProScreenRepair() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Every Pro panel, one place" title="MacBook Pro models we repair" intro="From the 2012 Retina through the 2025-2026 M5. Prices are panel + labour + warranty all-in — no diagnostic fee, no adhesive surcharge. The exact figure is pinned to your serial." />
-            <PriceTable rows={PRICING} />
+            <RepairPriceTable path="/macbook-pro-screen-repair-dubai" variant="inline" />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[72ch]">
               Glass-only repair is possible on 2012-2015 Retina. From the 2016 Touch Bar the glass is bonded to the panel — full assembly only.
             </p>
           </div>
         </section>
 
-        <RepairPriceTable path="/macbook-pro-screen-repair-dubai" title="How much does a MacBook Pro screen replacement cost here?" />
 
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
@@ -557,32 +544,5 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
       <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
-  );
-}
-
-function PriceTable({ rows }: { rows: PricingRow[] }) {
-  return (
-    <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
-      <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
-        <thead>
-          <tr className="border-b border-border text-accent">
-            <th className="px-lg py-md font-semibold">MacBook Pro model</th>
-            <th className="px-lg py-md font-semibold whitespace-nowrap">Screen replacement</th>
-            <th className="px-lg py-md font-semibold">Turnaround</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr key={r.model} className="border-b border-border last:border-0">
-              <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm whitespace-nowrap">
-                <PriceCTA compact message={`Hi, MacBook Pro screen repair price for ${r.model}?`} />
-              </td>
-              <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Reveal>
   );
 }

@@ -19,7 +19,7 @@ import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { localBusiness, organization, service as serviceSchema } from "@/lib/schema";
 import { NAP } from "@/content/site";
-import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+import { InvoicePriceCell, InvoicePriceNote } from "@/components/blocks/RepairPriceTable";
 
 // Was /images/real/lab/macbook-pro-screen-repair.jpg - that file has never
 // existed in public/ and returned 404 live on all five chip screen pages
@@ -256,7 +256,7 @@ export default function MacBookProChipScreenPage({
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
                     <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
-                      <PriceCTA compact message={`Hi, price for ${r.model} ${chip} screen repair in Dubai?`} />
+                      <InvoicePriceCell path={path} label={r.model}><PriceCTA compact message={`Hi, price for ${r.model} ${chip} screen repair in Dubai?`} /></InvoicePriceCell>
                     </td>
                     <td className="px-lg py-sm text-text-muted whitespace-nowrap">
                       {r.applePrice ? "Price on request" : "Not serviced"}
@@ -274,13 +274,13 @@ export default function MacBookProChipScreenPage({
               </tbody>
             </table>
           </div>
+          <InvoicePriceNote path={path} />
           <p className="mt-md text-[13px] text-text-faint max-w-[72ch]">
             Warranty: 3 months. Genuine Apple panels or OEM equivalent. Free diagnosis.
           </p>
           <div className="mt-xl flex justify-center"><CallButtons /></div>
         </section>
 
-        <RepairPriceTable path={path} />
 
         {/* WHAT MAKES THIS CHIP'S SCREEN UNIQUE */}
         <section

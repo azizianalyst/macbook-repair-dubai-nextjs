@@ -16,7 +16,6 @@ import { QuickAnswer, deriveServiceQuickAnswer } from "@/components/blocks/Quick
 import { LeadForm } from "@/components/blocks/LeadForm";
 import { LinkifyProse } from "@/lib/linkify";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
-import { PriceCTA } from "@/components/blocks/PriceCTA";
 import { Reveal } from "@/components/blocks/Reveal";
 import { ResponsiveImage } from "@/components/blocks/ResponsiveImage";
 import { Button } from "@/components/ui/button";
@@ -28,18 +27,6 @@ import GlassWarrantyNotice from "@/components/blocks/GlassWarrantyNotice";
 import { BreadcrumbTrail } from "@/components/blocks/BreadcrumbTrail";
 import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
 
-type PricingRow = { model: string; price: number; timeline: string };
-
-const PRICING: PricingRow[] = [
-  { model: "MacBook Air 13\" (M1/M2/M3)",     price: 600,  timeline: "Same day"   },
-  { model: "MacBook Air 15\" (M2/M3)",        price: 910,  timeline: "Same day"   },
-  { model: "MacBook Pro 13\" (Touch Bar)",    price: 600,  timeline: "Same day"   },
-  { model: "MacBook Pro 14\" (M1/M2/M3/M4)",  price: 1000,  timeline: "Same day · 1 day" },
-  { model: "MacBook Pro 16\" (M1/M2/M3/M4)",  price: 1200, timeline: "1-2 days"   },
-  { model: "MacBook Pro 15\" Retina 2012-15", price: 910,  timeline: "1 day"      },
-  { model: "MacBook Pro 13\" Retina 2012-15", price: 600,  timeline: "Same day"   },
-  { model: "MacBook 12\" Retina 2015-17",     price: 910,  timeline: "1-2 days"   },
-];
 
 const COMMON_PROBLEMS = [
   { title: "Flexgate - horizontal lines or no backlight",
@@ -239,7 +226,7 @@ export default function MacBookScreenRepair() {
 
         {/* Answer-first capsule (AEO/BLUF) */}
         <div className="mx-auto max-w-content px-5 md:px-6 grid gap-xl md:grid-cols-12 items-stretch">
-          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook screen repair", startingPrice: 600, timeline: "same-day on most models" })} />
+          <QuickAnswer tone="dark" className="max-w-none px-0 md:px-0 mt-0 md:col-span-7 h-full" {...deriveServiceQuickAnswer({ serviceName: "MacBook screen repair", pricePath: "/macbook-screen-repair-dubai", startingPrice: 600, timeline: "same-day on most models" })} />
           <Reveal delay={120} className="md:col-span-5 h-full rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg shadow-lg backdrop-blur-md">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
@@ -296,14 +283,13 @@ export default function MacBookScreenRepair() {
         <section className="bg-bg-alt border-y border-border">
           <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
             <SectionHead eyebrow="Every screen, one place" title="MacBook models we repair" intro="Every MacBook from the 2008 unibody through the 2025 M5 Pro 16″. Prices below are the panel + labour + warranty up to 3 months all-in. No diagnostic fee, no hidden adhesive charge." />
-            <PriceTable rows={PRICING} />
+            <RepairPriceTable path="/macbook-screen-repair-dubai" variant="inline" />
             <p className="mt-md text-[13px] text-text-faint mono max-w-[70ch]">
               Glass-only repair is possible on 2012-2015 Retina. From 2016 the glass is bonded to the LCD - full assembly only.
             </p>
           </div>
         </section>
 
-        <RepairPriceTable path="/macbook-screen-repair-dubai" title="How much does a MacBook screen replacement cost here?" />
 
         {/* ── Common problems ────────────────────────────────────── */}
         <section className="mx-auto max-w-content px-5 md:px-6 py-4xl">
@@ -622,32 +608,5 @@ function CtaRow({ whatsappMessage }: { whatsappMessage?: string }) {
       <Button asChild variant="whatsapp" size="lg"><a href={withSlash(href)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden /> WhatsApp Us</a></Button>
       <Button asChild size="lg" variant="secondary" className="border border-border-strong bg-bg-card text-text hover:bg-bg-alt"><a href={`tel:${NAP.phoneE164}`}><Phone aria-hidden /> Call Now</a></Button>
     </div>
-  );
-}
-
-function PriceTable({ rows }: { rows: PricingRow[] }) {
-  return (
-    <Reveal className="overflow-x-auto rounded-2xl border border-border bg-bg-alt">
-      <table className="w-full border-collapse text-left text-[14px] min-w-[520px]">
-        <thead>
-          <tr className="border-b border-border text-accent">
-            <th className="px-lg py-md font-semibold">MacBook model</th>
-            <th className="px-lg py-md font-semibold whitespace-nowrap">Screen replacement</th>
-            <th className="px-lg py-md font-semibold">Turnaround</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr key={r.model} className="border-b border-border last:border-0">
-              <td className="px-lg py-sm font-medium text-text">{r.model}</td>
-              <td className="px-lg py-sm whitespace-nowrap">
-                <PriceCTA compact message={`Hi, screen repair price for ${r.model}?`} />
-              </td>
-              <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Reveal>
   );
 }

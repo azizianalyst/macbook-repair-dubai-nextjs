@@ -24,7 +24,7 @@ import { useSeo, preloadFromHero } from "@/hooks/use-seo";
 import { pickReviews, reviewDevicesForPath } from "@/lib/find-reviews";
 import { NAP, REVIEW_COUNT_LABEL } from "@/content/site";
 import type { LucideIcon } from "lucide-react";
-import { RepairPriceTable } from "@/components/blocks/RepairPriceTable";
+import { InvoicePriceCell, InvoicePriceNote } from "@/components/blocks/RepairPriceTable";
 
 const IMG = {
   hero: {
@@ -265,7 +265,7 @@ export default function MacBookAirScreenReplacement() {
                   <tr key={r.model} className="border-b border-border last:border-0">
                     <td className="px-lg py-sm font-medium text-text">{r.model}</td>
                     <td className="px-lg py-sm font-bold text-accent whitespace-nowrap">
-                      <PriceCTA compact message={`Hi, MacBook Air screen replacement price for ${r.model}?`} />
+                      <InvoicePriceCell path="/macbook-air-screen-replacement-dubai" label={r.model}><PriceCTA compact message={`Hi, MacBook Air screen replacement price for ${r.model}?`} /></InvoicePriceCell>
                     </td>
                     <td className="px-lg py-sm text-text-muted">{r.timeline}</td>
                     <td className="px-lg py-sm">
@@ -280,12 +280,12 @@ export default function MacBookAirScreenReplacement() {
               </tbody>
             </table>
           </div>
+          <InvoicePriceNote path="/macbook-air-screen-replacement-dubai" />
           <p className="mt-md text-[13px] text-text-faint max-w-[72ch]">
             Glass-only replacement available on Intel 11″ and early Intel 13″ pre-2016. From M1 onward the glass is bonded to the panel — full assembly replacement required.
           </p>
         </section>
 
-        <RepairPriceTable path="/macbook-air-screen-replacement-dubai" title="How much does a MacBook Air screen replacement cost here?" />
 
         {/* ── MODELS COVERED ── */}
         <section className="bg-bg-alt mt-[96px] py-[80px]" style={{ borderTop: "1px solid var(--color-border)", borderBottom: "1px solid var(--color-border)" }}>
@@ -360,7 +360,7 @@ export default function MacBookAirScreenReplacement() {
             <div className="grid gap-lg md:grid-cols-2 lg:grid-cols-4">
               {VISIT_STEPS.map((s) => (
                 <div key={s.n} className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg flex flex-col gap-sm">
-                  <p className="text-[48px] font-bold leading-none text-accent/20 select-none">{s.n}</p>
+                  <p aria-hidden="true" data-n={s.n} className="text-[48px] font-bold leading-none text-accent/20 select-none before:content-[attr(data-n)]" />
                   <h3 className="text-[17px] font-semibold text-text">{s.title}</h3>
                   <p className="text-[15px] text-text-muted leading-relaxed">{s.body}</p>
                 </div>
