@@ -738,7 +738,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/blog/macbook-pro-m5-external-monitor-not-working-dubai": {
     "title": "MacBook Pro M5 External Monitor Not Working Dubai? Fix Guide 2026",
-    "description": "MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, fullscreen goes black. Step-by-step fixes for all M5 display connection issues."
+    "description": "MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, kernel panic on plug-in, fullscreen black. Fixes for every M5 display issue."
   },
   "/blog/macbook-pro-m5-fan-noise-dubai": {
     "title": "MacBook Pro M5 Fan Noise Dubai 2026: Crackling, Clicking, Grinding Fix",
@@ -781,7 +781,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook Pro screen replacement cost in Dubai, broken down by model, M1 to M5 and Intel, vs Apple Store. Message us on WhatsApp for your exact price. Same-day service."
   },
   "/blog/macbook-repair-warranty-explained": {
-    "title": "MacBook Repair Warranty Explained: Dubai 2026 (Up to 12 Months)",
+    "title": "MacBook Repair Warranty Explained: Dubai 2026 (15 Days to 2 Years)",
     "description": "Exactly how our tiered MacBook repair warranty works - 2 years on hardware, 3 months on batteries and screens, 15 days on board and liquid work - and how to claim."
   },
   "/blog/macbook-running-slow-10-fixes": {
@@ -1394,7 +1394,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
   },
   "/macbook-air-charging-port-repair-dubai": {
     "title": "MacBook Air Charging Port Repair Dubai - MagSafe 3 and USB-C",
-    "description": "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 12-month warranty. WhatsApp for a price."
+    "description": "MacBook Air charging port repair Dubai — MagSafe 3 board (M2/M3/M4) and USB-C port (Intel/M1). Same-day 1-2 hours, free diagnosis, 2-year warranty. WhatsApp for a price."
   },
   "/macbook-air-intel-battery-replacement-dubai": {
     "title": "MacBook Air Intel Battery Replacement Dubai — Same-Day",
@@ -1581,7 +1581,7 @@ export const ROUTE_META: Record<string, { title: string; description?: string }>
     "description": "MacBook microphone repair Dubai. Others can't hear you on calls, muffled mic, no sound input, water-damaged mic array. Usually 1-2 days. WhatsApp 055 741 3706."
   },
   "/macbook-neo-a18-repair-dubai": {
-    "title": "MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage",
+    "title": "MacBook Neo Logic Board Repair Dubai - No Power & Liquid",
     "description": "MacBook Neo A18 Pro logic board repair in Dubai: no power, liquid damage, charging faults and data recovery. Free diagnosis. WhatsApp 055 741 3706."
   },
   "/macbook-neo-battery-replacement-dubai": {

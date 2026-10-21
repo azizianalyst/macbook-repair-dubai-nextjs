@@ -7,13 +7,14 @@ export default function BlogMacBookProM5ExternalMonitor() {
   return (
     <BlogPostTemplate
       seoTitle="MacBook Pro M5 External Monitor Not Working Dubai? Fix Guide 2026"
-      seoDescription="MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, fullscreen goes black. Step-by-step fixes for all M5 display connection issues."
+      seoDescription="MacBook Pro M5 external monitor not working in Dubai? Third display not detected, dock drops, kernel panic on plug-in, fullscreen black. Fixes for every M5 display issue."
       path="/blog/macbook-pro-m5-external-monitor-not-working-dubai"
       wide
       toc={[
         { id: "why-monitor", label: "Why M5 monitor issues happen" },
         { id: "third-display", label: "Step 1. Third display not detected" },
         { id: "dock-drops", label: "Step 2. Display drops via dock" },
+        { id: "dock-panic", label: "Mac restarts when a monitor is plugged into the dock" },
         { id: "fullscreen-black", label: "Step 3. Fullscreen goes black" },
         { id: "resolution-wrong", label: "Step 4. Wrong resolution or refresh rate" },
         { id: "dubai-heat", label: "Step 5. Dubai heat and display faults" },
@@ -27,7 +28,7 @@ export default function BlogMacBookProM5ExternalMonitor() {
       quickAnswer="MacBook Pro M5 external monitor problems: third display requires a DisplayLink adapter or Apple Thunderbolt dock (M5 Max supports 4 displays natively, M5 Pro supports 3 via specific connections). Display dropping via dock means the dock firmware needs updating. Screen going black in fullscreen is a macOS Tahoe bug fixed in 26.2. Wrong resolution: hold Option and click Detect Displays in System Settings."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-06-22"
+      dateModified="2026-10-21"
       readingMinutes={10}
       featuredImageAlt="MacBook Pro M5 external monitor not working, technician testing Thunderbolt 5 display connections at Dubai repair workshop"
       body={
@@ -78,6 +79,36 @@ export default function BlogMacBookProM5ExternalMonitor() {
             <li><strong>Try direct connection</strong>: connect the monitor directly to the M5 with a Thunderbolt 5 to DisplayPort or Thunderbolt 5 to HDMI 2.1 cable, bypassing the dock. If the display is stable direct but drops through the dock, the dock firmware or cable is the fault, not the M5</li>
             <li><strong>MagSafe for power</strong>: if you are charging through the dock, switch to MagSafe for power and use the dock only for data and display. This reduces the load on the dock's power delivery controller and often stops the display drops</li>
           </ul>
+
+          <h2 id="dock-panic">Why does my MacBook Pro M5 restart the moment I plug a monitor into the dock?</h2>
+          <p>
+            This is a different fault from a display that drops, and it is newer. Since late September 2026,
+            16-inch M5 Max owners on Apple Community have described the same thing: the Mac is fine until a
+            monitor is plugged into a Thunderbolt 5 dock, then it freezes and reboots within seconds, every time,
+            even in macOS Recovery. The panic log reads <code>ACIO0 Recoverable Panic</code> (sometimes ACIO1),
+            which is the Thunderbolt controller, not the GPU. Three different docks are affected (iVanky
+            FusionDock Ultra, Anker Prime TB5, CalDigit TS5 Plus), and the Dell P2715Q is the monitor that
+            triggers it most often. Other monitors on the same dock work.
+          </p>
+          <p>
+            Because the same assert appears across three dock brands and on certified TB5 cables, it points to
+            Apple&apos;s Thunderbolt firmware rather than a broken dock, a bad cable or a faulty logic board.
+            Reinstalling macOS does not clear it; one owner wiped the Mac and the panic returned on the first
+            plug-in. What to do until Apple ships a fix:
+          </p>
+          <ul className="list-disc list-inside space-y-xs">
+            <li><strong>Plug that monitor straight into the Mac</strong>: the P2715Q works on an M5 Max when connected directly. Keep the dock for storage, USB and the monitors that do not panic</li>
+            <li><strong>Try the dock&apos;s HDMI port instead of DisplayPort</strong>: owners of the same monitor family report it works over HDMI, at 30Hz, which is usable for a second screen</li>
+            <li><strong>Update the dock firmware anyway</strong>: it has not cured this panic for anyone yet, but it removes one variable before you report it</li>
+            <li><strong>Report it to Apple</strong>: file Feedback with the panic text. The more reports that share the ACIO assert, the faster it is linked to one bug</li>
+          </ul>
+          <p>
+            When we see this Mac in Media City, the diagnosis is short: the monitor on the dock, then the
+            monitor on the Mac directly, then a different monitor on the dock. If the Mac only panics in the
+            first case, the board is fine and we say so. We only look at the Thunderbolt controller on the
+            board when a monitor also panics it plugged in directly, or when one port panics with everything.
+            That outcome has been rare so far.
+          </p>
 
           <h2 id="fullscreen-black">Step 3: Why does my external display go black when I go fullscreen on MacBook Pro M5?</h2>
           <p>
@@ -197,6 +228,10 @@ export default function BlogMacBookProM5ExternalMonitor() {
         {
           q: "How long does MacBook Pro M5 Thunderbolt port repair take in Dubai?",
           a: "A single port replacement or TB5 controller rework takes 2-3 hours. We test all ports before and after. Free diagnosis to confirm whether it is a port fault or a firmware issue before any repair is started. Drop off in the morning to collect same day in most cases.",
+        },
+        {
+          q: "Why does my MacBook Pro M5 Max kernel panic when I plug a monitor into my Thunderbolt 5 dock?",
+          a: "Since late September 2026, M5 Max owners report an ACIO Thunderbolt-controller panic the moment certain monitors, most often the Dell P2715Q, are plugged into an iVanky, Anker or CalDigit TB5 dock. It happens on certified cables and after a clean macOS install, so it looks like Apple's Thunderbolt firmware, not your dock or board. Plug that monitor straight into the Mac, or use the dock's HDMI port, until Apple patches it.",
         },
         {
           q: "Is it safe to use MacBook Pro M5 with a Thunderbolt port that drops displays?",

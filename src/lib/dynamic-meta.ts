@@ -71,9 +71,11 @@ function imacMeta(m: ModelEntry): Meta {
 
 // Build the path -> meta map once at module load.
 const MAP: Record<string, Meta> = {};
-for (const m of MACBOOK) MAP[`/${m.slug}`] = macbookMeta(m);
+// Variants merged into a family page (2026-10-21) have no route of their own any more.
+const merged = (m: object) => "mergedInto" in m && Boolean((m as { mergedInto?: string }).mergedInto);
+for (const m of MACBOOK) if (!merged(m)) MAP[`/${m.slug}`] = macbookMeta(m);
 for (const m of IPAD) MAP[`/${m.slug}`] = ipadMeta(m);
-for (const m of MAC_DESKTOP) MAP[`/${m.slug}`] = macDesktopMeta(m);
+for (const m of MAC_DESKTOP) if (!merged(m)) MAP[`/${m.slug}`] = macDesktopMeta(m);
 for (const m of IMAC) MAP[`/${m.slug}`] = imacMeta(m);
 
 for (const c of CITIES) {
@@ -125,7 +127,7 @@ const OVERRIDE: Record<string, Meta> = {
   // MacBook Neo spokes (13-inch, A18 Pro, on sale 11 March 2026). These mirror each
   // view's seoTitle/seoDescription exactly (src/views/MacBookNeo*.tsx) — keep them paired.
   "/macbook-neo-a18-repair-dubai": {
-    title: "MacBook Neo A18 Pro Repair Dubai - Board & Liquid Damage",
+    title: "MacBook Neo Logic Board Repair Dubai - No Power & Liquid",
     description: "MacBook Neo A18 Pro logic board repair in Dubai: no power, liquid damage, charging faults and data recovery. Free diagnosis. WhatsApp 055 741 3706.",
   },
   "/macbook-neo-screen-repair-dubai": {

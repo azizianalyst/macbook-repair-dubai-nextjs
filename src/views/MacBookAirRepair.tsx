@@ -46,8 +46,7 @@ const airReviews = REVIEWS
 
 /* Every Air generation we service, newest first. The model pages have no other hub. */
 const MODEL_LINKS = [
-  { label: 'MacBook Air 15" M5 (2026)', to: "/macbook-air-15-m5-2026-repair-dubai" },
-  { label: 'MacBook Air 13" M5 (2026)', to: "/macbook-air-13-m5-2026-repair-dubai" },
+  { label: 'MacBook Air M5 (13" and 15", 2026)', to: "/macbook-air-m5-repair-dubai" },
   { label: 'MacBook Air 15" M4 (2025)', to: "/macbook-air-15-m4-2025-repair-dubai" },
   { label: 'MacBook Air 13" M4 (2025)', to: "/macbook-air-13-m4-2025-repair-dubai" },
   { label: 'MacBook Air 15" M3 (2024)', to: "/macbook-air-15-m3-2024-repair-dubai" },

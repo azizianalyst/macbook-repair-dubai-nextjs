@@ -27,7 +27,7 @@ export default function BlogMacBookProM4Problems() {
       quickAnswer="MacBook Pro M4 common problems: mini-LED display faults such as a dark zone, lines or dead pixels (a soft halo around bright objects is normal blooming), Thunderbolt 5 docks not recognised (update the hub firmware), memory pressure on 16GB, and throttling on sustained loads. Most are software fixes. Message us on WhatsApp for a screen repair price."
       author={{ name: "Memona", role: "Senior MacBook battery technician" }}
       datePublished="2026-06-22"
-      dateModified="2026-09-26"
+      dateModified="2026-10-21"
       readingMinutes={10}
       featuredImageAlt="MacBook Pro M4 common problems, technician testing the Liquid Retina XDR display and Thunderbolt 5 ports at Dubai repair workshop"
       body={
@@ -207,6 +207,10 @@ export default function BlogMacBookProM4Problems() {
         {
           q: "How long does MacBook Pro M4 screen replacement take in Dubai?",
           a: "When the display assembly is in stock, replacement on M4 takes 90-120 minutes for the 14-inch and 2 hours for the 16-inch. We check white balance, brightness uniformity and every backlight zone after fitting. Drop off before 11am for same-day collection; if the assembly has to be sourced, allow 1–2 days.",
+        },
+        {
+          q: "My MacBook Pro M4 freezes and restarts with a WindowServer error since macOS 27.0.1. Is it hardware?",
+          a: "Probably not, as of October 2026. Owners report freezes, black screens and WindowServer restarts on the 14-inch M4 that started with the 27.0.1 update, with fans running hard on three browser tabs. Test in Safe Mode first; if the freezes stop there, it is software. Then test from a fresh user account to rule out one account's login items. Only if it still freezes in Safe Mode and in a new account is it worth a hardware diagnosis. We will update this answer when Apple ships the next 27.x release.",
         },
         {
           q: "Is it safe to keep using a MacBook Pro M4 with a dark zone or lines on screen?",

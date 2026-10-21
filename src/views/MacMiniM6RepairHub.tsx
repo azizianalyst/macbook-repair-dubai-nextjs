@@ -27,10 +27,7 @@ export default function MacMiniM6RepairHub() {
             Apple announced the 2026 Mac mini on 25 August 2026, and it went on sale on 22 September 2026. There are two chips: the <strong>M6</strong>, Apple&apos;s first 2-nanometre Mac chip, and the higher-performance <strong>M5 Pro</strong>. In the UAE, Apple lists the Mac mini from AED 3,799 with M6 and from AED 7,299 with M5 Pro. For core counts, memory and port options, Apple&apos;s own spec page for your exact configuration is the reference - on the bench we work from your serial number, not a brochure.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            Because this generation is weeks old, almost any hardware fault should be Apple's problem, not yours. We verify your serial number and coverage status first - if Apple should fix it under the 1-year warranty or AppleCare+, we tell you so and charge nothing. For the dedicated model pages see{" "}
-            <Link to="/mac-mini-m6-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac mini M6 2026 repair</Link>{" "}
-            and{" "}
-            <Link to="/mac-mini-m5-pro-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac mini M5 Pro 2026 repair</Link>.
+            Because this generation is weeks old, almost any hardware fault should be Apple's problem, not yours. We verify your serial number and coverage status first - if Apple should fix it under the 1-year warranty or AppleCare+, we tell you so and charge nothing. This page covers both chips; the repair approach is the same, and the difference that matters on the bench is the chip and memory in your configuration.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             Where we do earn our keep on a new mini: accidental damage that warranty excludes (liquid, drops, power surges - common with cheap UPS units in Dubai), data recovery from a machine Apple would simply replace, network, display and dock setup problems that look like hardware but are configuration, and thermal servicing once the machine has lived a summer in an enclosed TV unit.
@@ -71,8 +68,8 @@ export default function MacMiniM6RepairHub() {
       reviewNames={["Fatima Al Zaabi", "James Mitchell"]}
       related={[
         { label: "Mac mini Repair Dubai",           href: "/mac-mini-repair-dubai",               description: "All Mac mini models and services." },
-        { label: "Mac mini M6 2026 Repair",         href: "/mac-mini-m6-2026-repair-dubai",        description: "Dedicated M6 model page." },
-        { label: "Mac mini M5 Pro 2026 Repair",     href: "/mac-mini-m5-pro-2026-repair-dubai",    description: "Dedicated M5 Pro model page." },
+        { label: "Mac mini No Display",             href: "/mac-mini-no-display-dubai",            description: "No video out, HDMI and dock faults." },
+        { label: "Mac mini Data Recovery",          href: "/mac-mini-data-recovery-dubai",         description: "Getting files off a mini that won't boot." },
         { label: "Mac mini M4 / M4 Pro Repair",     href: "/mac-mini-m4-repair-dubai",             description: "The 2024 generation this model replaced." },
       ]}
       blogLink={{ label: "Mac mini vs Mac Studio in 2026: Which to Buy", href: "/blog/mac-mini-vs-mac-studio-2026" }}

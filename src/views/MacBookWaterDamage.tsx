@@ -126,6 +126,10 @@ const FAQS = [
     a: "This is the classic delayed liquid-damage failure. Corrosion takes 24-72 hours to bridge circuits and destroy components. A Mac that works immediately after a spill often has liquid that has not yet oxidised. As the moisture evaporates, mineral deposits and corrosion bridge power rails and short ICs. Bring it in now -- every additional hour increases the damage. The recovery rate after 72 hours drops to 30-40%.",
   },
   {
+    q: "My MacBook says 'Liquid detected in USB-C port'. Is it damaged?",
+    a: "Not necessarily. On macOS Sequoia and later, supported MacBook Air, Pro and Neo models warn you when a USB-C port, cable or accessory reads wet, so you stop charging before corrosion starts. Unplug, try a different dry cable, and let it dry. If the alert keeps coming back on the same port days later, or appears on one port after a spill or a liquid repair, the connector most likely has residue or corrosion. We inspect and clean the port under the microscope; replacement is only needed when the pins are corroded.",
+  },
+  {
     q: "Is water damage covered by Apple warranty or AppleCare+?",
     a: "Standard Apple warranty does not cover liquid damage. AppleCare+ covers accidental damage including liquid spills for a service fee per incident, listed on Apple's UAE support site. MacBook Repair Dubai offers independent repair with a faster turnaround -- typically same-day or next-day rather than the Apple Store timeline of several business days. We are an independent Apple specialist, not an Apple Authorized Service Provider.",
   },
@@ -204,7 +208,7 @@ export default function MacBookWaterDamage() {
 
 
         <TakeawaysByline
-          updated="September 2026"
+          updated="October 2026"
           reviewer="Shafiq, Lead technician"
           years={15}
           items={[
@@ -351,6 +355,47 @@ export default function MacBookWaterDamage() {
                 <p className="m-0 text-[13.5px] text-text-muted leading-relaxed">{d.body}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Liquid-detection alert */}
+        <section className="border-t border-border bg-bg">
+          <div className="mx-auto max-w-content px-5 md:px-6 py-4xl">
+            <div className="mb-lg max-w-[64ch]">
+              <h2 className="m-0 text-text text-[clamp(1.5rem,2.8vw,2rem)] font-bold flex items-center gap-sm">
+                <AlertTriangle size={24} className="text-amber-600" aria-hidden />
+                What does the &quot;Liquid detected in USB-C port&quot; alert mean?
+              </h2>
+              <p className="mt-md text-[17px] text-text-muted leading-relaxed">
+                Newer MacBooks warn you before you do the one thing that turns a wet port into a dead board: charging it.
+              </p>
+            </div>
+            <div className="max-w-[78ch] space-y-md text-[15.5px] leading-relaxed text-text-muted">
+              <p>
+                On macOS Sequoia and later, supported MacBook Air, MacBook Pro and MacBook Neo models show a
+                <strong className="text-text"> Liquid Detected</strong> alert when you plug a USB-C cable or accessory into a port that
+                reads as wet. Apple&apos;s own guidance is to disconnect the cable and let the port dry, because
+                charging through a wet connector drives current across the moisture and corrodes the pins. The alert
+                can be triggered by the cable or the accessory, not only the port, so try a different, dry cable
+                before worrying.
+              </p>
+              <p>
+                Three things the alert does <strong className="text-text">not</strong> tell you. It does not mean the board is damaged:
+                a port can read wet from humidity after a cold car on a Dubai summer day, or from a damp cable, and be fine
+                an hour later. It does not clear itself after a spill that reached the inside: a port that keeps alerting
+                days after a drink went in, or alerts on one port only after a liquid repair, usually still has residue or
+                corrosion on the connector. And older Macs never show it, so a dry charger that will not charge an older
+                MacBook after a spill is the same warning without the words.
+              </p>
+              <p>
+                What we do with it: inspect the connector under the microscope, clean the residue, and test the port on
+                a known-good cable. If the pins are eaten away, the USB-C port is replaced. On some models that is a
+                small flex part; on others it is soldered to the logic board and the job is board-level. One owner on
+                Apple Community saw the alert on a single port straight after an authorised liquid repair, which is a
+                sign the ports were not checked during that repair. We check every port on every liquid job, whether or
+                not the alert ever appeared.
+              </p>
+            </div>
           </div>
         </section>
 

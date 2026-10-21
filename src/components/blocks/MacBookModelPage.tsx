@@ -254,7 +254,10 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
   const verdict = worthRepairingVerdict(model);
   const turnaround = turnaroundFor(model);
   const serviceRows = buildServiceRows(model);
-  const related = pickRelatedModels(slug);
+  // Variants merged into a family page (2026-10-21) link to that page; keep one card per page.
+  const related = pickRelatedModels(slug)
+    .map((r) => ({ ...r, href: ("mergedInto" in r && (r as { mergedInto?: string }).mergedInto) || `/${r.slug}` }))
+    .filter((r, i, all) => all.findIndex((x) => x.href === r.href) === i);
   // The sibling ring wraps across Air/Pro at the family boundary; name the family only when every pick is in it.
   const relatedLabel = related.every((r) => r.family === model.family) ? FAMILY_LABEL[model.family] : "MacBook";
 
@@ -432,7 +435,7 @@ export default function MacBookModelPage({ slug }: { slug: string }) {
             {related.map((r) => (
               <Link
                 key={r.slug}
-                to={`/${r.slug}`}
+                to={r.href}
                 className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors"
               >
                 <div className="font-semibold">{r.name}</div>

@@ -27,13 +27,26 @@ export default function MacStudioM5RepairHub() {
             Apple announced the new Mac Studio on 25 August 2026, and it went on sale on 22 September 2026, with a choice of two chips: the <strong>M5 Max</strong> or the <strong>M5 Ultra</strong>, configurable up to 512GB. In the UAE, Apple lists it from AED 10,499 with M5 Max and from AED 23,999 with M5 Ultra. For core counts, memory options and ports, Apple&apos;s own spec page for your exact configuration is the reference - on the bench we work from your serial number.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
-            We do not assume a new Studio opens, cools or powers up exactly like the last one: fan, thermal-paste and power-supply work is confirmed on the bench before we quote it. And on a machine this young, factory faults belong with Apple. We check your serial number and AppleCare+ status before quoting. See the dedicated pages for{" "}
-            <Link to="/mac-studio-m5-max-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M5 Max 2026 repair</Link>{" "}
-            and{" "}
-            <Link to="/mac-studio-m5-ultra-2026-repair-dubai" className="text-accent underline underline-offset-2 hover:no-underline">Mac Studio M5 Ultra 2026 repair</Link>.
+            We do not assume a new Studio opens, cools or powers up exactly like the last one: fan, thermal-paste and power-supply work is confirmed on the bench before we quote it. And on a machine this young, factory faults belong with Apple. We check your serial number and AppleCare+ status before quoting. This page covers both the M5 Max and the M5 Ultra; the repair approach is the same, and the difference on the bench is the chip and memory in your configuration.
           </p>
           <p className="text-[16px] text-text-muted leading-relaxed mb-md">
             Where independent repair matters on a new Studio: liquid and power-surge damage (excluded from warranty), data recovery when the board is dead (the SSD is encrypted and tied to the chip, so that means repairing the board until it runs again), Thunderbolt and multi-display faults that turn out to be cable or configuration issues, and preventive thermal service - an Ultra rendering all day in a Dubai summer pulls dust through its fans quickly.
+          </p>
+          <h2 className="text-[24px] md:text-[28px] mb-md mt-lg">Why do Thunderbolt devices lose power on the Mac Studio M5 when an 8K display is connected?</h2>
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
+            The first M5 Studio hardware thread on Apple Community, from October 2026, is about this. An owner connected a Dell UP3218K 8K monitor on two Thunderbolt ports and an OWC bus-powered NVMe enclosure on a third. The enclosure would not power up while the display was connected, and the Mac kernel-panicked; afterwards the enclosure stayed dark. The same setup did the same thing on a MacBook Pro M4.
+          </p>
+          <p className="text-[16px] text-text-muted leading-relaxed mb-md">
+            It is not a faulty Studio. An 8K display over DisplayPort 1.4 needs two cables, and any Thunderbolt-to-DisplayPort adapters on those cables are themselves bus-powered devices competing for the same budget. OWC documents it in the enclosure&apos;s own spec sheet: it does not mount when it is the third bus-powered device on an M4 Mac mini or Mac Studio. The M5 Studio inherits that rule. What we check before anyone talks about a port repair:
+          </p>
+          <ul className="space-y-2 text-[15px] text-text-muted mb-md">
+            <li>• <strong className="text-text">Count the bus-powered devices</strong>, adapters included. Two display cables with active adapters plus a bus-powered SSD is already three.</li>
+            <li>• <strong className="text-text">Give the enclosure its own power</strong> or move it behind a self-powered Thunderbolt dock. If it then mounts and the panics stop, the Studio is fine.</li>
+            <li>• <strong className="text-text">Test the display alone, then the drive alone.</strong> A panic that only happens with both connected is a budget problem; a panic with one device on a port, on every port, is when we look at the Thunderbolt controller on the board.</li>
+          </ul>
+          <p className="text-[16px] text-text-muted leading-relaxed">
+            The related MacBook Pro M5 fault, a kernel panic the moment a monitor is plugged into a Thunderbolt 5 dock, is covered in our{" "}
+            <Link to="/blog/macbook-pro-m5-external-monitor-not-working-dubai" className="text-accent font-semibold hover:underline">MacBook Pro M5 external monitor guide</Link>.
           </p>
         </>
       }
@@ -67,13 +80,14 @@ export default function MacStudioM5RepairHub() {
         { q: "M5 Max or M5 Ultra - which should I buy for repair-friendliness?", a: "Neither is more repairable: memory and storage are soldered on both, so what you buy is what you keep. Both chips are the same M5 generation, so choose by budget and memory need. Apple lists the Mac Studio in the UAE from AED 10,499 (M5 Max) and AED 23,999 (M5 Ultra)." },
         { q: "Can the RAM or SSD be upgraded later?", a: "No. Unified memory and storage are soldered on both chips, so choose the configuration up front - video and AI workloads fill memory quickly. The SSD is also encrypted and tied to the chip: if the board fails, recovering data means repairing the board until it runs again. Chip-off recovery does not work on Apple silicon, and we cannot make storage bigger." },
         { q: "Is the 2026 Mac Studio repaired the same way as the 2025 model?", a: "We do not assume so. Apple's announcement is about the new M5 Max and M5 Ultra chips, so we confirm how each new unit opens, cools and powers up on the bench before quoting fan, thermal or power-supply work. On sale since 22 September 2026, it is also still inside Apple's one-year warranty, which we check first." },
+        { q: "My bus-powered SSD will not power up on the Mac Studio M5 when my 8K monitor is connected. Is a port broken?", a: "Almost certainly not. An 8K display over DisplayPort 1.4 uses two cables, and their adapters count as bus-powered devices. OWC's own spec sheet says its enclosure does not mount as the third bus-powered device on an M4 Mac mini or Mac Studio, and the M5 follows the same budget. Power the enclosure separately or put it behind a self-powered dock. If a device still fails alone on every port, bring it in and we test the Thunderbolt controller." },
         { q: "My new Studio is under warranty - why would I come to you?", a: "For anything Apple excludes: liquid, surge or physical damage, data recovery from a dead board (Apple replaces rather than recovers), and diagnosis when you are not sure whether a fault is hardware or configuration. Our diagnosis is free and we tell you honestly when Apple is the right route." },
       ]}
       reviewNames={["Fatima Al Zaabi", "James Mitchell"]}
       related={[
         { label: "Mac Studio Repair Dubai",            href: "/mac-studio-repair-dubai",                description: "All Mac Studio generations and services." },
-        { label: "Mac Studio M5 Max 2026 Repair",      href: "/mac-studio-m5-max-2026-repair-dubai",    description: "Dedicated M5 Max model page." },
-        { label: "Mac Studio M5 Ultra 2026 Repair",    href: "/mac-studio-m5-ultra-2026-repair-dubai",  description: "Dedicated M5 Ultra model page." },
+        { label: "Mac Studio Overheating Fix",         href: "/mac-studio-overheating-fix-dubai",       description: "Fan, dust and thermal service." },
+        { label: "Mac Studio Data Recovery",           href: "/mac-studio-data-recovery-dubai",         description: "When the board is dead and the data matters." },
         { label: "Mac Pro Repair Dubai",               href: "/mac-pro-repair-dubai",                   description: "Discontinued March 2026 - still fully supported here." },
       ]}
       blogLink={{ label: "Apple Discontinued the Mac Pro - What Now?", href: "/blog/apple-mac-pro-discontinued-what-now" }}

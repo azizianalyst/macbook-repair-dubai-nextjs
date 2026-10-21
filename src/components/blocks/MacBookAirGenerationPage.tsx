@@ -11,6 +11,7 @@ import {
   Search, BadgeCheck, MapPin,
 } from "lucide-react";
 import { Link } from "@/lib/router-compat";
+import { VariantSpecTable, type VariantRow } from "@/components/blocks/VariantSpecTable";
 import { PageShell } from "@/components/layout/PageShell";
 import { RelatedArticles } from "@/components/blocks/RelatedArticles";
 import { Hero } from "@/components/blocks/Hero";
@@ -40,6 +41,7 @@ export type MacBookAirGenerationProps = {
   heroDescription: string;
   heroMeta: string[];
   models: AirGenModel[];
+  variants?: VariantRow[]; // per-variant specs, shown when the variant pages are merged into this page
   faqs: AirGenFAQ[];
 };
 
@@ -256,7 +258,7 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
           <SectionHeading
             label="Supported models"
             title={`Which MacBook Air ${p.chip} models do we repair?`}
-            sub={`All ${p.chip} MacBook Air variants from ${p.years}. Tap a model for its dedicated repair page.`}
+            sub={`All ${p.chip} MacBook Air variants from ${p.years}. ${p.models.some((m) => m.href) ? "Tap a model for its dedicated repair page." : p.variants?.length ? "How the variants differ is in the table below; every one is repaired from this page." : ""}`}
           />
           <div className="rounded-2xl border border-border/70 bg-bg-card ring-1 ring-black/[0.03] p-lg">
             <div className="flex items-center gap-xs mb-md">
@@ -285,14 +287,17 @@ export default function MacBookAirGenerationPage(p: MacBookAirGenerationProps) {
                 ) : (
                   <span
                     key={m.label}
-                    className="inline-flex items-center gap-[5px] px-[9px] py-[4px] rounded-md border border-border bg-bg-alt text-[12px] text-text-faint font-medium"
+                    className="inline-flex items-center gap-[5px] px-[9px] py-[4px] rounded-md border border-border bg-bg-alt text-[12px] text-text font-medium"
                   >
                     {m.label}
-                    {m.aNum && <span className="text-[9px] font-normal opacity-70">{m.aNum}</span>}
+                    {m.aNum && <span className="text-[11px] font-normal text-text-muted">{m.aNum}</span>}
                   </span>
                 )
               ))}
             </div>
+            {p.variants && p.variants.length > 0 && (
+              <VariantSpecTable rows={p.variants} caption={`MacBook ${p.chip} variants compared`} />
+            )}
             <div className="mt-md pt-md border-t border-border">
               <Link to={PARENT_HREF} className="text-[13px] text-accent hover:underline">
                 ← View all MacBook Air models

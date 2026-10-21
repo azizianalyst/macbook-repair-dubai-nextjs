@@ -38,11 +38,6 @@ const REVIEWER = TEAM.find((t) => t.name === "Shafiq");
 /* Every MacBook Pro generation, newest first: chip hubs then dated model pages. */
 const MODEL_LINKS = [
   { label: "MacBook Pro M5 — all models", to: "/macbook-pro-m5-repair-dubai" },
-  { label: 'MacBook Pro 16" M5 Max (2026)', to: "/macbook-pro-16-m5-max-2026-repair-dubai" },
-  { label: 'MacBook Pro 16" M5 Pro (2026)', to: "/macbook-pro-16-m5-pro-2026-repair-dubai" },
-  { label: 'MacBook Pro 14" M5 Max (2026)', to: "/macbook-pro-14-m5-max-2026-repair-dubai" },
-  { label: 'MacBook Pro 14" M5 Pro (2026)', to: "/macbook-pro-14-m5-pro-2026-repair-dubai" },
-  { label: 'MacBook Pro 14" M5 (2025)', to: "/macbook-pro-14-m5-2025-repair-dubai" },
   { label: "MacBook Pro M4 — all models", to: "/macbook-pro-m4-repair-dubai" },
   { label: 'MacBook Pro 16" M4 (2024)', to: "/macbook-pro-16-m4-2024-repair-dubai" },
   { label: 'MacBook Pro 14" M4 (2024)', to: "/macbook-pro-14-m4-2024-repair-dubai" },

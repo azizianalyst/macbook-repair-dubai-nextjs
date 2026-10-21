@@ -134,6 +134,10 @@ const FAQS = [
     a: "No MagSafe or USB-C charging LED on a known-good charger means power is not reaching the logic board. First eliminate the charger: borrow a known-good Apple charger and try it. If still no light, the likely causes are a failed DC-in board, a blown power rail fuse, or liquid damage to the charging circuit. Free diagnosis at our Media City workshop confirms which.",
   },
   {
+    q: "My MacBook was left unused for months and now it will not charge or turn on. Is it dead?",
+    a: "Usually not. A lithium battery that sits unused self-discharges, and once it falls below its cut-off the Mac cannot start even on the charger, because the power controller needs a minimum voltage before it begins a charge cycle. Leave it on the original charger overnight; a trickle charge often lifts the pack enough to start. If it feels warm but never shows life after a full day, the battery has gone too low to recover and needs replacing, and we test the charging circuit at the same time. A Mac stored through a Dubai summer in a hot flat is the classic case.",
+  },
+  {
     q: "Is it worth repairing a MacBook that won't turn on?",
     a: "Yes in most cases. Diagnosis is free, and a Mac that appears dead frequently has a simple power fault. Most dead-Mac repairs cost a fraction of a replacement Mac. Even in the worst case of logic board failure, component-level repair is often cheaper than a new machine. We give you a free assessment so you can make an informed decision.",
   },

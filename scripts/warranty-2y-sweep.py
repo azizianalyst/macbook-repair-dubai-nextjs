@@ -16,6 +16,7 @@ RULES = [
     (re.compile(r"\b([Ww]arranty) of up to 12 months"), lambda m: f"{m.group(1)} of 15 days to 2 years"),
     (re.compile(r"\b[Uu]p to 12 months"), lambda m: "15 days to 2 years"),
     (re.compile(r"\bUp to 12-Month Warranty"), lambda m: "15-Day to 2-Year Warranty"),
+    (re.compile(r"\bUp to 12 Months\b"), lambda m: "15 Days to 2 Years"),
     (re.compile(r"\b[Uu]p to 12-month warranty"), lambda m: "15-day to 2-year warranty"),
     (re.compile(r"\bthe 12-month written warranty"), lambda m: "its written warranty"),
 ]

@@ -105,7 +105,7 @@ conflict" as its `lastResult`, and still run the data, check and report jobs.
 
 ## Edge state (2026-09-16, do not undo)
 
-- Cloudflare DNS (zone `e05eb391dd1b203db1c6c47716618b63`): apex `A 46.17.175.101`, proxied. **Checked 9 Oct 2026: `www` is still a CNAME to `www.macbook-repair-dubai.ae.cdn.hstgr.net` (Hostinger CDN), not the apex** — that is why www shows a parked page (http) / 525 (https). Owner fix in War Room task t02 (Redirect Rule www → apex, and/or repoint the CNAME). The Cloudflare API token can read DNS but not rulesets/SSL; Claude Code blocks Cloudflare writes unless the owner allows them.
+- Cloudflare DNS (zone `e05eb391dd1b203db1c6c47716618b63`): apex `A 46.17.175.101`, proxied. **Fixed 19 Oct 2026:** `www` was a CNAME to `www.macbook-repair-dubai.ae.cdn.hstgr.net` (Hostinger CDN: parked page / 525); it now CNAMEs to the apex (proxied) and the app's next.config redirect sends www to the apex (308). The Cloudflare API token can edit DNS but not Worker routes, rulesets or SSL.
 - hPanel → Performance → CDN: disabled, and the site is ticked under "Opt out of automatic CDN".
   Hostinger's CDN (`x-hcdn-request-id` header) behind Cloudflare bans Cloudflare's IPs and every
   visitor gets a 429 (the outage of 8–15 Sep). Seeing that header again is a red alert.

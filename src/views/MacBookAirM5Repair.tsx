@@ -1,5 +1,27 @@
 "use client";
+import airModels from "@/content/macbook-air-models.json";
+import type { VariantRow } from "@/components/blocks/VariantSpecTable";
 import MacBookAirGenerationPage from "@/components/blocks/MacBookAirGenerationPage";
+
+type ModelSpec = { slug: string; name: string; chip?: string; display?: string; maxRAM?: string; baseStorage?: string; maxStorage?: string; ports?: string };
+// The per-variant pages were merged into this page on 2026-10-21 (301s in next.config.mjs).
+// Their Apple spec facts live on here as one comparison table.
+const A_NUM: Record<string, string> = {
+  "macbook-air-13-m5-2026-repair-dubai": "",
+  "macbook-air-15-m5-2026-repair-dubai": "",
+};
+const VARIANTS: VariantRow[] = (airModels as ModelSpec[])
+  .filter((m) => A_NUM[m.slug] !== undefined)
+  .sort((a, b) => Object.keys(A_NUM).indexOf(a.slug) - Object.keys(A_NUM).indexOf(b.slug))
+  .map((m) => ({
+    name: m.name,
+    aNum: A_NUM[m.slug] || undefined,
+    chip: m.chip?.split(" - ")[0],
+    display: m.display,
+    memory: m.maxRAM,
+    storage: m.baseStorage && m.maxStorage ? `${m.baseStorage} to ${m.maxStorage}` : m.maxStorage,
+    ports: m.ports,
+  }));
 
 export default function MacBookAirM5Repair() {
   return (
@@ -19,9 +41,10 @@ export default function MacBookAirM5Repair() {
         "Same-day most repairs",
       ]}
       models={[
-        { label: '15" MacBook Air M5 (2026)', href: "/macbook-air-15-m5-2026-repair-dubai" },
-        { label: '13" MacBook Air M5 (2026)', href: "/macbook-air-13-m5-2026-repair-dubai" },
+        { label: '15" MacBook Air M5 (2026)' },
+        { label: '13" MacBook Air M5 (2026)' },
       ]}
+      variants={VARIANTS}
       faqs={[
         {
           q: "How much does MacBook Air M5 screen repair cost in Dubai?",

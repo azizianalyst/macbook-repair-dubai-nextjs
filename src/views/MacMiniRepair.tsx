@@ -81,6 +81,7 @@ const FAQS = [
   { q: "What types of issues can a Mac Mini repair service fix?", a: "We cover many issues, including hardware problems like faulty hard drives, RAM, and power supply issues. We also fix software-related problems such as OS crashes, data recovery, and virus removal. Our experienced technicians can diagnose and repair any problem." },
   { q: "How long does it typically take to repair a Mac Mini?", a: "The repair time depends on the complexity of the issue and the availability of replacement parts. We strive to complete most repairs within 24 to 48 hours; more extensive repairs may take 3-5 business days. We provide an estimated repair time after diagnosing the problem." },
   { q: "Can you upgrade my Mac Mini for better performance?", a: "Yes! We offer RAM upgrades, SSD installations, and macOS optimization services to enhance your Mac Mini's speed and overall performance. Many older models can perform like new after a professional upgrade." },
+  { q: "Why does my Mac mini keep saying 'Disk Not Ejected Properly' and dropping ports?", a: "Check the power budget before suspecting a port fault. A Mac mini can only power so many bus-powered devices; past that limit it shuts a port down, and a drive hanging off it ejects. A docking station that takes its power from one mini port and feeds several drives is the usual cause. Move the drives to a self-powered hub, or plug one drive straight into the mini with the monitor as the only other device and see if it stays mounted. If a single drive still ejects direct, change the cable or enclosure. If the 3.5mm audio only comes back when you reseat the plug, that is socket wear, which is a bench repair." },
   { q: "Can I walk in with my Mac mini without an appointment?", a: "Yes. Bring your Mac mini to Office #45, 10th Floor, Concord Tower, a 3-minute walk from the Palm Jumeirah tram stop, with parking on site. WhatsApp a photo and the serial number first and we quote before you travel. We message you when it is ready to collect. If you can't come in, send it by a same-day courier you book and WhatsApp us the tracking link." },
 ];
 
@@ -156,7 +157,7 @@ export default function MacMiniRepair() {
         <p className="text-[15px] text-text-muted max-w-[70ch] mb-md">Tap a model for its dedicated repair page with pricing, common faults and turnaround.</p>
         <div className="flex flex-wrap gap-2 mb-lg">
           {MAC_DESKTOP_MODELS.filter((m) => m.family === "mini").map((m) => (
-            <Link key={m.slug} to={`/${m.slug}`} className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
+            <Link key={m.slug} to={("mergedInto" in m && m.mergedInto) || `/${m.slug}`} className="px-3 py-1.5 border border-border/70 bg-bg-card ring-1 ring-black/[0.03] rounded-md text-[13px] text-accent hover:bg-bg-alt transition-colors">{m.name} →</Link>
           ))}
         </div>
         <ul className="flex flex-wrap gap-2 mb-lg">

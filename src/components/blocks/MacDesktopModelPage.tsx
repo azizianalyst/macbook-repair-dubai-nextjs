@@ -281,7 +281,10 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
   const verdict = worthRepairingVerdict(model);
   const turnaround = turnaroundFor(model);
   const serviceRows = buildServiceRows(model, turnaround);
-  const related = pickRelatedModels(slug);
+  // Variants merged into a family page (2026-10-21) link to that page; keep one card per page.
+  const related = pickRelatedModels(slug)
+    .map((r) => ({ ...r, href: ("mergedInto" in r && (r as { mergedInto?: string }).mergedInto) || `/${r.slug}` }))
+    .filter((r, i, all) => all.findIndex((x) => x.href === r.href) === i);
 
   const isAppleSilicon = model.era === "apple-silicon";
   const isStudio = model.family === "studio";
@@ -502,7 +505,7 @@ export default function MacDesktopModelPage({ slug }: { slug: string }) {
             {related.map((r) => (
               <Link
                 key={r.slug}
-                to={`/${r.slug}`}
+                to={r.href}
                 className="border border-border rounded-md p-sm bg-bg-card hover:border-primary text-[13px] transition-colors"
               >
                 <div className="font-semibold">{r.name}</div>

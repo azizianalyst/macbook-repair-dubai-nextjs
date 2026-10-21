@@ -549,7 +549,8 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Released March 2026. Parts supply is still ramping up. Screen and battery are available; specialty parts may take 3-5 days. Almost every unit is under Apple's 1-year warranty - start there.",
-    "heroTagline": "Apple's thinnest laptop with M5 power. Newest diagnostics, newest parts access."
+    "heroTagline": "Apple's thinnest laptop with M5 power. Newest diagnostics, newest parts access.",
+    "mergedInto": "/macbook-air-m5-repair-dubai"
   },
   {
     "slug": "macbook-air-15-m5-2026-repair-dubai",
@@ -598,6 +599,7 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Released March 2026. Almost every unit is under Apple's 1-year warranty - start at the Apple Store. We're here for accidental damage and out-of-warranty work, with newest-gen parts already in stock.",
-    "heroTagline": "The current 15-inch Air with M5. We're ready when you need us."
+    "heroTagline": "The current 15-inch Air with M5. We're ready when you need us.",
+    "mergedInto": "/macbook-air-m5-repair-dubai"
   }
 ]

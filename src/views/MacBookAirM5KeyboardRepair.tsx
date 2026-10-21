@@ -23,10 +23,10 @@ export default function MacBookAirM5KeyboardRepair() {
         "Spills are the exception: liquid damage is excluded from warranty and time matters. A spill cleaned within 24 hours usually needs only key-level work; left a week, it reaches the flex cable and logic board. Bring it in the same day.",
       ]}
       prices={[
-        { model: 'MacBook Air 13" M5 (2026) — individual key', price: 350, applePrice: null, timeline: "1–2 business days", l4href: "/macbook-air-13-m5-2026-repair-dubai" },
-        { model: 'MacBook Air 13" M5 (2026) — full top-case', price: 570, applePrice: 599, timeline: "1–2 business days", l4href: "/macbook-air-13-m5-2026-repair-dubai" },
-        { model: 'MacBook Air 15" M5 (2026) — individual key', price: 380, applePrice: null, timeline: "1–2 business days", l4href: "/macbook-air-15-m5-2026-repair-dubai" },
-        { model: 'MacBook Air 15" M5 (2026) — full top-case', price: 600, applePrice: 649, timeline: "1–2 business days", l4href: "/macbook-air-15-m5-2026-repair-dubai" },
+        { model: 'MacBook Air 13" M5 (2026) — individual key', price: 350, applePrice: null, timeline: "1–2 business days", l4href: "/macbook-air-m5-repair-dubai" },
+        { model: 'MacBook Air 13" M5 (2026) — full top-case', price: 570, applePrice: 599, timeline: "1–2 business days", l4href: "/macbook-air-m5-repair-dubai" },
+        { model: 'MacBook Air 15" M5 (2026) — individual key', price: 380, applePrice: null, timeline: "1–2 business days", l4href: "/macbook-air-m5-repair-dubai" },
+        { model: 'MacBook Air 15" M5 (2026) — full top-case', price: 600, applePrice: 649, timeline: "1–2 business days", l4href: "/macbook-air-m5-repair-dubai" },
       ]}
       faults={[
         { title: "Key cap snapped off", body: "If the scissor clip under the cap is intact we re-seat or replace the cap alone; if the clip broke we replace both. Colour-matched M5 caps in stock for common keys." },

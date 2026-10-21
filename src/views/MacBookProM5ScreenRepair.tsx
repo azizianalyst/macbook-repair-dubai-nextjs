@@ -24,8 +24,8 @@ export default function MacBookProM5ScreenRepair() {
         "M5 replacement assemblies are newer to the supply chain than parts for M1 to M4 models. Our current turnaround for M5 screen repairs is 2-3 days while parts availability builds. We confirm availability and give a firm timeline during the free diagnosis. We do not start work until you have approved the quote.",
       ]}
       prices={[
-        { model: "MacBook Pro 14-inch M5 / M5 Pro (2025-2026)", price: 1300, applePrice: 1699, timeline: "2-3 days", l4href: "/macbook-pro-14-m5-2025-repair-dubai" },
-        { model: "MacBook Pro 16-inch M5 Pro / M5 Max (2026)", price: 1500, applePrice: 1899, timeline: "2-3 days", l4href: "/macbook-pro-16-m5-max-2026-repair-dubai" },
+        { model: "MacBook Pro 14-inch M5 / M5 Pro (2025-2026)", price: 1300, applePrice: 1699, timeline: "2-3 days", l4href: "/macbook-pro-m5-repair-dubai" },
+        { model: "MacBook Pro 16-inch M5 Pro / M5 Max (2026)", price: 1500, applePrice: 1899, timeline: "2-3 days", l4href: "/macbook-pro-m5-repair-dubai" },
       ]}
       faults={[
         {

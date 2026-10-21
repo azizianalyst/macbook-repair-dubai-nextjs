@@ -446,7 +446,8 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Apple's current base M5 14\" Pro (Oct 2025). Most units are under Apple's 1-year warranty or AppleCare+. Always check Apple first - we're here for accidental damage and out-of-warranty work.",
-    "heroTagline": "Current base M5 Pro 14\". Apple Intelligence, nano-texture optional, current lineup."
+    "heroTagline": "Current base M5 Pro 14\". Apple Intelligence, nano-texture optional, current lineup.",
+    "mergedInto": "/macbook-pro-m5-repair-dubai"
   },
   {
     "slug": "macbook-pro-14-m5-pro-2026-repair-dubai",
@@ -495,7 +496,8 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Released March 2026 with Thunderbolt 5 - the first Mac with TB5. Specialty parts (TB5 controllers especially) are still ramping. Almost every unit is under Apple's 1-year warranty - start there. We're here for accidental damage Apple won't cover.",
-    "heroTagline": "M5 Pro 14\". Thunderbolt 5, world's fastest CPU core. Newest lineup, newest parts access."
+    "heroTagline": "M5 Pro 14\". Thunderbolt 5, world's fastest CPU core. Newest lineup, newest parts access.",
+    "mergedInto": "/macbook-pro-m5-repair-dubai"
   },
   {
     "slug": "macbook-pro-14-m5-max-2026-repair-dubai",
@@ -544,7 +546,8 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Released March 2026. The fastest 14\" Pro Apple has ever built - and the most expensive to repair at logic-board level - an M5 Max board costs more than some whole laptops. Almost every unit is under Apple warranty - always start there. AppleCare+ is highly recommended on this configuration.",
-    "heroTagline": "M5 Max 14\". The peak of Apple's portable performance. We treat it accordingly."
+    "heroTagline": "M5 Max 14\". The peak of Apple's portable performance. We treat it accordingly.",
+    "mergedInto": "/macbook-pro-m5-repair-dubai"
   },
   {
     "slug": "macbook-pro-16-m1-pro-2021-repair-dubai",
@@ -793,7 +796,8 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Released March 2026. 24-hour battery life claim - early units holding up well. Almost every unit is under Apple's 1-year warranty - start there. AppleCare+ recommended given specialty-part lead times.",
-    "heroTagline": "M5 Pro 16\". Thunderbolt 5, 24-hour battery, current Apple lineup."
+    "heroTagline": "M5 Pro 16\". Thunderbolt 5, 24-hour battery, current Apple lineup.",
+    "mergedInto": "/macbook-pro-m5-repair-dubai"
   },
   {
     "slug": "macbook-pro-16-m5-max-2026-repair-dubai",
@@ -842,6 +846,7 @@
       "liquid": "2-4 days"
     },
     "honestyNote": "Released March 2026. The single most powerful - and most expensive to repair - laptop Apple has ever made. Logic board replacement costs more than most complete laptops. Almost every unit is under Apple warranty - always start there. AppleCare+ is essential on this configuration.",
-    "heroTagline": "M5 Max 16\". The peak of portable Apple power. We treat every job as insurance-grade."
+    "heroTagline": "M5 Max 16\". The peak of portable Apple power. We treat every job as insurance-grade.",
+    "mergedInto": "/macbook-pro-m5-repair-dubai"
   }
 ]
