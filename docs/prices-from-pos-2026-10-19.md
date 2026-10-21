@@ -264,3 +264,17 @@ Not used: the lowest invoice as a 'from' price. It rests on a single job and mos
 | Logic board / no-power repair | Any MacBook | any | 656 | 12 |
 | Liquid damage repair | Any MacBook | any | 800 | 5 |
 | Trackpad replacement | Any MacBook | any | 455 | 6 |
+
+## Update 2026-10-21 (owner): part-only screen price next to the fitted price
+
+The owner asked to use the part-only (untaxed, B2B) invoices to show a lower screen figure, and confirmed that **any customer can buy the screen part alone at that price**.
+Shown as: "AED 1,129 fitted" with "Part only AED 881" underneath. Part price = median of part-only invoices for that model (5+ needed), **plus 5% VAT** because a walk-in purchase carries VAT and every site price is VAT-inclusive.
+Not shown: a fitting/labour charge. Fitting = total minus part would mix medians from different jobs; for the Air M2 it came out at AED 91, which is not a real labour price. If the owner gives a real fitting charge it can be added.
+Not done: setting prices 'below competitors'. There is no competitor price data in this project, so any such figure would be invented.
+
+| Model | Fitted (typical, incl. VAT) | Part only (typical, VAT added) | Part-only invoices |
+|---|---|---|---|
+| MacBook Air (M1, 2020) | 1,129 | 881 | 15 |
+| MacBook Air (13-inch, M2, 2022) | 999 | 908 | 12 |
+| MacBook Pro (13-inch, M1, 2020) and (13-inch, M2, 2022) | 1,190 | 934 | 5 |
+| Other MacBook Pro 13-inch Intel (2016 to 2020) | 980 | 819 | 10 |
